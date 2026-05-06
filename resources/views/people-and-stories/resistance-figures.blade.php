@@ -1,0 +1,89 @@
+@extends('layouts.app')
+
+@section('title', '抗戰人物｜人物與故事')
+@section('meta_description', '港九大隊成員與敵後工作者的多重面貌：從武裝行動到情報交通，理解個人抉擇與集體支援下的香港抗戰人物。')
+
+@section('content')
+<main class="people-and-stories">
+    @include('partials.hero-nav.people')
+
+    <section id="resistance-figures">
+        <div class="bg-left" style="background-image: url('{{ asset('img/bg/bg_binocular_r.png') }}');">
+            <div class="container top-padding bottom-padding-sm">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-8 mx-auto">
+                        <div class="text-center">
+                            <img src="{{ asset('img/home/icon_ornament.svg') }}" alt="icon" class="icon-image">
+                            <h3>抗戰人物</h3>
+                            <h6>Those Who Stood Up</h6>
+                            <p class="mt-5">香港抗戰由許多不同身份的人共同書寫：工人、學生、農民、漁民、婦女、交通員和游擊隊員。有人走上前線，有人在暗處工作，他們的選擇共同留下了香港的抗戰記憶。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-section overflow-hidden">
+            <div class="swiper battleSwiper">
+                <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                        <img src="{{ asset('img/people-and-stories/image_1_1.png') }}" alt="Image 1" class="w-100">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('img/people-and-stories/image_1_2.png') }}" alt="Image 2" class="w-100">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('img/people-and-stories/image_1_3.png') }}" alt="Image 3" class="w-100">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('img/people-and-stories/image_1_1.png') }}" alt="Image 1" class="w-100">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('img/people-and-stories/image_1_2.png') }}" alt="Image 2" class="w-100">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('img/people-and-stories/image_1_3.png') }}" alt="Image 3" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-right" style="background-image: url('{{ asset('img/bg/bg_binocular_l.png') }}');">
+            <div class="container top-padding-sm bottom-padding">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-8 mx-auto">
+                        <p>香港抗戰的歷史，不只是軍隊、戰役和政治局勢的歷史，也是一個個普通人在危難中作出選擇的歷史。當香港被戰火吞沒、城市進入日治之後，許多人被迫重新思考自己與家園、民族和時代的關係。有人走上前線，有人進入敵後，有人留在城市暗處工作，也有人以家庭、村落和職業身份作掩護，默默支援抵抗。</p>
+                        <p>港九大隊的成員來自不同背景，包括工人、學生、農民、漁民、原居民和愛國青年。他們並非一開始就是歷史書中的「英雄」，很多人原本只是香港日常社會中的普通一員。戰爭改變了他們的人生方向，也迫使他們面對艱難選擇：是沉默自保，還是冒險參與抗戰；是等待局勢改變，還是主動守護家園。</p>
+                        <p>這些抗戰人物之所以值得被記住，正因為他們的出身和經歷如此貼近香港社會。有些人在工廠、學校、漁村和鄉郊長大，有些人本來只是普通青年，卻在戰爭中成為交通員、情報員、游擊隊員或後勤人員。抗戰不是一個遙遠的抽象概念，而是進入了他們的生活，改變了他們的家庭，也改變了他們對自身責任的理解。</p>
+                        <p>港九大隊中的許多幹部和隊員，早在全面抗戰爆發後便受到救亡運動影響。他們透過讀書會、青年組織、工會、同鄉會和地下黨組織接觸抗日思想。香港淪陷後，這些過去的組織經驗和人際網絡，成為敵後抗戰的重要基礎。換言之，抗戰人物並不是突然出現的，他們是在長期社會動員和民族危機中逐步形成的。</p>
+                        <p>這些人物的工作形式十分多樣。有人參與武裝行動，突襲日軍哨所、破壞交通設施、打擊漢奸和偽警；有人負責情報、交通、翻譯、宣傳、後勤和醫療；也有人在市區中以「不帶槍的游擊隊」身份活動，依靠機智、關係和日常身份在敵人眼皮底下工作。抗戰因此不只屬於拿槍的人，也屬於每一個在危險中承擔任務的人。</p>
+                        <button type="button" class="read-more" data-bs-toggle="modal" data-bs-target="#readMoreModal">閱讀更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="readMoreModal" tabindex="-1" aria-labelledby="readMoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="readMoreModalLabel">閱讀更多</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
+                </div>
+                <div class="modal-body">
+                    <p>有些人物以戰鬥行動被後人記住。短槍隊員、海上隊員和各中隊骨幹，曾在西貢、沙頭角、大嶼山、九龍和海面上執行突襲、爆破、伏擊與護送任務。他們面對的是裝備、兵力和情報力量都遠勝自己的敵人，因此每一次行動都需要勇氣，也需要冷靜判斷。這些戰鬥人物的故事，是香港敵後抗戰中最直接、最激烈的一面。</p>
+                    <p>也有些人物的貢獻並不在槍聲之中，而在沉默和隱蔽之中。交通員要穿過檢查站，情報員要觀察敵軍部署，地下工作者要維持接頭和聯絡，醫療與後勤人員則要照顧傷病、籌措藥物和安排物資。這些工作看似不如戰鬥轟烈，卻同樣危險。一旦暴露，不只自己可能被捕，整條交通線和身邊同伴都可能受到牽連。</p>
+                    <p>不少人物的故事帶有沉重代價。有些人在戰鬥中犧牲，有些人在被捕後遭受酷刑，仍然保守秘密；有些人因掩護隊友、保護情報或支援游擊隊而失去生命。這些犧牲並不只是個人悲劇，也反映出日治時期香港敵後工作的危險程度。每一次行動背後，都可能牽連家庭、村落和整個地下網絡。</p>
+                    <p>女性抗戰人物尤其值得被看見。她們有的擔任交通員，有的照顧隊員，有的傳送情報，有的掩護地下工作者，也有的動員家人和鄉親支援抗戰。她們往往利用日常身份作掩護，以探親、買菜、洗衣、送飯等方式完成危險任務。她們的抗戰不一定出現在正面戰場，卻深入家庭、街巷和村落之中。</p>
+                    <p>同時，抗戰人物也不應只被理解為孤立的英雄。他們之所以能夠行動，往往依靠家人、鄉親、同學、工友和地下組織的支援。許多人物背後都有一張人際網絡：有人提供情報，有人安排住宿，有人送信，有人照顧傷員。個人的勇氣，常常是在集體互助中被支撐起來的。</p>
+                    <p>這些人物在戰後也留下不同軌跡。有人繼續從事政治、軍事、外交、教育或地方工作，有人回到普通生活，有人則因犧牲而永遠停留在年輕時的形象。無論後來人生如何，他們在日治歲月中的選擇，都已成為香港抗戰記憶的一部分。記住他們，是記住香港人在民族危亡中曾經作出的承擔。</p>
+                    <p>今天回望這些人物，不只是為了紀念他們的名字，更是為了理解他們所代表的精神。他們在香港最黑暗的歲月中作出選擇，把個人的安危放在家園與民族大義之後。正因為有這些人的行動，香港抗戰才不只是宏大的歷史敘述，而成為有血有肉、有面孔、有聲音的記憶。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @include('partials.accordion')
+</main>
+@endsection

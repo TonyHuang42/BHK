@@ -1,11 +1,514 @@
-@import 'tailwindcss';
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "swiper/css/bundle";
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+:root {
+    --padding: 100px;
+}
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 4rem);
+    font-weight: 300;
+}
+
+h2 {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    font-weight: 300;
+}
+
+h3 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 300;
+}
+
+h4 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 300;
+}
+
+h5 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+h6 {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-weight: 300;
+}
+
+p {
+    font-weight: 300;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+}
+
+a:hover {
+    color: #672727;
+}
+
+.section-padding {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+
+.section-padding-sm {
+    padding-top: calc(var(--padding) * 0.5);
+    padding-bottom: calc(var(--padding) * 0.5);
+}
+
+.section-padding-lg {
+    padding-top: calc(var(--padding) * 1.5);
+    padding-bottom: calc(var(--padding) * 1.5);
+}
+
+.top-padding {
+    padding-top: var(--padding);
+}
+
+.bottom-padding {
+    padding-bottom: var(--padding);
+}
+
+.top-padding-sm {
+    padding-top: calc(var(--padding) * 0.5);
+}
+
+.bottom-padding-sm {
+    padding-bottom: calc(var(--padding) * 0.5);
+}
+
+.navbar-nav {
+    --bs-nav-link-font-weight: 400;
+}
+
+.navbar-nav .nav-link.nav-link--current {
+    color: #672727;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.navbar-nav .nav-link.nav-link--current:hover {
+    color: #672727;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.logo {
+    height: 40px;
+}
+
+.dropdown-item {
+    font-weight: 300;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero-img {
+    height: 760px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: min(70vw, 480px);
+    max-width: calc(100% - 2rem);
+    height: auto;
+    display: block;
+    pointer-events: none;
+}
+
+.battle-of-hong-kong-hero-title {
+    left: 9%;
+}
+
+.under-japanese-occupation-hero-img {
+    object-position: 80% center;
+}
+
+.under-japanese-occupation-hero-title {
+    right: 9%;
+}
+
+.home-intro {
+    background-color: #672727;
+}
+
+.home-overview {
+    background-color: #fbf9ed;
+}
+
+.icon-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.bg-texture-gray {
+    background-image: url(/img/home/texture_bg_gray.png);
+}
+
+.bg-left {
+    background-repeat: no-repeat;
+    background-position: 5% center;
+    background-size: 250px auto;
+}
+
+.bg-right {
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-size: 250px auto;
+}
+
+.under-japanese-occupation .bg-left {
+    background-size: 175px auto;
+}
+
+.under-japanese-occupation .bg-right {
+    background-size: 175px auto;
+}
+
+.people-and-stories .bg-left {
+    background-size: 200px auto;
+}
+
+.people-and-stories .bg-right {
+    background-size: 200px auto;
+}
+
+.overview-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.overview-card-image {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+}
+
+.overview-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.overview-card-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.home-overview a:hover .overview-card .overview-card-image {
+    transform: scale(1.04);
+}
+
+.home-overview a:hover .overview-card::after {
+    opacity: 1;
+}
+
+.home-overview a:hover .overview-card .overview-card-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    min-height: 100px;
+    background-color: #672727;
+    color: #fff;
+}
+
+.battleSwiper .swiper-slide {
+    transition: transform 0.3s ease;
+}
+
+.battleSwiper .swiper-slide img {
+    object-fit: cover;
+}
+
+.history-content {
+    padding: 1rem 0.5rem;
+}
+
+.history-timeline {
+    position: relative;
+    min-height: 100%;
+}
+
+.history-years-list {
+    position: relative;
+    width: 100%;
+    max-width: 120px;
+}
+
+.history-years-list::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    left: 5.51px;
+    width: 1px;
+    background-color: #cfcfcf;
+}
+
+.history-year-btn {
+    border: none;
+    background: transparent;
+    color: #8e8e8e;
+    padding: 0 0 0 1.25rem;
+    position: relative;
+    text-align: left;
+    transition: color 0.25s ease;
+}
+
+.history-year-btn::before {
+    content: "";
+    position: absolute;
+    left: 0.1rem;
+    top: 50%;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    border: 2px solid #c8c8c8;
+    background-color: #f2f2f2;
+    transform: translateY(-50%);
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.history-year-btn:hover {
+    color: #444;
+}
+
+.history-year-btn.is-active {
+    color: #222;
+    font-weight: 600;
+}
+
+.history-year-btn.is-active::before {
+    border-color: #392424;
+    background-color: #ffffff;
+}
+
+.history-image-wrap {
+    overflow: hidden;
+}
+
+.history-image {
+    object-fit: cover;
+    display: block;
+}
+
+.accordion {
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-active-bg: none;
+    --bs-accordion-active-color: #000;
+    --bs-accordion-btn-padding-x: 0;
+    --bs-accordion-body-padding-x: 0;
+}
+
+.accordion-body ol,
+.accordion-body ul {
+    margin-left: -36px;
+}
+
+.accordion-body ul {
+    list-style: none;
+}
+
+.accordion-body li {
+    position: relative;
+    padding-left: 16px;
+}
+
+.accordion-body li::before {
+    content: "•";
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1.8;
+    margin-top: -2px;
+}
+
+.read-more {
+    border: none;
+    background: transparent;
+    color: #672727;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    padding: 0;
+}
+
+/* Responsive CSS */
+@media only screen and (max-width: 1399px) {
+    .hero::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        pointer-events: none;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        z-index: 1;
+    }
+
+    .under-japanese-occupation-hero-img {
+        object-position: 65% center;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .bg-right {
+        background-position: 98% 95%;
+        background-size: 15% auto;
+        padding-bottom: 50px;
+    }
+
+    .bg-left {
+        background-position: 2% center;
+        background-size: 15% auto;
+    }
+
+    .under-japanese-occupation .bg-left {
+        background-size: 10.5% auto;
+    }
+
+    .under-japanese-occupation .bg-right {
+        background-size: 10.5% auto;
+    }
+
+    .people-and-stories .bg-left {
+        background-size: 12% auto;
+    }
+
+    .people-and-stories .bg-right {
+        background-size: 12% auto;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .section-padding {
+        padding-top: calc(var(--padding) * 0.5);
+        padding-bottom: calc(var(--padding) * 0.5);
+    }
+
+    .section-padding-lg {
+        padding-top: calc(var(--padding) * 0.75);
+        padding-bottom: calc(var(--padding) * 0.75);
+    }
+
+    .top-padding {
+        padding-top: calc(var(--padding) * 0.5);
+    }
+
+    .bottom-padding {
+        padding-bottom: calc(var(--padding) * 0.5);
+    }
+
+    .history-description {
+        max-width: 100%;
+    }
+
+    .history-timeline {
+        justify-content: flex-start !important;
+    }
+
+    .history-years-list {
+        max-width: 100%;
+        width: auto;
+        display: flex !important;
+        flex-wrap: wrap;
+        column-gap: 1.2rem;
+        row-gap: 0.75rem;
+    }
+
+    .history-years-list::before {
+        display: none;
+    }
+
+    .history-year-btn {
+        padding-left: 0.9rem;
+    }
+
+    .history-year-btn::before {
+        left: 0;
+        width: 0.45rem;
+        height: 0.45rem;
+    }
+
+    .history-image-wrap {
+        min-height: 360px;
+        border-width: 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .history-image-wrap {
+        min-height: 280px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .bg-right {
+        background-size: 18% auto;
+    }
+
+    .bg-left {
+        background-size: 18% auto;
+    }
+
+    .under-japanese-occupation .bg-left {
+        background-size: 15% auto;
+    }
+
+    .under-japanese-occupation .bg-right {
+        background-size: 15% auto;
+    }
+
+    .people-and-stories .bg-left {
+        background-size: 16% auto;
+    }
+
+    .people-and-stories .bg-right {
+        background-size: 16% auto;
+    }
 }

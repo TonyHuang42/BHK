@@ -103,6 +103,17 @@ a:hover {
     color: #672727;
 }
 
+.hero-subnav a[aria-current="page"] {
+    color: #672727;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-weight: 400;
+}
+
+.hero-subnav a[aria-current="page"]:hover {
+    color: #672727;
+}
+
 .navbar-toggler:focus {
     box-shadow: none;
     outline: none;
@@ -168,7 +179,7 @@ a:hover {
 }
 
 .bg-texture-gray {
-    background-image: url(/img/home/texture_bg_gray.png);
+    background-image: url('../../public/img/home/texture_bg_gray.png');
 }
 
 .bg-left {
@@ -404,7 +415,7 @@ footer {
     }
 
     .bg-left {
-        background-position: 2% center;
+        background-position: 2% 30%;
         background-size: 15% auto;
     }
 

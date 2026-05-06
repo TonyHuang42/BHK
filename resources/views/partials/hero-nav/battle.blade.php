@@ -3,7 +3,7 @@
     <img src="{{ asset('img/home/section_header-香港保衛戰.svg') }}" alt="香港保衛戰" class="hero-title battle-of-hong-kong-hero-title">
 </section>
 
-<section class="border-bottom">
+<section class="border-bottom hero-subnav">
     <div class="container py-4">
         <div class="d-flex justify-content-evenly gap-2 gap-sm-0 flex-wrap">
             <a href="{{ route('battle.before-the-storm') }}" {!! request()->routeIs('battle.before-the-storm') ? 'aria-current="page"' : '' !!}>戰前背景</a>

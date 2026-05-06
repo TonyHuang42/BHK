@@ -3,7 +3,7 @@
     <img src="{{ asset('img/home/section_header-日治下的香港.svg') }}" alt="日治下的香港" class="hero-title under-japanese-occupation-hero-title">
 </section>
 
-<section class="border-bottom">
+<section class="border-bottom hero-subnav">
     <div class="container py-4">
         <div class="d-flex justify-content-evenly gap-2 gap-sm-0 flex-wrap">
             <a href="{{ route('occupation.occupation-rule') }}" {!! request()->routeIs('occupation.occupation-rule') ? 'aria-current="page"' : '' !!}>佔領統治</a>

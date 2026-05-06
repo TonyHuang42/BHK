@@ -3,7 +3,7 @@
     <img src="{{ asset('img/home/section_header-游擊與抵抗.svg') }}" alt="游擊與抵抗" class="hero-title battle-of-hong-kong-hero-title">
 </section>
 
-<section class="border-bottom">
+<section class="border-bottom hero-subnav">
     <div class="container py-4">
         <div class="d-flex justify-content-evenly gap-2 gap-sm-0 flex-wrap">
             <a href="{{ route('guerrilla.hk-kowloon-brigade') }}" {!! request()->routeIs('guerrilla.hk-kowloon-brigade') ? 'aria-current="page"' : '' !!}>港九大隊</a>

@@ -1,0 +1,24 @@
+{
+  "public/img/home/texture_bg_gray.png": {
+    "file": "assets/texture_bg_gray-CX3btgox.png",
+    "src": "public/img/home/texture_bg_gray.png"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-DhzKeY0K.css",
+    "name": "app",
+    "names": [
+      "app.css"
+    ],
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "assets": [
+      "assets/texture_bg_gray-CX3btgox.png"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-BiP7z-ol.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}

@@ -2,14 +2,14 @@
 
 namespace Database\Factories;
 
-use App\Models\Gallery;
+use App\Models\PressRelease;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /**
- * @extends Factory<Gallery>
+ * @extends Factory<PressRelease>
  */
-class GalleryFactory extends Factory
+class PressReleaseFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -23,13 +23,11 @@ class GalleryFactory extends Factory
         return [
             'title' => $title,
             'slug' => Str::slug($title),
+            'summary' => $this->faker->paragraph(),
             'date' => $this->faker->date(),
+            'thumbnail' => 'press-releases/thumbnails/'.$this->faker->uuid().'.jpg',
+            'body' => $this->faker->paragraphs(3, true),
             'is_publish' => $this->faker->boolean(),
-            'thumbnail' => 'galleries/thumbnails/'.$this->faker->uuid().'.jpg',
-            'images' => [
-                'galleries/'.$this->faker->uuid().'.jpg',
-                'galleries/'.$this->faker->uuid().'.jpg',
-            ],
         ];
     }
 }

@@ -43,7 +43,7 @@ expect()->extend('toBeOne', function () {
 |
 */
 
-function something()
+function livewire(string $name, array $parameters = [])
 {
-    // ..
+    return Livewire\Livewire::test($name, $parameters);
 }

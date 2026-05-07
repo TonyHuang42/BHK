@@ -22,7 +22,7 @@ class GalleryForm
                     ->maxLength(255)
                     ->unique(ignoreRecord: true)
                     ->live()
-                    ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slug', Str::slug($state))),
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
                 Hidden::make('slug')
                     ->required()
                     ->unique(ignoreRecord: true),

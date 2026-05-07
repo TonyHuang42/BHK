@@ -3,6 +3,7 @@
 namespace App\Filament\Admin\Resources\Galleries\Tables;
 
 use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
@@ -28,6 +29,9 @@ class GalleriesTable
             ])
             ->filters([
                 //
+            ])
+            ->actions([
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

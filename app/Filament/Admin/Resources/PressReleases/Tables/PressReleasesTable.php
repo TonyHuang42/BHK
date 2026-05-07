@@ -3,6 +3,7 @@
 namespace App\Filament\Admin\Resources\PressReleases\Tables;
 
 use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 // use Filament\Actions\EditAction;
 use Filament\Tables\Columns\ImageColumn;
@@ -33,9 +34,9 @@ class PressReleasesTable
             ->filters([
                 //
             ])
-            // ->recordActions([
-            //     EditAction::make(),
-            // ])
+            ->actions([
+                DeleteAction::make(),
+            ])
             ->toolbarActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),

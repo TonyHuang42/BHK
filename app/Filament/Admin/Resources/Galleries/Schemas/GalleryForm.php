@@ -1,19 +1,17 @@
 <?php
 
-namespace App\Filament\Admin\Resources\PressReleases\Schemas;
+namespace App\Filament\Admin\Resources\Galleries\Schemas;
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Hidden;
-use Filament\Forms\Components\RichEditor;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Str;
 
-class PressReleaseForm
+class GalleryForm
 {
     public static function configure(Schema $schema): Schema
     {
@@ -39,18 +37,24 @@ class PressReleaseForm
                     ->label('Publish')
                     ->default(false),
                 FileUpload::make('thumbnail')
+                    ->required()
                     ->image()
                     ->disk('public')
                     ->visibility('public')
-                    ->directory('press-releases/thumbnails')
+                    ->directory('galleries/thumbnails')
                     ->columnSpanFull(),
-                Textarea::make('summary')
+                FileUpload::make('images')
                     ->required()
-                    ->columnSpanFull(),
-                RichEditor::make('body')
-                    ->required()
-                    ->fileAttachmentsDirectory('press-releases/attachments')
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->multiple()
+                    ->panelLayout('grid')
+                    ->reorderable()
+                    ->appendFiles()
+                    ->image()
+                    ->preserveFilenames()
+                    ->disk('public')
+                    ->directory('galleries')
+                    ->visibility('public'),
             ]);
     }
 }

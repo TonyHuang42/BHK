@@ -39,7 +39,7 @@
         <div class="container-fluid gx-0">
             <div class="row g-0">
                 <div class="col-sm-6 col-md">
-                    <a href="{{ route('battle.before-the-storm') }}">
+                    <a href="{{ route('battle.index') }}">
                         <article class="overview-card">
                             <img src="{{ asset('img/home/image_香港保衛戰_.png') }}" alt="香港保衛戰" class="w-100 h-100 overview-card-image">
                             <div class="overview-card-content text-center p-5">

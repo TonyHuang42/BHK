@@ -3,8 +3,8 @@ import Swiper from 'swiper/bundle';
 
 // Initialize Swiper
 document.addEventListener('DOMContentLoaded', () => {
-    if (document.querySelector(".battleSwiper")) {
-        new Swiper(".battleSwiper", {
+    document.querySelectorAll('.battleSwiper').forEach((el) => {
+        new Swiper(el, {
             slidesPerView: 2.2,
             centeredSlides: true,
             spaceBetween: 100,
@@ -29,5 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
             }
         });
-    }
+    });
 });

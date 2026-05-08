@@ -50,10 +50,10 @@
                                 香港保衛戰
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('battle.before-the-storm') }}">戰前背景</a></li>
-                                <li><a class="dropdown-item" href="{{ route('battle.eighteen-days-of-battle') }}">戰役經過</a></li>
-                                <li><a class="dropdown-item" href="{{ route('battle.black-christmas') }}">黑色聖誕</a></li>
-                                <li><a class="dropdown-item" href="{{ route('battle.wartime-timeline') }}">戰時時間線</a></li>
+                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'before-the-storm']) }}">戰前背景</a></li>
+                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'eighteen-days-of-battle']) }}">戰役經過</a></li>
+                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'black-christmas']) }}">黑色聖誕</a></li>
+                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'wartime-timeline']) }}">戰時時間線</a></li>
                             </ul>
                         </li>
 

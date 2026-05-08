@@ -5,11 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'home')->name('home');
 
 Route::prefix('battle-of-hong-kong')->name('battle.')->group(function () {
-    Route::redirect('/', '/battle-of-hong-kong/before-the-storm');
-    Route::view('/before-the-storm', 'battle-of-hong-kong.before-the-storm')->name('before-the-storm');
-    Route::view('/eighteen-days-of-battle', 'battle-of-hong-kong.eighteen-days-of-battle')->name('eighteen-days-of-battle');
-    Route::view('/black-christmas', 'battle-of-hong-kong.black-christmas')->name('black-christmas');
-    Route::view('/wartime-timeline', 'battle-of-hong-kong.wartime-timeline')->name('wartime-timeline');
+    Route::view('/', 'battle-of-hong-kong.index')->name('index');
 });
 
 Route::prefix('guerrilla-resistance')->name('guerrilla.')->group(function () {

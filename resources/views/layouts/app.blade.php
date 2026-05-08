@@ -62,10 +62,10 @@
                                 游擊與抵抗
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('guerrilla.hk-kowloon-brigade') }}">港九大隊</a></li>
-                                <li><a class="dropdown-item" href="{{ route('guerrilla.guerrilla-warfare') }}">游擊戰</a></li>
-                                <li><a class="dropdown-item" href="{{ route('guerrilla.intelligence-and-rescue') }}">情報與營救</a></li>
-                                <li><a class="dropdown-item" href="{{ route('guerrilla.underground-resistance') }}">敵後抵抗網絡</a></li>
+                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'hk-kowloon-brigade']) }}">港九大隊</a></li>
+                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'guerrilla-warfare']) }}">游擊戰</a></li>
+                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'intelligence-and-rescue']) }}">情報與營救</a></li>
+                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'underground-resistance']) }}">敵後抵抗網絡</a></li>
                             </ul>
                         </li>
 
@@ -74,10 +74,10 @@
                                 日治下的香港
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('occupation.occupation-rule') }}">佔領統治</a></li>
-                                <li><a class="dropdown-item" href="{{ route('occupation.survival-and-rationing') }}">生存與配給</a></li>
-                                <li><a class="dropdown-item" href="{{ route('occupation.economy-and-society') }}">經濟與社會</a></li>
-                                <li><a class="dropdown-item" href="{{ route('occupation.everyday-life-wartime') }}">戰時日常</a></li>
+                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'occupation-rule']) }}">佔領統治</a></li>
+                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'survival-and-rationing']) }}">生存與配給</a></li>
+                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'economy-and-society']) }}">經濟與社會</a></li>
+                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'everyday-life-wartime']) }}">戰時日常</a></li>
                             </ul>
                         </li>
 
@@ -86,10 +86,10 @@
                                 人物與故事
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('people.resistance-figures') }}">抗戰人物</a></li>
-                                <li><a class="dropdown-item" href="{{ route('people.village-memories') }}">村落記憶</a></li>
-                                <li><a class="dropdown-item" href="{{ route('people.mutual-aid') }}">民間互助</a></li>
-                                <li><a class="dropdown-item" href="{{ route('people.rescue-stories') }}">救援故事</a></li>
+                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'resistance-figures']) }}">抗戰人物</a></li>
+                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'village-memories']) }}">村落記憶</a></li>
+                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'mutual-aid']) }}">民間互助</a></li>
+                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'rescue-stories']) }}">救援故事</a></li>
                             </ul>
                         </li>
 

@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="col-sm-6 col-md">
-                    <a href="{{ route('guerrilla.hk-kowloon-brigade') }}">
+                    <a href="{{ route('guerrilla.index') }}">
                         <article class="overview-card">
                             <img src="{{ asset('img/home/image_游擊與抵抗.jpg') }}" alt="游擊與抵抗" class="w-100 h-100 overview-card-image">
                             <div class="overview-card-content text-center p-5">
@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="col-sm-6 col-md">
-                    <a href="{{ route('occupation.occupation-rule') }}">
+                    <a href="{{ route('occupation.index') }}">
                         <article class="overview-card">
                             <img src="{{ asset('img/home/image_日治下的香港.jpg') }}" alt="日治下的香港" class="w-100 h-100 overview-card-image">
                             <div class="overview-card-content text-center p-5">
@@ -72,7 +72,7 @@
                 </div>
 
                 <div class="col-sm-6 col-md">
-                    <a href="{{ route('people.resistance-figures') }}">
+                    <a href="{{ route('people.index') }}">
                         <article class="overview-card">
                             <img src="{{ asset('img/home/image_人物與故事.jpg') }}" alt="人物與故事" class="w-100 h-100 overview-card-image">
                             <div class="overview-card-content text-center p-5">

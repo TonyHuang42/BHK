@@ -30,4 +30,54 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Generic Tab Logic
+    const tabLinks = document.querySelectorAll('[data-tab-link]');
+    const tabPanels = document.querySelectorAll('[data-tab-panel]');
+
+    if (tabLinks.length > 0 && tabPanels.length > 0) {
+        const slugs = Array.from(tabLinks).map(a => a.dataset.tabLink);
+        const uniqueSlugs = [...new Set(slugs)];
+
+        function tabFromUrl() {
+            const param = new URLSearchParams(window.location.search).get('tab');
+            return uniqueSlugs.includes(param) ? param : '';
+        }
+
+        function setUrlTab(slug) {
+            const url = new URL(window.location.href);
+            url.searchParams.set('tab', slug);
+            const query = url.searchParams.toString();
+            history.replaceState(null, '', query ? `${url.pathname}?${query}` : url.pathname);
+        }
+
+        function activate(slug) {
+            if (!uniqueSlugs.includes(slug)) slug = uniqueSlugs[0];
+            
+            tabPanels.forEach(p => {
+                p.hidden = (p.dataset.tabPanel !== slug);
+            });
+            
+            tabLinks.forEach(a => {
+                const isActive = a.dataset.tabLink === slug;
+                if (isActive) {
+                    a.setAttribute('aria-current', 'page');
+                } else {
+                    a.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        tabLinks.forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const slug = a.dataset.tabLink;
+                setUrlTab(slug);
+                activate(slug);
+            });
+        });
+
+        window.addEventListener('popstate', () => activate(tabFromUrl() || uniqueSlugs[0]));
+        activate(tabFromUrl() || uniqueSlugs[0]);
+    }
 });

@@ -13,16 +13,16 @@
     <section class="border-bottom hero-subnav">
         <div class="container py-4">
             <div class="d-flex justify-content-evenly gap-2 gap-sm-0 flex-wrap">
-                <a href="{{ route('battle.index', ['tab' => 'before-the-storm']) }}" data-battle-tab-link="before-the-storm">戰前背景</a>
-                <a href="{{ route('battle.index', ['tab' => 'eighteen-days-of-battle']) }}" data-battle-tab-link="eighteen-days-of-battle">戰役經過</a>
-                <a href="{{ route('battle.index', ['tab' => 'black-christmas']) }}" data-battle-tab-link="black-christmas">黑色聖誕</a>
-                <a href="{{ route('battle.index', ['tab' => 'wartime-timeline']) }}" data-battle-tab-link="wartime-timeline">戰時時間線</a>
+                <a href="{{ route('battle.index', ['tab' => 'before-the-storm']) }}" data-tab-link="before-the-storm">戰前背景</a>
+                <a href="{{ route('battle.index', ['tab' => 'eighteen-days-of-battle']) }}" data-tab-link="eighteen-days-of-battle">戰役經過</a>
+                <a href="{{ route('battle.index', ['tab' => 'black-christmas']) }}" data-tab-link="black-christmas">黑色聖誕</a>
+                <a href="{{ route('battle.index', ['tab' => 'wartime-timeline']) }}" data-tab-link="wartime-timeline">戰時時間線</a>
             </div>
         </div>
     </section>
 
     {{-- 戰前背景 --}}
-    <section class="bg-texture-gray" id="before-the-storm" data-battle-tab="before-the-storm" hidden>
+    <section class="bg-texture-gray" id="before-the-storm" data-tab-panel="before-the-storm" hidden>
         <div class="bg-left" style="background-image: url('{{ asset('img/bg/bg_plane_r.png') }}');">
             <div class="container top-padding bottom-padding-sm">
                 <div class="row">
@@ -80,7 +80,7 @@
     </section>
 
     {{-- 戰役經過 --}}
-    <section class="bg-texture-gray" id="eighteen-days-of-battle" data-battle-tab="eighteen-days-of-battle" hidden>
+    <section class="bg-texture-gray" id="eighteen-days-of-battle" data-tab-panel="eighteen-days-of-battle" hidden>
         <div class="bg-left" style="background-image: url('{{ asset('img/bg/bg_plane_r.png') }}');">
             <div class="container top-padding bottom-padding-sm">
                 <div class="row">
@@ -138,7 +138,7 @@
     </section>
 
     {{-- 黑色聖誕 --}}
-    <section class="bg-texture-gray" id="black-christmas" data-battle-tab="black-christmas" hidden>
+    <section class="bg-texture-gray" id="black-christmas" data-tab-panel="black-christmas" hidden>
         <div class="bg-left" style="background-image: url('{{ asset('img/bg/bg_plane_r.png') }}');">
             <div class="container top-padding bottom-padding-sm">
                 <div class="row">
@@ -196,7 +196,7 @@
     </section>
 
     {{-- 戰時時間線 --}}
-    <section class="bg-texture-gray" id="wartime-timeline" data-battle-tab="wartime-timeline" hidden>
+    <section class="bg-texture-gray" id="wartime-timeline" data-tab-panel="wartime-timeline" hidden>
         <div class="bg-left" style="background-image: url('{{ asset('img/bg/bg_plane_r.png') }}');">
             <div class="container top-padding">
                 <div class="row">
@@ -423,46 +423,5 @@
             button.addEventListener("mouseenter", () => applyHistoryState(year));
         });
     })();
-</script>
-
-<script>
-(function () {
-    const slugs = ['before-the-storm', 'eighteen-days-of-battle', 'black-christmas', 'wartime-timeline'];
-    const panels = document.querySelectorAll('[data-battle-tab]');
-    const links  = document.querySelectorAll('[data-battle-tab-link]');
-
-    function tabFromUrl() {
-        const param = new URLSearchParams(window.location.search).get('tab');
-        return slugs.includes(param) ? param : '';
-    }
-
-    function setUrlTab(slug) {
-        const url = new URL(window.location.href);
-        url.searchParams.set('tab', slug);
-        const query = url.searchParams.toString();
-        history.replaceState(null, '', query ? `${url.pathname}?${query}` : url.pathname);
-    }
-
-    function activate(slug) {
-        if (!slugs.includes(slug)) slug = slugs[0];
-        panels.forEach(p => p.hidden = (p.dataset.battleTab !== slug));
-        links.forEach(a => {
-            const isActive = a.dataset.battleTabLink === slug;
-            if (isActive) a.setAttribute('aria-current', 'page');
-            else a.removeAttribute('aria-current');
-        });
-    }
-
-    links.forEach(a => a.addEventListener('click', e => {
-        e.preventDefault();
-        const slug = a.dataset.battleTabLink;
-        setUrlTab(slug);
-        activate(slug);
-    }));
-
-    window.addEventListener('popstate', () => activate(tabFromUrl() || slugs[0]));
-
-    activate(tabFromUrl() || slugs[0]);
-})();
 </script>
 @endsection

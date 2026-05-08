@@ -27,7 +27,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-xl">
             <div class="container d-flex justify-content-between align-items-center">
                 <a class="navbar-brand me-5 d-flex align-items-center gap-2" href="{{ route('home') }}">
                     <img src="{{ asset('img/home/logo.svg') }}" alt="logo" class="logo">
@@ -92,7 +92,24 @@
                                 <li><a class="dropdown-item" href="{{ route('people.rescue-stories') }}">救援故事</a></li>
                             </ul>
                         </li>
-                    </ul>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                聯繫我們
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end p-3 shadow-sm border" style="width: 320px;">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h6 class="mb-0 fw-bold">聯繫我們</h6>
+                                    <button type="button" class="btn-close text-reset" style="font-size: 0.8rem;" aria-label="Close" onclick="this.closest('.dropdown').querySelector('.nav-link').click()"></button>
+                                </div>
+                                <p class="mb-3 text-muted small">聯繫我們 聯繫我們 聯繫我們 聯繫我們：</p>
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-2"><strong>電郵：</strong> <a href="mailto:info@example.com" class="text-decoration-none">info@example.com</a></li>
+                                    {{-- <li><strong>電話：</strong> <a href="tel:+12345678" class="text-decoration-none">+1234 5678</a></li> --}}
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>   
                 </div>
             </div>
         </nav>

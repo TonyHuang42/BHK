@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
@@ -8,3 +9,5 @@ Route::view('battle-of-hong-kong', 'battle-of-hong-kong.index')->name('battle.in
 Route::view('guerrilla-resistance', 'guerrilla-resistance.index')->name('guerrilla.index');
 Route::view('under-japanese-occupation', 'under-japanese-occupation.index')->name('occupation.index');
 Route::view('people-and-stories', 'people-and-stories.index')->name('people.index');
+
+Route::get('galleries', [GalleryController::class, 'index'])->name('galleries.index');

@@ -261,6 +261,56 @@ a:hover {
     transform: translateY(0);
 }
 
+.gallery-card-trigger {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    color: inherit;
+    cursor: pointer;
+}
+
+.gallery-card-trigger:hover .gallery-card-title {
+    color: #672727;
+}
+
+.gallery-card {
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.gallery-card-image-wrapper {
+    overflow: hidden;
+}
+
+.gallery-card-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+}
+
+.gallery-card:hover .gallery-card-image {
+    transform: scale(1.04);
+}
+
+.gallery-card-title {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.pagination {
+    --bs-pagination-color: #000;
+    --bs-pagination-hover-color: #672727;
+    --bs-pagination-active-bg: #672727;
+    --bs-pagination-active-border-color: #672727;
+    --bs-pagination-focus-box-shadow: none;
+}
+
 footer {
     min-height: 100px;
     background-color: #672727;

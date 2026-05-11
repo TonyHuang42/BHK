@@ -1,10 +1,16 @@
 {
+  "node_modules/photoswipe/dist/photoswipe.esm.js": {
+    "file": "assets/photoswipe.esm-33QBPrd4.js",
+    "name": "photoswipe.esm",
+    "src": "node_modules/photoswipe/dist/photoswipe.esm.js",
+    "isDynamicEntry": true
+  },
   "public/img/home/texture_bg_gray.png": {
     "file": "assets/texture_bg_gray-CX3btgox.png",
     "src": "public/img/home/texture_bg_gray.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-DhzKeY0K.css",
+    "file": "assets/app-BaWxOScn.css",
     "name": "app",
     "names": [
       "app.css"
@@ -16,9 +22,15 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-Dbj4uSVA.js",
+    "file": "assets/app-CSZgmN4N.js",
     "name": "app",
     "src": "resources/js/app.js",
-    "isEntry": true
+    "isEntry": true,
+    "dynamicImports": [
+      "node_modules/photoswipe/dist/photoswipe.esm.js"
+    ],
+    "css": [
+      "assets/app-DOg8h1BU.css"
+    ]
   }
 }

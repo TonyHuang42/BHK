@@ -1,5 +1,7 @@
 import './bootstrap';
 import Swiper from 'swiper/bundle';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
 
 // Initialize Swiper
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,6 +33,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    document.querySelectorAll('.gallery-card-trigger').forEach((trigger) => {
+        let items;
+        try {
+            items = JSON.parse(trigger.dataset.pswpItems || '[]');
+        } catch (e) {
+            items = [];
+        }
+
+        if (!items.length) {
+            return;
+        }
+
+        const lightbox = new PhotoSwipeLightbox({
+            bgOpacity: 1,
+            dataSource: items,
+            pswpModule: () => import('photoswipe'),
+        });
+        lightbox.init();
+
+        trigger.addEventListener('click', () => {
+            lightbox.loadAndOpen(0);
+        });
+    });
+
     // Generic Tab Logic
     const tabLinks = document.querySelectorAll('[data-tab-link]');
     const tabPanels = document.querySelectorAll('[data-tab-panel]');
@@ -53,11 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function activate(slug) {
             if (!uniqueSlugs.includes(slug)) slug = uniqueSlugs[0];
-            
+
             tabPanels.forEach(p => {
                 p.hidden = (p.dataset.tabPanel !== slug);
             });
-            
+
             tabLinks.forEach(a => {
                 const isActive = a.dataset.tabLink === slug;
                 if (isActive) {

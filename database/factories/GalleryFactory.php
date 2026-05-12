@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Gallery;
+use App\Models\GalleryCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -21,6 +22,7 @@ class GalleryFactory extends Factory
         $title = $this->faker->unique()->sentence();
 
         return [
+            'gallery_category_id' => GalleryCategory::factory(),
             'title' => $title,
             'slug' => Str::slug($title),
             'date' => $this->faker->date(),

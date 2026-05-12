@@ -4,7 +4,9 @@ use App\Filament\Admin\Resources\Galleries\GalleryResource;
 use App\Filament\Admin\Resources\Galleries\Pages\CreateGallery;
 use App\Filament\Admin\Resources\Galleries\Pages\EditGallery;
 use App\Filament\Admin\Resources\Galleries\Pages\ListGalleries;
+use Filament\Actions\DeleteAction;
 use App\Models\Gallery;
+use App\Models\GalleryCategory;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
@@ -32,10 +34,12 @@ test('can render create page', function () {
 });
 
 test('can create gallery', function () {
+    $category = GalleryCategory::factory()->create();
     $newData = Gallery::factory()->make();
 
     livewire(CreateGallery::class)
         ->fillForm([
+            'gallery_category_id' => $category->id,
             'title' => $newData->title,
             'date' => $newData->date->format('Y-m-d'),
             'is_publish' => $newData->is_publish,
@@ -51,7 +55,15 @@ test('can create gallery', function () {
 
     $this->assertDatabaseHas('galleries', [
         'title' => $newData->title,
+        'gallery_category_id' => $category->id,
     ]);
+});
+
+test('cannot create gallery without category', function () {
+    livewire(CreateGallery::class)
+        ->fillForm(['gallery_category_id' => null])
+        ->call('create')
+        ->assertHasFormErrors(['gallery_category_id' => 'required']);
 });
 
 test('cannot create gallery with missing required fields', function () {
@@ -121,8 +133,8 @@ test('can update gallery', function () {
 test('can delete gallery', function () {
     $gallery = Gallery::factory()->create();
 
-    livewire(ListGalleries::class)
-        ->callTableAction('delete', $gallery);
+    livewire(EditGallery::class, ['record' => $gallery->getRouteKey()])
+        ->callAction(DeleteAction::class);
 
     $this->assertModelMissing($gallery);
 });

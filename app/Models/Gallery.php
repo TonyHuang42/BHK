@@ -5,6 +5,7 @@ namespace App\Models;
 use Database\Factories\GalleryFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Storage;
 
 class Gallery extends Model
@@ -13,6 +14,7 @@ class Gallery extends Model
     use HasFactory;
 
     protected $fillable = [
+        'gallery_category_id',
         'title',
         'slug',
         'date',
@@ -28,6 +30,11 @@ class Gallery extends Model
             'is_publish' => 'boolean',
             'images' => 'array',
         ];
+    }
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(GalleryCategory::class, 'gallery_category_id');
     }
 
     protected static function booted(): void

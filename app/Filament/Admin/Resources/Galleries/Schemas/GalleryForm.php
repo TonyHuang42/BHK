@@ -5,6 +5,7 @@ namespace App\Filament\Admin\Resources\Galleries\Schemas;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Hidden;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Utilities\Set;
@@ -32,7 +33,14 @@ class GalleryForm
                     ->native(false)
                     ->displayFormat('Y-m-d')
                     ->required(),
+                Select::make('gallery_category_id')
+                    ->label('Category')
+                    ->relationship(name: 'category', titleAttribute: 'name')
+                    ->required()
+                    ->preload()
+                    ->searchable(),
                 Toggle::make('is_publish')
+                    ->inline(false)
                     ->required()
                     ->label('Publish')
                     ->default(false),

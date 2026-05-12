@@ -3,7 +3,6 @@
 namespace App\Filament\Admin\Resources\Galleries\Tables;
 
 use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
@@ -21,17 +20,15 @@ class GalleriesTable
                 TextColumn::make('title')
                     ->searchable()
                     ->sortable(),
+                TextColumn::make('category.name')
+                    ->label('Category')
+                    ->sortable()
+                    ->searchable(),
                 TextColumn::make('date')
                     ->date()
                     ->sortable(),
                 ToggleColumn::make('is_publish')
                     ->label('Published'),
-            ])
-            ->filters([
-                //
-            ])
-            ->actions([
-                DeleteAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

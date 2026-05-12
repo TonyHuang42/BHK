@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Storage;
 
 class PressRelease extends Model
@@ -11,6 +12,7 @@ class PressRelease extends Model
     use HasFactory;
 
     protected $fillable = [
+        'press_release_category_id',
         'title',
         'slug',
         'summary',
@@ -26,6 +28,11 @@ class PressRelease extends Model
             'date' => 'date',
             'is_publish' => 'boolean',
         ];
+    }
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(PressReleaseCategory::class, 'press_release_category_id');
     }
 
     protected static function booted(): void

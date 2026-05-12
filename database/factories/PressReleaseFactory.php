@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\PressRelease;
+use App\Models\PressReleaseCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -21,6 +22,7 @@ class PressReleaseFactory extends Factory
         $title = $this->faker->unique()->sentence();
 
         return [
+            'press_release_category_id' => PressReleaseCategory::factory(),
             'title' => $title,
             'slug' => Str::slug($title),
             'summary' => $this->faker->paragraph(),

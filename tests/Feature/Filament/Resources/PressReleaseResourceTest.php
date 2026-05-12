@@ -5,7 +5,9 @@ use App\Filament\Admin\Resources\PressReleases\Pages\EditPressRelease;
 use App\Filament\Admin\Resources\PressReleases\Pages\ListPressReleases;
 use App\Filament\Admin\Resources\PressReleases\PressReleaseResource;
 use App\Models\PressRelease;
+use App\Models\PressReleaseCategory;
 use App\Models\User;
+use Filament\Actions\DeleteAction;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 // use function Pest\Livewire\livewire;
@@ -29,10 +31,12 @@ test('can render create page', function () {
 });
 
 test('can create press release', function () {
+    $category = PressReleaseCategory::factory()->create();
     $newData = PressRelease::factory()->make();
 
     livewire(CreatePressRelease::class)
         ->fillForm([
+            'press_release_category_id' => $category->id,
             'title' => $newData->title,
             'summary' => $newData->summary,
             'date' => $newData->date->format('Y-m-d'),
@@ -45,7 +49,15 @@ test('can create press release', function () {
 
     $this->assertDatabaseHas('press_releases', [
         'title' => $newData->title,
+        'press_release_category_id' => $category->id,
     ]);
+});
+
+test('cannot create press release without category', function () {
+    livewire(CreatePressRelease::class)
+        ->fillForm(['press_release_category_id' => null])
+        ->call('create')
+        ->assertHasFormErrors(['press_release_category_id' => 'required']);
 });
 
 test('cannot create press release with missing required fields', function () {
@@ -111,8 +123,8 @@ test('can update press release', function () {
 test('can delete press release', function () {
     $pressRelease = PressRelease::factory()->create();
 
-    livewire(ListPressReleases::class)
-        ->callTableAction('delete', $pressRelease);
+    livewire(EditPressRelease::class, ['record' => $pressRelease->getRouteKey()])
+        ->callAction(DeleteAction::class);
 
     $this->assertModelMissing($pressRelease);
 });

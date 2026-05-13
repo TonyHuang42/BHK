@@ -27,7 +27,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-xl">
+        <nav class="navbar navbar-expand-xxl">
             <div class="container d-flex justify-content-between align-items-center">
                 <a class="navbar-brand me-5 d-flex align-items-center gap-2" href="{{ route('home') }}">
                     <img src="{{ asset('img/home/logo.svg') }}" alt="logo" class="logo">
@@ -99,6 +99,12 @@
                             </a>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('press-releases.*') ? 'nav-link--current' : '' }}" href="{{ route('press-releases.index') }}">
+                                新聞稿
+                            </a>
+                        </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 聯繫我們
@@ -115,7 +121,7 @@
                                 </ul>
                             </div>
                         </li>
-                    </ul>   
+                    </ul>
                 </div>
             </div>
         </nav>

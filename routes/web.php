@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\PressReleaseController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
@@ -11,3 +12,4 @@ Route::view('under-japanese-occupation', 'under-japanese-occupation.index')->nam
 Route::view('people-and-stories', 'people-and-stories.index')->name('people.index');
 
 Route::get('galleries', [GalleryController::class, 'index'])->name('galleries.index');
+Route::get('press-releases', [PressReleaseController::class, 'index'])->name('press-releases.index');

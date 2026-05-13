@@ -438,6 +438,32 @@ footer {
     padding: 0;
 }
 
+.press-release-card-image-wrapper {
+    overflow: hidden;
+}
+
+.press-release-card-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+}
+
+.press-release-card:hover .press-release-card-image {
+    transform: scale(1.04);
+}
+
+.press-release-card-category {
+    text-transform: uppercase;
+    color: #672727;
+}
+
+.press-release-card-divider {
+    border-top: 1px solid #e5e5e5;
+    margin: 0;
+}
+
 /* Responsive CSS */
 @media only screen and (max-width: 1399px) {
     .hero::after {

@@ -11,14 +11,14 @@
 
     <section class="section-padding">
         <div class="container">
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <div class="text-center mb-5">
                         <img src="{{ asset('img/home/icon_ornament.svg') }}" alt="icon" class="icon-image">
                         <h3 class="mb-0">新聞稿</h3>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             @if ($pressReleases->isEmpty())
                 <div class="row">
@@ -29,29 +29,31 @@
             @else
                 <div class="row row-gap-5">
                     @foreach ($pressReleases as $pressRelease)
-                        <div class="col-12">
-                            <article class="press-release-card row align-items-center g-4 g-lg-5">
-                                <div class="col-lg-6">
-                                    <div class="press-release-card-image-wrapper">
-                                        <img
-                                            src="{{ asset('storage/' . $pressRelease->thumbnail) }}"
-                                            alt="{{ $pressRelease->title }}"
-                                            class="press-release-card-image"
-                                        >
+                        {{-- <div class="col-12"> --}}
+                            <a href="{{ route('press-releases.show', $pressRelease->slug) }}" class="press-release-card-link overflow-hidden">
+                                <article class="press-release-card row align-items-center g-4 g-lg-5">
+                                    <div class="col-lg-6">
+                                        <div class="press-release-card-image-wrapper">
+                                            <img
+                                                src="{{ asset('storage/' . $pressRelease->thumbnail) }}"
+                                                alt="{{ $pressRelease->title }}"
+                                                class="press-release-card-image"
+                                            >
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    @if ($pressRelease->category)
-                                        <p class="press-release-card-category mb-2">{{ $pressRelease->category->name }}</p>
-                                    @endif
-                                    <h2 class="mb-3">{{ $pressRelease->title }}</h2>
-                                    @if ($pressRelease->summary)
-                                        <p class="mb-3">{{ $pressRelease->summary }}</p>
-                                    @endif
-                                    <p class="mb-0 text-muted small">{{ $pressRelease->date->format('Y-m-d') }}</p>
-                                </div>
-                            </article>
-                        </div>
+                                    <div class="col-lg-6">
+                                        @if ($pressRelease->category)
+                                            <p class="press-release-card-category mb-2">{{ $pressRelease->category->name }}</p>
+                                        @endif
+                                        <h2 class="mb-3">{{ $pressRelease->title }}</h2>
+                                        @if ($pressRelease->summary)
+                                            <p class="mb-3">{{ $pressRelease->summary }}</p>
+                                        @endif
+                                        <p class="mb-0 small">{{ $pressRelease->date->format('Y-m-d') }}</p>
+                                    </div>
+                                </article>
+                            </a>
+                        {{-- </div> --}}
                         @if (!$loop->last)
                             <div class="col-12 press-release-card-divider p-0"></div>
                         @endif

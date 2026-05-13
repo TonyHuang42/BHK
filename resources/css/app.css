@@ -450,9 +450,9 @@ footer {
     transition: transform 0.45s ease;
 }
 
-.press-release-card:hover .press-release-card-image {
+/* .press-release-card:hover .press-release-card-image {
     transform: scale(1.04);
-}
+} */
 
 .press-release-card-category {
     text-transform: uppercase;
@@ -462,6 +462,57 @@ footer {
 .press-release-card-divider {
     border-top: 1px solid #e5e5e5;
     margin: 0;
+}
+
+.press-release-card-link {
+    display: block;
+    color: inherit;
+}
+
+.press-release-card-link:hover {
+    color: inherit;
+}
+
+/* .press-release-card-link:hover .press-release-card h2 {
+    color: #672727;
+} */
+
+/* .press-release-body {
+    line-height: 1.8;
+} */
+
+.press-release-hero-img {
+    height: 550px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.press-release-body :first-child {
+    margin-top: 0;
+}
+
+.press-release-body :last-child {
+    margin-bottom: 0;
+}
+
+.press-release-body img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+}
+
+.press-release-body ul,
+.press-release-body ol {
+    padding-left: 1.5rem;
+}
+
+.press-release-content {
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    margin-top: -280px;
 }
 
 /* Responsive CSS */

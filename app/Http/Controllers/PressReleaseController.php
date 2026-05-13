@@ -17,4 +17,15 @@ class PressReleaseController extends Controller
 
         return view('press-releases.index', compact('pressReleases'));
     }
+
+    public function show(string $slug): View
+    {
+        $pressRelease = PressRelease::query()
+            ->with('category')
+            ->where('slug', $slug)
+            ->where('is_publish', true)
+            ->firstOrFail();
+
+        return view('press-releases.show', compact('pressRelease'));
+    }
 }

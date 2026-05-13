@@ -13,3 +13,4 @@ Route::view('people-and-stories', 'people-and-stories.index')->name('people.inde
 
 Route::get('galleries', [GalleryController::class, 'index'])->name('galleries.index');
 Route::get('press-releases', [PressReleaseController::class, 'index'])->name('press-releases.index');
+Route::get('press-releases/{slug}', [PressReleaseController::class, 'show'])->name('press-releases.show');

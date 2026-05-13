@@ -11,14 +11,14 @@
 
     <section class="section-padding">
         <div class="container">
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <div class="text-center mb-5">
                         <img src="{{ asset('img/home/icon_ornament.svg') }}" alt="icon" class="icon-image">
                         <h3 class="mb-0">相冊</h3>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             @if ($galleries->isEmpty())
                 <div class="row">

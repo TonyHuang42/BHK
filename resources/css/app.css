@@ -244,6 +244,7 @@ a:hover {
     aspect-ratio: 3 / 4;
     object-fit: cover;
     display: block;
+    transform: scale(1.01);
     transition: transform 0.45s ease;
 }
 
@@ -251,7 +252,7 @@ a:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.3);
     opacity: 0;
     transition: opacity 0.35s ease;
 }
@@ -271,7 +272,7 @@ a:hover {
 }
 
 .home-overview a:hover .overview-card .overview-card-image {
-    transform: scale(1.04);
+    transform: scale(1.05);
 }
 
 .home-overview a:hover .overview-card::after {

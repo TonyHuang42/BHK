@@ -6,7 +6,7 @@
 @section('content')
 <main>
     <section class="hero">
-        <img src="{{ asset('img/guerrilla-resistance/banner.png') }}" alt="游擊與抵抗" class="hero-img" style="object-position: 60% 90%;">
+        <img src="{{ asset('img/guerrilla-resistance/banner.jpg') }}" alt="游擊與抵抗" class="hero-img" style="object-position: 60% 90%;">
         <img src="{{ asset('img/home/section_header-游擊與抵抗.svg') }}" alt="游擊與抵抗" class="hero-title battle-of-hong-kong-hero-title">
     </section>
 
@@ -42,22 +42,22 @@
             <div class="swiper battleSwiper">
                 <div class="swiper-wrapper align-items-center">
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/guerrilla-resistance/image_1_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/guerrilla-resistance/image_1_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/guerrilla-resistance/image_1_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/guerrilla-resistance/image_1_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/guerrilla-resistance/image_1_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/guerrilla-resistance/image_1_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/guerrilla-resistance/image_1_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/guerrilla-resistance/image_1_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/guerrilla-resistance/image_1_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/guerrilla-resistance/image_1_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/guerrilla-resistance/image_1_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/guerrilla-resistance/image_1_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                 </div>
             </div>
@@ -100,22 +100,22 @@
             <div class="swiper battleSwiper">
                 <div class="swiper-wrapper align-items-center">
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/guerrilla-resistance/image_2_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/guerrilla-resistance/image_2_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/guerrilla-resistance/image_2_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/guerrilla-resistance/image_2_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/guerrilla-resistance/image_2_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/guerrilla-resistance/image_2_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/guerrilla-resistance/image_2_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/guerrilla-resistance/image_2_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/guerrilla-resistance/image_2_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/guerrilla-resistance/image_2_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/guerrilla-resistance/image_2_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/guerrilla-resistance/image_2_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-8 mx-auto">
-                    <img src="{{ asset('img/guerrilla-resistance/image_3_1.png') }}" alt="Image 1" class="w-100">
+                    <img src="{{ asset('img/guerrilla-resistance/image_3_1.jpg') }}" alt="Image 1" class="w-100">
                 </div>
             </div>
         </div>
@@ -199,7 +199,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-8 mx-auto">
-                    <img src="{{ asset('img/guerrilla-resistance/image_4_1.png') }}" alt="Image 1" class="w-100">
+                    <img src="{{ asset('img/guerrilla-resistance/image_4_1.jpg') }}" alt="Image 1" class="w-100">
                 </div>
             </div>
         </div>

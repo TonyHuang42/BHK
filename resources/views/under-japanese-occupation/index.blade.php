@@ -6,7 +6,7 @@
 @section('content')
 <main>
     <section class="hero">
-        <img src="{{ asset('img/under-japanese-occupation/banner.png') }}" alt="日治下的香港" class="hero-img under-japanese-occupation-hero-img">
+        <img src="{{ asset('img/under-japanese-occupation/banner.jpg') }}" alt="日治下的香港" class="hero-img under-japanese-occupation-hero-img">
         <img src="{{ asset('img/home/section_header-日治下的香港.svg') }}" alt="日治下的香港" class="hero-title under-japanese-occupation-hero-title">
     </section>
 
@@ -41,7 +41,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-8 mx-auto">
-                    <img src="{{ asset('img/under-japanese-occupation/image_1_1.png') }}" alt="Image 1" class="w-100">
+                    <img src="{{ asset('img/under-japanese-occupation/image_1_1.jpg') }}" alt="Image 1" class="w-100">
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-8 mx-auto">
-                    <img src="{{ asset('img/under-japanese-occupation/image_2_1.png') }}" alt="Image 1" class="w-100">
+                    <img src="{{ asset('img/under-japanese-occupation/image_2_1.jpg') }}" alt="Image 1" class="w-100">
                 </div>
             </div>
         </div>
@@ -124,22 +124,22 @@
             <div class="swiper battleSwiper">
                 <div class="swiper-wrapper align-items-center">
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/under-japanese-occupation/image_3_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/under-japanese-occupation/image_3_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/under-japanese-occupation/image_3_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/under-japanese-occupation/image_3_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/under-japanese-occupation/image_3_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/under-japanese-occupation/image_3_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/under-japanese-occupation/image_3_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/under-japanese-occupation/image_3_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/under-japanese-occupation/image_3_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/under-japanese-occupation/image_3_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/under-japanese-occupation/image_3_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/under-japanese-occupation/image_3_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                 </div>
             </div>
@@ -181,7 +181,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-8 mx-auto">
-                    <img src="{{ asset('img/under-japanese-occupation/image_4.png') }}" alt="Image 1" class="w-100">
+                    <img src="{{ asset('img/under-japanese-occupation/image_4.jpg') }}" alt="Image 1" class="w-100">
                 </div>
             </div>
         </div>

@@ -41,7 +41,7 @@
                 <div class="col-sm-6 col-md">
                     <a href="{{ route('battle.index') }}">
                         <article class="overview-card">
-                            <img src="{{ asset('img/home/image_香港保衛戰_.png') }}" alt="香港保衛戰" class="w-100 h-100 overview-card-image">
+                            <img src="{{ asset('img/home/image_香港保衛戰.jpg') }}" alt="香港保衛戰" class="w-100 h-100 overview-card-image">
                             <div class="overview-card-content text-center p-5">
                                 <img src="{{ asset('img/home/section_header-香港保衛戰.svg') }}" alt="香港保衛戰" class="img-fluid">
                             </div>

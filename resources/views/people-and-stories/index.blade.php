@@ -6,7 +6,7 @@
 @section('content')
 <main class="people-and-stories">
     <section class="hero">
-        <img src="{{ asset('img/people-and-stories/banner.png') }}" alt="人物與故事" class="hero-img" style="object-position: 35% center;">
+        <img src="{{ asset('img/people-and-stories/banner.jpg') }}" alt="人物與故事" class="hero-img" style="object-position: 35% center;">
         <img src="{{ asset('img/home/section_header-人物與故事.svg') }}" alt="人物與故事" class="hero-title under-japanese-occupation-hero-title">
     </section>
 
@@ -42,22 +42,22 @@
             <div class="swiper battleSwiper">
                 <div class="swiper-wrapper align-items-center">
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/people-and-stories/image_1_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/people-and-stories/image_1_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/people-and-stories/image_1_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/people-and-stories/image_1_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/people-and-stories/image_1_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/people-and-stories/image_1_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/people-and-stories/image_1_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/people-and-stories/image_1_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/people-and-stories/image_1_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/people-and-stories/image_1_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/people-and-stories/image_1_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/people-and-stories/image_1_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-8 mx-auto">
-                    <img src="{{ asset('img/people-and-stories/image_2.png') }}" alt="Image 1" class="w-100">
+                    <img src="{{ asset('img/people-and-stories/image_2.jpg') }}" alt="Image 1" class="w-100">
                 </div>
             </div>
         </div>
@@ -140,7 +140,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-8 mx-auto">
-                    <img src="{{ asset('img/people-and-stories/image_3.png') }}" alt="Image 1" class="w-100">
+                    <img src="{{ asset('img/people-and-stories/image_3.jpg') }}" alt="Image 1" class="w-100">
                 </div>
             </div>
         </div>
@@ -182,7 +182,7 @@
             <div class="swiper battleSwiper">
                 <div class="swiper-wrapper align-items-center">
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/people-and-stories/image_4_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/people-and-stories/image_4_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
                         <img src="{{ asset('img/people-and-stories/image_4_2.png') }}" alt="Image 2" class="w-100">
@@ -191,7 +191,7 @@
                         <img src="{{ asset('img/people-and-stories/image_4_3.png') }}" alt="Image 3" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/people-and-stories/image_4_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/people-and-stories/image_4_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
                         <img src="{{ asset('img/people-and-stories/image_4_2.png') }}" alt="Image 2" class="w-100">

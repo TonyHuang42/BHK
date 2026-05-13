@@ -6,7 +6,7 @@
 @section('content')
 <main>
     <section class="hero">
-        <img src="{{ asset('img/battle-of-hong-kong/banner.png') }}" alt="" class="hero-img" aria-hidden="true">
+        <img src="{{ asset('img/battle-of-hong-kong/banner.jpg') }}" alt="" class="hero-img" aria-hidden="true">
     </section>
 
     <section class="section-padding">

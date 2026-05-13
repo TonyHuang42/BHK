@@ -6,7 +6,7 @@
 @section('content')
 <main>
     <section class="hero">
-        <img src="{{ asset('img/battle-of-hong-kong/banner.png') }}" alt="" class="hero-img" aria-hidden="true" style="object-position: 55% center;">
+        <img src="{{ asset('img/battle-of-hong-kong/banner.jpg') }}" alt="" class="hero-img" aria-hidden="true" style="object-position: 55% center;">
         <img src="{{ asset('img/home/section_header-香港保衛戰.svg') }}" alt="香港保衛戰" class="hero-title battle-of-hong-kong-hero-title">
     </section>
 
@@ -42,22 +42,22 @@
             <div class="swiper battleSwiper">
                 <div class="swiper-wrapper align-items-center">
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_1_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_1_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_1_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_1_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_1_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_1_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_1_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_1_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_1_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_1_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_1_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_1_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                 </div>
             </div>
@@ -137,22 +137,22 @@
             <div class="swiper battleSwiper">
                 <div class="swiper-wrapper align-items-center">
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_2_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_2_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_2_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_2_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_2_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_2_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_2_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_2_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_2_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_2_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_2_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_2_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                 </div>
             </div>
@@ -238,22 +238,22 @@
             <div class="swiper battleSwiper">
                 <div class="swiper-wrapper align-items-center">
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_3_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_3_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_3_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_3_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_3_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_3_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_3_1.png') }}" alt="Image 1" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_3_1.jpg') }}" alt="Image 1" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_3_2.png') }}" alt="Image 2" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_3_2.jpg') }}" alt="Image 2" class="w-100">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('img/battle-of-hong-kong/image_3_3.png') }}" alt="Image 3" class="w-100">
+                        <img src="{{ asset('img/battle-of-hong-kong/image_3_3.jpg') }}" alt="Image 3" class="w-100">
                     </div>
                 </div>
             </div>
@@ -343,7 +343,7 @@
 
                     <div class="col-lg-5">
                         <div class="history-image-wrap h-100">
-                            <img src="{{ asset('img/battle-of-hong-kong/image_4_1.png') }}" alt="1937年香港" class="history-image w-100 h-100" id="historyImage">
+                            <img src="{{ asset('img/battle-of-hong-kong/image_4_1.jpg') }}" alt="1937年香港" class="history-image w-100 h-100" id="historyImage">
                         </div>
                     </div>
                 </div>
@@ -363,7 +363,7 @@
                 paragraphs: [
                     "1937年七七事變後，中國全面抗戰爆發。雖然香港當時仍是英國殖民地，未立即成為戰場，但它與內地戰局已密切相連。大量難民、文化人、報人和政治人士南下香港，使香港成為抗戰新聞、救亡活動、物資轉運和思想交流的重要空間。這一時期的香港，不只是旁觀戰爭的港口城市，也逐漸成為支援中國抗戰的重要後方。"
                 ],
-                image: imgBase + "image_4_1.png",
+                image: imgBase + "image_4_1.jpg",
                 imageAlt: "1937年香港"
             },
             "1938.10": {
@@ -371,7 +371,7 @@
                 paragraphs: [
                     "1938年10月，日軍在華南登陸並佔領廣州，香港北面的戰略壓力急速上升。廣州失守後，日軍控制華南多條交通線，也切斷中國經香港、澳門輸入物資的部分通道。香港從此不再只是遠離前線的商埠，而是被日軍直接威脅的邊境城市。日軍若要南進東南亞、控制南中國海航道，香港便成為不能忽視的軍事目標。"
                 ],
-                image: imgBase + "image_4_2.png",
+                image: imgBase + "image_4_2.jpg",
                 imageAlt: "1938年香港"
             },
             "1941.12.08": {
@@ -379,7 +379,7 @@
                 paragraphs: [
                     "1941年12月8日，日軍越過深圳河，從北面進攻香港，香港保衛戰正式開始。同日，日軍空襲啟德機場，迅速削弱香港守軍的空中力量。面對兵力、火力和制空權均佔優勢的日軍，守軍沿新界北部展開抵抗，並嘗試利用地形和防線拖延敵軍推進。這一天標誌着香港正式被捲入太平洋戰爭，也揭開十八日苦戰的序幕。"
                 ],
-                image: imgBase + "image_4_3.png",
+                image: imgBase + "image_4_3.jpg",
                 imageAlt: "日軍進攻香港"
             },
             "1941.12.10": {
@@ -387,7 +387,7 @@
                 paragraphs: [
                     "戰事開始後，日軍推進速度極快。新界地區的防線雖有準備，但面對日軍猛烈攻勢，很快陷入被動。醉酒灣防線原本被視為阻延日軍南下的重要屏障，但其防守未能持久，守軍被迫逐步撤向九龍及香港島。新界失守不只是地理上的後退，也意味香港守軍失去戰略縱深，整場戰役開始急速收縮到九龍與港島一帶。"
                 ],
-                image: imgBase + "image_4_4.png",
+                image: imgBase + "image_4_4.jpg",
                 imageAlt: "新界防線被突破"
             },
             "1941.12.13": {
@@ -395,7 +395,7 @@
                 paragraphs: [
                     "到12月13日前後，九龍半島大致落入日軍控制，守軍撤往香港島，維多利亞港成為雙方之間最後的天然屏障。香港島此後成為保衛戰的最後防線。九龍失守後，城市氣氛更加緊張，大批平民面對炮火、缺糧和逃難壓力。對守軍而言，戰局已由多線防守轉為孤島防禦；對市民而言，香港淪陷的陰影已越來越近。"
                 ],
-                image: imgBase + "image_4_5.png",
+                image: imgBase + "image_4_5.jpg",
                 imageAlt: "九龍半島基本失守"
             },
             "1941.12.18": {
@@ -403,7 +403,7 @@
                 paragraphs: [
                     "1941年12月18日夜，日軍從港島東北岸一帶登陸，戰鬥進入最激烈階段。港島山地、道路和市區很快成為近距離戰場，守軍在黃泥涌峽、灣仔峽、赤柱等地頑強抵抗。日軍登陸後，港島防線被逐步切割，守軍之間的聯絡和補給越來越困難。這一階段的戰鬥十分慘烈，軍人和平民都承受巨大傷亡與恐懼。"
                 ],
-                image: imgBase + "image_4_6.png",
+                image: imgBase + "image_4_6.jpg",
                 imageAlt: "日軍登陸港島"
             },
             "1941.12.25": {
@@ -411,7 +411,7 @@
                 paragraphs: [
                     "1941年12月25日，香港總督楊慕琦代表英國殖民政府向日軍投降。這一天後來被稱為「黑色聖誕」，象徵香港保衛戰的結束，也標誌着日治時期的開始。經過十八日戰鬥，香港從重要港口變成被佔領城市，市民隨即面對宵禁、搜捕、糧食短缺、軍票和強制疏散等壓迫。戰役雖然結束，但香港人的苦難才剛開始。"
                 ],
-                image: imgBase + "image_4_7.png",
+                image: imgBase + "image_4_7.jpg",
                 imageAlt: "港府投降"
             },
             "1942": {
@@ -419,7 +419,7 @@
                 paragraphs: [
                     "香港淪陷後，抗戰並沒有停止。中國共產黨領導的華南抗日游擊力量進入港九新界，建立據點，聯絡鄉民，收集武器，並逐步整編為港九大隊。此後，香港的抗戰由正面戰場轉入敵後：游擊隊展開情報、營救、突襲、爆破和宣傳行動，也協助文化人、戰俘和盟軍人員逃離險境。香港保衛戰因此不只是十八日的軍事事件，更是香港敵後抵抗記憶的起點。"
                 ],
-                image: imgBase + "image_4_8.png",
+                image: imgBase + "image_4_8.jpg",
                 imageAlt: "敵後抗戰展開"
             }
         };

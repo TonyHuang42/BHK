@@ -44,7 +44,7 @@ h6 {
 
 p {
     font-weight: 300;
-    line-height: 1.8;
+    line-height: 1.9;
     text-align: justify;
 }
 
@@ -101,6 +101,24 @@ a:hover {
 
 .navbar-nav .nav-link.nav-link--current:hover {
     color: #672727;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #672727;
+}
+
+.navbar-nav .nav-link.show {
+    color: #672727;
+}
+
+.nav-link:focus-visible,
+.btn-close:focus {
+    box-shadow: none;
+}
+
+.dropdown-menu[data-bs-popper] {
+    top: 126%;
 }
 
 .hero-subnav a[aria-current="page"] {
@@ -192,6 +210,10 @@ a:hover {
     background-repeat: no-repeat;
     background-position: 95% center;
     background-size: 250px auto;
+}
+
+.modal-body {
+    padding: 32px;
 }
 
 .under-japanese-occupation .bg-left {
@@ -681,5 +703,18 @@ footer {
 
     .people-and-stories .bg-right {
         background-size: 16% auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg,
+    .modal-xl {
+        --bs-modal-width: 680px;
+    }
+}
+
+@media (min-width: 576px) {
+    .modal {
+        --bs-modal-margin: 48px;
     }
 }

@@ -29,7 +29,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-xxl">
+        <nav class="navbar navbar-expand-xl">
             <div class="container d-flex justify-content-between align-items-center">
                 <a class="navbar-brand me-5 d-flex align-items-center gap-2" href="{{ route('home') }}">
                     <img src="{{ asset('img/home/logo.svg') }}" alt="logo" class="logo">
@@ -40,7 +40,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav d-flex justify-content-end w-100 gap-0 column-gap-4">
+                    <ul class="navbar-nav d-flex justify-content-end w-100 gap-0 column-gap-3">
                         <li class="nav-item">
                             <a class="nav-link {{ request()->routeIs('home') ? 'nav-link--current' : '' }}" href="{{ route('home') }}">
                                 主頁

@@ -5,7 +5,7 @@
 
 @section('content')
 <main>
-    <section class="hero">
+    <section class="home-hero">
         <img src="{{ asset('img/home/banner.jpg') }}" alt="Home banner" class="hero-img" style="object-position: 65% center;">
     </section>
 

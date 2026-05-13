@@ -9,13 +9,7 @@ class PressReleaseController extends Controller
 {
     public function index(): View
     {
-        $pressReleases = PressRelease::query()
-            ->with('category')
-            ->where('is_publish', true)
-            ->latest('date')
-            ->paginate(10);
-
-        return view('press-releases.index', compact('pressReleases'));
+        return view('press-releases.index');
     }
 
     public function show(string $slug): View

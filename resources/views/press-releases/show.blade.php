@@ -10,10 +10,10 @@
         <section class="section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mx-auto press-release-content top-padding-sm">
+                    <div class="col-lg-8 mx-auto press-release-content top-padding-sm px-5">
                         {{-- <img src="{{ asset('img/home/icon_ornament.svg') }}" alt="icon" class="icon-image"> --}}
                         <h2 class="mb-3">{{ $pressRelease->title }}</h2>
-                        <p class="small mb-5">
+                        <p class="mb-5">
                             @if ($pressRelease->category)
                                 <span class="press-release-card-category">{{ $pressRelease->category->name }}</span>
                                 <span class="mx-1">|</span>

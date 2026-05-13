@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Gallery;
+use App\Models\GalleryCategory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
@@ -21,6 +22,11 @@ class GallerySeeder extends Seeder
 
     public function run(): void
     {
+        $defaultCategory = GalleryCategory::firstOrCreate(
+            ['slug' => 'general'],
+            ['name' => 'General']
+        );
+
         Storage::disk('public')->makeDirectory('galleries/thumbnails');
         Storage::disk('public')->makeDirectory('galleries');
 
@@ -39,6 +45,7 @@ class GallerySeeder extends Seeder
             }
 
             Gallery::create([
+                'gallery_category_id' => $defaultCategory->id,
                 'title' => $album['title'],
                 'slug' => $album['slug'],
                 'date' => $album['date'],

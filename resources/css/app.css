@@ -261,6 +261,39 @@ a:hover {
     transform: translateY(0);
 }
 
+.gallery-filter {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+.gallery-filter-list {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+}
+
+.gallery-filter-link {
+    background-color: transparent;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transform: translateY(1px);
+    transition: color 0.2s ease;
+}
+
+.gallery-filter-link:hover {
+    color: #672727;
+}
+
+.gallery-filter-link.is-active {
+    border-color: #000;
+}
+
 .gallery-card-trigger {
     display: block;
     width: 100%;

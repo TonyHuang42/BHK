@@ -33,7 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    document.querySelectorAll('.gallery-card-trigger').forEach((trigger) => {
+    document.addEventListener('click', (event) => {
+        const trigger = event.target.closest('.gallery-card-trigger');
+        if (!trigger) {
+            return;
+        }
+
         let items;
         try {
             items = JSON.parse(trigger.dataset.pswpItems || '[]');
@@ -51,10 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pswpModule: () => import('photoswipe'),
         });
         lightbox.init();
-
-        trigger.addEventListener('click', () => {
-            lightbox.loadAndOpen(0);
-        });
+        lightbox.loadAndOpen(0);
     });
 
     // Generic Tab Logic

@@ -10,7 +10,7 @@
     "src": "public/img/home/texture_bg_gray.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-BnAiazLV.css",
+    "file": "assets/app-CBOiJbKZ.css",
     "name": "app",
     "names": [
       "app.css"
@@ -22,7 +22,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-CSZgmN4N.js",
+    "file": "assets/app-DSrZBbPD.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,

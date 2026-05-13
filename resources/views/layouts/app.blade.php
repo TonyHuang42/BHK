@@ -23,6 +23,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon/favicon-16x16.png') }}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('img/favicon/android-chrome-192x192.png') }}">
     <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('img/favicon/android-chrome-512x512.png') }}">
+
+    @livewireStyles
 </head>
 
 <body>
@@ -136,6 +138,8 @@
             </div>
         </div>
     </footer>
+
+    @livewireScripts
 </body>
 
 </html>

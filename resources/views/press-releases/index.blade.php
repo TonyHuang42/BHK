@@ -6,7 +6,8 @@
 @section('content')
 <main>
     <section class="hero">
-        <img src="{{ asset('img/press-release/banner_新聞稿.jpg') }}" alt="" class="hero-img" aria-hidden="true">
+        <img src="{{ asset('img/press-release/banner_新聞稿.jpg') }}" alt="" class="hero-img" aria-hidden="true" style="object-position: 80% center;">
+        <img src="{{ asset('img/press-release/section_header_新聞稿.svg') }}" alt="人物與故事" class="hero-title press-release-hero-title">
     </section>
 
     <section class="section-padding">

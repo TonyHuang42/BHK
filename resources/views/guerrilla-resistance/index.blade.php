@@ -7,7 +7,7 @@
 <main>
     <section class="hero">
         <img src="{{ asset('img/guerrilla-resistance/banner.jpg') }}" alt="游擊與抵抗" class="hero-img" style="object-position: 60% 90%;">
-        <img src="{{ asset('img/home/section_header-游擊與抵抗.svg') }}" alt="游擊與抵抗" class="hero-title battle-of-hong-kong-hero-title">
+        <img src="{{ asset('img/home/section_header-游擊與抵抗.svg') }}" alt="游擊與抵抗" class="hero-title">
     </section>
 
     <section class="border-bottom hero-subnav">

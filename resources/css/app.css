@@ -159,6 +159,7 @@ a:hover {
 .hero-title {
     position: absolute;
     top: 50%;
+    left: 9%;
     transform: translateY(-50%);
     z-index: 2;
     width: min(70vw, 480px);
@@ -168,15 +169,20 @@ a:hover {
     pointer-events: none;
 }
 
-.battle-of-hong-kong-hero-title {
-    left: 9%;
+.gallery-hero-title {
+    width: min(25vw, 170px);
+}
+
+.press-release-hero-title{
+    width: min(50vw, 340px);
 }
 
 .under-japanese-occupation-hero-img {
-    object-position: 80% top;
+    object-position: 100% top;
 }
 
-.under-japanese-occupation-hero-title {
+.right-hero-title {
+    left: auto;
     right: 9%;
 }
 

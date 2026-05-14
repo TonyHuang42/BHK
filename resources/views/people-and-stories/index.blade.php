@@ -6,8 +6,8 @@
 @section('content')
 <main class="people-and-stories">
     <section class="hero">
-        <img src="{{ asset('img/people-and-stories/banner.jpg') }}" alt="人物與故事" class="hero-img" style="object-position: 35% top;">
-        <img src="{{ asset('img/home/section_header-人物與故事.svg') }}" alt="人物與故事" class="hero-title under-japanese-occupation-hero-title">
+        <img src="{{ asset('img/people-and-stories/banner.jpg') }}" alt="人物與故事" class="hero-img" style="object-position: 100% top;">
+        <img src="{{ asset('img/home/section_header-人物與故事.svg') }}" alt="人物與故事" class="hero-title">
     </section>
 
     <section class="border-bottom hero-subnav">

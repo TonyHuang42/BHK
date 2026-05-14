@@ -6,7 +6,8 @@
 @section('content')
 <main>
     <section class="hero">
-        <img src="{{ asset('img/gallery/banner_相冊.jpg') }}" alt="" class="hero-img" aria-hidden="true">
+        <img src="{{ asset('img/gallery/banner_相冊.jpg') }}" alt="" class="hero-img" aria-hidden="true" style="object-position: 80% center;">
+        <img src="{{ asset('img/gallery/section_header_相冊.svg') }}" alt="人物與故事" class="hero-title gallery-hero-title">
     </section>
 
     <section class="section-padding">

@@ -44,7 +44,7 @@ h6 {
 
 p {
     font-weight: 300;
-    line-height: 1.9;
+    line-height: 1.8;
     text-align: justify;
 }
 
@@ -173,7 +173,7 @@ a:hover {
 }
 
 .under-japanese-occupation-hero-img {
-    object-position: 80% center;
+    object-position: 80% top;
 }
 
 .under-japanese-occupation-hero-title {
@@ -586,7 +586,7 @@ footer {
     }
 
     .under-japanese-occupation-hero-img {
-        object-position: 65% center;
+        object-position: 65% top;
     }
 }
 

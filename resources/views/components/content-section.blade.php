@@ -24,16 +24,7 @@
         </div>
     </div>
 
-    @if (count($images) >= 1)
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-8 mx-auto">
-                    <img src="{{ asset($images[0]) }}" alt="Image 1" class="w-100">
-                </div>
-            </div>
-        </div>
-        
-    @elseif (count($images) >= 3)
+    @if (count($images) >= 3)
         <div class="slider-section overflow-hidden">
             <div class="swiper battleSwiper">
                 <div class="swiper-wrapper align-items-center">
@@ -42,6 +33,15 @@
                             <img src="{{ asset($image) }}" alt="Image {{ ($index % count($images)) + 1 }}" class="w-100">
                         </div>
                     @endforeach
+                </div>
+            </div>
+        </div>
+
+    @elseif (count($images) >= 1)
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-8 mx-auto">
+                    <img src="{{ asset($images[0]) }}" alt="Image 1" class="w-100">
                 </div>
             </div>
         </div>

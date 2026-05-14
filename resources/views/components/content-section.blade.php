@@ -4,10 +4,12 @@
     'subtitle',
     'intro',
     'images' => [],
+    'bgLeft' => 'img/bg/bg_plane_r.png',
+    'bgRight' => 'img/bg/bg_plane_l.png',
 ])
 
 <section class="bg-texture-gray" id="{{ $id }}" data-tab-panel="{{ $id }}" hidden>
-    <div class="bg-left" style="background-image: url('{{ asset('img/bg/bg_plane_r.png') }}');">
+    <div class="bg-left" style="background-image: url('{{ asset($bgLeft) }}');">
         <div class="container top-padding bottom-padding-sm">
             <div class="row">
                 <div class="col-xl-6 col-lg-8 mx-auto">
@@ -22,24 +24,38 @@
         </div>
     </div>
 
-    <div class="slider-section overflow-hidden">
-        <div class="swiper battleSwiper">
-            <div class="swiper-wrapper align-items-center">
-                @foreach (array_merge($images, $images) as $index => $image)
-                    <div class="swiper-slide">
-                        <img src="{{ asset($image) }}" alt="Image {{ ($index % count($images)) + 1 }}" class="w-100">
-                    </div>
-                @endforeach
+    @if (count($images) >= 1)
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-8 mx-auto">
+                    <img src="{{ asset($images[0]) }}" alt="Image 1" class="w-100">
+                </div>
             </div>
         </div>
-    </div>
+        
+    @elseif (count($images) >= 3)
+        <div class="slider-section overflow-hidden">
+            <div class="swiper battleSwiper">
+                <div class="swiper-wrapper align-items-center">
+                    @foreach (array_merge($images, $images) as $index => $image)
+                        <div class="swiper-slide">
+                            <img src="{{ asset($image) }}" alt="Image {{ ($index % count($images)) + 1 }}" class="w-100">
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    @endif
 
-    <div class="bg-right" style="background-image: url('{{ asset('img/bg/bg_plane_l.png') }}');">
+    <div class="bg-right" style="background-image: url('{{ asset($bgRight) }}');">
         <div class="container top-padding-sm bottom-padding">
             <div class="row">
                 <div class="col-xl-6 col-lg-8 mx-auto">
                     {{ $slot }}
                     <button type="button" class="read-more" data-bs-toggle="modal" data-bs-target="#readMoreModal-{{ $id }}">閱讀更多</button>
+                    @if (count($images) === 2)
+                        <img src="{{ asset($images[1]) }}" alt="Image 2" class="w-100 mt-4">
+                    @endif
                 </div>
             </div>
         </div>

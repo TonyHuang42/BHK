@@ -29,9 +29,9 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-xl">
+        <nav class="navbar navbar-expand-lg">
             <div class="container d-flex justify-content-between align-items-center">
-                <a class="navbar-brand me-5 d-flex align-items-center gap-2" href="{{ route('home') }}">
+                <a class="navbar-brand me-0 d-flex align-items-center gap-2" href="{{ route('home') }}">
                     <img src="{{ asset('img/home/logo.svg') }}" alt="logo" class="logo">
                 </a>
 
@@ -40,12 +40,12 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav d-flex justify-content-end w-100 gap-0 column-gap-3">
-                        <li class="nav-item">
+                    <ul class="navbar-nav d-flex justify-content-end w-100 gap-0 column-gap-xl-3 column-gap-lg-1 column-gap-2">
+                        {{-- <li class="nav-item">
                             <a class="nav-link {{ request()->routeIs('home') ? 'nav-link--current' : '' }}" href="{{ route('home') }}">
                                 主頁
                             </a>
-                        </li>
+                        </li> --}}
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle {{ request()->routeIs('battle.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

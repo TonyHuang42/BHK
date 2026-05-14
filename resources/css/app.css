@@ -121,6 +121,10 @@ a:hover {
     top: 126%;
 }
 
+.dropdown-toggle::after {
+    margin-left: 1px;
+}
+
 .hero-subnav a[aria-current="page"] {
     color: #672727;
     text-decoration: underline;

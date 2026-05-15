@@ -112,13 +112,23 @@ a:hover {
     color: #672727;
 }
 
+.contact-popup {
+    width: 320px;
+    background-image: url('../../public/img/home/contact_us.jpg');
+    background-repeat: no-repeat;
+    background-position: center 100%;
+    background-size: cover;
+    color: #fff;
+    border: 3px solid #e5e5e5;
+}
+
 .nav-link:focus-visible,
 .btn-close:focus {
     box-shadow: none;
 }
 
 .dropdown-menu[data-bs-popper] {
-    top: 126%;
+    top: 126.2%;
 }
 
 .dropdown-toggle::after {

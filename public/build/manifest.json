@@ -5,12 +5,16 @@
     "src": "node_modules/photoswipe/dist/photoswipe.esm.js",
     "isDynamicEntry": true
   },
+  "public/img/home/contact_us.jpg": {
+    "file": "assets/contact_us-BRDhFm7g.jpg",
+    "src": "public/img/home/contact_us.jpg"
+  },
   "public/img/home/texture_bg_gray.png": {
     "file": "assets/texture_bg_gray-CX3btgox.png",
     "src": "public/img/home/texture_bg_gray.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-COSYhxCW.css",
+    "file": "assets/app-Bh7ZzOci.css",
     "name": "app",
     "names": [
       "app.css"
@@ -18,6 +22,7 @@
     "src": "resources/css/app.css",
     "isEntry": true,
     "assets": [
+      "assets/contact_us-BRDhFm7g.jpg",
       "assets/texture_bg_gray-CX3btgox.png"
     ]
   },

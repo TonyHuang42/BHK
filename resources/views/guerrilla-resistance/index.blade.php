@@ -6,7 +6,7 @@
 @section('content')
 <main>
     <section class="hero">
-        <img src="{{ asset('img/guerrilla-resistance/banner.jpg') }}" alt="游擊與抵抗" class="hero-img" style="object-position: 60% 90%;">
+        <img src="{{ asset('img/guerrilla-resistance/banner_游擊與抵抗.jpg') }}" alt="游擊與抵抗" class="hero-img" style="object-position: 60% 90%;">
         <img src="{{ asset('img/home/section_header-游擊與抵抗.svg') }}" alt="游擊與抵抗" class="hero-title" style="top: 45%; left: 13%;">
     </section>
 

@@ -6,7 +6,7 @@
 @section('content')
 <main>
     <section class="hero">
-        <img src="{{ asset('img/under-japanese-occupation/banner.jpg') }}" alt="日治下的香港" class="hero-img under-japanese-occupation-hero-img">
+        <img src="{{ asset('img/under-japanese-occupation/banner_日治下的香港.jpg') }}" alt="日治下的香港" class="hero-img under-japanese-occupation-hero-img">
         <img src="{{ asset('img/home/section_header-日治下的香港.svg') }}" alt="日治下的香港" class="hero-title right-hero-title">
     </section>
 

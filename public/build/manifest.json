@@ -6,7 +6,7 @@
     "isDynamicEntry": true
   },
   "public/img/home/contact_us.jpg": {
-    "file": "assets/contact_us-BRDhFm7g.jpg",
+    "file": "assets/contact_us-DJbgLd-6.jpg",
     "src": "public/img/home/contact_us.jpg"
   },
   "public/img/home/texture_bg_gray.png": {
@@ -14,7 +14,7 @@
     "src": "public/img/home/texture_bg_gray.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-Bh7ZzOci.css",
+    "file": "assets/app-CPrAd1V4.css",
     "name": "app",
     "names": [
       "app.css"
@@ -22,7 +22,7 @@
     "src": "resources/css/app.css",
     "isEntry": true,
     "assets": [
-      "assets/contact_us-BRDhFm7g.jpg",
+      "assets/contact_us-DJbgLd-6.jpg",
       "assets/texture_bg_gray-CX3btgox.png"
     ]
   },

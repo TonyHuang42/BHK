@@ -112,15 +112,38 @@ a:hover {
     color: #672727;
 }
 
-.contact-popup {
-    width: 320px;
+.contact-popup-bg {
+    height: 448px;
+    width: 600px;
     background-image: url('../../public/img/home/contact_us.jpg');
     background-repeat: no-repeat;
-    background-position: center 100%;
+    background-position: 100% center;
     background-size: cover;
-    color: #fff;
-    border: 3px solid #e5e5e5;
+    color: #672727;
+    position: relative;
+    box-shadow: 15px 15px 32px rgba(0, 0, 0, 0.8);
+    padding: 50px;
 }
+
+/* .contact-popup {
+    height: fit-content;
+    width: 270px;
+    position: absolute;
+    right: 9%;
+    top: 28%;
+    transform: translateY(-50%);
+} */
+
+.btn-close {
+    --bs-btn-close-opacity: 1;
+    --bs-btn-close-hover-opacity: 1;
+}
+
+/* .contact-popup.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
 
 .nav-link:focus-visible,
 .btn-close:focus {
@@ -188,7 +211,7 @@ a:hover {
 }
 
 .press-release-hero-title{
-    width: min(50vw, 340px);
+    width: min(50vw, 230px);
 }
 
 .under-japanese-occupation-hero-img {
@@ -656,6 +679,15 @@ footer {
 
     .bottom-padding {
         padding-bottom: calc(var(--padding) * 0.5);
+    }
+
+    .contact-popup-bg {
+        height: 448px;
+        width: 100%;
+    }
+
+    .contact-popup {
+        top: 35%;
     }
 
     .history-description {

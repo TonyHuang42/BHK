@@ -109,18 +109,22 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                                聯繫我們
+                                聯絡我們
                             </a>
-                            <div class="dropdown-menu dropdown-menu-end p-3 contact-popup">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <h6 class="mb-0 fw-bold">聯繫我們</h6>
-                                    <button type="button" class="btn-close btn-close-white" style="font-size: 0.8rem;" aria-label="Close" onclick="this.closest('.dropdown').querySelector('.nav-link').click()"></button>
+                            <div class="dropdown-menu dropdown-menu-end contact-popup-bg">
+                                <button type="button" class="btn-close" style="font-size: 0.8rem; position: absolute; top: 16px; right: 16px;" aria-label="Close" onclick="this.closest('.dropdown').querySelector('.nav-link').click()"></button>
+                                <div class="contact-popup">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <h3 class="fw-bold mb-1" style="color:#692626;">聯絡我們</h3>
+                                    </div>
+                                    <div style="margin-left: 235px;">
+                                        <p class="mb-3 fw-normal">如有任何疑問，歡迎透過以下方式聯絡我們：</p>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2"><strong>電郵：</strong> <a href="mailto:inquiry@battle-of-hk.com" class="text-decoration-none fw-normal" style="color: #672727;">inquiry@battle-of-hk.com</a></li>
+                                            {{-- <li><strong>電話：</strong> <a href="tel:+12345678" class="text-decoration-none">+1234 5678</a></li> --}}
+                                        </ul>
+                                    </div>
                                 </div>
-                                <p class="mb-3 small">聯繫我們 聯繫我們 聯繫我們 聯繫我們：</p>
-                                <ul class="list-unstyled mb-0 small">
-                                    <li class="mb-2"><strong>電郵：</strong> <a href="mailto:info@example.com" class="text-decoration-none text-white">info@example.com</a></li>
-                                    {{-- <li><strong>電話：</strong> <a href="tel:+12345678" class="text-decoration-none">+1234 5678</a></li> --}}
-                                </ul>
                             </div>
                         </li>
                     </ul>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->date('date');
             $table->boolean('is_publish')->default(false);
-            $table->string('thumbnail');
+            $table->string('featured_image');
             $table->json('images');
             $table->timestamps();
         });

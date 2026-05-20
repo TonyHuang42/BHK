@@ -66,7 +66,7 @@ class PressReleaseSeeder extends Seeder
 
     public function run(): void
     {
-        Storage::disk('public')->makeDirectory('press-releases/thumbnails');
+        Storage::disk('public')->makeDirectory('press-releases/featured-images');
 
         $categoryModels = [];
         foreach ($this->categories as $category) {
@@ -77,9 +77,9 @@ class PressReleaseSeeder extends Seeder
         }
 
         foreach ($this->pressReleases as $index => $data) {
-            $thumbnailPath = $this->downloadImage(
+            $featuredImagePath = $this->downloadImage(
                 "https://picsum.photos/seed/bhk-pr-{$index}/800/600",
-                "press-releases/thumbnails/seed-{$index}.jpg"
+                "press-releases/featured-images/seed-{$index}.jpg"
             );
 
             PressRelease::create([
@@ -88,7 +88,7 @@ class PressReleaseSeeder extends Seeder
                 'slug' => Str::slug($data['title']).'-'.($index + 1),
                 'summary' => $data['summary'],
                 'date' => $data['date'],
-                'thumbnail' => $thumbnailPath,
+                'featured_image' => $featuredImagePath,
                 'body' => $data['body'],
                 'is_publish' => true,
             ]);

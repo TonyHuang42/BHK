@@ -4,10 +4,10 @@ use App\Filament\Admin\Resources\Galleries\GalleryResource;
 use App\Filament\Admin\Resources\Galleries\Pages\CreateGallery;
 use App\Filament\Admin\Resources\Galleries\Pages\EditGallery;
 use App\Filament\Admin\Resources\Galleries\Pages\ListGalleries;
-use Filament\Actions\DeleteAction;
 use App\Models\Gallery;
 use App\Models\GalleryCategory;
 use App\Models\User;
+use Filament\Actions\DeleteAction;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
@@ -43,7 +43,7 @@ test('can create gallery', function () {
             'title' => $newData->title,
             'date' => $newData->date->format('Y-m-d'),
             'is_publish' => $newData->is_publish,
-            'thumbnail' => UploadedFile::fake()->image('thumbnail.jpg'),
+            'featured_image' => UploadedFile::fake()->image('featured_image.jpg'),
             'images' => [
                 UploadedFile::fake()->image('image1.jpg'),
                 UploadedFile::fake()->image('image2.jpg'),
@@ -71,14 +71,14 @@ test('cannot create gallery with missing required fields', function () {
         ->fillForm([
             'title' => null,
             'date' => null,
-            'thumbnail' => null,
+            'featured_image' => null,
             'images' => null,
         ])
         ->call('create')
         ->assertHasFormErrors([
             'title' => 'required',
             'date' => 'required',
-            'thumbnail' => 'required',
+            'featured_image' => 'required',
             'images' => 'required',
         ]);
 });
@@ -121,7 +121,7 @@ test('can update gallery', function () {
     ])
         ->fillForm([
             'title' => $newData->title,
-            'thumbnail' => UploadedFile::fake()->image('new_thumbnail.jpg'),
+            'featured_image' => UploadedFile::fake()->image('new_featured_image.jpg'),
             'images' => [UploadedFile::fake()->image('new_image.jpg')],
         ])
         ->call('save')

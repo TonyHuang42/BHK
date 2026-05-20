@@ -36,7 +36,7 @@
                         <div class="col-lg-6">
                             <div class="press-release-card-image-wrapper">
                                 <img
-                                    src="{{ asset('storage/' . $pressRelease->thumbnail) }}"
+                                    src="{{ asset('storage/' . $pressRelease->featured_image) }}"
                                     alt="{{ $pressRelease->title }}"
                                     class="press-release-card-image"
                                 >

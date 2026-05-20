@@ -27,7 +27,7 @@ class PressReleaseFactory extends Factory
             'slug' => Str::slug($title),
             'summary' => $this->faker->paragraph(),
             'date' => $this->faker->date(),
-            'thumbnail' => 'press-releases/thumbnails/'.$this->faker->uuid().'.jpg',
+            'featured_image' => 'press-releases/featured-images/'.$this->faker->uuid().'.jpg',
             'body' => $this->faker->paragraphs(3, true),
             'is_publish' => $this->faker->boolean(),
         ];

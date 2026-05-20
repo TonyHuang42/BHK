@@ -35,7 +35,7 @@
                     <button type="button" class="gallery-card-trigger" data-pswp-items="{{ json_encode($gallery->lightbox_items, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) }}">
                         <article class="gallery-card">
                             <div class="gallery-card-image-wrapper">
-                                <img src="{{ asset('storage/' . $gallery->thumbnail) }}" alt="{{ $gallery->title }}" class="gallery-card-image">
+                                <img src="{{ asset('storage/' . $gallery->featured_image) }}" alt="{{ $gallery->title }}" class="gallery-card-image">
                             </div>
                             <h5 class="gallery-card-title">{{ $gallery->title }}</h5>
                         </article>

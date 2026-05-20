@@ -44,12 +44,12 @@ class GalleryForm
                     ->required()
                     ->label('Publish')
                     ->default(false),
-                FileUpload::make('thumbnail')
+                FileUpload::make('featured_image')
                     ->required()
                     ->image()
                     ->disk('public')
                     ->visibility('public')
-                    ->directory('galleries/thumbnails')
+                    ->directory('galleries/featured-images')
                     ->columnSpanFull(),
                 FileUpload::make('images')
                     ->required()

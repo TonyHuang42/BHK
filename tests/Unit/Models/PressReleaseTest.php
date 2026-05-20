@@ -7,32 +7,32 @@ use Tests\TestCase;
 
 uses(TestCase::class, RefreshDatabase::class);
 
-test('thumbnail is deleted when press release is deleted', function () {
+test('featured image is deleted when press release is deleted', function () {
     Storage::fake('public');
 
     $pressRelease = PressRelease::factory()->create([
-        'thumbnail' => 'press-releases/thumbnails/test.jpg',
+        'featured_image' => 'press-releases/featured-images/test.jpg',
     ]);
 
-    Storage::disk('public')->put('press-releases/thumbnails/test.jpg', 'content');
+    Storage::disk('public')->put('press-releases/featured-images/test.jpg', 'content');
 
     $pressRelease->delete();
 
-    Storage::disk('public')->assertMissing('press-releases/thumbnails/test.jpg');
+    Storage::disk('public')->assertMissing('press-releases/featured-images/test.jpg');
 });
 
-test('original thumbnail is deleted when thumbnail is updated', function () {
+test('original featured image is deleted when featured image is updated', function () {
     Storage::fake('public');
 
     $pressRelease = PressRelease::factory()->create([
-        'thumbnail' => 'press-releases/thumbnails/old.jpg',
+        'featured_image' => 'press-releases/featured-images/old.jpg',
     ]);
 
-    Storage::disk('public')->put('press-releases/thumbnails/old.jpg', 'content');
+    Storage::disk('public')->put('press-releases/featured-images/old.jpg', 'content');
 
     $pressRelease->update([
-        'thumbnail' => 'press-releases/thumbnails/new.jpg',
+        'featured_image' => 'press-releases/featured-images/new.jpg',
     ]);
 
-    Storage::disk('public')->assertMissing('press-releases/thumbnails/old.jpg');
+    Storage::disk('public')->assertMissing('press-releases/featured-images/old.jpg');
 });

@@ -5,7 +5,7 @@
 
 @section('content')
     <main>
-        <img src="{{ asset('storage/' . $pressRelease->thumbnail) }}" alt="{{ $pressRelease->title }}" class="press-release-hero-img" aria-hidden="true">
+        <img src="{{ asset('storage/' . $pressRelease->featured_image) }}" alt="{{ $pressRelease->title }}" class="press-release-hero-img" aria-hidden="true">
 
         <section class="section-padding">
             <div class="container">

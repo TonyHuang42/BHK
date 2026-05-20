@@ -27,7 +27,7 @@ class GalleryFactory extends Factory
             'slug' => Str::slug($title),
             'date' => $this->faker->date(),
             'is_publish' => $this->faker->boolean(),
-            'thumbnail' => 'galleries/thumbnails/'.$this->faker->uuid().'.jpg',
+            'featured_image' => 'galleries/featured-images/'.$this->faker->uuid().'.jpg',
             'images' => [
                 'galleries/'.$this->faker->uuid().'.jpg',
                 'galleries/'.$this->faker->uuid().'.jpg',

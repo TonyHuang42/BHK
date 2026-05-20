@@ -45,11 +45,11 @@ class PressReleaseForm
                     ->required()
                     ->label('Publish')
                     ->default(false),
-                FileUpload::make('thumbnail')
+                FileUpload::make('featured_image')
                     ->image()
                     ->disk('public')
                     ->visibility('public')
-                    ->directory('press-releases/thumbnails')
+                    ->directory('press-releases/featured-images')
                     ->columnSpanFull(),
                 Textarea::make('summary')
                     ->required()

@@ -19,7 +19,7 @@ class Gallery extends Model
         'slug',
         'date',
         'is_publish',
-        'thumbnail',
+        'featured_image',
         'images',
     ];
 
@@ -40,10 +40,10 @@ class Gallery extends Model
     protected static function booted(): void
     {
         static::updated(function (Gallery $gallery) {
-            if ($gallery->wasChanged('thumbnail')) {
-                $originalThumbnail = $gallery->getOriginal('thumbnail');
-                if ($originalThumbnail) {
-                    Storage::disk('public')->delete($originalThumbnail);
+            if ($gallery->wasChanged('featured_image')) {
+                $originalFeaturedImage = $gallery->getOriginal('featured_image');
+                if ($originalFeaturedImage) {
+                    Storage::disk('public')->delete($originalFeaturedImage);
                 }
             }
 
@@ -63,8 +63,8 @@ class Gallery extends Model
         });
 
         static::deleting(function (Gallery $gallery) {
-            if ($gallery->thumbnail) {
-                Storage::disk('public')->delete($gallery->thumbnail);
+            if ($gallery->featured_image) {
+                Storage::disk('public')->delete($gallery->featured_image);
             }
 
             if (is_array($gallery->images)) {

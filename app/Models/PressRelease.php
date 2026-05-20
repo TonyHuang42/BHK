@@ -17,7 +17,7 @@ class PressRelease extends Model
         'slug',
         'summary',
         'date',
-        'thumbnail',
+        'featured_image',
         'body',
         'is_publish',
     ];
@@ -38,17 +38,17 @@ class PressRelease extends Model
     protected static function booted(): void
     {
         static::updated(function (PressRelease $pressRelease) {
-            if ($pressRelease->wasChanged('thumbnail')) {
-                $originalThumbnail = $pressRelease->getOriginal('thumbnail');
-                if ($originalThumbnail) {
-                    Storage::disk('public')->delete($originalThumbnail);
+            if ($pressRelease->wasChanged('featured_image')) {
+                $originalFeaturedImage = $pressRelease->getOriginal('featured_image');
+                if ($originalFeaturedImage) {
+                    Storage::disk('public')->delete($originalFeaturedImage);
                 }
             }
         });
 
         static::deleting(function (PressRelease $pressRelease) {
-            if ($pressRelease->thumbnail) {
-                Storage::disk('public')->delete($pressRelease->thumbnail);
+            if ($pressRelease->featured_image) {
+                Storage::disk('public')->delete($pressRelease->featured_image);
             }
         });
     }

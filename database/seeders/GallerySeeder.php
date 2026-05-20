@@ -27,13 +27,13 @@ class GallerySeeder extends Seeder
             ['name' => 'General']
         );
 
-        Storage::disk('public')->makeDirectory('galleries/thumbnails');
+        Storage::disk('public')->makeDirectory('galleries/featured-images');
         Storage::disk('public')->makeDirectory('galleries');
 
         foreach ($this->albums as $index => $album) {
-            $thumbnailPath = $this->downloadImage(
-                "https://picsum.photos/seed/bhk-thumb-{$index}/800/800",
-                "galleries/thumbnails/seed-{$index}.jpg"
+            $featuredImagePath = $this->downloadImage(
+                "https://picsum.photos/seed/bhk-featured-{$index}/800/800",
+                "galleries/featured-images/seed-{$index}.jpg"
             );
 
             $images = [];
@@ -50,7 +50,7 @@ class GallerySeeder extends Seeder
                 'slug' => $album['slug'],
                 'date' => $album['date'],
                 'is_publish' => true,
-                'thumbnail' => $thumbnailPath,
+                'featured_image' => $featuredImagePath,
                 'images' => $images,
             ]);
         }

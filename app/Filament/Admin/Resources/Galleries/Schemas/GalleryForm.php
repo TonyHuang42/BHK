@@ -5,12 +5,16 @@ namespace App\Filament\Admin\Resources\Galleries\Schemas;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Hidden;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Livewire\Component as Livewire;
 
 class GalleryForm
 {
@@ -49,20 +53,33 @@ class GalleryForm
                     ->image()
                     ->disk('public')
                     ->visibility('public')
-                    ->directory('galleries/featured-images')
+                    ->directory(fn (?Model $record, Livewire $livewire): string => $record
+                        ? "galleries/{$record->id}"
+                        : "galleries/temp-{$livewire->getId()}"
+                    )
                     ->columnSpanFull(),
-                FileUpload::make('images')
+                Repeater::make('images')
                     ->required()
                     ->columnSpanFull()
-                    ->multiple()
-                    ->panelLayout('grid')
                     ->reorderable()
-                    ->appendFiles()
-                    ->image()
-                    ->preserveFilenames()
-                    ->disk('public')
-                    ->directory('galleries')
-                    ->visibility('public'),
+                    ->itemLabel(fn (array $state): ?string => $state['caption'] ?: null)
+                    ->addActionLabel('Add Image')
+                    ->columns(2)
+                    ->schema([
+                        FileUpload::make('path')
+                            ->label('Image')
+                            ->required()
+                            ->image()
+                            ->preserveFilenames()
+                            ->disk('public')
+                            ->directory(fn (?Model $record, Livewire $livewire): string => $record
+                                ? "galleries/{$record->id}"
+                                : "galleries/temp-{$livewire->getId()}"
+                            )
+                            ->visibility('public'),
+                        Textarea::make('caption')
+                            ->autosize(),
+                    ]),
             ]);
     }
 }

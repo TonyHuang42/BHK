@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Services\GalleryThumbnailService;
 use Database\Factories\GalleryFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -39,6 +40,41 @@ class Gallery extends Model
 
     protected static function booted(): void
     {
+        static::saving(function (Gallery $gallery) {
+            if (! $gallery->isDirty('images')) {
+                return;
+            }
+
+            $images = is_array($gallery->images) ? $gallery->images : [];
+
+            if (empty($images)) {
+                return;
+            }
+
+            $thumbnailService = app(GalleryThumbnailService::class);
+            $normalized = [];
+
+            foreach (array_values($images) as $item) {
+                if (! is_array($item) || empty($item['path'])) {
+                    continue;
+                }
+
+                $thumbnail = $item['thumbnail'] ?? null;
+
+                if (! $thumbnail || ! Storage::disk('public')->exists($thumbnail)) {
+                    $thumbnail = $thumbnailService->generate($item['path']);
+                }
+
+                $normalized[] = [
+                    'path' => $item['path'],
+                    'caption' => $item['caption'] ?? '',
+                    'thumbnail' => $thumbnail,
+                ];
+            }
+
+            $gallery->images = $normalized;
+        });
+
         static::updated(function (Gallery $gallery) {
             if ($gallery->wasChanged('featured_image')) {
                 $originalFeaturedImage = $gallery->getOriginal('featured_image');
@@ -53,11 +89,20 @@ class Gallery extends Model
                 $originalImages = is_array($originalImages) ? $originalImages : [];
 
                 $currentImages = is_array($gallery->images) ? $gallery->images : [];
+                $currentPaths = array_column($currentImages, 'path');
 
-                $deletedImages = array_diff($originalImages, $currentImages);
+                foreach ($originalImages as $item) {
+                    if (! is_array($item) || empty($item['path'])) {
+                        continue;
+                    }
 
-                foreach ($deletedImages as $image) {
-                    Storage::disk('public')->delete($image);
+                    if (! in_array($item['path'], $currentPaths, true)) {
+                        Storage::disk('public')->delete($item['path']);
+
+                        if (! empty($item['thumbnail'])) {
+                            Storage::disk('public')->delete($item['thumbnail']);
+                        }
+                    }
                 }
             }
         });
@@ -67,9 +112,19 @@ class Gallery extends Model
                 Storage::disk('public')->delete($gallery->featured_image);
             }
 
-            if (is_array($gallery->images)) {
-                foreach ($gallery->images as $image) {
-                    Storage::disk('public')->delete($image);
+            $images = is_array($gallery->images) ? $gallery->images : [];
+
+            foreach ($images as $item) {
+                if (! is_array($item)) {
+                    continue;
+                }
+
+                if (! empty($item['path'])) {
+                    Storage::disk('public')->delete($item['path']);
+                }
+
+                if (! empty($item['thumbnail'])) {
+                    Storage::disk('public')->delete($item['thumbnail']);
                 }
             }
         });

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Gallery;
 use App\Models\GalleryCategory;
+use App\Services\GalleryThumbnailService;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
@@ -20,39 +21,49 @@ class GallerySeeder extends Seeder
         ['title' => '抗戰人物肖像集', 'slug' => 'resistance-portraits', 'date' => '2024-07-20', 'imageCount' => 5],
     ];
 
-    public function run(): void
+    public function run(GalleryThumbnailService $thumbnailService): void
     {
         $defaultCategory = GalleryCategory::firstOrCreate(
             ['slug' => 'general'],
             ['name' => 'General']
         );
 
-        Storage::disk('public')->makeDirectory('galleries/featured-images');
-        Storage::disk('public')->makeDirectory('galleries');
-
         foreach ($this->albums as $index => $album) {
-            $featuredImagePath = $this->downloadImage(
-                "https://picsum.photos/seed/bhk-featured-{$index}/800/800",
-                "galleries/featured-images/seed-{$index}.jpg"
-            );
-
-            $images = [];
-            for ($i = 0; $i < $album['imageCount']; $i++) {
-                $images[] = $this->downloadImage(
-                    "https://picsum.photos/seed/bhk-img-{$index}-{$i}/1200/900",
-                    "galleries/seed-{$index}-{$i}.jpg"
-                );
-            }
-
-            Gallery::create([
+            $gallery = Gallery::create([
                 'gallery_category_id' => $defaultCategory->id,
                 'title' => $album['title'],
                 'slug' => $album['slug'],
                 'date' => $album['date'],
                 'is_publish' => true,
-                'featured_image' => $featuredImagePath,
-                'images' => $images,
+                'featured_image' => '',
+                'images' => [],
             ]);
+
+            $dir = "galleries/{$gallery->id}";
+            Storage::disk('public')->makeDirectory($dir);
+
+            $featuredImagePath = $this->downloadImage(
+                "https://picsum.photos/seed/bhk-featured-{$index}/800/800",
+                "{$dir}/featured.jpg"
+            );
+
+            $images = [];
+            for ($i = 0; $i < $album['imageCount']; $i++) {
+                $path = $this->downloadImage(
+                    "https://picsum.photos/seed/bhk-img-{$index}-{$i}/1200/900",
+                    "{$dir}/{$i}.jpg"
+                );
+
+                $images[] = [
+                    'path' => $path,
+                    'caption' => '',
+                    'thumbnail' => $thumbnailService->generate($path),
+                ];
+            }
+
+            $gallery->featured_image = $featuredImagePath;
+            $gallery->images = $images;
+            $gallery->saveQuietly();
         }
     }
 

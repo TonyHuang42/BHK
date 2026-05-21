@@ -58,13 +58,19 @@ class GalleryIndex extends Component
     }
 
     /**
-     * @return array<int, array{src: string, width: int, height: int, alt: string}>
+     * @return array<int, array{src: string, msrc?: string, width: int, height: int, alt: string}>
      */
     private function buildLightboxItems(Gallery $gallery): array
     {
         $images = is_array($gallery->images) ? $gallery->images : [];
 
-        return array_values(array_filter(array_map(function (string $path) use ($gallery) {
+        return array_values(array_filter(array_map(function (array $item) use ($gallery) {
+            $path = $item['path'] ?? null;
+
+            if (! $path) {
+                return null;
+            }
+
             $dimensions = Cache::rememberForever("gallery-image-dimensions:{$path}", function () use ($path) {
                 $absolutePath = Storage::disk('public')->path($path);
 
@@ -85,12 +91,18 @@ class GalleryIndex extends Component
                 return null;
             }
 
-            return [
+            $entry = [
                 'src' => asset('storage/'.$path),
                 'width' => $dimensions['width'],
                 'height' => $dimensions['height'],
-                'alt' => $gallery->title,
+                'alt' => $item['caption'] ?: $gallery->title,
             ];
+
+            if (! empty($item['thumbnail'])) {
+                $entry['msrc'] = asset('storage/'.$item['thumbnail']);
+            }
+
+            return $entry;
         }, $images)));
     }
 }

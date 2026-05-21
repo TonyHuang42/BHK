@@ -27,11 +27,40 @@ class GalleryFactory extends Factory
             'slug' => Str::slug($title),
             'date' => $this->faker->date(),
             'is_publish' => $this->faker->boolean(),
-            'featured_image' => 'galleries/featured-images/'.$this->faker->uuid().'.jpg',
-            'images' => [
-                'galleries/'.$this->faker->uuid().'.jpg',
-                'galleries/'.$this->faker->uuid().'.jpg',
-            ],
+            'featured_image' => '',
+            'images' => [],
         ];
+    }
+
+    public function configure(): static
+    {
+        return $this->afterCreating(function (Gallery $gallery) {
+            $dir = "galleries/{$gallery->id}";
+            $needsSave = false;
+
+            if ($gallery->featured_image === '') {
+                $gallery->featured_image = "{$dir}/".fake()->uuid().'.jpg';
+                $needsSave = true;
+            }
+
+            if (empty($gallery->images)) {
+                $makeImage = function () use ($dir): array {
+                    $filename = fake()->uuid();
+
+                    return [
+                        'path' => "{$dir}/{$filename}.jpg",
+                        'caption' => '',
+                        'thumbnail' => "{$dir}/{$filename}-thumb.jpg",
+                    ];
+                };
+
+                $gallery->images = [$makeImage(), $makeImage()];
+                $needsSave = true;
+            }
+
+            if ($needsSave) {
+                $gallery->saveQuietly();
+            }
+        });
     }
 }

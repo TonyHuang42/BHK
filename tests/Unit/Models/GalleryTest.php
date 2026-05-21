@@ -1,7 +1,11 @@
 <?php
 
 use App\Models\Gallery;
+use App\Models\GalleryCategory;
+use App\Services\GalleryThumbnailService;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
@@ -12,18 +16,25 @@ test('featured image and images are deleted when gallery is deleted', function (
 
     $gallery = Gallery::factory()->create([
         'featured_image' => 'galleries/featured-images/test.jpg',
-        'images' => ['galleries/image1.jpg', 'galleries/image2.jpg'],
+        'images' => [
+            ['path' => 'galleries/image1.jpg', 'caption' => '', 'thumbnail' => 'galleries/image1-thumb.jpg'],
+            ['path' => 'galleries/image2.jpg', 'caption' => '', 'thumbnail' => 'galleries/image2-thumb.jpg'],
+        ],
     ]);
 
     Storage::disk('public')->put('galleries/featured-images/test.jpg', 'content');
     Storage::disk('public')->put('galleries/image1.jpg', 'content');
     Storage::disk('public')->put('galleries/image2.jpg', 'content');
+    Storage::disk('public')->put('galleries/image1-thumb.jpg', 'content');
+    Storage::disk('public')->put('galleries/image2-thumb.jpg', 'content');
 
     $gallery->delete();
 
     Storage::disk('public')->assertMissing('galleries/featured-images/test.jpg');
     Storage::disk('public')->assertMissing('galleries/image1.jpg');
     Storage::disk('public')->assertMissing('galleries/image2.jpg');
+    Storage::disk('public')->assertMissing('galleries/image1-thumb.jpg');
+    Storage::disk('public')->assertMissing('galleries/image2-thumb.jpg');
 });
 
 test('original featured image is deleted when featured image is updated', function () {
@@ -42,20 +53,115 @@ test('original featured image is deleted when featured image is updated', functi
     Storage::disk('public')->assertMissing('galleries/featured-images/old.jpg');
 });
 
-test('removed images are deleted when images are updated', function () {
+test('removed images and their thumbnails are deleted when images are updated', function () {
     Storage::fake('public');
 
     $gallery = Gallery::factory()->create([
-        'images' => ['galleries/image1.jpg', 'galleries/image2.jpg'],
+        'images' => [
+            ['path' => 'galleries/image1.jpg', 'caption' => '', 'thumbnail' => 'galleries/image1-thumb.jpg'],
+            ['path' => 'galleries/image2.jpg', 'caption' => '', 'thumbnail' => 'galleries/image2-thumb.jpg'],
+        ],
     ]);
 
     Storage::disk('public')->put('galleries/image1.jpg', 'content');
     Storage::disk('public')->put('galleries/image2.jpg', 'content');
+    Storage::disk('public')->put('galleries/image1-thumb.jpg', 'content');
+    Storage::disk('public')->put('galleries/image2-thumb.jpg', 'content');
 
     $gallery->update([
-        'images' => ['galleries/image1.jpg', 'galleries/image3.jpg'],
+        'images' => [
+            ['path' => 'galleries/image1.jpg', 'caption' => '', 'thumbnail' => 'galleries/image1-thumb.jpg'],
+            ['path' => 'galleries/image3.jpg', 'caption' => '', 'thumbnail' => 'galleries/image3-thumb.jpg'],
+        ],
     ]);
 
     Storage::disk('public')->assertMissing('galleries/image2.jpg');
+    Storage::disk('public')->assertMissing('galleries/image2-thumb.jpg');
     Storage::disk('public')->assertExists('galleries/image1.jpg');
+});
+
+test('gallery belongs to a category', function () {
+    $gallery = Gallery::factory()->create();
+
+    expect($gallery->category())->toBeInstanceOf(BelongsTo::class);
+    expect($gallery->category)->toBeInstanceOf(GalleryCategory::class);
+});
+
+test('date is cast to a carbon instance', function () {
+    $gallery = Gallery::factory()->create(['date' => '2024-06-15']);
+
+    expect($gallery->date)->toBeInstanceOf(Carbon::class);
+    expect($gallery->date->format('Y-m-d'))->toBe('2024-06-15');
+});
+
+test('images is cast to array', function () {
+    $gallery = Gallery::factory()->create();
+
+    expect($gallery->images)->toBeArray();
+});
+
+test('is_publish is cast to boolean', function () {
+    $gallery = Gallery::factory()->create(['is_publish' => 1]);
+
+    expect($gallery->is_publish)->toBeBool()->toBeTrue();
+});
+
+test('generates thumbnail for images with no existing thumbnail', function () {
+    Storage::fake('public');
+
+    $imagePath = 'galleries/test-image.jpg';
+
+    $this->mock(GalleryThumbnailService::class)
+        ->shouldReceive('generate')
+        ->once()
+        ->with($imagePath)
+        ->andReturn('galleries/test-image-thumb.jpg');
+
+    $gallery = Gallery::factory()->create([
+        'images' => [
+            ['path' => $imagePath, 'caption' => 'Test', 'thumbnail' => null],
+        ],
+    ]);
+
+    expect($gallery->fresh()->images[0]['thumbnail'])->toBe('galleries/test-image-thumb.jpg');
+});
+
+test('preserves thumbnail for images with existing thumbnail in storage', function () {
+    Storage::fake('public');
+
+    $imagePath = 'galleries/test-image.jpg';
+    $existingThumbnail = 'galleries/test-image-thumb.jpg';
+    Storage::disk('public')->put($existingThumbnail, 'content');
+
+    $this->mock(GalleryThumbnailService::class)
+        ->shouldNotReceive('generate');
+
+    $gallery = Gallery::factory()->create([
+        'images' => [
+            ['path' => $imagePath, 'caption' => '', 'thumbnail' => $existingThumbnail],
+        ],
+    ]);
+
+    expect($gallery->fresh()->images[0]['thumbnail'])->toBe($existingThumbnail);
+});
+
+test('images with empty path are skipped during normalization', function () {
+    Storage::fake('public');
+
+    $validPath = 'galleries/valid.jpg';
+    $validThumbnail = 'galleries/valid-thumb.jpg';
+    Storage::disk('public')->put($validThumbnail, 'content');
+
+    $this->mock(GalleryThumbnailService::class)
+        ->shouldNotReceive('generate');
+
+    $gallery = Gallery::factory()->create([
+        'images' => [
+            ['path' => '', 'caption' => 'Empty path', 'thumbnail' => null],
+            ['path' => $validPath, 'caption' => 'Valid', 'thumbnail' => $validThumbnail],
+        ],
+    ]);
+
+    expect($gallery->fresh()->images)->toHaveCount(1);
+    expect($gallery->fresh()->images[0]['path'])->toBe($validPath);
 });

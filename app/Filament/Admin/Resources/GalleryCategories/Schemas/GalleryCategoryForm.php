@@ -7,6 +7,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Str;
+use Overtrue\Pinyin\Pinyin;
 
 class GalleryCategoryForm
 {
@@ -19,7 +20,7 @@ class GalleryCategoryForm
                     ->maxLength(255)
                     ->unique(ignoreRecord: true)
                     ->live()
-                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug(Pinyin::permalink($state ?? '')))),
                 Hidden::make('slug')
                     ->required()
                     ->unique(ignoreRecord: true),

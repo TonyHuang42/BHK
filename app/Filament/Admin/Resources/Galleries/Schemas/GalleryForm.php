@@ -15,6 +15,7 @@ use Filament\Schemas\Schema;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Livewire\Component as Livewire;
+use Overtrue\Pinyin\Pinyin;
 
 class GalleryForm
 {
@@ -27,7 +28,7 @@ class GalleryForm
                     ->maxLength(255)
                     ->unique(ignoreRecord: true)
                     ->live()
-                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug(Pinyin::permalink($state ?? '')))),
                 Hidden::make('slug')
                     ->required()
                     ->unique(ignoreRecord: true),

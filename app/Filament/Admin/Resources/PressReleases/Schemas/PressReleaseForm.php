@@ -13,6 +13,7 @@ use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Str;
+use Overtrue\Pinyin\Pinyin;
 
 class PressReleaseForm
 {
@@ -25,7 +26,7 @@ class PressReleaseForm
                     ->maxLength(255)
                     ->unique(ignoreRecord: true)
                     ->live()
-                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug(Pinyin::permalink($state ?? '')))),
                 Hidden::make('slug')
                     ->required()
                     ->unique(ignoreRecord: true),

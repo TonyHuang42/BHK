@@ -32,6 +32,7 @@ class GalleryIndex extends Component
     public function render(): View
     {
         $categories = GalleryCategory::query()
+            ->where('slug', '!=', 'uncategorized')
             ->orderBy('name', 'asc')
             ->get();
 

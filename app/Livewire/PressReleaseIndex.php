@@ -30,6 +30,7 @@ class PressReleaseIndex extends Component
     public function render(): View
     {
         $categories = PressReleaseCategory::query()
+            ->where('slug', '!=', 'uncategorized')
             ->orderBy('name', 'asc')
             ->get();
 

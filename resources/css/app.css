@@ -776,8 +776,8 @@ footer {
 /* PhotoSwipe UI offsets to make room for the thumbnail strip */
 .pswp {
     --pswp-bg: #fff;
-    --pswp-icon-color: #fff;
-    --pswp-icon-color-secondary: #000;
+    --pswp-icon-color: #000;
+    --pswp-icon-color-secondary: #fff;
 }
 
 .pswp__top-bar {
@@ -791,7 +791,7 @@ footer {
 /* PhotoSwipe caption */
 .pswp__caption {
     position: absolute;
-    bottom: 60px;
+    bottom: 100px;
     left: 0;
     right: 110px;
     height: 90px;

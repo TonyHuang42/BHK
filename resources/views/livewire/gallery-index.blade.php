@@ -7,7 +7,7 @@
                         type="button"
                         wire:click="setCategory('')"
                         class="gallery-filter-link {{ $category === '' ? 'is-active' : '' }}"
-                    >All</button>
+                    >全部</button>
                 </li>
                 @foreach ($categories as $cat)
                     <li>

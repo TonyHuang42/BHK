@@ -14,7 +14,7 @@
     "src": "public/img/home/texture_bg_gray.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-CPrAd1V4.css",
+    "file": "assets/app-B1tCIlCA.css",
     "name": "app",
     "names": [
       "app.css"
@@ -27,15 +27,12 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-DSrZBbPD.js",
+    "file": "assets/app-CxG36bnw.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "dynamicImports": [
       "node_modules/photoswipe/dist/photoswipe.esm.js"
-    ],
-    "css": [
-      "assets/app-DOg8h1BU.css"
     ]
   }
 }

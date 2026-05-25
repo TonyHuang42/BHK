@@ -1,7 +1,6 @@
 import './bootstrap';
 import Swiper from 'swiper/bundle';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import 'photoswipe/style.css';
 
 // Initialize Swiper
 document.addEventListener('DOMContentLoaded', () => {
@@ -53,8 +52,54 @@ document.addEventListener('DOMContentLoaded', () => {
         const lightbox = new PhotoSwipeLightbox({
             bgOpacity: 1,
             dataSource: items,
-            pswpModule: () => import('photoswipe'),
+            pswpModule: () => import("photoswipe"),
+            padding: { top: 50, bottom: 200, right: 110 },
         });
+
+        lightbox.on('uiRegister', function () {
+            lightbox.pswp.ui.registerElement({
+                name: 'caption',
+                order: 9,
+                isButton: false,
+                appendTo: 'root',
+                onInit: (el, pswp) => {
+                    pswp.on('change', () => {
+                        el.innerHTML = pswp.currSlide.data.caption || '';
+                    });
+                },
+            });
+
+            lightbox.pswp.ui.registerElement({
+                name: 'thumbs',
+                order: 9,
+                isButton: false,
+                appendTo: 'root',
+                onInit: (el, pswp) => {
+                    items.forEach((item, index) => {
+                        const btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.className = 'pswp__thumb-btn';
+                        const img = document.createElement('img');
+                        img.src = item.msrc || item.src;
+                        img.alt = '';
+                        btn.appendChild(img);
+                        btn.addEventListener('click', () => pswp.goTo(index));
+                        el.appendChild(btn);
+                    });
+
+                    const btns = el.querySelectorAll('.pswp__thumb-btn');
+
+                    const updateActive = () => {
+                        btns.forEach((btn, i) => btn.classList.toggle('is-active', i === pswp.currIndex));
+                        btns[pswp.currIndex]?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                    };
+
+                    pswp.on('change', updateActive);
+                    updateActive();
+                },
+            });
+        });
+
         lightbox.init();
         lightbox.loadAndOpen(0);
     });

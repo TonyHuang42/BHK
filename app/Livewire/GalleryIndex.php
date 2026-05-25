@@ -58,7 +58,7 @@ class GalleryIndex extends Component
     }
 
     /**
-     * @return array<int, array{src: string, msrc?: string, width: int, height: int, alt: string}>
+     * @return array<int, array{src: string, msrc?: string, width: int, height: int, alt: string, caption: string}>
      */
     private function buildLightboxItems(Gallery $gallery): array
     {
@@ -96,6 +96,7 @@ class GalleryIndex extends Component
                 'width' => $dimensions['width'],
                 'height' => $dimensions['height'],
                 'alt' => $item['caption'] ?: $gallery->title,
+                'caption' => $item['caption'] ?? '',
             ];
 
             if (! empty($item['thumbnail'])) {

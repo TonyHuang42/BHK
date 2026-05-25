@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Casts\ArrayWithUnicode;
 use App\Services\GalleryThumbnailService;
 use Database\Factories\GalleryFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -29,7 +30,7 @@ class Gallery extends Model
         return [
             'date' => 'date',
             'is_publish' => 'boolean',
-            'images' => 'array',
+            'images' => ArrayWithUnicode::class,
         ];
     }
 

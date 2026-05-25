@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 appendTo: 'root',
                 onInit: (el, pswp) => {
                     pswp.on('change', () => {
-                        el.innerHTML = pswp.currSlide.data.caption || '';
+                        el.innerHTML = (pswp.currSlide.data.caption || '').replace(/\n/g, '<br>');
                     });
                 },
             });

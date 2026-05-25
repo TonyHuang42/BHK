@@ -777,6 +777,7 @@ footer {
 /* PhotoSwipe UI offsets to make room for the thumbnail strip */
 .pswp {
     --pswp-bg: #fff;
+    --pswp-placeholder-bg: #fff;
     --pswp-icon-color: #000;
     --pswp-icon-color-secondary: #fff;
 }

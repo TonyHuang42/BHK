@@ -43,9 +43,10 @@ class PressReleaseForm
                     ->preload()
                     ->searchable(),
                 Toggle::make('is_publish')
+                    ->inline(false)
                     ->required()
                     ->label('Publish')
-                    ->default(false),
+                    ->default(true),
                 FileUpload::make('featured_image')
                     ->image()
                     ->disk('public')

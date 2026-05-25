@@ -48,7 +48,7 @@ class GalleryForm
                     ->inline(false)
                     ->required()
                     ->label('Publish')
-                    ->default(false),
+                    ->default(true),
                 FileUpload::make('featured_image')
                     ->required()
                     ->image()

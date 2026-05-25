@@ -60,10 +60,12 @@ class Gallery extends Model
                     continue;
                 }
 
-                $thumbnail = $item['thumbnail'] ?? null;
+                $expectedThumbnailPath = GalleryThumbnailService::thumbnailPath($item['path']);
 
-                if (! $thumbnail || ! Storage::disk('public')->exists($thumbnail)) {
+                if (! Storage::disk('public')->exists($expectedThumbnailPath)) {
                     $thumbnail = $thumbnailService->generate($item['path']);
+                } else {
+                    $thumbnail = $expectedThumbnailPath;
                 }
 
                 $normalized[] = [

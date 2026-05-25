@@ -145,6 +145,33 @@ test('preserves thumbnail for images with existing thumbnail in storage', functi
     expect($gallery->fresh()->images[0]['thumbnail'])->toBe($existingThumbnail);
 });
 
+test('regenerates thumbnail when image path changes but old thumbnail still exists', function () {
+    Storage::fake('public');
+
+    $oldThumbnail = 'galleries/old-image-thumb.jpg';
+    Storage::disk('public')->put($oldThumbnail, 'old content');
+
+    $gallery = Gallery::factory()->create([
+        'images' => [
+            ['path' => 'galleries/old-image.jpg', 'caption' => '', 'thumbnail' => $oldThumbnail],
+        ],
+    ]);
+
+    $this->mock(GalleryThumbnailService::class)
+        ->shouldReceive('generate')
+        ->once()
+        ->with('galleries/new-image.jpg')
+        ->andReturn('galleries/new-image-thumb.jpg');
+
+    $gallery->update([
+        'images' => [
+            ['path' => 'galleries/new-image.jpg', 'caption' => '', 'thumbnail' => $oldThumbnail],
+        ],
+    ]);
+
+    expect($gallery->fresh()->images[0]['thumbnail'])->toBe('galleries/new-image-thumb.jpg');
+});
+
 test('images with empty path are skipped during normalization', function () {
     Storage::fake('public');
 

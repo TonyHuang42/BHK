@@ -358,7 +358,10 @@ a:hover {
 }
 
 .gallery-filter-link.is-active {
-    border-color: #000;
+    /* border-color: #000; */
+    color: #672727;
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 .gallery-card-trigger {

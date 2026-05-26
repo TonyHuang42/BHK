@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             bgOpacity: 1,
             dataSource: items,
             pswpModule: () => import("photoswipe"),
-            padding: { top: 50, bottom: 200, right: 110 },
+            padding: { top: 50, bottom: 200, left: 10, right: 125 },
         });
 
         lightbox.on('uiRegister', function () {

@@ -7,7 +7,7 @@ use App\Services\GalleryThumbnailService;
 use Database\Factories\GalleryFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Facades\Storage;
 
 class Gallery extends Model
@@ -16,7 +16,6 @@ class Gallery extends Model
     use HasFactory;
 
     protected $fillable = [
-        'gallery_category_id',
         'title',
         'slug',
         'date',
@@ -34,9 +33,9 @@ class Gallery extends Model
         ];
     }
 
-    public function category(): BelongsTo
+    public function categories(): BelongsToMany
     {
-        return $this->belongsTo(GalleryCategory::class, 'gallery_category_id');
+        return $this->belongsToMany(GalleryCategory::class, 'gallery_has_categories')->withTimestamps();
     }
 
     protected static function booted(): void

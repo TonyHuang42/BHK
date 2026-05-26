@@ -38,9 +38,10 @@ class GalleryForm
                     ->native(false)
                     ->displayFormat('Y-m-d')
                     ->required(),
-                Select::make('gallery_category_id')
-                    ->label('Category')
-                    ->relationship(name: 'category', titleAttribute: 'name')
+                Select::make('categories')
+                    ->label('Categories')
+                    ->relationship(name: 'categories', titleAttribute: 'name')
+                    ->multiple()
                     ->required()
                     ->preload()
                     ->searchable(),

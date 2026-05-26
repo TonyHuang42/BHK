@@ -49,7 +49,7 @@ test('can create gallery', function () {
 
     $component = livewire(CreateGallery::class)
         ->fillForm([
-            'gallery_category_id' => $category->id,
+            'categories' => [$category->id],
             'title' => $newData->title,
             'date' => $newData->date->format('Y-m-d'),
             'is_publish' => $newData->is_publish,
@@ -67,17 +67,18 @@ test('can create gallery', function () {
         ->assertHasNoFormErrors()
         ->assertRedirect();
 
-    $this->assertDatabaseHas('galleries', [
-        'title' => $newData->title,
+    $gallery = Gallery::where('title', $newData->title)->first();
+    $this->assertDatabaseHas('gallery_has_categories', [
+        'gallery_id' => $gallery->id,
         'gallery_category_id' => $category->id,
     ]);
 });
 
 test('cannot create gallery without category', function () {
     livewire(CreateGallery::class)
-        ->fillForm(['gallery_category_id' => null])
+        ->fillForm(['categories' => []])
         ->call('create')
-        ->assertHasFormErrors(['gallery_category_id' => 'required']);
+        ->assertHasFormErrors(['categories' => 'required']);
 });
 
 test('cannot create gallery with missing required fields', function () {
@@ -176,7 +177,8 @@ test('can search galleries by title', function () {
 
 test('can search galleries by category name', function () {
     $category = GalleryCategory::factory()->create(['name' => 'Unique Architecture XYZ']);
-    $gallery = Gallery::factory()->create(['gallery_category_id' => $category->id]);
+    $gallery = Gallery::factory()->create();
+    $gallery->categories()->sync([$category->id]);
     $others = Gallery::factory()->count(2)->create();
 
     livewire(ListGalleries::class)
@@ -241,8 +243,205 @@ test('edit page pre-fills form with existing gallery data', function () {
     livewire(EditGallery::class, ['record' => $gallery->getRouteKey()])
         ->assertFormSet([
             'title' => $gallery->title,
-            'gallery_category_id' => $gallery->gallery_category_id,
+            'categories' => $gallery->categories->pluck('id')->all(),
             'is_publish' => $gallery->is_publish,
             'date' => $gallery->date->format('Y-m-d'),
         ]);
+});
+
+// --- Image persistence tests ---
+
+test('creating gallery saves all images with correct count', function () {
+    $category = GalleryCategory::factory()->create();
+    $newData = Gallery::factory()->make();
+
+    $component = livewire(CreateGallery::class)
+        ->fillForm([
+            'categories' => [$category->id],
+            'title' => $newData->title,
+            'date' => $newData->date->format('Y-m-d'),
+            'is_publish' => $newData->is_publish,
+            'featured_image' => UploadedFile::fake()->image('featured.jpg'),
+        ]);
+
+    [$rk1, $rk2, $rk3] = [(string) Str::uuid(), (string) Str::uuid(), (string) Str::uuid()];
+    [$fk1, $fk2, $fk3] = [(string) Str::uuid(), (string) Str::uuid(), (string) Str::uuid()];
+    $component->set('data.images', [
+        $rk1 => ['path' => [$fk1 => 'galleries/image-1.jpg'], 'caption' => 'First'],
+        $rk2 => ['path' => [$fk2 => 'galleries/image-2.jpg'], 'caption' => 'Second'],
+        $rk3 => ['path' => [$fk3 => 'galleries/image-3.jpg'], 'caption' => 'Third'],
+    ]);
+
+    $component->call('create')->assertHasNoFormErrors()->assertRedirect();
+
+    $gallery = Gallery::where('title', $newData->title)->first();
+    expect($gallery)->not->toBeNull();
+    expect($gallery->images)->toHaveCount(3);
+});
+
+test('creating gallery stores image paths as strings not arrays', function () {
+    $category = GalleryCategory::factory()->create();
+    $newData = Gallery::factory()->make();
+
+    $component = livewire(CreateGallery::class)
+        ->fillForm([
+            'categories' => [$category->id],
+            'title' => $newData->title,
+            'date' => $newData->date->format('Y-m-d'),
+            'is_publish' => true,
+            'featured_image' => UploadedFile::fake()->image('featured.jpg'),
+        ]);
+
+    [$rk, $fk] = [(string) Str::uuid(), (string) Str::uuid()];
+    $component->set('data.images', [
+        $rk => ['path' => [$fk => 'galleries/image-a.jpg'], 'caption' => ''],
+    ]);
+
+    $component->call('create')->assertHasNoFormErrors();
+
+    $gallery = Gallery::where('title', $newData->title)->first();
+    expect($gallery->images)->toHaveCount(1);
+    expect($gallery->images[0]['path'])->toBeString();
+});
+
+test('creating gallery preserves captions for each image', function () {
+    $category = GalleryCategory::factory()->create();
+    $newData = Gallery::factory()->make();
+
+    $component = livewire(CreateGallery::class)
+        ->fillForm([
+            'categories' => [$category->id],
+            'title' => $newData->title,
+            'date' => $newData->date->format('Y-m-d'),
+            'is_publish' => true,
+            'featured_image' => UploadedFile::fake()->image('featured.jpg'),
+        ]);
+
+    [$rk1, $rk2] = [(string) Str::uuid(), (string) Str::uuid()];
+    [$fk1, $fk2] = [(string) Str::uuid(), (string) Str::uuid()];
+    $component->set('data.images', [
+        $rk1 => ['path' => [$fk1 => 'galleries/img1.jpg'], 'caption' => 'Caption One'],
+        $rk2 => ['path' => [$fk2 => 'galleries/img2.jpg'], 'caption' => 'Caption Two'],
+    ]);
+
+    $component->call('create')->assertHasNoFormErrors();
+
+    $gallery = Gallery::where('title', $newData->title)->first();
+    $captions = array_column($gallery->images, 'caption');
+    expect($captions)->toContain('Caption One');
+    expect($captions)->toContain('Caption Two');
+});
+
+test('creating gallery moves featured image out of temp directory', function () {
+    Storage::fake('public');
+
+    $category = GalleryCategory::factory()->create();
+    $newData = Gallery::factory()->make();
+
+    $livewireId = 'test-livewire-id';
+    $tempFeaturedPath = "galleries/temp-{$livewireId}/featured.jpg";
+    Storage::disk('public')->put($tempFeaturedPath, 'image content');
+
+    $component = livewire(CreateGallery::class)
+        ->fillForm([
+            'categories' => [$category->id],
+            'title' => $newData->title,
+            'date' => $newData->date->format('Y-m-d'),
+            'is_publish' => true,
+        ]);
+
+    $fileKey = (string) Str::uuid();
+    $component->set('data.featured_image', [$fileKey => $tempFeaturedPath]);
+
+    [$rk, $fk] = [(string) Str::uuid(), (string) Str::uuid()];
+    $component->set('data.images', [
+        $rk => ['path' => [$fk => 'galleries/img1.jpg'], 'caption' => ''],
+    ]);
+
+    $component->call('create')->assertHasNoFormErrors();
+
+    $gallery = Gallery::where('title', $newData->title)->first();
+    expect($gallery->featured_image)->not->toStartWith('galleries/temp-');
+    expect($gallery->featured_image)->toStartWith("galleries/{$gallery->id}");
+});
+
+test('editing gallery with added images saves all images including new ones', function () {
+    $gallery = Gallery::factory()->create([
+        'images' => [
+            ['path' => 'galleries/1/existing.jpg', 'caption' => 'Existing', 'thumbnail' => 'galleries/1/existing-thumb.jpg'],
+        ],
+    ]);
+
+    $component = livewire(EditGallery::class, ['record' => $gallery->getRouteKey()])
+        ->fillForm([
+            'featured_image' => UploadedFile::fake()->image('featured.jpg'),
+        ]);
+
+    [$rk1, $rk2] = [(string) Str::uuid(), (string) Str::uuid()];
+    [$fk1, $fk2] = [(string) Str::uuid(), (string) Str::uuid()];
+    $component->set('data.images', [
+        $rk1 => ['path' => [$fk1 => 'galleries/1/existing.jpg'], 'caption' => 'Existing'],
+        $rk2 => ['path' => [$fk2 => 'galleries/1/new-image.jpg'], 'caption' => 'Newly Added'],
+    ]);
+
+    $component->call('save')->assertHasNoFormErrors();
+
+    expect($gallery->refresh()->images)->toHaveCount(2);
+});
+
+test('editing gallery saves correct image count when images are replaced', function () {
+    $gallery = Gallery::factory()->create([
+        'images' => [
+            ['path' => 'galleries/1/old-1.jpg', 'caption' => '', 'thumbnail' => 'galleries/1/old-1-thumb.jpg'],
+            ['path' => 'galleries/1/old-2.jpg', 'caption' => '', 'thumbnail' => 'galleries/1/old-2-thumb.jpg'],
+            ['path' => 'galleries/1/old-3.jpg', 'caption' => '', 'thumbnail' => 'galleries/1/old-3-thumb.jpg'],
+        ],
+    ]);
+
+    $component = livewire(EditGallery::class, ['record' => $gallery->getRouteKey()])
+        ->fillForm([
+            'featured_image' => UploadedFile::fake()->image('featured.jpg'),
+        ]);
+
+    [$rk, $fk] = [(string) Str::uuid(), (string) Str::uuid()];
+    $component->set('data.images', [
+        $rk => ['path' => [$fk => 'galleries/1/replacement.jpg'], 'caption' => 'Only One'],
+    ]);
+
+    $component->call('save')->assertHasNoFormErrors();
+
+    expect($gallery->refresh()->images)->toHaveCount(1);
+});
+
+test('can create gallery with multiple categories', function () {
+    $catA = GalleryCategory::factory()->create();
+    $catB = GalleryCategory::factory()->create();
+    $newData = Gallery::factory()->make();
+
+    $repeaterKey = (string) Str::uuid();
+    $fileKey = (string) Str::uuid();
+
+    $component = livewire(CreateGallery::class)
+        ->fillForm([
+            'categories' => [$catA->id, $catB->id],
+            'title' => $newData->title,
+            'date' => $newData->date->format('Y-m-d'),
+            'is_publish' => $newData->is_publish,
+            'featured_image' => UploadedFile::fake()->image('featured.jpg'),
+        ]);
+
+    $component->set('data.images', [
+        $repeaterKey => [
+            'path' => [$fileKey => 'galleries/test-image.jpg'],
+            'caption' => '',
+        ],
+    ]);
+
+    $component->call('create')
+        ->assertHasNoFormErrors()
+        ->assertRedirect();
+
+    $gallery = Gallery::where('title', $newData->title)->first();
+    $this->assertDatabaseHas('gallery_has_categories', ['gallery_id' => $gallery->id, 'gallery_category_id' => $catA->id]);
+    $this->assertDatabaseHas('gallery_has_categories', ['gallery_id' => $gallery->id, 'gallery_category_id' => $catB->id]);
 });

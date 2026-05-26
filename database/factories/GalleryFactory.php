@@ -22,7 +22,6 @@ class GalleryFactory extends Factory
         $title = $this->faker->unique()->sentence();
 
         return [
-            'gallery_category_id' => GalleryCategory::factory(),
             'title' => $title,
             'slug' => Str::slug($title),
             'date' => $this->faker->date(),
@@ -35,6 +34,10 @@ class GalleryFactory extends Factory
     public function configure(): static
     {
         return $this->afterCreating(function (Gallery $gallery) {
+            if ($gallery->categories()->count() === 0) {
+                $gallery->categories()->attach(GalleryCategory::factory()->create());
+            }
+
             $dir = "galleries/{$gallery->id}";
             $needsSave = false;
 

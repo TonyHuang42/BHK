@@ -57,6 +57,7 @@ class PressReleaseForm
                     ->required()
                     ->columnSpanFull(),
                 RichEditor::make('body')
+                    ->extraAttributes(['style' => 'min-height: 200px'])
                     ->required()
                     ->fileAttachmentsDirectory('press-releases/attachments')
                     ->columnSpanFull(),

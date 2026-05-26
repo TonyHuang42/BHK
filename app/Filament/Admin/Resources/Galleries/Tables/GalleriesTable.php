@@ -20,9 +20,9 @@ class GalleriesTable
                 TextColumn::make('title')
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('category.name')
-                    ->label('Category')
-                    ->sortable()
+                TextColumn::make('categories.name')
+                    ->label('Categories')
+                    ->badge()
                     ->searchable(),
                 TextColumn::make('date')
                     ->date()

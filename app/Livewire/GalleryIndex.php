@@ -39,7 +39,7 @@ class GalleryIndex extends Component
         $galleries = Gallery::query()
             ->where('is_publish', true)
             ->when($this->category, function ($query) {
-                $query->whereHas('category', function ($q) {
+                $query->whereHas('categories', function ($q) {
                     $q->where('slug', $this->category);
                 });
             })

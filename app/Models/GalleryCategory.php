@@ -5,7 +5,7 @@ namespace App\Models;
 use Database\Factories\GalleryCategoryFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class GalleryCategory extends Model
 {
@@ -17,8 +17,8 @@ class GalleryCategory extends Model
         'slug',
     ];
 
-    public function galleries(): HasMany
+    public function galleries(): BelongsToMany
     {
-        return $this->hasMany(Gallery::class);
+        return $this->belongsToMany(Gallery::class, 'gallery_has_categories')->withTimestamps();
     }
 }

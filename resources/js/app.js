@@ -76,9 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 isButton: false,
                 appendTo: 'root',
                 onInit: (el, pswp) => {
-                    pswp.on('change', () => {
-                        el.innerHTML = (pswp.currSlide.data.caption || '').replace(/\n/g, '<br>');
-                    });
+                    const inner = document.createElement('div');
+                    el.appendChild(inner);
+
+                    const updateCaption = () => {
+                        const slide = pswp.currSlide;
+                        const w = slide.data.w || slide.data.width;
+                        inner.style.maxWidth = (w * slide.currZoomLevel) + 'px';
+                        inner.innerHTML = (slide.data.caption || '').replace(/\n/g, '<br>');
+                    };
+
+                    pswp.on('change', updateCaption);
                 },
             });
 

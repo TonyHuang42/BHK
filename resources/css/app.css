@@ -826,8 +826,8 @@ footer {
     gap: 4px;
     padding: 4px;
     z-index: 10;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
+    scrollbar-width: auto;
+    scrollbar-color: auto;
 }
 
 .pswp__thumb-btn {

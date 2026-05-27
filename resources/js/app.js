@@ -96,6 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 isButton: false,
                 appendTo: 'root',
                 onInit: (el, pswp) => {
+                    el.addEventListener('wheel', (e) => e.stopPropagation());
+
                     items.forEach((item, index) => {
                         const btn = document.createElement('button');
                         btn.type = 'button';

@@ -99,7 +99,8 @@ test('can delete gallery category that has no galleries', function () {
 
 test('cannot delete gallery category that is in use', function () {
     $category = GalleryCategory::factory()->create();
-    Gallery::factory()->create(['gallery_category_id' => $category->id]);
+    $gallery = Gallery::factory()->create();
+    $gallery->categories()->sync([$category->id]);
 
     livewire(ListGalleryCategories::class)
         ->callTableAction('delete', $category)

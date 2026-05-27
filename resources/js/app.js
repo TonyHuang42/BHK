@@ -124,7 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         lightbox.init();
-        lightbox.loadAndOpen(0);
+        const startIndex = parseInt(trigger.dataset.pswpIndex, 10) || 0;
+        lightbox.loadAndOpen(startIndex);
     });
 
     // Generic Tab Logic

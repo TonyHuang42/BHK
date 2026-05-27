@@ -32,14 +32,14 @@
         <div class="row row-gap-5">
             @foreach ($galleries as $gallery)
                 <div class="col-6 col-lg-4" wire:key="gallery-{{ $gallery->id }}">
-                    <button type="button" class="gallery-card-trigger" data-pswp-items="{{ json_encode($gallery->lightbox_items, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) }}">
+                    <a href="{{ route('galleries.show', $gallery->slug) }}" class="gallery-card-link">
                         <article class="gallery-card">
                             <div class="gallery-card-image-wrapper">
                                 <img src="{{ asset('storage/' . $gallery->featured_image) }}" alt="{{ $gallery->title }}" class="gallery-card-image">
                             </div>
                             <h5 class="gallery-card-title">{{ $gallery->title }}</h5>
                         </article>
-                    </button>
+                    </a>
                 </div>
             @endforeach
         </div>

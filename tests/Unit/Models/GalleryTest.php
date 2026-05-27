@@ -3,7 +3,7 @@
 use App\Models\Gallery;
 use App\Models\GalleryCategory;
 use App\Services\GalleryThumbnailService;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
@@ -80,11 +80,11 @@ test('removed images and their thumbnails are deleted when images are updated', 
     Storage::disk('public')->assertExists('galleries/image1.jpg');
 });
 
-test('gallery belongs to a category', function () {
+test('gallery belongs to many categories', function () {
     $gallery = Gallery::factory()->create();
 
-    expect($gallery->category())->toBeInstanceOf(BelongsTo::class);
-    expect($gallery->category)->toBeInstanceOf(GalleryCategory::class);
+    expect($gallery->categories())->toBeInstanceOf(BelongsToMany::class);
+    expect($gallery->categories->first())->toBeInstanceOf(GalleryCategory::class);
 });
 
 test('date is cast to a carbon instance', function () {

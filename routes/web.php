@@ -12,5 +12,6 @@ Route::view('under-japanese-occupation', 'under-japanese-occupation.index')->nam
 Route::view('people-and-stories', 'people-and-stories.index')->name('people.index');
 
 Route::get('galleries', [GalleryController::class, 'index'])->name('galleries.index');
+Route::get('galleries/{slug}', [GalleryController::class, 'show'])->name('galleries.show');
 Route::get('press-releases', [PressReleaseController::class, 'index'])->name('press-releases.index');
 Route::get('press-releases/{slug}', [PressReleaseController::class, 'show'])->name('press-releases.show');

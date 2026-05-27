@@ -49,11 +49,24 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        const leftArrowSVGString =
+            '<svg aria-hidden="true" class="pswp__icn" width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M31 36L19 24L31 12" stroke="#333" stroke-width="2"/></svg>';
+        const closeSVG =
+            '<svg aria-hidden="true" width="24" height="24" viewBox="0 0 48 48" fill="none"><path d="M8 8L40 40" stroke="#333" stroke-width="4"/><path d="M8 40L40 8" stroke="#333" stroke-width="4"/></svg>';
+        const zoomInSVG =
+            '<svg aria-hidden="true" class="zoom-in-icon" width="24" height="24" viewBox="0 0 48 48" fill="none"><path d="M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z" fill="none" stroke="#333" stroke-width="4"/><path d="M21 15L21 27" stroke="#333" stroke-width="4"/><path d="M15.0156 21.0156L27 21" stroke="#333" stroke-width="4"/><path d="M33.2216 33.2217L41.7069 41.707" stroke="#333" stroke-width="4"/></svg>';
+        const zoomOutSVG =
+            '<svg aria-hidden="true" class="zoom-out-icon" width="24" height="24" viewBox="0 0 48 48" fill="none"><path d="M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z" fill="none" stroke="#333" stroke-width="4"/><path d="M15.0156 21.0156L27 21" stroke="#333" stroke-width="4"/><path d="M33.2216 33.2217L41.7069 41.707" stroke="#333" stroke-width="4"/></svg>';
+
         const lightbox = new PhotoSwipeLightbox({
             bgOpacity: 1,
             dataSource: items,
             pswpModule: () => import("photoswipe"),
             padding: { top: 50, bottom: 200, left: 10, right: 125 },
+            arrowPrevSVG: leftArrowSVGString,
+            arrowNextSVG: leftArrowSVGString,
+            closeSVG: closeSVG,
+            zoomSVG: `${zoomInSVG}${zoomOutSVG}`,
         });
 
         lightbox.on('uiRegister', function () {

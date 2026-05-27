@@ -781,8 +781,8 @@ footer {
 .pswp {
     --pswp-bg: #fff;
     --pswp-placeholder-bg: #fff;
-    --pswp-icon-color: #000;
-    --pswp-icon-color-secondary: #fff;
+    --pswp-icon-color: none;
+    --pswp-icon-color-secondary: none;
 }
 
 .pswp__top-bar {
@@ -856,4 +856,26 @@ footer {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+}
+
+.zoom-in-icon {
+    display: block;
+    position: absolute;
+    top: 19px;
+    left: 20px;
+}
+
+.zoom-out-icon {
+    display: none;
+    position: absolute;
+    top: 19px;
+    left: 20px;
+}
+
+.pswp--zoomed-in .zoom-in-icon {
+    display: none;
+}
+
+.pswp--zoomed-in .zoom-out-icon {
+    display: block;
 }

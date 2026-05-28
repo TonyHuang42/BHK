@@ -16,6 +16,7 @@
         "vite": "^8.0.10"
     },
     "dependencies": {
+        "justified-layout": "^4.1.0",
         "photoswipe": "^5.4.4"
     }
 }

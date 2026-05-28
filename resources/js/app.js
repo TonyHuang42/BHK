@@ -1,6 +1,7 @@
 import './bootstrap';
 import Swiper from 'swiper/bundle';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import justifiedLayout from 'justified-layout';
 
 // Initialize Swiper
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,9 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        const container = trigger.closest('[data-justified-gallery]');
+
         let items;
         try {
-            items = JSON.parse(trigger.dataset.pswpItems || '[]');
+            items = JSON.parse(container?.dataset.pswpItems || '[]');
         } catch (e) {
             items = [];
         }
@@ -177,4 +180,67 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('popstate', () => activate(tabFromUrl() || uniqueSlugs[0]));
         activate(tabFromUrl() || uniqueSlugs[0]);
     }
+
+    // Justified gallery layout (Flickr justified-layout)
+    function layoutJustifiedGallery(container) {
+        const items = Array.from(container.querySelectorAll('.gallery-justified-item'));
+        if (items.length === 0) {
+            return;
+        }
+
+        const containerWidth = container.clientWidth;
+        if (containerWidth === 0) {
+            return; // hidden (e.g. inactive tab); ResizeObserver retriggers when revealed
+        }
+
+        const targetRowHeight = window.innerWidth < 768 ? 160 : 220;
+
+        const geometry = justifiedLayout(
+            items.map((el) => ({
+                width: parseInt(el.dataset.width, 10) || 1,
+                height: parseInt(el.dataset.height, 10) || 1,
+            })),
+            {
+                containerWidth,
+                targetRowHeight,
+                boxSpacing: 16,
+                containerPadding: 0,
+            }
+        );
+
+        geometry.boxes.forEach((box, i) => {
+            const el = items[i];
+            el.style.position = 'absolute';
+            el.style.top = `${box.top}px`;
+            el.style.left = `${box.left}px`;
+            el.style.width = `${box.width}px`;
+            el.style.height = `${box.height}px`;
+        });
+
+        container.style.height = `${geometry.containerHeight}px`;
+        container.classList.add('is-justified');
+    }
+
+    function initJustifiedGalleries() {
+        document.querySelectorAll('[data-justified-gallery]').forEach((container) => {
+            if (container.dataset.justifiedBound === '1') {
+                return;
+            }
+            container.dataset.justifiedBound = '1';
+
+            layoutJustifiedGallery(container);
+
+            let raf = null;
+            const ro = new ResizeObserver(() => {
+                if (raf) {
+                    cancelAnimationFrame(raf);
+                }
+                raf = requestAnimationFrame(() => layoutJustifiedGallery(container));
+            });
+            ro.observe(container);
+        });
+    }
+
+    initJustifiedGalleries();
+    document.addEventListener('livewire:navigated', initJustifiedGalleries);
 });

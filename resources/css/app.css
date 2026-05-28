@@ -10,6 +10,9 @@ body {
     font-family: "Noto Sans TC", sans-serif;
     letter-spacing: 0.5px;
     font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -211,7 +214,7 @@ a:hover {
     width: min(25vw, 170px);
 }
 
-.press-release-hero-title{
+.press-release-hero-title {
     width: min(50vw, 230px);
 }
 
@@ -479,6 +482,7 @@ footer {
     min-height: 100px;
     background-color: #672727;
     color: #fff;
+    margin-top: auto;
 }
 
 .battleSwiper .swiper-slide {
@@ -679,6 +683,113 @@ footer {
     margin-top: -250px;
 }
 
+/* PhotoSwipe UI offsets to make room for the thumbnail strip */
+.pswp {
+    --pswp-bg: #fff;
+    --pswp-placeholder-bg: #fff;
+    --pswp-icon-color: none;
+    --pswp-icon-color-secondary: none;
+}
+
+.pswp__top-bar {
+    padding-right: 110px;
+}
+
+.pswp__button--arrow {
+    margin-top: -125px;
+}
+
+.pswp__button--arrow--next {
+    right: 110px;
+}
+
+/* PhotoSwipe caption */
+.pswp__caption {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 110px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    color: #000;
+    /* font-size: 0.875rem; */
+    text-align: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* PhotoSwipe thumbnail strip */
+.pswp__thumbs {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    overflow-y: auto;
+    background: #f2f2f2;
+    border-left: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px;
+    z-index: 10;
+    scrollbar-width: auto;
+    scrollbar-color: auto;
+}
+
+.pswp__thumb-btn {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 2px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    opacity: 0.7;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.pswp__thumb-btn:hover {
+    opacity: 1;
+}
+
+.pswp__thumb-btn.is-active {
+    border-color: #672727;
+    opacity: 1;
+}
+
+.pswp__thumb-btn img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.zoom-in-icon {
+    display: block;
+    position: absolute;
+    top: 19px;
+    left: 20px;
+}
+
+.zoom-out-icon {
+    display: none;
+    position: absolute;
+    top: 19px;
+    left: 20px;
+}
+
+.pswp--zoomed-in .zoom-in-icon {
+    display: none;
+}
+
+.pswp--zoomed-in .zoom-out-icon {
+    display: block;
+}
+
 /* Responsive CSS */
 @media only screen and (max-width: 1399px) {
     .hero::after {
@@ -822,9 +933,30 @@ footer {
     .people-and-stories .bg-right {
         background-size: 16% auto;
     }
+
+    .press-release-content {
+        margin-top: 0;
+    }
+
+    .pswp__thumbs {
+        display: none;
+    }
+
+    .pswp__top-bar {
+        padding-right: 0;
+    }
+
+    .pswp__button--arrow--next {
+        right: 0;
+    }
+
+    .pswp__caption {
+        right: 0;
+    }
 }
 
 @media (min-width: 992px) {
+
     .modal-lg,
     .modal-xl {
         --bs-modal-width: 680px;
@@ -835,107 +967,4 @@ footer {
     .modal {
         --bs-modal-margin: 48px;
     }
-}
-
-/* PhotoSwipe UI offsets to make room for the thumbnail strip */
-.pswp {
-    --pswp-bg: #fff;
-    --pswp-placeholder-bg: #fff;
-    --pswp-icon-color: none;
-    --pswp-icon-color-secondary: none;
-}
-
-.pswp__top-bar {
-    padding-right: 110px;
-}
-
-.pswp__button--arrow--next {
-    right: 110px;
-}
-
-/* PhotoSwipe caption */
-.pswp__caption {
-    position: absolute;
-    bottom: 100px;
-    left: 0;
-    right: 110px;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 24px;
-    color: #000;
-    /* font-size: 0.875rem; */
-    text-align: center;
-    pointer-events: none;
-    z-index: 10;
-}
-
-/* PhotoSwipe thumbnail strip */
-.pswp__thumbs {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100px;
-    overflow-y: auto;
-    background: #f2f2f2;
-    border-left: 1px solid #e5e5e5;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 4px;
-    z-index: 10;
-    scrollbar-width: auto;
-    scrollbar-color: auto;
-}
-
-.pswp__thumb-btn {
-    display: block;
-    width: 100%;
-    padding: 0;
-    border: 2px solid transparent;
-    background: transparent;
-    cursor: pointer;
-    opacity: 0.7;
-    flex-shrink: 0;
-    transition: opacity 0.2s ease, border-color 0.2s ease;
-}
-
-.pswp__thumb-btn:hover {
-    opacity: 1;
-}
-
-.pswp__thumb-btn.is-active {
-    border-color: #672727;
-    opacity: 1;
-}
-
-.pswp__thumb-btn img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-}
-
-.zoom-in-icon {
-    display: block;
-    position: absolute;
-    top: 19px;
-    left: 20px;
-}
-
-.zoom-out-icon {
-    display: none;
-    position: absolute;
-    top: 19px;
-    left: 20px;
-}
-
-.pswp--zoomed-in .zoom-in-icon {
-    display: none;
-}
-
-.pswp--zoomed-in .zoom-out-icon {
-    display: block;
 }

@@ -46,7 +46,7 @@
                             @if ($pressRelease->category)
                                 <p class="press-release-card-category mb-2">{{ $pressRelease->category->name }}</p>
                             @endif
-                            <h2 class="mb-3">{{ $pressRelease->title }}</h2>
+                            <h3 class="mb-3">{{ $pressRelease->title }}</h3>
                             @if ($pressRelease->summary)
                                 <p class="mb-3">{{ $pressRelease->summary }}</p>
                             @endif

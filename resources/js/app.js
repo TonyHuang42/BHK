@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const leftArrowSVGString =
-            '<svg aria-hidden="true" class="pswp__icn" width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M31 36L19 24L31 12" stroke="#333" stroke-width="2"/></svg>';
+            '<svg aria-hidden="true" class="pswp__icn" width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M31 36L19 24L31 12" stroke="#ddd" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 36L19 24L31 12" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
         const closeSVG =
             '<svg aria-hidden="true" width="24" height="24" viewBox="0 0 48 48" fill="none"><path d="M8 8L40 40" stroke="#333" stroke-width="4"/><path d="M8 40L40 8" stroke="#333" stroke-width="4"/></svg>';
         const zoomInSVG =
@@ -65,7 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
             bgOpacity: 1,
             dataSource: items,
             pswpModule: () => import("photoswipe"),
-            padding: { top: 50, bottom: 200, left: 10, right: 125 },
+            paddingFn: (viewportSize) =>
+                viewportSize.x < 576
+                    ? { top: 50, bottom: 200, left: 4, right: 10 }
+                    : { top: 50, bottom: 200, left: 10, right: 125 },
             arrowPrevSVG: leftArrowSVGString,
             arrowNextSVG: leftArrowSVGString,
             closeSVG: closeSVG,

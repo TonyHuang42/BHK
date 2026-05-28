@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto press-release-content top-padding-sm px-5">
                         {{-- <img src="{{ asset('img/home/icon_ornament.svg') }}" alt="icon" class="icon-image"> --}}
-                        <h2 class="mb-3">{{ $pressRelease->title }}</h2>
+                        <h3 class="mb-3">{{ $pressRelease->title }}</h3>
                         <p class="mb-5">
                             @if ($pressRelease->category)
                                 <span class="press-release-card-category">{{ $pressRelease->category->name }}</span>

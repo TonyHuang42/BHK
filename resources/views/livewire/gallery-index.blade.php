@@ -29,7 +29,7 @@
             </div>
         </div>
     @else
-        <div class="row row-gap-5">
+        <div class="row row-gap-lg-5 row-gap-4">
             @foreach ($galleries as $gallery)
                 <div class="col-6 col-lg-4" wire:key="gallery-{{ $gallery->id }}">
                     <a href="{{ route('galleries.show', $gallery->slug) }}" class="gallery-card-link">

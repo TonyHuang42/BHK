@@ -10,7 +10,7 @@
         <section class="section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mx-auto press-release-content top-padding-sm px-5">
+                    <div class="col-lg-8 mx-auto press-release-content">
                         {{-- <img src="{{ asset('img/home/icon_ornament.svg') }}" alt="icon" class="icon-image"> --}}
                         <h3 class="mb-3">{{ $pressRelease->title }}</h3>
                         <p class="mb-5">

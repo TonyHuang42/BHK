@@ -7,6 +7,8 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Str;
 
 class GalleryImageForm
 {
@@ -20,7 +22,12 @@ class GalleryImageForm
                     ->image()
                     ->disk('public')
                     ->visibility('public')
-                    ->directory('galleries/images'),
+                    ->directory('galleries/images')
+                    ->getUploadedFileNameForStorageUsing(function (UploadedFile $file): string {
+                        $name = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+
+                        return $name.'-'.Str::random(6).'.'.$file->getClientOriginalExtension();
+                    }),
                 Textarea::make('caption')
                     ->autosize(),
                 Select::make('categories')

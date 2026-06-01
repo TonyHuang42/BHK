@@ -12,7 +12,7 @@
 
     <section class="section-padding">
         <div class="container">
-            <livewire:gallery-index />
+            <livewire:gallery-image-grid />
         </div>
     </section>
 </main>

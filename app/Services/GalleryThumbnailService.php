@@ -9,9 +9,9 @@ use Intervention\Image\ImageManager;
 
 class GalleryThumbnailService
 {
-    public function generate(string $relativePath, int $maxWidth = 400): string
+    public function generate(string $relativePath, ?string $thumbnailDir = null, int $maxWidth = 400): string
     {
-        $thumbnailPath = self::thumbnailPath($relativePath);
+        $thumbnailPath = self::thumbnailPath($relativePath, $thumbnailDir);
 
         if (Storage::disk('public')->exists($thumbnailPath)) {
             return $thumbnailPath;
@@ -39,10 +39,15 @@ class GalleryThumbnailService
         return $thumbnailPath;
     }
 
-    public static function thumbnailPath(string $relativePath): string
+    public static function thumbnailPath(string $relativePath, ?string $thumbnailDir = null): string
     {
-        $dir = dirname($relativePath);
         $name = pathinfo($relativePath, PATHINFO_FILENAME);
+
+        if ($thumbnailDir !== null) {
+            return rtrim($thumbnailDir, '/').'/'.$name.'-thumb.jpg';
+        }
+
+        $dir = dirname($relativePath);
 
         return ($dir === '.' ? '' : $dir.'/').$name.'-thumb.jpg';
     }

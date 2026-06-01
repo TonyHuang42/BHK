@@ -226,12 +226,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initJustifiedGalleries() {
         document.querySelectorAll('[data-justified-gallery]').forEach((container) => {
+            // Always recompute the layout (idempotent) so it stays correct after
+            // Livewire updates the grid (e.g. when the category filter changes).
+            layoutJustifiedGallery(container);
+
             if (container.dataset.justifiedBound === '1') {
                 return;
             }
             container.dataset.justifiedBound = '1';
-
-            layoutJustifiedGallery(container);
 
             let raf = null;
             const ro = new ResizeObserver(() => {
@@ -246,4 +248,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initJustifiedGalleries();
     document.addEventListener('livewire:navigated', initJustifiedGalleries);
+
+    // Recompute the layout after Livewire morphs a component's DOM, e.g. when
+    // the gallery category filter replaces the grid's items in place.
+    document.addEventListener('livewire:init', () => {
+        Livewire.hook('morphed', initJustifiedGalleries);
+    });
 });

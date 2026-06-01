@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Filament\Admin\Resources\PressReleases\Pages;
+namespace App\Filament\Admin\Resources\GalleryImages\Pages;
 
-use App\Filament\Admin\Resources\PressReleaseCategories\PressReleaseCategoryResource;
-use App\Filament\Admin\Resources\PressReleases\PressReleaseResource;
+use App\Filament\Admin\Resources\GalleryImageCategories\GalleryImageCategoryResource;
+use App\Filament\Admin\Resources\GalleryImages\GalleryImageResource;
 use Filament\Actions\Action;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Support\Icons\Heroicon;
 
-class ListPressReleases extends ListRecords
+class ListGalleryImages extends ListRecords
 {
-    protected static string $resource = PressReleaseResource::class;
+    protected static string $resource = GalleryImageResource::class;
 
     protected function getHeaderActions(): array
     {
@@ -19,9 +19,9 @@ class ListPressReleases extends ListRecords
             Action::make('manageCategories')
                 ->label('Manage Categories')
                 ->icon(Heroicon::OutlinedRectangleStack)
-                ->url(fn () => PressReleaseCategoryResource::getUrl('index')),
+                ->url(fn () => GalleryImageCategoryResource::getUrl('index')),
             CreateAction::make()
-                ->label('New Press Release')
+                ->label('New Image')
                 ->icon(Heroicon::OutlinedPlus),
         ];
     }

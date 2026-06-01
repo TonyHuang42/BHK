@@ -7,6 +7,7 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 
 class PressReleasesTable
@@ -32,6 +33,12 @@ class PressReleasesTable
                     ->sortable(),
                 ToggleColumn::make('is_publish')
                     ->label('Published'),
+            ])
+            ->filters([
+                SelectFilter::make('category')
+                    ->relationship('category', 'name')
+                    ->searchable()
+                    ->preload(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Filament\Admin\Resources\GalleryImages\Pages;
+
+use App\Filament\Admin\Resources\GalleryImages\GalleryImageResource;
+use Filament\Actions\DeleteAction;
+use Filament\Resources\Pages\EditRecord;
+
+class EditGalleryImage extends EditRecord
+{
+    protected static string $resource = GalleryImageResource::class;
+
+    protected function getRedirectUrl(): string
+    {
+        return static::getResource()::getUrl('index');
+    }
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            DeleteAction::make(),
+        ];
+    }
+}

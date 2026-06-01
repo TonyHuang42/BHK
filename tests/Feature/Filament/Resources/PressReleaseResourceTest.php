@@ -26,6 +26,19 @@ test('can list press releases', function () {
         ->assertSuccessful();
 });
 
+test('can filter press releases by category', function () {
+    $categoryA = PressReleaseCategory::factory()->create();
+    $categoryB = PressReleaseCategory::factory()->create();
+
+    $pressReleasesA = PressRelease::factory()->count(3)->for($categoryA, 'category')->create();
+    $pressReleasesB = PressRelease::factory()->count(2)->for($categoryB, 'category')->create();
+
+    livewire(ListPressReleases::class)
+        ->filterTable('category', $categoryA->id)
+        ->assertCanSeeTableRecords($pressReleasesA)
+        ->assertCanNotSeeTableRecords($pressReleasesB);
+});
+
 test('can render create page', function () {
     $this->get(PressReleaseResource::getUrl('create'))->assertSuccessful();
 });

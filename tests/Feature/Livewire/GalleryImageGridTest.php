@@ -73,3 +73,11 @@ test('lists categories as filter options', function () {
         ->assertSee('全部')
         ->assertSee('Wartime');
 });
+
+test('lists categories ordered by sort_order', function () {
+    GalleryImageCategory::factory()->create(['name' => 'Alpha', 'sort_order' => 2]);
+    GalleryImageCategory::factory()->create(['name' => 'Bravo', 'sort_order' => 1]);
+
+    livewire(GalleryImageGrid::class)
+        ->assertSeeInOrder(['Bravo', 'Alpha']);
+});

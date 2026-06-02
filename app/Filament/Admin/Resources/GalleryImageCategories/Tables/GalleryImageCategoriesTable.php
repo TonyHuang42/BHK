@@ -29,6 +29,8 @@ class GalleryImageCategoriesTable
                     ->sortable(),
             ])
             ->filters([])
+            ->reorderable('sort_order')
+            ->defaultSort('sort_order')
             ->recordActions([
                 DeleteAction::make()
                     ->before(function (DeleteAction $action, GalleryImageCategory $record) {

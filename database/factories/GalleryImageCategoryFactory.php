@@ -21,6 +21,7 @@ class GalleryImageCategoryFactory extends Factory
         return [
             'name' => ucwords($name),
             'slug' => Str::slug($name),
+            'sort_order' => 0,
         ];
     }
 }

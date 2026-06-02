@@ -42,6 +42,20 @@ test('can create a gallery image category', function () {
     ]);
 });
 
+test('appends new category to the end of the sort order', function () {
+    GalleryImageCategory::factory()->create(['sort_order' => 5]);
+
+    livewire(CreateGalleryImageCategory::class)
+        ->fillForm(['name' => 'Newest Category'])
+        ->call('create')
+        ->assertHasNoFormErrors();
+
+    $this->assertDatabaseHas('gallery_image_categories', [
+        'name' => 'Newest Category',
+        'sort_order' => 6,
+    ]);
+});
+
 test('generates slug from name', function () {
     livewire(CreateGalleryImageCategory::class)
         ->fillForm(['name' => 'Nature Photography'])

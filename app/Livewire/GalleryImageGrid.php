@@ -19,7 +19,7 @@ class GalleryImageGrid extends Component
     public function render(): View
     {
         $categories = GalleryImageCategory::query()
-            ->orderBy('name', 'asc')
+            ->orderBy('sort_order', 'asc')
             ->get();
 
         $images = GalleryImage::query()

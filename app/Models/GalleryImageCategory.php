@@ -15,6 +15,7 @@ class GalleryImageCategory extends Model
     protected $fillable = [
         'name',
         'slug',
+        'sort_order',
     ];
 
     public function images(): BelongsToMany

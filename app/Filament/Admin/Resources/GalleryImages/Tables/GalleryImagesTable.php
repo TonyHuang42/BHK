@@ -2,14 +2,19 @@
 
 namespace App\Filament\Admin\Resources\GalleryImages\Tables;
 
+use App\Models\GalleryImageCategory;
+use Filament\Actions\BulkAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 // use Filament\Actions\EditAction;
+use Filament\Forms\Components\Select;
+use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Collection;
 
 class GalleryImagesTable
 {
@@ -46,6 +51,24 @@ class GalleryImagesTable
             ->defaultSort('sort_order')
             ->toolbarActions([
                 BulkActionGroup::make([
+                    BulkAction::make('assignCategories')
+                        ->label('Assign categories')
+                        ->icon(Heroicon::Tag)
+                        ->schema([
+                            Select::make('categories')
+                                ->label('Categories')
+                                ->options(fn (): array => GalleryImageCategory::query()->pluck('name', 'id')->all())
+                                ->multiple()
+                                ->preload()
+                                ->required(),
+                        ])
+                        ->action(function (array $data, Collection $records): void {
+                            foreach ($records as $record) {
+                                $record->categories()->sync($data['categories']);
+                            }
+                        })
+                        ->deselectRecordsAfterCompletion()
+                        ->successNotificationTitle('Categories assigned'),
                     DeleteBulkAction::make(),
                 ]),
             ]);

@@ -8,6 +8,7 @@ use App\Models\GalleryImage;
 use App\Models\GalleryImageCategory;
 use App\Models\User;
 use Filament\Actions\DeleteAction;
+use Filament\Actions\Testing\TestAction;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
@@ -87,6 +88,33 @@ test('can assign categories when creating a gallery image', function () {
         'gallery_image_id' => $image->id,
         'gallery_image_category_id' => $category->id,
     ]);
+});
+
+test('can bulk assign categories to gallery images', function () {
+    $images = GalleryImage::factory()->count(2)->create();
+    $existing = GalleryImageCategory::factory()->create();
+    $images->each(fn (GalleryImage $image) => $image->categories()->attach($existing));
+
+    $newCategory = GalleryImageCategory::factory()->create();
+
+    livewire(ListGalleryImages::class)
+        ->selectTableRecords($images->pluck('id')->all())
+        ->callAction(
+            TestAction::make('assignCategories')->table()->bulk(),
+            data: ['categories' => [$newCategory->id]],
+        )
+        ->assertHasNoActionErrors();
+
+    foreach ($images as $image) {
+        $this->assertDatabaseHas('gallery_image_has_categories', [
+            'gallery_image_id' => $image->id,
+            'gallery_image_category_id' => $newCategory->id,
+        ]);
+        $this->assertDatabaseMissing('gallery_image_has_categories', [
+            'gallery_image_id' => $image->id,
+            'gallery_image_category_id' => $existing->id,
+        ]);
+    }
 });
 
 test('cannot create a gallery image without an image', function () {

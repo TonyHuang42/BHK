@@ -1,6 +1,6 @@
 {
   "node_modules/photoswipe/dist/photoswipe.esm.js": {
-    "file": "assets/photoswipe.esm-33QBPrd4.js",
+    "file": "assets/photoswipe.esm-DDLW1qEt.js",
     "name": "photoswipe.esm",
     "src": "node_modules/photoswipe/dist/photoswipe.esm.js",
     "isDynamicEntry": true
@@ -26,8 +26,14 @@
       "assets/texture_bg_gray-CX3btgox.png"
     ]
   },
+  "resources/js/admin/multidrag-reorder.js": {
+    "file": "assets/multidrag-reorder-BOcluNjB.js",
+    "name": "multidrag-reorder",
+    "src": "resources/js/admin/multidrag-reorder.js",
+    "isEntry": true
+  },
   "resources/js/app.js": {
-    "file": "assets/app-BvBcCZkR.js",
+    "file": "assets/app-DLts0EZE.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,

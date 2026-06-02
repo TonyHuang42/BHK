@@ -2,17 +2,17 @@
 
 namespace App\Filament\Admin\Resources\GalleryImages\Tables;
 
+use App\Filament\Admin\Resources\GalleryImages\Pages\ListGalleryImages;
 use App\Models\GalleryImageCategory;
 use Filament\Actions\BulkAction;
 use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
 // use Filament\Actions\EditAction;
+use Filament\Actions\DeleteBulkAction;
 use Filament\Forms\Components\Select;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
-use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Collection;
@@ -48,7 +48,7 @@ class GalleryImagesTable
             // ->recordActions([
             //     EditAction::make(),
             // ])
-            ->reorderable('sort_order', condition: fn (HasTable $livewire): bool => blank($livewire->getTableFilterState('categories')['values'] ?? null))
+            ->reorderable('sort_order', condition: fn (ListGalleryImages $livewire): bool => blank($livewire->getTableFilterState('categories')['values'] ?? null) && blank($livewire->getTableSearch()))
             ->defaultSort('sort_order')
             ->toolbarActions([
                 BulkActionGroup::make([

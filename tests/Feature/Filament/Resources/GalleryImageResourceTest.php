@@ -63,6 +63,24 @@ test('does not reorder gallery images while a category filter is active', functi
     }
 });
 
+test('does not reorder gallery images while a search term is active', function () {
+    $images = GalleryImage::factory()->count(3)->create();
+
+    $originalOrder = $images->mapWithKeys(fn (GalleryImage $image) => [$image->getKey() => $image->sort_order]);
+
+    livewire(ListGalleryImages::class)
+        ->set('tableSearch', $images[0]->caption)
+        ->call('reorderTable', [
+            $images[2]->getKey(),
+            $images[0]->getKey(),
+            $images[1]->getKey(),
+        ]);
+
+    foreach ($originalOrder as $key => $sortOrder) {
+        expect(GalleryImage::find($key)->sort_order)->toBe($sortOrder);
+    }
+});
+
 test('can render create page', function () {
     $this->get(GalleryImageResource::getUrl('create'))->assertSuccessful();
 });

@@ -25,7 +25,8 @@ class GalleryImagesTable
             ->columns([
                 ImageColumn::make('thumbnail_url')
                     ->label('Image')
-                    ->disk('public'),
+                    ->disk('public')
+                    ->imageHeight(100),
                 TextColumn::make('caption')
                     ->limit(50)
                     ->wrap()

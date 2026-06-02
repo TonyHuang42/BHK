@@ -17,7 +17,8 @@ class PressReleasesTable
         return $table
             ->columns([
                 ImageColumn::make('featured_image')
-                    ->disk('public'),
+                    ->disk('public')
+                    ->imageHeight(100),
                 TextColumn::make('title')
                     ->searchable()
                     ->sortable(),

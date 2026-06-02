@@ -43,6 +43,26 @@ test('can reorder gallery images', function () {
     expect($images[1]->refresh()->sort_order)->toBe(3);
 });
 
+test('does not reorder gallery images while a category filter is active', function () {
+    $category = GalleryImageCategory::factory()->create();
+    $images = GalleryImage::factory()->count(3)->create();
+    $images->each(fn (GalleryImage $image) => $image->categories()->attach($category));
+
+    $originalOrder = $images->mapWithKeys(fn (GalleryImage $image) => [$image->getKey() => $image->sort_order]);
+
+    livewire(ListGalleryImages::class)
+        ->set('tableFilters.categories.values', [$category->id])
+        ->call('reorderTable', [
+            $images[2]->getKey(),
+            $images[0]->getKey(),
+            $images[1]->getKey(),
+        ]);
+
+    foreach ($originalOrder as $key => $sortOrder) {
+        expect(GalleryImage::find($key)->sort_order)->toBe($sortOrder);
+    }
+});
+
 test('can render create page', function () {
     $this->get(GalleryImageResource::getUrl('create'))->assertSuccessful();
 });

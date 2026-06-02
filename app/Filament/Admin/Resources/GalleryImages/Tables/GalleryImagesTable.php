@@ -12,6 +12,7 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
+use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Collection;
@@ -47,7 +48,7 @@ class GalleryImagesTable
             // ->recordActions([
             //     EditAction::make(),
             // ])
-            ->reorderable('sort_order')
+            ->reorderable('sort_order', condition: fn (HasTable $livewire): bool => blank($livewire->getTableFilterState('categories')['values'] ?? null))
             ->defaultSort('sort_order')
             ->toolbarActions([
                 BulkActionGroup::make([

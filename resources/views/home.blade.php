@@ -5,8 +5,9 @@
 
 @section('content')
 <main>
-    <section class="home-hero">
-        <img src="{{ asset('img/home/banner.jpg') }}" alt="Home banner" class="hero-img" style="object-position: 65% center;">
+    <section class="hero">
+        <img src="{{ asset('img/home/banner.jpg') }}" alt="Home banner" class="hero-img" style="object-position: 50% center;">
+        <img src="{{ asset('img/home/section_header_香港抗戰歷史.svg') }}" alt="香港抗戰歷史" class="hero-title home-hero-title">
     </section>
 
     <section class="home-intro section-padding">

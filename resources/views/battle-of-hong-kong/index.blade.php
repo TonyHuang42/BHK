@@ -6,7 +6,7 @@
 @section('content')
 <main>
     <section class="hero">
-        <img src="{{ asset('img/battle-of-hong-kong/banner_香港保衛戰.jpg') }}" alt="" class="hero-img" aria-hidden="true" style="object-position: 55% center;">
+        <img src="{{ asset('img/battle-of-hong-kong/banner_香港保衛戰.jpg') }}" alt="香港保衛戰" class="hero-img" aria-hidden="true" style="object-position: 55% center;">
         <img src="{{ asset('img/home/section_header-香港保衛戰.svg') }}" alt="香港保衛戰" class="hero-title" style="top: 40%; left: 7%;">
     </section>
 

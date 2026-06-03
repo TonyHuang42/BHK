@@ -210,6 +210,14 @@ a:hover {
     pointer-events: none;
 }
 
+.home-hero-title {
+    top: 40%;
+    left: auto;
+    right: 3%;
+    width: min(80vw, 600px);
+    opacity: 0.75;
+}
+
 .gallery-hero-title {
     width: min(25vw, 170px);
 }
@@ -911,6 +919,11 @@ footer {
 }
 
 @media only screen and (max-width: 575px) {
+    .home-hero-title {
+        top: 22%;
+        right: 3%;
+    }
+
     .bg-right {
         background-size: 18% auto;
     }

@@ -28,122 +28,157 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container d-flex justify-content-between align-items-center">
-                <a class="navbar-brand me-0 d-flex align-items-center gap-2" href="{{ route('home') }}">
-                    <img src="{{ asset('img/home/logo.svg') }}" alt="logo" class="logo">
+
+<header>
+    
+<nav class="navbar navbar-expand-lg">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <!-- Logo -->
+        <a class="navbar-brand me-0 d-flex align-items-center gap-2" href="{{ route('home') }}">
+            <img src="{{ asset('img/home/logo.svg') }}" alt="logo" class="logo">
+        </a>
+
+        <!-- Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav d-flex justify-content-end w-100 gap-2">
+
+                <!-- Battle -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {{ request()->routeIs('battle.*') ? 'nav-link--current' : '' }}" href="#">
+                        {{ __('messages.battle') }}
+                    </a>                    
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'before-the-storm']) }}">戰前背景</a></li>
+                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'eighteen-days-of-battle']) }}">戰役經過</a></li>
+                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'black-christmas']) }}">黑色聖誕</a></li>
+                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'wartime-timeline']) }}">戰時時間線</a></li>
+                    </ul>
+                </li>
+
+                <!-- Guerrilla -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {{ request()->routeIs('guerrilla.*') ? 'nav-link--current' : '' }}" href="#">
+                        {{ __('messages.guerrilla') }}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'hk-kowloon-brigade']) }}">港九大隊</a></li>
+                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'guerrilla-warfare']) }}">游擊戰</a></li>
+                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'intelligence-and-rescue']) }}">情報與營救</a></li>
+                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'underground-resistance']) }}">敵後抵抗網絡</a></li>
+                    </ul>
+                </li>
+
+                <!-- Occupation -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {{ request()->routeIs('occupation.*') ? 'nav-link--current' : '' }}" href="#">
+                        {{ __('messages.occupation') }}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'occupation-rule']) }}">佔領統治</a></li>
+                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'survival-and-rationing']) }}">生存與配給</a></li>
+                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'economy-and-society']) }}">經濟與社會</a></li>
+                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'everyday-life-wartime']) }}">戰時日常</a></li>
+                    </ul>
+                </li>
+
+                <!-- People -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {{ request()->routeIs('people.*') ? 'nav-link--current' : '' }}" href="#">
+                        {{ __('messages.people') }}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'resistance-figures']) }}">抗戰人物</a></li>
+                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'village-memories']) }}">村落記憶</a></li>
+                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'mutual-aid']) }}">民間互助</a></li>
+                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'rescue-stories']) }}">救援故事</a></li>
+                    </ul>
+                </li>
+
+                <!-- Gallery -->
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('galleries.*') ? 'nav-link--current' : '' }}" href="{{ route('galleries.index') }}">
+                        {{ __('messages.gallery') }}
+                    </a>
+                </li>
+
+                <!-- Press -->
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('press-releases.*') ? 'nav-link--current' : '' }}" href="{{ route('press-releases.index') }}">
+                        {{ __('messages.press') }}
+                    </a>
+                </li>
+
+                <!-- Contact -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" data-bs-toggle="dropdown">
+                        {{ __('messages.contact') }}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end contact-popup-bg">
+                        <button type="button" class="btn-close" onclick="this.closest('.dropdown').querySelector('.nav-link').click()"></button>
+
+                        <div class="contact-popup">
+                            <h3 class="fw-bold mb-1" style="color:#692626;">
+                                {{ __('messages.contact') }}
+                            </h3>
+
+                            <p>如有任何疑問，歡迎聯絡我們：</p>
+
+                            <ul class="list-unstyled mb-0">
+                                <li><strong>電郵：</strong> inquiry@battle-of-hk.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Language Switch (STATIC) -->
+            <li class="nav-item dropdown">
+                <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                    🌐 {{ app()->getLocale() }}
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a class="dropdown-item" href="{{ route('lang.switch', 'zh') }}">
+                            中文
+                        </a>
+                    </li>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav d-flex justify-content-end w-100 gap-0 column-gap-xl-3 column-gap-lg-1 column-gap-2">
-                        {{-- <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('home') ? 'nav-link--current' : '' }}" href="{{ route('home') }}">
-                                主頁
-                            </a>
-                        </li> --}}
+                    <li>
+                        <a class="dropdown-item" href="{{ route('lang.switch', 'en') }}">
+                            English
+                        </a>
+                    </li>
+                </ul>
+            </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {{ request()->routeIs('battle.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                香港保衛戰
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'before-the-storm']) }}">戰前背景</a></li>
-                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'eighteen-days-of-battle']) }}">戰役經過</a></li>
-                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'black-christmas']) }}">黑色聖誕</a></li>
-                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'wartime-timeline']) }}">戰時時間線</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {{ request()->routeIs('guerrilla.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                游擊與抵抗
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'hk-kowloon-brigade']) }}">港九大隊</a></li>
-                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'guerrilla-warfare']) }}">游擊戰</a></li>
-                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'intelligence-and-rescue']) }}">情報與營救</a></li>
-                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'underground-resistance']) }}">敵後抵抗網絡</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {{ request()->routeIs('occupation.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                日治下的香港
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'occupation-rule']) }}">佔領統治</a></li>
-                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'survival-and-rationing']) }}">生存與配給</a></li>
-                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'economy-and-society']) }}">經濟與社會</a></li>
-                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'everyday-life-wartime']) }}">戰時日常</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {{ request()->routeIs('people.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                人物與故事
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'resistance-figures']) }}">抗戰人物</a></li>
-                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'village-memories']) }}">村落記憶</a></li>
-                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'mutual-aid']) }}">民間互助</a></li>
-                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'rescue-stories']) }}">救援故事</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('galleries.*') ? 'nav-link--current' : '' }}" href="{{ route('galleries.index') }}">
-                                相冊
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('press-releases.*') ? 'nav-link--current' : '' }}" href="{{ route('press-releases.index') }}">
-                                新聞稿
-                            </a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                                聯絡我們
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end contact-popup-bg">
-                                <button type="button" class="btn-close" style="font-size: 0.8rem; position: absolute; top: 16px; right: 16px;" aria-label="Close" onclick="this.closest('.dropdown').querySelector('.nav-link').click()"></button>
-                                <div class="contact-popup">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <h3 class="fw-bold mb-1" style="color:#692626;">聯絡我們</h3>
-                                    </div>
-                                    <div style="margin-left: 235px;">
-                                        <p class="mb-3 fw-normal">如有任何疑問，歡迎透過以下方式聯絡我們：</p>
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="mb-2"><strong>電郵：</strong> <a href="mailto:inquiry@battle-of-hk.com" class="text-decoration-none fw-normal" style="color: #672727;">inquiry@battle-of-hk.com</a></li>
-                                            {{-- <li><strong>電話：</strong> <a href="tel:+12345678" class="text-decoration-none">+1234 5678</a></li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    @yield('content')
-
-    <footer class="d-flex align-items-center">
-        <div class="container">
-            <div class="copyright">
-                <div>© {{ date('Y') }} 香港抗戰歷史 版權所有</div>
-            </div>
+            </ul>
         </div>
-    </footer>
+    </div>
+</nav>
+</header>
 
-    @livewireScripts
+@yield('content')
+
+<footer class="d-flex align-items-center">
+    <div class="container">
+        <div class="copyright">
+            <div>© {{ date('Y') }} 香港抗戰歷史 版權所有</div>
+        </div>
+    </div>
+</footer>
+
+@livewireScripts
 </body>
-
 </html>

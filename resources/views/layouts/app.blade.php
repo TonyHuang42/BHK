@@ -50,53 +50,78 @@
 
                 <!-- Battle -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {{ request()->routeIs('battle.*') ? 'nav-link--current' : '' }}" href="#">
+                    <a
+                        class="nav-link dropdown-toggle {{ request()->routeIs('battle.*') ? 'nav-link--current' : '' }}"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
                         {{ __('messages.battle') }}
-                    </a>                    
+                    </a>
+
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'before-the-storm']) }}">戰前背景</a></li>
-                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'eighteen-days-of-battle']) }}">戰役經過</a></li>
-                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'black-christmas']) }}">黑色聖誕</a></li>
-                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'wartime-timeline']) }}">戰時時間線</a></li>
+                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'before-the-storm']) }}">{{ __('messages.battle_dropdown_1') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'eighteen-days-of-battle']) }}">{{ __('messages.battle_dropdown_2') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'black-christmas']) }}">{{ __('messages.battle_dropdown_3') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'wartime-timeline']) }}">{{ __('messages.battle_dropdown_4') }}</a></li>
                     </ul>
                 </li>
 
-                <!-- Guerrilla -->
+              <!-- Guerrilla -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {{ request()->routeIs('guerrilla.*') ? 'nav-link--current' : '' }}" href="#">
+                    <a
+                        class="nav-link dropdown-toggle {{ request()->routeIs('guerrilla.*') ? 'nav-link--current' : '' }}"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
                         {{ __('messages.guerrilla') }}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'hk-kowloon-brigade']) }}">港九大隊</a></li>
-                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'guerrilla-warfare']) }}">游擊戰</a></li>
-                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'intelligence-and-rescue']) }}">情報與營救</a></li>
-                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'underground-resistance']) }}">敵後抵抗網絡</a></li>
+                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'hk-kowloon-brigade']) }}">{{ __('messages.guerrilla_dropdown_1') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'guerrilla-warfare']) }}">{{ __('messages.guerrilla_dropdown_2') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'intelligence-and-rescue']) }}">{{ __('messages.guerrilla_dropdown_3') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'underground-resistance']) }}">{{ __('messages.guerrilla_dropdown_4') }}</a></li>
                     </ul>
                 </li>
 
                 <!-- Occupation -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {{ request()->routeIs('occupation.*') ? 'nav-link--current' : '' }}" href="#">
+                    <a
+                        class="nav-link dropdown-toggle {{ request()->routeIs('occupation.*') ? 'nav-link--current' : '' }}"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
                         {{ __('messages.occupation') }}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'occupation-rule']) }}">佔領統治</a></li>
-                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'survival-and-rationing']) }}">生存與配給</a></li>
-                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'economy-and-society']) }}">經濟與社會</a></li>
-                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'everyday-life-wartime']) }}">戰時日常</a></li>
+                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'occupation-rule']) }}">{{ __('messages.occupation_dropdown_1') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'survival-and-rationing']) }}">{{ __('messages.occupation_dropdown_2') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'economy-and-society']) }}">{{ __('messages.occupation_dropdown_3') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'everyday-life-wartime']) }}">{{ __('messages.occupation_dropdown_4') }}</a></li>
                     </ul>
                 </li>
 
                 <!-- People -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {{ request()->routeIs('people.*') ? 'nav-link--current' : '' }}" href="#">
+                    <a
+                        class="nav-link dropdown-toggle {{ request()->routeIs('people.*') ? 'nav-link--current' : '' }}"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
                         {{ __('messages.people') }}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'resistance-figures']) }}">抗戰人物</a></li>
-                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'village-memories']) }}">村落記憶</a></li>
-                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'mutual-aid']) }}">民間互助</a></li>
-                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'rescue-stories']) }}">救援故事</a></li>
+                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'resistance-figures']) }}">{{ __('messages.people_dropdown_1') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'village-memories']) }}">{{ __('messages.people_dropdown_2') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'mutual-aid']) }}">{{ __('messages.people_dropdown_3') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'rescue-stories']) }}">{{ __('messages.people_dropdown_4') }}</a></li>
                     </ul>
                 </li>
 

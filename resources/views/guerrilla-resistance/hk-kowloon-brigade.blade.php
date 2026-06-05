@@ -1,9 +1,9 @@
 {{-- 港九大隊 --}}
 <x-content-section
     id="hk-kowloon-brigade"
-    title="港九大隊"
-    subtitle="The Hong Kong–Kowloon Brigade"
-    intro="香港淪陷後，抵抗並沒有停止。港九大隊在新界、西貢、沙頭角、大嶼山和市區等地建立據點，成為日佔時期香港最重要的敵後抗日力量。"
+    title="{{ __('guerrilla.guerrilla_warfare.hk_brigade_title') }}"
+    subtitle="{{ __('guerrilla.guerrilla_warfare.hk_brigade_subtitle') }}" 
+    intro="{{ __('guerrilla.guerrilla_warfare.hk_brigade_intro') }}"
     bgLeft="img/bg/bg_rifle_r.png"
     bgRight="img/bg/bg_rifle_l.png"
     :images="[

@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-8 mx-auto">
                     {{ $slot }}
-                    <button type="button" class="read-more" data-bs-toggle="modal" data-bs-target="#readMoreModal-{{ $id }}">閱讀更多</button>
+                    <button type="button" class="read-more" data-bs-toggle="modal" data-bs-target="#readMoreModal-{{ $id }}">{{ __('battle.before_storm.section_readmore') }}</button>
                     @if (count($images) === 2)
                         <img src="{{ asset($images[1]) }}" alt="Image 2" class="w-100 mt-4">
                     @endif

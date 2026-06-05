@@ -1,52 +1,59 @@
 {{-- 戰役經過 --}}
 <x-content-section
     id="eighteen-days-of-battle"
-    title="戰役經過"
-    subtitle="Eighteen Days of Battle"
-    intro="1941年12月，日軍由北面進攻香港，戰事從新界一路推進至九龍和香港島。短短十八日內，守軍與市民共同經歷了空襲、撤退、巷戰與孤島防守的巨大壓力。"
+    title="{{ __('battle.before_storm.battle_process_title') }}"
+    subtitle="{{ __('battle.before_storm.battle_process_subtitle') }}"
+    intro="{{ __('battle.before_storm.battle_process_intro') }}"
     :images="[
         'img/battle-of-hong-kong/image_2_1.jpg',
         'img/battle-of-hong-kong/image_2_2.jpg',
         'img/battle-of-hong-kong/image_2_3.jpg',
     ]"
 >
-    <h6>戰役總覽：由北而南的十八日</h6>
-    <p>1941 年 12 月 8 日清晨，日軍越過深圳河，香港保衛戰正式爆發。這一天，太平洋戰爭全面展開；日本同時向多個英美據點發動攻勢，香港亦在同一場大規模戰略行動中成為目標。日軍首先轟炸啟德機場，削弱香港有限的空中力量，隨後由新界北部向南推進。香港從戰前的緊張前線，瞬間變成真正的戰場。</p>
-    <p>這場戰役歷時十八日，從新界、九龍一路打到香港島。守軍雖在兵力、火力、制空權和補給上處於劣勢，但仍在多處陣地頑強抵抗。香港保衛戰不是一場單一地點的戰鬥，而是一連串連續退守、陣地防禦、城市作戰和山地攻防的總和。日軍進攻迅速，守軍則在被逐步壓縮的空間內苦戰，直至 12 月 25 日香港總督楊慕琦宣告投降，香港進入三年零八個月的日佔時期。香港歷史博物館和加拿大退伍軍人事務部均記載，香港戰役由 1941 年 12 月 8 日開始，至 12 月 25 日結束。</p>
 
-    <h6>越過深圳河：戰火由北而來</h6>
-    <p>日軍進攻香港的第一步，是從深圳河以北越境南下。新界北部與日軍控制下的華南地區相連，令香港的陸上防線很快便承受壓力。日軍兵分多路推進，沿元朗、上水、粉嶺、沙頭角、大埔等方向向南壓迫，目標是突破新界，迫近九龍。與此同時，啟德機場遭到轟炸，香港空中防禦力量幾乎在戰事初期便被削弱。</p>
-    <p>守軍在新界北部的任務，主要是延緩日軍推進，爭取時間退守主要防線。由於日軍掌握進攻主動權，又擁有較強的炮兵和空中支援，守軍很難在新界北部長期抵擋。戰事開始後，香港守軍逐步向「醉酒灣防線」撤退。這條防線原本被視為九龍北部的重要屏障，但在日軍迅速推進下，它很快便面臨嚴峻考驗。</p>
+    <h6>{{ __('battle.before_storm.battle_process_section_1_title') }}</h6>
+    <p>{{ __('battle.before_storm.battle_process_section_1_p1') }}</p>
+    <p>{{ __('battle.before_storm.battle_process_section_1_p1') }}</p>
+
+    <h6>{{ __('battle.before_storm.battle_process_section_2_title') }}</h6>
+    <p>{{ __('battle.before_storm.battle_process_section_2_p1') }}</p>
+    <p>{{ __('battle.before_storm.battle_process_section_2_p1') }}</p>
 
     <x-slot:modal>
-        <h6>醉酒灣防線：九龍門戶的失守</h6>
-        <p>醉酒灣防線橫跨九龍以北山脊，依靠山地、碉堡、壕溝和交通線構成防禦體系。它的戰略意義，在於阻止日軍從新界進入九龍，為香港島防務爭取時間。其中，城門棱堡是防線上的重要據點，也是日軍突破的關鍵目標。</p>
-        <p>然而，戰局發展比守軍預期更快。1941 年 12 月 9 日晚至 10 日凌晨，日軍突襲城門棱堡。這次夜襲令醉酒灣防線的中心支點迅速失守，防線整體難以繼續維持。Juno Beach Centre 的戰史資料指出，日軍在 12 月 9 日攻擊醉酒灣防線，令整條大陸防線變得無法守住，迫使守軍放棄該線。</p>
-        <p>醉酒灣防線的失守，是香港保衛戰的第一個重大轉折。原本希望能拖延日軍多日的防線，實際上很快被突破。這使守軍不得不放棄九龍北部陣地，轉入撤退與再部署。從此，香港戰局不再是守住新界的問題，而是如何在九龍撤退後，依託維多利亞港與香港島繼續抵抗。</p>
+        <h6>{{ __('battle.before_storm.battle_process_model_section_1_title') }}</h6>
+        <p>{{ __('battle.before_storm.battle_process_model_section_1_p1') }}</p>
+        <p>{{ __('battle.before_storm.battle_process_model_section_1_p2') }}</p>
+        <p>{{ __('battle.before_storm.battle_process_model_section_1_p3') }}</p>
 
-        <h6>九龍撤退：由陸上防線轉向港島防衛</h6>
-        <p>醉酒灣防線失守後，守軍開始從九龍撤往香港島。九龍地區的防守空間有限，若繼續停留，部隊可能被日軍壓迫至海邊而無法撤離。因此，守軍指揮部決定逐步放棄九龍，將防衛重心轉到香港島。</p>
-        <p>撤退本身是一項艱難任務。守軍需要在日軍壓迫下維持秩序，把人員、裝備和部分物資運過維多利亞港。同時，九龍半島的失守也意味著日軍可從北岸炮擊香港島，並觀察島上防線。對市民而言，戰火由新界推至九龍，再逼近港島，恐懼與混亂迅速擴散。原本熟悉的城市空間，被炮火、防空警報、軍事封鎖和難民潮所取代。</p>
-        <p>到 12 月中旬，九龍已落入日軍手中。香港島成為守軍最後的主要陣地。維多利亞港雖一度提供天然屏障，但在日軍取得九龍後，這道水面屏障已不再穩固。日軍開始準備渡海登島，戰役進入第二階段。</p>
+        <h6>{{ __('battle.before_storm.battle_process_model_section_2_title') }}</h6>
+        <p>{{ __('battle.before_storm.battle_process_model_section_2_p1') }}</p>
+        <p>{{ __('battle.before_storm.battle_process_model_section_2_p2') }}</p>
+        <p>{{ __('battle.before_storm.battle_process_model_section_2_p3') }}</p>
 
-        <h6>維港兩岸：最後屏障的動搖</h6>
-        <p>香港島的防禦，依靠海岸炮台、山地陣地、道路關卡和步兵防線組成。守軍希望利用維多利亞港阻止日軍渡海，並依托港島崎嶇地形進行抵抗。然而，日軍佔領九龍後，能夠從北岸觀察和炮擊港島，對守軍陣地形成持續壓力。</p>
-        <p>日軍在渡海前，先以炮火和空襲削弱港島防禦。守軍則面對補給困難、通訊受阻、醫療壓力加劇和民眾傷亡增加等問題。隨著水源、糧食和彈藥日益緊張，香港島上的軍民都被迫承受越來越沉重的壓力。這時的戰役，已不只是軍事陣地的攻防，更是整座城市在圍困中能夠承受多久的問題。</p>
+        <h6>{{ __('battle.before_storm.battle_process_model_section_3_title') }}</h6>
+        <p>{{ __('battle.before_storm.battle_process_model_section_3_p1') }}</p>
+        <p>{{ __('battle.before_storm.battle_process_model_section_3_p2') }}</p>
+        <p>{{ __('battle.before_storm.battle_process_model_section_3_p3') }}</p>
 
-        <h6>登陸港島：戰鬥進入最殘酷階段</h6>
-        <p>1941 年 12 月 18 日晚，日軍開始渡海登陸香港島北岸。日軍登島後，守軍與其在北角、鰂魚涌、太古、黃泥涌峽、淺水灣、赤柱等地展開激烈戰鬥。港島地形複雜，道路、山脊、峽谷和海岸線交錯，使戰鬥呈現分散而殘酷的特徵。部隊之間的聯繫時常被切斷，不同防區可能各自苦戰，難以形成完整協同。</p>
-        <p>黃泥涌峽一帶，是港島戰事中最慘烈的地點之一。這裡連接港島南北交通，是日軍分割守軍防線的重要目標。守軍在峽谷、山坡和道路兩側頑強抵抗，但日軍不斷滲透和包抄，使防線逐步被切開。英軍、加拿大軍、印度部隊、香港義勇防衛軍及其他守軍單位，在各處陣地奮戰，許多人戰死、受傷或被俘。Commonwealth War Graves Commission 指出，西灣國殤紀念墳場安葬和紀念大量在香港戰役及其後被囚期間犧牲的英聯邦軍人，反映了港島戰鬥與戰俘經歷的沉重代價。</p>
+        <h6>{{ __('battle.before_storm.battle_process_model_section_4_title') }}</h6>
+        <p>{{ __('battle.before_storm.battle_process_model_section_4_p1') }}</p>
+        <p>{{ __('battle.before_storm.battle_process_model_section_4_p2') }}</p>
+        <p>{{ __('battle.before_storm.battle_process_model_section_4_p3') }}</p>
 
-        <h6>孤立與分割：港島防線逐步瓦解</h6>
-        <p>日軍登陸後，港島防線逐漸被分割。守軍在多個地點仍然堅持抵抗，但整體指揮和增援愈發困難。日軍奪取高地和交通要道後，可以切斷各防區聯繫，使守軍陷入孤立。醫院、臨時救護站和民居都受到戰火波及，戰爭對平民造成嚴重傷害。</p>
-        <p>戰役後期，守軍已面臨多重困境：部分陣地失守，彈藥和糧水不足，傷員眾多，通訊破壞，且缺乏外部增援。儘管如此，香港島多處戰鬥仍持續到最後階段。赤柱一帶的守軍尤其堅持至接近投降前後，顯示香港保衛戰並非迅速崩潰，而是在極端劣勢下持續苦戰至最後一刻。</p>
+        <h6>{{ __('battle.before_storm.battle_process_model_section_5_title') }}</h6>
+        <p>{{ __('battle.before_storm.battle_process_model_section_5_p1') }}</p>
+        <p>{{ __('battle.before_storm.battle_process_model_section_5_p2') }}</p>
+        <p>{{ __('battle.before_storm.battle_process_model_section_5_p3') }}</p>
 
-        <h6>聖誕日投降：黑色聖誕的開始</h6>
-        <p>1941 年 12 月 25 日，香港戰局已無法挽回。當日下午，香港總督楊慕琦與守軍司令莫德庇等向日軍投降。這一天後來被稱為「黑色聖誕」。對香港而言，這不只是一次軍事失敗，也是一個時代的斷裂：英國殖民管治被日軍佔領取代，城市進入長達三年零八個月的苦難歲月。</p>
-        <p>香港保衛戰的結束，並不代表香港抵抗的終結。正是在英軍戰敗投降後，香港抵抗日軍侵略的重任，逐步落到中國共產黨領導的抗日游擊隊及本地抗日力量身上。港九大隊相關史料指出，港九大隊是香港淪陷三年零八個月期間，唯一一支成建制、由始至終堅持抵抗的抗日武裝力量。 這也為後續章節——秘密大營救、敵後游擊戰、情報合作、海上作戰和民眾支援——埋下歷史伏線。</p>
+        <h6>{{ __('battle.before_storm.battle_process_model_section_6_title') }}</h6>
+        <p>{{ __('battle.before_storm.battle_process_model_section_6_p1') }}</p>
+        <p>{{ __('battle.before_storm.battle_process_model_section_6_p2') }}</p>
+        <p>{{ __('battle.before_storm.battle_process_model_section_6_p3') }}</p>
 
-        <h6>小結：一場失守之戰，也是一段抵抗的開端</h6>
-        <p>香港保衛戰以軍事失敗告終，但它在香港歷史中留下深刻印記。十八日之內，香港經歷了從邊境入侵、九龍失守、港島登陸到全城投降的急劇變化。這場戰役暴露了英國遠東防務的脆弱，也顯示出守軍在孤立無援下的艱苦抵抗。</p>
-        <p>更重要的是，香港保衛戰並不是這段歷史的終點，而是日佔時期抗戰歷史的起點。當正規防線崩潰後，香港的山區、村落、海灣與城市街巷，逐漸成為另一種抵抗的空間。從此，香港抗戰的重心由正面戰場轉入敵後：營救、情報、游擊、宣傳、鋤奸、海上交通與民眾支援，將共同構成香港在日佔歲月中不屈不撓的抗戰篇章。</p>
+        <h6>{{ __('battle.before_storm.battle_process_model_section_7_title') }}</h6>
+        <p>{{ __('battle.before_storm.battle_process_model_section_7_p1') }}</p>
+        <p>{{ __('battle.before_storm.battle_process_model_section_7_p2') }}</p>
+        
+        
     </x-slot:modal>
 </x-content-section>

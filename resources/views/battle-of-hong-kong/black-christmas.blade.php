@@ -1,46 +1,52 @@
 {{-- 黑色聖誕 --}}
 <x-content-section
     id="black-christmas"
-    title="黑色聖誕"
-    subtitle="Black Christmas"
-    intro="1941年12月25日，香港投降，這一天後來被稱為「黑色聖誕」。它標誌着香港保衛戰的結束，也象徵三年零八個月日治歲月的開始。"
+    title="{{ __('battle.before_storm.black_christmas_title') }}"
+    subtitle="{{ __('battle.before_storm.black_christmas_subtitle') }}"
+    intro="{{ __('battle.before_storm.black_christmas_intro') }}"
     :images="[
         'img/battle-of-hong-kong/image_3_1.jpg',
         'img/battle-of-hong-kong/image_3_2.jpg',
         'img/battle-of-hong-kong/image_3_3.jpg',
     ]"
 >
-    <h6>一個城市的淪陷時刻</h6>
-    <p>1941 年 12 月 25 日，是聖誕節，也是香港歷史上沉痛的一天。經過十八日激戰，香港守軍在新界、九龍和香港島多處戰場苦苦抵抗，但在兵力、火力、制空權、補給和外援皆處於劣勢的情況下，戰局已無法扭轉。這一天，香港總督楊慕琦和駐港英軍司令莫德庇向日軍投降，香港正式淪陷。香港人後來稱這一天為「黑色聖誕」，因為它標誌著戰鬥的終結，也標誌著三年零八個月日佔苦難的開始。香港記憶資料庫記載，日軍於 1941 年 12 月 8 日進攻香港，守軍經十八日激戰後於聖誕日投降，日佔時期隨即展開。</p>
-    <p>「黑色聖誕」之所以沉重，不只是因為香港在軍事上失守。對市民而言，這一天代表原有秩序的突然崩塌：政府權力中斷，軍事佔領開始，交通、糧食、治安和日常生活都被迫進入未知狀態。戰火雖然逐漸停下，但更漫長、更陰暗的歲月才剛剛開始。</p>
 
-    <h6>聖誕日的投降</h6>
-    <p>12 月 25 日前後，香港島的戰鬥已進入最後階段。日軍登陸後，逐步切斷守軍防線，控制交通要道和高地。守軍各部隊被分割，多處陣地孤立無援，彈藥、食水和醫療資源日益緊張。加拿大退伍軍人事務部指出，到聖誕日，經過十七日以上苦戰的盟軍已傷亡慘重，最終別無選擇，只能放下武器投降；加拿大士兵其後成為戰俘，許多人在香港和日本的戰俘營中熬過三年多歲月。</p>
-    <p>投降儀式在半島酒店進行。這座酒店原本象徵香港作為國際城市的繁華與體面，但在 1941 年聖誕日，它卻成為香港主權與軍事控制權轉移的場所。港九大隊成立八十周年紀念特刊亦收錄相關圖片說明，記載 1941 年 12 月 25 日英軍宣佈投降，並標明圖中為半島酒店內的受降儀式。</p>
+    <h6>{{ __('battle.before_storm.black_christmas_section_1_title') }}</h6>
+    <p>{{ __('battle.before_storm.black_christmas_section_1_p1') }}</p>
+    <p>{{ __('battle.before_storm.black_christmas_section_1_p2') }}</p>
+
+    <h6>{{ __('battle.before_storm.black_christmas_section_2_title') }}</h6>
+    <p>{{ __('battle.before_storm.black_christmas_section_2_p1') }}</p>
+    <p>{{ __('battle.before_storm.black_christmas_section_2_p2') }}</p>
 
     <x-slot:modal>
-        <h6>從戰火到佔領</h6>
-        <p>戰鬥結束並不等於苦難結束。對許多士兵而言，投降後等待他們的是戰俘生涯；對平民而言，日軍進城後的搜捕、管制、掠奪與糧食短缺，將逐步改變生活的一切。原本作為國際貿易港的香港，被納入日本軍事佔領體系之中，港口、倉庫、道路、船隻、工廠和物資，都可能被日軍徵用或控制。</p>
-        <p>日佔政府很快建立軍事統治秩序。市民的行動受到限制，新聞、言論、集會、交通和糧食供應都被嚴密管制。許多人被迫離開市區，返回內地或鄉村；也有人因戰亂、飢餓、疾病和暴力失去家人。香港歷史博物館指出，1941 年 12 月 8 日至 25 日的十八日戰事，標誌著日軍佔領香港的過程；這段歷史後來成為香港二戰記憶中的重要創傷。</p>
+        <h6>{{ __('battle.before_storm.black_christmas_model_section_1_title') }}</h6>
+        <p>{{ __('battle.before_storm.black_christmas_model_section_1_p1') }}</p>
+        <p>{{ __('battle.before_storm.black_christmas_model_section_1_p2') }}</p>
 
-        <h6>軍民的沉重代價</h6>
-        <p>香港保衛戰造成大量軍民傷亡。守軍包括英軍、加拿大軍、印度部隊、香港義勇防衛軍及其他輔助人員，許多人戰死、受傷或被俘。戰後，大量英聯邦軍人安葬或紀念於香港多處軍人墳場，當中包括西灣國殤紀念墳場。這些墓碑和紀念名錄，至今仍提醒後人，香港保衛戰不是抽象的軍事事件，而是由一個個具體生命所承受的歷史代價。Commonwealth War Graves Commission 的資料亦以香港戰役為例，記述英聯邦軍人在戰鬥與被囚期間付出的沉重犧牲。</p>
-        <p>平民同樣承受巨大痛苦。炮火、空襲、街巷戰和軍事佔領，使香港市民在短時間內失去安全感。部分家庭在戰事中流離失所；部分平民因缺糧、醫療不足或日軍暴行而受害。對普通市民來說，「黑色聖誕」不是戰史書上的一個日期，而是生活被戰爭徹底撕裂的開始。</p>
 
-        <h6>城市秩序的崩塌</h6>
-        <p>香港淪陷後，原有殖民政府行政體系被迫停頓，日軍接管城市管理。銀行、學校、報館、商店、醫院和公共機構都受到不同程度的衝擊。貨幣、糧食、工作、醫療和交通等日常生活基礎，逐漸變得不穩定。市民不只要面對軍事統治，還要面對物資短缺帶來的生存壓力。</p>
-        <p>日軍佔領下的香港，不再是戰前那個繁忙的自由港。港口仍然重要，但其功能被轉向軍事和佔領需要；城市仍然運作，但運作邏輯已由殖民行政轉為軍事控制。街道、碼頭、倉庫和學校等熟悉空間，都可能被賦予新的佔領用途。這種轉變，使香港人的日常生活被迫服從戰爭機器。</p>
+        <h6>{{ __('battle.before_storm.black_christmas_model_section_2_title') }}</h6>
+        <p>{{ __('battle.before_storm.black_christmas_model_section_2_p1') }}</p>
+        <p>{{ __('battle.before_storm.black_christmas_model_section_2_p2') }}</p>
 
-        <h6>聖誕的反差</h6>
-        <p>「黑色聖誕」這個名稱之所以令人難忘，正在於它強烈的反差。聖誕節本應象徵平安、團聚與希望，但 1941 年的香港，迎來的卻是投降、失序和佔領。戰時的鐘聲、炮聲、腳步聲和哭聲，取代了節日的安寧。對許多香港家庭而言，這一天不是節日，而是恐懼與不確定的開端。</p>
-        <p>這種反差，也使「黑色聖誕」成為香港集體記憶中的重要符號。它不只是軍事失敗的代稱，更象徵一座城市在戰爭中被迫改變命運。從這一天開始，香港人必須在佔領、飢餓、搜捕、恐懼與壓迫中尋找生存空間，也必須在黑暗中保存抵抗的火種。</p>
 
-        <h6>抵抗並未終結</h6>
-        <p>香港投降後，正規防線雖然瓦解，但抗日行動並未停止。相反，戰爭形態由正面防禦轉向敵後抗爭。港九大隊相關史料指出，英軍戰敗投降後，在香港抵抗日軍侵略的重任落在中國共產黨領導的抗日游擊隊身上；1942 年 2 月 3 日，港九大隊在西貢黃毛應村宣告成立，並成為香港淪陷三年零八個月期間唯一一支成建制、由始至終堅持抵抗的抗日武裝力量。</p>
-        <p>因此，「黑色聖誕」既是香港失守的一天，也是另一段抗戰歷史的起點。從城市戰場到山區村落，從港九市區到新界鄉郊，從陸上交通線到海上航道，香港的抵抗力量開始以新的方式延續。後來的秘密大營救、情報合作、游擊戰、鋤奸行動和民眾支援，都在這個歷史斷裂點之後逐漸展開。</p>
+        <h6>{{ __('battle.before_storm.black_christmas_model_section_3_title') }}</h6>
+        <p>{{ __('battle.before_storm.black_christmas_model_section_3_p1') }}</p>
+        <p>{{ __('battle.before_storm.black_christmas_model_section_3_p2') }}</p>
 
-        <h6>小結：黑暗中的歷史轉折</h6>
-        <p>1941 年 12 月 25 日，香港陷入黑暗。這一天結束了十八日的香港保衛戰，也開啟了漫長的日佔歲月。它讓香港市民第一次如此直接地感受到世界大戰的殘酷，也讓這座城市被迫面對佔領、失序和生存危機。</p>
-        <p>然而，黑色聖誕並不只是失敗與苦難的象徵。它同時提醒我們，香港的抗戰故事並沒有在投降一刻結束。當公開的軍事防線被擊破，地下交通、鄉村網絡、海上力量和民間支援，便成為延續抵抗的重要力量。正是在黑色聖誕之後，香港抗戰進入另一個更隱蔽、更艱苦，也更能展現民眾意志的階段。</p>
+
+        <h6>{{ __('battle.before_storm.black_christmas_model_section_4_title') }}</h6>
+        <p>{{ __('battle.before_storm.black_christmas_model_section_4_p1') }}</p>
+        <p>{{ __('battle.before_storm.black_christmas_model_section_4_p2') }}</p>
+
+
+        <h6>{{ __('battle.before_storm.black_christmas_model_section_5_title') }}</h6>
+        <p>{{ __('battle.before_storm.black_christmas_model_section_5_p1') }}</p>
+        <p>{{ __('battle.before_storm.black_christmas_model_section_5_p2') }}</p>
+
+
+        <h6>{{ __('battle.before_storm.black_christmas_model_section_6_title') }}</h6>
+        <p>{{ __('battle.before_storm.black_christmas_model_section_6_p1') }}</p>
+        <p>{{ __('battle.before_storm.black_christmas_model_section_6_p2') }}</p>   
     </x-slot:modal>
 </x-content-section>

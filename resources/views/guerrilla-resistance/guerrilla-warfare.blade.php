@@ -1,9 +1,9 @@
 {{-- 游擊戰 --}}
 <x-content-section
     id="guerrilla-warfare"
-    title="游擊戰"
-    subtitle="Guerrilla Warfare"
-    intro="面對兵力和武器都佔優勢的日軍，游擊隊以山林、村落、海灣和街巷作為戰場。他們透過突襲、爆破、伏擊和宣傳，打擊敵人，也鼓舞民心。"
+     title="{{ __('guerrilla.guerrilla_warfare.title') }}"
+    subtitle="{{ __('guerrilla.guerrilla_warfare.subtitle') }}" 
+    intro="{{ __('guerrilla.guerrilla_warfare.intro') }}"
     bgLeft="img/bg/bg_rifle_r.png"
     bgRight="img/bg/bg_rifle_l.png"
     :images="[
@@ -12,65 +12,68 @@
         'img/guerrilla-resistance/image_2_3.jpg',
     ]"
 >
-    <h6>在山海之間延續抵抗</h6>
-    <p>香港淪陷後，日軍控制了主要市區、交通要道、港口和軍事設施，但這並不等於香港完全失去抵抗空間。新界的山地、鄉村、海灣和島嶼，仍然為抗日力量提供了活動條件。港九大隊正是在這樣的環境下，利用熟悉地形、群眾支援和機動戰術，在日軍重兵佔領的香港展開游擊戰。</p>
-    <p>港九大隊的游擊戰，不是正面戰場上的大規模會戰，而是分散、靈活、隱蔽而持久的敵後行動。它可以是在山路上伏擊巡邏隊，可以是在夜間突襲日軍據點，可以是在市區爆破交通設施，也可以是在海上以小船對抗敵船。相關紀念特刊形容，港九大隊在香港這個戰略要地開展農村游擊戰、海島游擊戰、海上游擊戰和城市游擊戰，有效干擾日軍部署，也使駐港日軍和漢奸走狗終日惶恐不安。</p>
 
-    <h6>香港地形與游擊戰條件</h6>
-    <p>香港地方狹小，日軍駐有重兵，港九大隊難以建立大片穩定根據地。因此，香港的游擊戰不能照搬內地廣闊農村的模式，而必須因地制宜。山嶺、村落、海灣、島嶼、市區街巷和邊境通道，都成為不同形式抗戰的依托。古物古蹟辦事處關於東江縱隊文物徑的文章指出，港九大隊在日軍佔領香港期間，憑情報聯絡、運輸補給與掩護營救等游擊戰術多方打擊日軍，成為香港抗戰的中堅力量。</p>
-    <p>這種作戰環境要求隊伍必須小型化、機動化和高度依賴地方社會。大隊不可能長期固守一處，也不宜與日軍大部隊硬拼。因此，港九大隊常以短槍隊、小隊或中隊為單位，根據敵情快速行動，完成任務後迅速撤離。它的力量不在於兵力龐大，而在於熟悉地形、接近群眾、善於隱蔽，以及能在敵人意想不到之處發動攻擊。</p>
-
+    <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_section_1_title') }}</h6>
+     <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_section_1_p1') }}</p>
+     <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_section_1_p2') }}</p>
+ 
+    <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_section_2_title') }}</h6>
+    <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_section_2_p1') }}</p>
+    <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_section_2_p2') }}</p>
+    
     <x-slot:modal>
-        <h6>以小制大：機動靈活的戰術</h6>
-        <p>游擊戰的核心，是以弱敵強、避實擊虛。港九大隊面對的是佔有火力、兵力和交通優勢的日軍，若進行正面陣地戰，極易陷入不利。因此，大隊多採取突襲、伏擊、爆破、破壞、鋤奸、截擊和夜襲等方式，選擇敵人薄弱環節下手。行動目標可以是小型哨所、巡邏隊、交通線、偽警機構、物資船隻或日軍臨時駐地。</p>
-        <p>這種戰術的目的，不一定是佔領地方，而是干擾敵軍、打擊氣焰、補充武器、破壞交通、保護群眾，並向市民展示抗日力量仍然存在。港九大隊的行動往往規模不大，但影響可以很大。一次成功襲擊，可能迫使日軍調整掃蕩部署；一次爆破行動，可能中斷交通和軍事運輸；一次夜襲據點，則能削弱偽警和特務對鄉村的壓迫。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_1_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_1_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_1_p2') }}</p>
+        
+        <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_2_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_2_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_2_p2') }}</p>
+        
+        <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_3_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_3_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_3_p2') }}</p>
+        
+        <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_4_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_4_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_4_p2') }}</p>
+        
+        <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_5_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_5_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_5_p2') }}</p>
 
-        <h6>陸上游擊：山村與據點之間的戰鬥</h6>
-        <p>港九大隊的陸上游擊戰主要活躍於西貢、沙頭角、沙田、大埔、元朗、大嶼山等地。這些地區有山路、村落、海岸和農田，既能讓游擊隊隱蔽轉移，也能透過村民支援獲取糧食、情報和嚮導。西貢、沙頭角一帶尤其重要，既靠近海路，也能連接大鵬灣和東江游擊區，是港九大隊多次活動和作戰的核心地帶。</p>
-        <p>陸上游擊戰的對手不只有日軍，還包括偽警、特務、漢奸、土匪和地方惡勢力。日佔時期，日軍不可能完全控制每條山路和每個村落，因此常依賴偽組織、密探和地方勢力收集情報、壓迫群眾。港九大隊打擊這些力量，既是軍事行動，也是保護鄉民和維持抗日根據地安全的需要。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_6_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_6_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_6_p2') }}</p>
+        
+        <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_7_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_7_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_7_p2') }}</p>
+        
+        <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_8_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_8_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_8_p2') }}</p>
+        
+        <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_9_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_9_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_9_p2') }}</p>
+        
+        <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_10_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_10_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_10_p2') }}</p>
 
-        <h6>短槍隊與近距離突襲</h6>
-        <p>短槍隊是港九大隊游擊戰中很具特色的力量。短槍隊人數較少，裝備輕便，便於在山路、村落和市區邊緣活動。他們能夠化裝、潛伏、接近目標，在短時間內發動突襲，然後迅速撤離。這種作戰方式特別適合香港狹窄而複雜的環境。</p>
-        <p>例如沙田短槍隊在獅子山、茶果嶺、牛池灣、窩塘等地都有活動。港九大隊志記載，1942年7至8月間，沙田短槍隊原計劃經獅子山山腳下的引水渠到沙田水塘突襲日軍，途中遇上日軍後即時利用引水渠掩蔽，待敵人走近後開火，擊斃日軍軍官、士兵及印度兵，並繳獲武器。 這類戰例反映出港九大隊善於利用地形和臨場判斷，以小隊行動取得戰果。</p>
-
-        <h6>偷襲啟德機場：直插敵人要害</h6>
-        <p>1944年2月，港九大隊策劃偷襲啟德機場。啟德機場是日軍在港重要軍事設施之一，與空中交通、軍事調動和物資運輸密切相關。當時日軍正大力搜捕跳傘逃生的美軍飛行員克爾中尉，並對西貢、沙田一帶進行掃蕩。港九大隊為牽制敵人，決定展開外線行動，襲擊啟德機場。</p>
-        <p>據港九大隊相關資料，劉黑仔等人潛入機場，刺死值班日軍後，以定時炸彈炸毀飛機一架，同時炸毀油庫。 這次行動的意義，不只在於造成物質損失，更在於向日軍表明，即使在其嚴密控制的軍事設施附近，游擊隊仍有能力滲透和破壞。它也顯示港九大隊的作戰範圍不局限於山區，而能伸入敵人重點防衛區域。</p>
-
-        <h6>爆破窩打老道火車橋：破壞交通與牽制掃蕩</h6>
-        <p>游擊戰不只是襲擊人員，也包括破壞交通線。1944年4月，港九大隊市區中隊爆破九龍窩打老道四號火車橋。這條鐵路交通線對日軍調動和掃蕩有實際作用，因此成為重要破壞目標。紀念特刊記載，為牽制日軍，港九大隊市區中隊於1944年4月22日深夜爆破窩打老道四號火車橋，原本開往新界和寶安掃蕩的日軍馬上撤回市區。</p>
-        <p>這次爆破行動說明了城市游擊戰的特殊價值。港九大隊不需要長期佔領市區，也不必與日軍進行街頭大戰，只要在關鍵節點上精準破壞，便能迫使敵人調兵、改變計劃，甚至中斷正在進行的掃蕩。這種以小規模行動牽動大範圍敵軍部署的方式，是香港游擊戰的重要特色。</p>
-
-        <h6>夜襲據點：打擊偽警與敵軍駐地</h6>
-        <p>除了破壞交通和軍事設施，港九大隊也多次夜襲日軍、偽警和敵方據點。夜間行動有利於游擊隊隱蔽接近目標，也能減低敵方火力優勢。這類行動通常需要事前偵察、內線配合、地形熟悉和撤退路線安排，一旦成功，便能繳獲武器彈藥，削弱敵人基層控制。</p>
-        <p>1944年10月，大嶼山中隊襲擊大澳偽警察局，俘虜三十多名警察，繳槍三十九支。 大澳位處大嶼山西部，是海陸交通的重要地點；偽警機構對當地治安和日軍控制有實際作用。這次行動不只取得武器，也打擊了偽警在地方上的威信，向鄉民展示抗日力量仍能在日軍統治下主動出擊。</p>
-
-        <h6>官坑七聖古廟：粉碎日軍修築工事</h6>
-        <p>1944年冬，西貢中隊對駐守官坑七聖古廟的日軍據點發動突襲。據紀念特刊記載，西貢中隊中隊長張興、指導員梁超經過嚴密偵察後率隊行動，殲滅營房內全部日軍士兵，並繳獲一批槍枝彈藥，成功粉碎日軍在該區修築工事的企圖。</p>
-        <p>這類行動顯示，港九大隊不是被動躲避日軍掃蕩，而是能夠主動打擊敵人企圖。日軍若在鄉村或山區建立固定工事，便可能進一步壓縮游擊隊活動空間，也會威脅村民和交通線。港九大隊在工事尚未穩固前發動襲擊，既消除據點，也保護了西貢一帶的活動條件。</p>
-
-        <h6>海上游擊：以小船對抗大船</h6>
-        <p>香港四面環海，島嶼眾多，海上交通對日軍和游擊隊都極為重要。港九大隊利用海灣、漁船、島嶼和熟悉水道的漁民，發展出富有特色的海上游擊戰。曾生在《港九獨立大隊史》序言中指出，港九地區地方狹小、敵人駐以重兵，游擊隊難於迴旋，因此港九大隊特別利用周圍遼闊海域和眾多島嶼，發展海上武裝，以小船襲擊敵人大船，多次擊沉或俘獲敵船，並保護己方航運。</p>
-        <p>海上游擊戰需要勇氣，也需要技術。小船火力弱、速度有限，一旦遭遇日軍炮艇或武裝船隻，處境非常危險。但小船也有優勢：熟悉水道，容易隱蔽，能在夜間靠近目標，並可利用島嶼和海岸掩護撤退。海上中隊的活動，使大鵬灣、大嶼山、龍鼓洲、沙洲等水域都成為抗日戰場的一部分。</p>
-
-        <h6>龍鼓洲與沙洲：海上作戰的代價</h6>
-        <p>海上游擊戰也付出沉重代價。1943年5月某夜，大嶼山中隊隊長劉春祥帶領六名班排骨幹，自東涌乘帆船前往屯門龍鼓灘，希望打通寶安與中山游擊區聯繫。船行至龍鼓洲、沙洲海域時，突然遭兩艘日軍炮艇伏擊。由於帆船火力和航速均不及敵方，激戰後船被擊沉，劉春祥等七名指戰員及船家梁克一家五口壯烈犧牲。</p>
-        <p>這段歷史提醒我們，游擊戰並不只是機智與勝利，也包含極高風險和犧牲。海上行動看似靈活，但一旦暴露在敵方炮艇火力下，小船幾乎沒有防護。劉春祥等人的犧牲，反映出港九大隊在開闢海上交通、建立跨區聯繫和維持抗戰路線時，面對的是真實而沉重的生命代價。</p>
-
-        <h6>大浪口之戰：海上中隊的戰果</h6>
-        <p>到戰爭後期，港九大隊海上中隊的作戰能力逐步成熟。1945年8月初，海上中隊在大浪口進攻一艘日軍大木船，據紀念特刊記載，該役共擊斃四十多名日軍，並繳獲大量武器及物資。 這次行動發生在日本投降前夕，顯示港九大隊即使在戰爭最後階段仍保持主動出擊能力。</p>
-        <p>海上戰果對港九大隊尤其重要，因為它不只削弱敵人，也能補充游擊隊自身物資。日佔時期香港物資短缺，武器、彈藥、醫藥和糧食都極為珍貴。成功截獲敵船，往往意味著能取得槍械、藥品、軍用物資和生活用品，直接支援部隊和根據地運作。</p>
-
-        <h6>城市游擊：在敵人中心地帶行動</h6>
-        <p>港九大隊的游擊戰還包括城市行動。香港和九龍市區是日軍統治中心，警備森嚴，行動風險極高。但市區同時也是情報、交通、宣傳和破壞工作的關鍵場域。港九大隊市區中隊被稱為「不帶槍的游擊隊」，其工作方式與山區武裝不同，更重視秘密聯絡、情報收集、傳單宣傳和精準破壞。</p>
-        <p>城市游擊戰的意義，在於讓日軍知道佔領中心並不安全。當傳單出現在街頭，當鐵路橋被炸毀，當情報從市區流向敵後根據地，日軍的統治便不再是完全穩固的。城市中的每一次秘密行動，都需要冒著被搜捕、審訊和處決的危險。這種抵抗不一定總伴隨槍聲，卻同樣是游擊戰的一部分。</p>
-
-        <h6>戰果與歷史評價</h6>
-        <p>據不完全統計，港九大隊斃傷日軍一百餘名，斃傷漢奸、偽警及間諜等七十餘名，俘虜、受降日偽軍六百餘名；炸毀日軍飛機一架，繳獲長短槍五百五十餘支、機槍六十餘挺、炮六門，繳獲敵船至少三十三艘，擊沉四艘，並取得大量彈藥。 這些數字來自不完全統計，但已足以說明港九大隊在日佔香港期間持續作戰的規模和影響。</p>
-        <p>更重要的是，港九大隊的游擊戰並不只是以擊斃敵人或繳獲武器來衡量。它牽制日軍，保護群眾，維持抗戰士氣，保存香港與華南抗日力量之間的聯繫，也讓香港在淪陷後仍能成為敵後抵抗的一部分。這種作用，很難完全用數字呈現，卻是理解香港抗戰史時不可忽視的一環。</p>
-
-        <h6>小結：不屈服的戰場</h6>
-        <p>港九大隊的游擊戰，讓日佔香港的歷史不只是「淪陷」二字。當主要城市和交通線落入日軍手中，抵抗仍在山路、海灣、島嶼、村落和街巷之間延續。港九大隊以有限的武器、人手和資源，利用香港特殊地形和本地社會支援，發展出靈活而多樣的作戰方式。</p>
-        <p>這些行動或許規模不如正面戰場上的大會戰，卻在日軍佔領秩序之中打開一道道裂縫。它們提醒後人，香港在戰時並非只是被動承受苦難的城市，也是一個有人持續抵抗、有人冒險守護家園、有人在黑暗中堅持希望的戰場。</p>
-    </x-slot:modal>
+        <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_11_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_11_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_11_p2') }}</p>
+        
+        <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_12_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_12_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_12_p2') }}</p>
+        
+        <h6>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_13_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_13_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.guerrilla_model_section_13_p2') }}</p>
+        
+        
+       </x-slot:modal>
 </x-content-section>

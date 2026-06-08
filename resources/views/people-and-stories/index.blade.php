@@ -16,7 +16,7 @@
                 <a href="{{ route('people.index', ['tab' => 'resistance-figures']) }}" data-tab-link="resistance-figures">{{ __('peopleStories.people-and-stories.tab_1') }}</a>
                 <a href="{{ route('people.index', ['tab' => 'village-memories']) }}" data-tab-link="village-memories">{{ __('peopleStories.people-and-stories.tab_2') }}</a>
                 <a href="{{ route('people.index', ['tab' => 'mutual-aid']) }}" data-tab-link="mutual-aid">{{ __('peopleStories.people-and-stories.tab_3') }}</a>
-                <a href="{{ route('people.index', ['tab' => 'rescue-stories']) }}" data-tab-link="rescue-stories">{{ __('peopleStories.people-and-stories.tab_1') }}</a>
+                <a href="{{ route('people.index', ['tab' => 'rescue-stories']) }}" data-tab-link="rescue-stories">{{ __('peopleStories.people-and-stories.tab_4') }}</a>
             </div>
         </div>
     </section>

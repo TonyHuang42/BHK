@@ -16,17 +16,16 @@ return [
     'guerrilla_dropdown_4' => 'Anti-Japanese resistance network',
 
     'occupation' => 'Occupation of Hong Kong',
-    'occupation_dropdown_1' => 'occupation rule',
-    'occupation_dropdown_2' => 'Survival and rationing',
-    'occupation_dropdown_3' => 'Economy and Society',
-    'occupation_dropdown_4' => 'Wartime daily life',
+    'occupation_dropdown_1' => 'Japanese Rule in Hong Kong',
+    'occupation_dropdown_2' => 'Survival and Rationing in Crisis',
+    'occupation_dropdown_3' => 'Economy and Society Under Occupation',
+    'occupation_dropdown_4' => 'Everyday Life Under Occupation',
     
     'people' => 'People & Stories',
-    'people_dropdown_1' => 'Anti-Japanese War Figures',
-    'people_dropdown_2' => 'Village memory',
-    'people_dropdown_3' => 'Civilian mutual aid',
-    'people_dropdown_4' => 'rescue story',
-
+    'people_dropdown_1' => 'Those Who Stood Up',
+    'people_dropdown_2' => 'Villages That Remember',
+    'people_dropdown_3' => 'Acts of Courage and Care',
+    'people_dropdown_4' => 'Stories of Rescue',
 
     'gallery' => 'Gallery',
     'press' => 'Press Releases',

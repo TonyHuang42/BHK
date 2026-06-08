@@ -10,6 +10,10 @@
         'img/under-japanese-occupation/image_1_1.jpg',
     ]"
 >
+    <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_section_1_title') }}</h6>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_section_1_p1') }}</p>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_section_1_p1') }}</p>
+    
     <h6>從軍事勝利到軍政控制</h6>
     <p>1941 年 12 月 25 日，香港在「黑色聖誕」中淪陷。戰鬥結束後，日軍面對的已不只是如何擊敗守軍，而是如何控制一座人口密集、港口繁忙、社會網絡複雜的城市。香港從英國殖民地變成日本軍事佔領地，原有政府秩序被中斷，市民生活也被納入一套以軍事、治安、物資和思想控制為核心的管治體系之中。</p>
     <p>日本佔領香港後，於 1942 年 2 月設立「香港佔領地總督部」，由磯谷廉介出任總督。香港記憶資料庫指出，日本在 1941 年 12 月 25 日完全控制香港，翌年 2 月設立「香港佔領地總督部」，並把香港視為軍事補給線，以高壓方式管治城市。 這意味著香港不再以普通民政城市方式運作，而是被納入日本戰時軍事體系，成為支援其華南及太平洋戰爭部署的佔領據點。</p>

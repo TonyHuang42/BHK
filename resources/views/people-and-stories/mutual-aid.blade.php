@@ -1,74 +1,74 @@
 {{-- 民間互助 --}}
 <x-content-section
     id="mutual-aid"
-    title="民間互助"
-    subtitle="Acts of Courage and Care"
-    intro="在飢餓、搜捕和壓迫之中，民間互助成為支撐社會的重要力量。有人借出房屋，有人提供食物，有人照顧傷病，有人冒險傳遞消息，讓抵抗得以延續。"
+    title="{{ __('peopleStories.people-and-stories.acts_title') }}"
+    subtitle="{{ __('peopleStories.people-and-stories.acts_subtitle') }}" 
+    intro="{{ __('peopleStories.people-and-stories.acts_intro') }}"
     bgLeft="img/bg/bg_binocular_r.png"
     bgRight="img/bg/bg_binocular_l.png"
     :images="[
         'img/people-and-stories/image_3.jpg',
     ]"
 >
-    <h6>戰火之下彼此支撐</h6>
-    <p>香港抗戰的歷史，不只是游擊隊員與日軍之間的戰鬥，也是一段普通人在危難中彼此扶持的歷史。日佔時期，糧食短缺、交通受阻、搜捕頻繁、村落被掃蕩，許多人自身已經生活艱難，卻仍然選擇支援抗日力量、照顧傷病者、保護被追捕的人，或把有限的食物和住所分享出來。</p>
-    <p>這種民間互助，是港九大隊能夠長期堅持的重要基礎。曾生在《港九獨立大隊史》序言中指出，港九獨立大隊是港九人民的子弟兵，其每一項成就都與港九同胞的熱情支援分不開。換言之，香港抗戰不是少數武裝人員孤立完成的事，而是由無數村民、漁民、商戶、婦女、青年、宗教人士和交通員共同承擔的歷史。</p>
+    <h6>{{ __('peopleStories.people-and-stories.acts_section_1_title') }}</h6>
+    <p>{{ __('peopleStories.people-and-stories.acts_section_1_p1') }}</p>
+    <p>{{ __('peopleStories.people-and-stories.acts_section_1_p2') }}</p>
 
-    <h6>一碗飯、一間屋、一條路</h6>
-    <p>民間互助有時並不宏大。它可能只是一碗飯、一張床、一間可以暫避的屋、一條熟悉山路的帶領，或一句及時傳來的消息。對身處敵後的游擊隊員、情報員和被營救者而言，這些微小幫助往往就是生死之間的差別。</p>
-    <p>在日軍佔領下，任何協助抗日力量的行為都可能帶來嚴重後果。提供食物可能被視為「通匪」，帶路可能被視為協助游擊隊，藏人可能牽連全家。即使如此，仍有許多普通人選擇伸手相助。這種互助不是出於富足，而是在自己同樣缺糧、缺藥、缺安全感的情況下，仍願意為別人保留一點生路。</p>
+    <h6>{{ __('peopleStories.people-and-stories.acts_section_2_title') }}</h6>
+    <p>{{ __('peopleStories.people-and-stories.acts_section_2_p1') }}</p>
+    <p>{{ __('peopleStories.people-and-stories.acts_section_2_p2') }}</p>
 
-    <x-slot:modal>
-        <h6>村民的支援：抗戰的根基</h6>
-        <p>新界村落是民間互助最重要的空間之一。村民熟悉地形，知道哪條山路能避開日軍，哪個山洞能藏人，哪戶人家可靠，哪片海灣適合上落。對港九大隊而言，村民的支援不只是後勤補充，而是整個敵後活動能否持續的根基。</p>
-        <p>這種支援常常以日常形式出現。有人煮飯送水，有人把柴草和糧食送到指定地點，有人修補衣服，有人照顧傷員，有人聽到日軍出動便立即通報。戰爭把普通村落變成抗戰網絡的一部分，也讓村民在不穿軍裝的情況下承擔了抗戰風險。</p>
+     <x-slot:modal>
+          <h6>{{ __('peopleStories.people-and-stories.acts_model_section_1_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_1_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_1_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.acts_model_section_2_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_2_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_2_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.acts_model_section_3_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_3_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_3_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.acts_model_section_4_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_4_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_4_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.acts_model_section_5_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_5_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_5_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.acts_model_section_6_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_6_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_6_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.acts_model_section_7_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_7_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_7_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.acts_model_section_8_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_8_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_8_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.acts_model_section_9_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_9_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_9_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.acts_model_section_10_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_10_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_10_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.acts_model_section_11_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_11_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_11_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.acts_model_section_12_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_12_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_12_p2') }}</p>
 
-        <h6>赤徑婦女的集體支援</h6>
-        <p>赤徑村的故事，很能說明民間互助如何由個人行動變成集體支援。《港九大隊志》記載，李有娣擔任赤徑婦女會會長期間，多次動員村中婦女支援港九大隊。她們唱歌演戲宣傳抗日，協助收割柴草，運送糧食和物資到山洞存放，安排隊員住宿，打掃衛生，補衣服，照顧傷病員，並傳遞情報。</p>
-        <p>這些工作看似細碎，卻支撐了整個敵後抗戰的日常運作。隊伍需要衣服，需要清潔住所，需要病人有人照料，需要消息有人傳送，也需要有人向村民解釋抗戰的意義。赤徑婦女的支援讓我們看到，女性不是抗戰故事中的旁觀者，而是村落互助和群眾動員的重要力量。</p>
-
-        <h6>凌娘：像母親一樣照顧游擊隊</h6>
-        <p>西貢昂窩村村民凌娘，被稱為「游擊隊的母親」。成立八十周年紀念特刊記載，她無微不至地照顧游擊隊員，借出自家房屋給軍需處辦公，又動員兩個兒子參加港九大隊工作；1943 年初，她更用土辦法救活了身患重病的民運員梁雪英。</p>
-        <p>凌娘的故事，是民間互助中最溫暖也最沉重的一類。她不是軍事指揮員，也不是前線戰士，但她以照顧、收留和救治的方式支援抗戰。對奔走於山路和敵後的年輕隊員而言，一位願意照顧他們的村民，可能就像黑暗中的家人。這種「母親」式的支持，讓抗戰不只是戰鬥，也有人情與溫度。</p>
-
-        <h6>商戶與魚欄：用生意作掩護</h6>
-        <p>民間互助也出現在商戶和行業網絡中。戰時的商舖、魚欄、米舖和雜貨店，不一定只是交易場所，也可能成為物資籌措、情報傳遞或人員接應的掩護。商戶熟悉市場、人脈和貨物流通，比普通人更容易取得食物、藥物和消息，也能以正常經營掩護秘密工作。</p>
-        <p>這種支援需要很高的警覺。商戶一方面要應付日軍和偽警檢查，另一方面又要避免讓真正用途暴露。一次貨物轉交、一句暗號、一個留宿安排，都可能牽涉整個地下網絡的安全。民間互助在這裡不只是善意，也是一種有技巧、有風險的戰時智慧。</p>
-
-        <h6>交通員：把人與消息連起來</h6>
-        <p>交通員是敵後互助網絡中最危險也最關鍵的角色之一。文件、情報、藥物、口信、路線安排和人員轉移，都需要交通員穿梭在村落、市區、山路和海邊之間。成立八十周年紀念特刊的陣亡戰士名單中，便列有馮芝、張詠賢、張金福、曾永生、劉洋勝等交通員，顯示交通工作在抗戰中的重要與危險。</p>
-        <p>交通員的工作很少有壯闊場面，卻往往決定行動成敗。他們需要記住路線、辨認接頭人、避開檢查站，還要在被捕時保守秘密。許多交通員沒有正式戰鬥身份，但他們承擔的是同樣沉重的風險。民間互助若沒有交通員，就難以從一個村落延伸到另一個村落，也難以從山區連接到市區和海上。</p>
-
-        <h6>漁民與船家：海上的互助</h6>
-        <p>香港的抗戰離不開海。漁民和船家熟悉水道、潮汐、風向和島嶼，能協助運送人員和物資，也能為游擊隊提供海上路線。這種支援極其危險，因為日軍炮艇和巡邏船隨時可能截查，海上天氣亦難以控制。一艘小船，一次夜航，往往背負著整個行動的成敗。</p>
-        <p>劉春祥抗日英雄群體的故事，讓我們看到船家支援所付出的代價。1943 年 5 月，劉春祥等人乘帆船由東涌前往龍鼓灘途中，在龍鼓洲、沙洲海域遭日軍炮艇伏擊，七名指戰員以及船家梁克一家五口全部犧牲。這說明海上互助不是旁觀式的幫忙，而是與抗日隊員共同承擔生命危險。</p>
-
-        <h6>宗教人士與庇護</h6>
-        <p>寺院、庵堂和教堂在戰時也可能成為庇護空間。大嶼山寶蓮寺住持筏可大師的故事，是其中最具代表性的例子。1944 年日軍掃蕩大嶼山時，港九大隊副大隊長魯風正在寶蓮寺養病。筏可大師安排魯風偽裝成僧人，混在數百僧尼和居士中聽經，助其避過日軍搜查；其後日軍以刀相逼並毒打筏可大師，他仍沒有透露魯風行蹤。</p>
-        <p>這種庇護是一種道德選擇。宗教人士本可避免捲入軍事衝突，但在面對受傷或被追捕者時，有人選擇保護生命。筏可大師的行動讓我們看到，民間互助不只來自親族或村落，也可以來自信仰中的慈悲與義氣。</p>
-
-        <h6>互助背後的沉默</h6>
-        <p>民間互助常常需要沉默。當日軍掃蕩村落，逼問游擊隊行蹤時，最重要的支援可能不是做什麼，而是不說什麼。烏蛟騰村長李世藩、李源培等人在日軍逼供下拒絕透露游擊隊行蹤，遭受殘酷折磨。這種沉默，是以身體承受暴力來保護他人的選擇。</p>
-        <p>沉默的力量很難在普通敘事中呈現，卻是敵後抗戰能夠存續的重要條件。交通站能維持，是因為有人不說；隊員能轉移，是因為有人不說；村落能保存秘密，也是因為有人在酷刑面前不說。民間互助不一定總是主動行動，有時正是在最恐怖的時刻守住秘密。</p>
-
-        <h6>互助與互信</h6>
-        <p>在日軍高壓統治下，互助需要信任。村民要相信游擊隊不會濫用支援，游擊隊要相信村民不會告密，交通員要相信接頭人準時可靠，商戶要相信物資交到正確的人手中。這些信任不是一日建立，而是在長期共同生活、共同風險和共同信念中形成。</p>
-        <p>佔領統治常常試圖破壞這種信任。特務、告密、偽警和酷刑，都是為了讓人彼此懷疑，不敢再互相支援。正因如此，民間互助本身就是對佔領秩序的一種抵抗。當人們仍願意相信、照顧和保護彼此，日軍便無法完全控制社會。</p>
-
-        <h6>婦女、老人與孩子的角色</h6>
-        <p>民間互助不只由青壯年男性承擔。婦女可以送信、照顧傷員、縫補衣物、準備食物；老人可以掩護年輕人、留意村中動靜；孩子有時也能傳遞簡短信號或觀察陌生人動向。這些角色未必被正式記錄，但它們讓抵抗網絡更加靈活，也更貼近日常生活。</p>
-        <p>正因這些行動嵌入日常，才不容易被敵人完全識破。一位婦女提著籃子走過村口，一位老人坐在門前看路，一個孩子跑去通知鄰家，表面都是普通生活，實際上可能是保護網絡的一部分。民間互助因此不是外加於生活之上的任務，而是藏在生活本身之中。</p>
-
-        <h6>缺糧中的分享</h6>
-        <p>日治香港物資極度匱乏，因此分享食物尤其不易。赤徑村的記錄提到，日佔時期村民生活艱苦、糧食不足，甚至有人飢餓至死；即便如此，村民仍把有限米糧獻出支援游擊隊。這類行為很能說明民間互助的重量：不是富足時的捐助，而是在自己也可能捱餓時仍願意分出一份。</p>
-        <p>這種分享，不只是物資支援，也是一種共同承擔。村民明白游擊隊若無法生存，地方也會更難抵抗日軍和敵偽勢力；游擊隊也明白每一點糧食背後都是村民的犧牲。互助因此建立在共同命運之上，而不是單向施予。</p>
-
-        <h6>民間互助與歷史記憶</h6>
-        <p>許多互助行動本來不容易被記錄。戰時一碗飯、一夜留宿、一句提醒、一次帶路，未必會出現在正式文件裡。很多故事只能靠口述、回憶、地方考察和後人整理保存。正因如此，今天講述民間互助，不只是補充戰史，也是為那些沒有留下完整名字的人留下位置。</p>
-        <p>港九大隊的紀念資料和志書中，除了記錄指揮員和戰鬥，也特別保存了鄉民、村長、交通員、情報員、民運員、婦女和宗教人士的事跡。這讓我們看到，香港抗戰不是單一英雄敘事，而是一群人在不同位置上共同支撐的歷史。</p>
-
-        <h6>小結：最平凡，也最珍貴的抵抗</h6>
-        <p>民間互助讓香港抗戰有了更深的人情和社會基礎。有人拿起武器，有人掌舵開船；有人印傳單，有人送消息；有人守住秘密，有人打開家門；有人在缺糧中分出一點米，有人在危險中保護素未謀面的人。這些行動未必都轟轟烈烈，卻支撐了港九大隊和敵後抗戰的延續。</p>
-        <p>在日佔歲月中，互助本身就是一種抵抗。它抵抗恐懼，抵抗孤立，抵抗佔領者試圖製造的不信任。正因有這些平凡而珍貴的選擇，香港的抗戰記憶才不只是槍聲與犧牲，也包含照顧、信任、分享和彼此守護。</p>
+        <h6>{{ __('peopleStories.people-and-stories.acts_model_section_13_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_13_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.acts_model_section_13_p2') }}</p>
     </x-slot:modal>
 </x-content-section>

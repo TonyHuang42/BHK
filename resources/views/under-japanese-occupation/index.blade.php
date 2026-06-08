@@ -13,10 +13,10 @@
     <section class="border-bottom hero-subnav">
         <div class="container py-4">
             <div class="d-flex justify-content-evenly gap-2 gap-sm-0 flex-wrap">
-                <a href="{{ route('occupation.index', ['tab' => 'occupation-rule']) }}" data-tab-link="occupation-rule">佔領統治</a>
-                <a href="{{ route('occupation.index', ['tab' => 'survival-and-rationing']) }}" data-tab-link="survival-and-rationing">生存與配給</a>
-                <a href="{{ route('occupation.index', ['tab' => 'economy-and-society']) }}" data-tab-link="economy-and-society">經濟與社會</a>
-                <a href="{{ route('occupation.index', ['tab' => 'everyday-life-wartime']) }}" data-tab-link="everyday-life-wartime">戰時日常</a>
+                <a href="{{ route('occupation.index', ['tab' => 'occupation-rule']) }}" data-tab-link="occupation-rule">{{ __('underJapaneseOccupation.japanese_occupation_rule.tab_1') }}</a>
+                <a href="{{ route('occupation.index', ['tab' => 'survival-and-rationing']) }}" data-tab-link="survival-and-rationing">{{ __('underJapaneseOccupation.japanese_occupation_rule.tab_2') }}</a>
+                <a href="{{ route('occupation.index', ['tab' => 'economy-and-society']) }}" data-tab-link="economy-and-society">{{ __('underJapaneseOccupation.japanese_occupation_rule.tab_3') }}</a>
+                <a href="{{ route('occupation.index', ['tab' => 'everyday-life-wartime']) }}" data-tab-link="everyday-life-wartime">{{ __('underJapaneseOccupation.japanese_occupation_rule.tab_4') }}</a>
             </div>
         </div>
     </section>

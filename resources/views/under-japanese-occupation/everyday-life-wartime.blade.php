@@ -1,74 +1,74 @@
 {{-- 戰時日常 --}}
 <x-content-section
     id="everyday-life-wartime"
-    title="戰時日常"
-    subtitle="Everyday Life Under Occupation"
-    intro="日治下的香港，戰爭不只存在於軍營、憲兵隊和政府公告之中，也進入了每一個人的日常生活。街道名稱改變了，學校課程改變了，報紙和電台被審查，晚上有燈火管制，出門要擔心檢查與搜捕，回家也未必有足夠食物。"
+    title="{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_title') }}"
+    subtitle="{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_subtitle') }}" 
+    intro="{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_intro') }}"
     bgLeft="img/bg/bg_rifle_r.png"
     bgRight="img/bg/bg_rifle_l.png"
     :images="[
         'img/under-japanese-occupation/image_4.jpg',
     ]"
 >
-    <h6>在恐懼與匱乏中生活</h6>
-    <p>日治下的香港，戰爭不只存在於軍營、憲兵隊和政府公告之中，也進入了每一個人的日常生活。街道名稱改變了，學校課程改變了，報紙和電台被審查，晚上有燈火管制，出門要擔心檢查與搜捕，回家也未必有足夠食物。對普通市民而言，戰爭不是遙遠的國際局勢，而是每天醒來後都要面對的生活現實。</p>
-    <p>這一節關心的，不只是制度或數字，而是人們如何在佔領下過日子。有人為了一餐飯排隊數小時，有人把天台變成菜圃，有人把窗戶遮得密不透光以避開燈火管制，有人壓低聲音收聽消息，有人把親友藏在家中，有人則在恐懼中學會沉默。政府檔案處關於日佔香港的展覽指出，日佔時期香港居民面對食物與日用品嚴重短缺，建築物被毀或徵用，市民生活和城市面貌都發生劇烈變化。</p>
-
-    <h6>街道變了，城市也變了</h6>
-    <p>日軍佔領香港後，不只接管政府和軍事設施，也嘗試改寫城市空間的象徵。許多街道和地區被改以日式名稱，公共建築被徵用，學校、酒店、商廈和住宅可能變成軍政機關、宿舍、醫院、倉庫或其他用途。政府檔案處資料指出，日治時期日軍曾進行物業登記，並將部分街道及地區改以日式名稱，同時徵用建築物和土地。</p>
-    <p>對市民而言，這些改變不只是行政細節，而是熟悉城市突然變得陌生。原本的街名、學校、商舖和公共空間，承載著日常記憶；當它們被改名、封鎖或徵用，城市生活便失去穩定感。人們仍走在同一條街上，卻生活在另一套權力秩序之下。這種陌生感，是日治生活中難以量化卻非常真實的一部分。</p>
+    <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_section_1_title') }}</h6>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_section_1_p1') }}</p>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_section_1_p2') }}</p>
+        
+    <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_section_2_title') }}</h6>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_section_2_p1') }}</p>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_section_2_p2') }}</p>
 
     <x-slot:modal>
-        <h6>燈火管制與夜晚的恐懼</h6>
-        <p>日治時期香港實施燈火管制，夜晚的城市不再明亮。窗戶要遮掩，燈光不能外洩，街上巡查和警戒使夜間活動變得危險。對家庭來說，晚上的一點光可能只是煮食、縫補或讀寫所需；但在佔領秩序下，它也可能引來懷疑。</p>
-        <p>《港九大隊志》中梁佩雲的經歷，讓我們看到這種日常恐懼如何與地下工作交織。她白天在日本橫濱正金銀行工作，晚上在香港砵甸乍街一個閣樓刻印宣傳品；因日軍實施燈火管制，稍有火光都會惹來注意，她工作前要先用毛毯或窗簾把窗戶密封起來。 這個細節呈現了日治夜晚的壓迫感：光不再只是光，也可能變成危險的訊號。</p>
+       <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_1_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_1_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_1_p2') }}</p>
 
-        <h6>家庭生活的收縮</h6>
-        <p>戰前香港家庭生活雖然未必富裕，但仍有相對穩定的工作、學校、街市、節日和社交節奏。日治時期，這些節奏被打斷。食物短缺、燃料不足、物價高漲、親人離散和人口遣返，使家庭生活向內收縮。家不再只是休息之所，也成為儲糧、藏物、照顧病人、躲避搜捕和等待消息的地方。</p>
-        <p>許多家庭每天最重要的安排，是如何分配食物。大人可能少吃一點，把米粥留給老人或孩子；有人把貴重物品拿去交換食物；有人離開市區投靠鄉下親戚。家庭成員之間的愛與責任，常常在飢餓中被迫作出艱難選擇。戰時日常的殘酷，不一定表現在激烈事件中，也可能表現在飯桌上一碗越來越稀的粥。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_2_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_2_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_2_p2') }}</p>
 
-        <h6>學校與教育的改變</h6>
-        <p>日治下的教育也受到佔領政策影響。日軍試圖透過學校、媒體和宣傳建立有利於佔領者的觀念。相關資料指出，日治時期香港教育被視為推動影響力的重要工具，日語成為學校重要科目，英文教學受到限制，日本當局亦嘗試透過課堂向學生灌輸日本傳統與習俗。</p>
-        <p>對學生而言，學校不再只是讀書的地方，而是佔領統治的一部分。有些學校停課，有些校舍被徵用，有些學生因家庭困難而失學。能夠繼續上學的人，也要面對課程和語言的改變。對一代年輕人而言，戰爭打斷了原本的成長道路：讀書、升學、工作、理想，都被迫讓位於生存。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_3_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_3_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_3_p2') }}</p>
 
-        <h6>報紙、廣播與宣傳</h6>
-        <p>日治時期，新聞和娛樂受到嚴格控制。報紙被審查，電台用於宣傳，電影和公共資訊也被納入佔領者的政治目的。資料顯示，日治時期《Hong Kong News》成為日本宣傳工具，本地中文報紙數量亦被壓縮並受新聞審查；電台和電影也被用作宣傳渠道。</p>
-        <p>這使市民很難獲得可靠消息。戰局如何？盟軍是否反攻？親人是否仍在？糧食會否增加？這些問題往往沒有可信答案。人們只能從公告、傳聞、地下消息和外來片段中拼湊現實。資訊不可靠，本身也是一種壓迫：它使人焦慮、迷惘，也使謠言更容易流傳。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_4_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_4_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_4_p2') }}</p>
 
-        <h6>娛樂仍在，但不再相同</h6>
-        <p>即使在戰爭中，人們仍需要片刻喘息。戲院、電影、茶座和小型娛樂並未完全消失，但它們的內容、價格和可及性都被戰爭改變。資料提到，日治時期娛樂活動仍然存在，但多數只屬於有能力負擔的人；戲院主要放映日本電影，包括日治時期香港唯一製作的電影《香港攻略》。</p>
-        <p>娛樂在這時變得矛盾。一方面，它能讓人短暫逃離飢餓和恐懼；另一方面，它也可能成為佔領宣傳的一部分。看一場電影、聽一次音樂、在茶座坐一會，對某些人而言是難得的放鬆；對更多人而言，則是遙不可及的奢侈。戰時日常裡，娛樂沒有消失，只是被匱乏、審查和不平等重新塑造。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_5_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_5_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_5_p2') }}</p>
 
-        <h6>醫療與病痛</h6>
-        <p>戰時日常也充滿病痛。食物不足削弱身體，藥物短缺使小病可能變成重病，醫療機構又受佔領秩序和物資短缺影響。拘留營、貧民區、難民聚集地和鄉村，都面對營養不良、傳染病和衛生惡化的威脅。對普通家庭而言，生病不只是健康問題，也可能是經濟災難：看病要錢，買藥要門路，照顧病人又需要食物和時間。</p>
-        <p>在這樣的背景下，民間互助和簡單護理變得格外重要。有人靠土方，有人靠鄰里照顧，有人靠地下網絡取得少量藥物。《港九大隊志》記載，赤徑「天水流芳」大屋作為英軍服務團 Y 站時，亦協助港九大隊日常救護工作及供應藥物到九龍戰俘營。 這類細節讓我們看到，醫療在日治時期不只是醫院裡的事，也存在於村屋、交通站和秘密網絡之中。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_6_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_6_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_6_p2') }}</p>
 
-        <h6>村落中的日常</h6>
-        <p>日治時期的鄉村生活與市區不同，但同樣艱難。鄉村或許有田地、山林和水源，但也面對日軍掃蕩、糧食徵收、土匪威脅和交通困難。西貢、沙頭角、大嶼山等地的村民，不只要維持自己的生計，也常被捲入抗日、搜捕和日軍報復之中。</p>
-        <p>《港九大隊志》中的資料顯示，日軍曾到黃毛應村掃蕩，因未發現游擊隊員蹤跡，便把村民帶到村內教堂嚴刑逼供。 這種事件說明，鄉村並不是遠離戰爭的避風港。村民的日常可能一面是耕作、煮食、照顧家人，另一面則是隨時面對日軍搜查和酷刑威脅。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_7_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_7_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_7_p2') }}</p>
 
-        <h6>市區中的隱蔽生活</h6>
-        <p>在香港和九龍市區，日常生活更依賴偽裝和沉默。上班、買米、排隊、通行、探親，都可能遇到檢查。有人表面上在銀行、商舖或機構工作，暗中卻傳遞情報、印刷傳單或接應人員。這種雙重生活需要極高警覺：白天要像普通市民一樣行動，晚上則可能冒險完成秘密任務。</p>
-        <p>梁佩雲的經歷正是一個例子。她白天在日本銀行工作，利用工作之便暗中記錄貨幣發行、收支報表和機構往來等重要經濟情報，晚上則刻印宣傳品。 她的日常看似普通，實際上每一步都帶著風險。日治香港的城市生活，常常就是在表面服從和內心抵抗之間小心行走。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_8_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_8_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_8_p2') }}</p>
 
-        <h6>人與人之間的信任</h6>
-        <p>佔領統治破壞了社會信任。特務、告密、搜捕和協力者，使人們不敢輕易說話。誰能相信？誰會洩密？誰只是求生，誰又真正投靠敵人？這些問題困擾著許多家庭和社區。日常對話可能要壓低聲音，陌生人的打聽可能引起警覺，甚至鄰里之間也可能因恐懼而疏遠。</p>
-        <p>但信任並沒有完全消失。有人在危險中收留親友，有人在飢餓中分享食物，有人為抗日人員帶路，有人被審訊也不供出他人。戰時日常因此同時包含兩種力量：一方面是佔領帶來的猜疑和沉默；另一方面是困境中仍然存在的互助與義氣。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_9_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_9_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_9_p2') }}</p>
 
-        <h6>節日、儀式與時間感</h6>
-        <p>日治時期，節日也失去原有氣氛。聖誕節成為「黑色聖誕」的記憶，中秋、農曆新年、清明、重陽等傳統節日，在飢餓和管制下難以如常慶祝。家庭團聚變得困難，祭祀和拜山也可能受交通、治安和物資限制影響。時間仍然流動，但節日不再能帶來安定感。</p>
-        <p>這種時間感的改變，是戰時日常的重要部分。人們不再以工作、上學、節日和家庭計劃安排生活，而是以配給、宵禁、搜捕、空襲消息和戰局傳聞來計算日子。每一天都可能相似：找食物、避風險、等消息、熬過去。漫長的三年零八個月，正是由無數這樣的日子累積而成。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_10_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_10_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_10_p2') }}</p>
 
-        <h6>兒童與青少年的戰爭記憶</h6>
-        <p>對兒童和青少年而言，日治歲月留下的記憶可能是斷裂而強烈的：飢餓、排隊、搬家、失學、親人離開、街上士兵、家中低聲說話。孩子未必完全理解政治與戰局，卻能感受到大人的恐懼和生活的變化。戰爭使童年提早結束，也使一代人帶著缺糧、失學和不安全感成長。</p>
-        <p>有些青年則在戰時被迫承擔成年人的責任：工作、照顧家人、送信、帶路，甚至加入抗日活動。日治香港的青年不是旁觀者，他們的生活選擇被戰爭大幅改寫。這也解釋了為何後來許多抗日故事中，青年學生、工人和普通市民會成為重要角色。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_11_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_11_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_11_p2') }}</p>
 
-        <h6>日常中的抵抗</h6>
-        <p>日治下的抵抗，不一定每天都以武裝戰鬥形式出現。有時，它是在燈火管制下印一張傳單；有時，是把消息偷偷傳給可靠的人；有時，是在日軍查問時保持沉默；有時，是把一點藥、一碗粥、一個藏身角落留給需要的人。這些行動未必宏大，卻能在佔領秩序中保存人的尊嚴。</p>
-        <p>《港九大隊志》記載，梁佩雲刻印的宣傳品內容包括東江縱隊和港九大隊的戰鬥消息，也有市區情況和鼓勵市民協助抗戰的口號。 這說明即使在城市日常最受控制的地方，仍有人試圖把消息傳出去，把希望傳下去。日常生活本身，也可以成為抵抗的一部分。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_12_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_12_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_12_p2') }}</p>
 
-        <h6>小結：活下去，也記住</h6>
-        <p>戰時日常沒有戰役時間線那樣清晰，也不像制度史那樣容易整理。它由很多微小片段組成：一盞不能外洩的燈、一張被審查的報紙、一間被徵用的學校、一碗稀粥、一段低聲交談、一條被改名的街、一個被藏起來的人。這些片段共同構成日治香港最貼近普通人的歷史。</p>
-        <p>理解戰時日常，是為了看見在宏大歷史背後，人們如何一日一日活下去。日治香港的市民不只是戰爭的受害者，也是在恐懼、匱乏和壓力下努力維持家庭、信任、記憶與尊嚴的人。正是這些日常經驗，讓我們更深刻地理解三年零八個月的重量。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_13_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_13_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_model_section_13_p2') }}</p>
     </x-slot:modal>
 </x-content-section>

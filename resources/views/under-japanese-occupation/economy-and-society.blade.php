@@ -1,9 +1,9 @@
 {{-- 經濟與社會 --}}
 <x-content-section
     id="economy-and-society"
-    title="經濟與社會"
-    subtitle="Economy and Society Under Occupation"
-    intro="日治下的香港，不只是政治上被佔領，也在經濟和社會結構上被徹底改變。戰前的香港是華南重要的自由港、轉口貿易中心和金融城市；日軍佔領後，原有的商業網絡被切斷，銀行和貨幣制度被改造，工廠、倉庫、船隻和物業被徵用，市民的工作、收入和財產都受到巨大衝擊。"
+    title="{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_title') }}"
+    subtitle="{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_subtitle') }}" 
+    intro="{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_intro') }}"
     bgLeft="img/bg/bg_rifle_r.png"
     bgRight="img/bg/bg_rifle_l.png"
     :images="[
@@ -12,61 +12,61 @@
         'img/under-japanese-occupation/image_3_3.jpg',
     ]"
 >
-    <h6>被戰爭重塑的城市秩序</h6>
-    <p>日治下的香港，不只是政治上被佔領，也在經濟和社會結構上被徹底改變。戰前的香港是華南重要的自由港、轉口貿易中心和金融城市；日軍佔領後，原有的商業網絡被切斷，銀行和貨幣制度被改造，工廠、倉庫、船隻和物業被徵用，市民的工作、收入和財產都受到巨大衝擊。</p>
-    <p>這一節所說的「經濟與社會」，不是單純的物價或市場問題，而是整座城市如何被戰爭機器重新安排。日軍需要香港服務其軍事目的，因此控制貨幣、物資、勞動力和城市空間；而市民則在失業、通貨膨脹、人口流散、黑市交易和社會關係破裂中艱難求存。香港記憶資料庫指出，香港人口由淪陷前約 160 萬，下降至 1945 年日本投降時約 60 萬，這種人口劇變正反映日治時期社會經濟秩序的深層崩塌。</p>
-
-    <h6>自由港的停頓</h6>
-    <p>戰前香港的繁榮，很大程度依靠自由港地位、國際貿易、航運、金融和與華南腹地的聯繫。日軍佔領後，這套經濟基礎迅速瓦解。國際航線中斷，外貿受軍事封鎖影響，英美等盟國企業和銀行無法正常運作，許多商舖、貨倉和公司被日方接管或停業。香港不再是開放的轉口港，而成為日本戰時控制下的佔領地經濟。</p>
-    <p>這種變化對普通市民影響極大。港口停頓，意味著碼頭工人、船員、搬運工、倉庫職員、商行僱員和相關行業失去工作；貿易收縮，意味著市場供應減少、價格上升、工資失去保障。城市的經濟生命線被切斷後，許多人不再能靠原本職業生活，只能轉向臨時勞動、黑市交換、投靠親友或離港求生。</p>
+    <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_section_1_title') }}</h6>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_section_1_p1') }}</p>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_section_1_p2') }}</p>
+        
+    <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_section_2_title') }}</h6>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_section_2_p1') }}</p>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_section_2_p2') }}</p>
 
     <x-slot:modal>
-        <h6>軍票與貨幣秩序崩潰</h6>
-        <p>日治經濟最具代表性的改變，是日本軍票取代原有貨幣。香港記憶資料庫資料顯示，自 1943 年 6 月 1 日起，港幣已不能再兌換成日本軍票，軍票成為香港唯一法定貨幣。 政府檔案處亦指出，居民被迫把港幣兌換成軍票；這實質上令市民多年積蓄被佔領政權以強制方式轉化，財產安全受到嚴重破壞。</p>
-        <p>軍票沒有穩定信用基礎，並可由軍方大量發行。隨著戰局惡化，軍票購買力不斷下降，通貨膨脹加劇，市民手上的紙幣越來越難換取實物。貨幣本應保障交易和儲蓄，但在日治香港，它成為佔領權力的一部分。人們不只失去收入，也失去對貨幣的信任；一袋米、一瓶油、一件衣服，有時比一疊軍票更有價值。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_1_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_1_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_1_p2') }}</p>
+        
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_2_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_2_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_2_p2') }}</p>
+        
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_3_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_3_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_3_p2') }}</p>
 
-        <h6>銀行、商號與財產控制</h6>
-        <p>日軍佔領香港後，銀行與金融機構被嚴格控制。英資、美資和其他盟國相關企業受到清算、接管或限制，日本銀行和日資企業則被扶植起來。這種金融重組不只是經濟政策，也是一種權力轉移：誰能發行貨幣、誰能控制存款、誰能處理貿易和貸款，都由佔領政權重新安排。</p>
-        <p>政府檔案處戰時記錄顯示，日軍佔領後曾進行物業登記，記錄地址、面積、業權和估值等資料，並徵用建築物和土地。 對普通市民和商戶而言，財產不再穩定可靠。房屋可能被佔用，貨倉可能被接管，設備可能被徵收，銀行存款可能失去價值。戰前積累的財富，在戰爭與佔領政策之下迅速變得脆弱。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_4_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_4_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_4_p2') }}</p>
+        
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_5_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_5_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_5_p2') }}</p>
+        
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_6_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_6_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_6_p2') }}</p>
 
-        <h6>物資徵用與產業改造</h6>
-        <p>日治下的香港經濟以軍事需求為優先。日軍重視船塢、機場、倉庫、交通設施和可供軍事使用的工業能力；因此，許多原本服務民用市場的資源，被轉向軍事用途。工廠可能停產，也可能被迫為佔領當局服務；車輛、船隻、燃料、金屬、木材和建材，都可能被徵用。</p>
-        <p>這種產業改造令城市經濟失去正常循環。企業不能按市場需要經營，工人不能按原有行業穩定就業，商戶也難以取得貨源。佔領政權並非要恢復香港作為商業城市的活力，而是把它壓縮成支援戰爭的工具。經濟活動仍然存在，但其目的、規則和受益者都被改變。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_7_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_7_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_7_p2') }}</p>
+        
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_8_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_8_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_8_p2') }}</p>
+        
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_9_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_9_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_9_p2') }}</p>
 
-        <h6>失業與勞動壓力</h6>
-        <p>當貿易萎縮、工廠停頓、企業被接管，大量市民失去工作。失業不只是收入問題，也直接影響配給、居住和能否留在香港。沒有工作的人更容易被視為「多餘人口」，面臨遣返壓力；有工作的人，則可能被迫接受低薪、危險或與日軍相關的勞動安排。</p>
-        <p>在戰時經濟中，勞動不再完全由市場決定，而受佔領制度支配。有人被僱用於修路、搬運、建築、船塢、機場和其他軍事相關工程；有人為了糧食和安全，被迫接受不理想的工作。工作不再代表穩定生活，而常常只是換取最低限度生存機會的條件。</p>
-
-        <h6>黑市經濟與灰色求生</h6>
-        <p>官方供應不足、軍票貶值和物資短缺，使黑市迅速成為日治香港不可忽視的一部分。人們在黑市購買米糧、油鹽、藥品、布匹、燃料，也用首飾、衣物、家具或外幣交換食物。黑市既充滿剝削和風險，也成為許多人維持生命的最後渠道。</p>
-        <p>黑市的存在，反映了佔領經濟的失敗。當正式制度無法供應基本生活，人們只能轉向非正式交易。這種交易改變了社會關係：有貨源者、掌握通行渠道者、與佔領機構有關係者，可能取得更大生存優勢；貧困者、無證者和孤立家庭則更容易被排擠。日治社會因此變得更加不平等，也更加依賴人脈、風險和運氣。</p>
-
-        <h6>人口流失與社會空洞化</h6>
-        <p>日治期間，香港人口大幅下降。香港記憶資料庫記載，香港人口由淪陷前約 160 萬，下降至 1945 年約 60 萬。 這種下降由多種因素造成，包括人口遣返、逃難、死亡、失業、飢餓和家庭流散。它不只是統計數字，而是整座城市社會肌理的撕裂。</p>
-        <p>人口流失令許多街區變得冷清，學校、商舖、工廠和社區組織失去原有人口基礎。家庭成員可能分散在香港、新界、廣東內地或更遠地方；有人離開後再也沒有回來。城市空間仍在，但熟悉的鄰里關係、職業網絡和社會互助被嚴重破壞。日治香港的「空」，不只是街道變少人，也是社會關係被戰爭抽空。</p>
-
-        <h6>社會階層的重新排列</h6>
-        <p>戰爭改變了誰能生存、誰能掌握資源。戰前的富戶、商人和專業人士，若財產被徵收或貨幣貶值，也可能迅速失去保障；貧民和工人本已脆弱，在失業與缺糧下更難支撐。另一方面，能與佔領機構周旋、掌握物資來源、從事黑市交易或取得行政位置的人，可能在戰時獲得相對優勢。</p>
-        <p>這種社會階層重新排列，帶來道德和情感上的複雜性。有些人與日方合作，是為了保護社區、維持醫療或保存機構；也有人主動投靠佔領政權，藉機牟利、搜捕抗日人士或壓迫同胞。戰時社會並不總是黑白分明，許多人在飢餓、恐懼和家庭責任之間作出艱難選擇。但正因如此，日治香港的社會史才更沉重：它不只記錄苦難，也記錄人在壓力下的取捨。</p>
-
-        <h6>慈善機構與社會救濟</h6>
-        <p>在政府功能被佔領政權改造、民生資源嚴重不足的情況下，傳統華人慈善機構仍努力維持有限服務。東華三院、保良局等機構在戰時雖面對經費、物資和行政限制，但仍盡力提供醫療、救濟、收容、殮葬等支援。這些機構的存在，讓一些最脆弱的人仍能獲得最低限度的幫助。</p>
-        <p>然而，慈善救濟難以抵消整體經濟崩壞。當飢餓、失業和疾病同時擴散，民間機構能做的極其有限。它們更像是在破碎制度中的補丁，努力減少最嚴重的痛苦。這也顯示，日治香港的社會支撐並未完全消失；即使在佔領之下，仍有人試圖保留互助、照顧和公共責任。</p>
-
-        <h6>教育、專業與青年出路</h6>
-        <p>經濟崩潰也影響教育和青年出路。許多學校停課、遷移或被徵用，學生失去正常學習環境。青年原本可以透過教育、工業、商業或專業工作尋找未來，但在日治時期，這些道路被戰爭阻斷。有人被迫工作，有人離港，有人加入抗日網絡，有人則在失學與失業中漂泊。</p>
-        <p>專業階層同樣受衝擊。醫生、教師、工程人員、銀行職員、文員和商務人員，都要在佔領制度下重新尋找位置。有人被迫為日方機構工作，有人轉入地下活動，有人靠私人接濟維持生活。戰爭使社會原有的向上流動中斷，也使整整一代年輕人的生活軌跡被改變。</p>
-
-        <h6>城市空間的改造</h6>
-        <p>日治經濟也改變了香港的城市空間。政府檔案處資料提到，日軍曾徵用建築物和土地，並把部分街道和地區改以日式名稱。 學校可變成軍事用途設施，商廈可被接管，倉庫可用於軍需，民房可被登記和重新分配。城市仍是同一個地理空間，但其功能與象徵意義被佔領權力改寫。</p>
-        <p>這種改造讓市民在熟悉的地方感到陌生。街名變了，機構變了，公共建築的用途變了，曾經代表教育、商業或社區生活的地方，可能成為軍事、行政或拘禁空間。經濟控制因此不只發生在市場，也發生在城市地景之中。香港被迫以新的方式運作，而這種運作服務的是佔領者的戰爭需要。</p>
-
-        <h6>戰時利益與道德陰影</h6>
-        <p>日治香港的經濟社會中，也存在戰時利益者。有人透過黑市、走私、與日方合作、控制物資或利用人脈獲利；有人則因掌握糧食、證件、交通或職位而取得權力。這些利益並非總是公開可見，但它們加深了社會不平等，也加深了戰後對「合作」「求生」「牟利」之間界線的爭議。</p>
-        <p>在極端環境中，求生與道德判斷常常糾纏。有人為了家人而不得不與佔領機構接觸；有人為了保護機構而勉強周旋；但也有人利用佔領秩序傷害同胞。這些灰色地帶，是戰爭留給社會的長期陰影。日治香港不只經歷物資損失，也經歷信任受損：人們開始懷疑誰可靠、誰告密、誰在危難中伸手，誰又在危難中牟利。</p>
-
-        <h6>小結：經濟崩壞下的社會變形</h6>
-        <p>日治下的香港，從自由港變成受軍事支配的佔領地經濟。貨幣失去信用，貿易停頓，物業與企業被控制，工作和人口被重新安排，黑市與灰色交易成為求生渠道。這些變化不只是經濟數據上的衰退，而是整個社會秩序的變形。</p>
-        <p>在這段歲月中，香港人面對的不只是貧困，而是原有生活基礎被全面抽走：工作不穩，錢不可靠，物資不足，鄰里離散，信任受損。經濟崩壞最終變成社會創傷。它讓一座曾以貿易和流動聞名的城市，被迫在封鎖、徵用和飢餓之中重新學習如何生存。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_10_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_10_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_10_p2') }}</p>
+        
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_11_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_11_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_11_p2') }}</p>
+        
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_12_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_12_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_model_section_12_p2') }}</p>
     </x-slot:modal>
 </x-content-section>

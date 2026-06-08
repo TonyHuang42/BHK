@@ -1,9 +1,9 @@
 {{-- 情報與營救 --}}
 <x-content-section
     id="intelligence-and-rescue"
-    title="情報與營救"
-    subtitle="Spies, Signals, and Rescues"
-    intro="抗戰不只發生在槍聲之中，也發生在秘密交通線、情報站和逃亡路上. 游擊隊與地下工作者合作，營救文化人、戰俘和盟軍人員，並向盟軍提供重要軍事情報。"
+    title="{{ __('guerrilla.guerrilla_warfare.intelligence_title') }}"
+    subtitle="{{ __('guerrilla.guerrilla_warfare.intelligence_subtitle') }}" 
+    intro="{{ __('guerrilla.guerrilla_warfare.intelligence_intro') }}"
     bgLeft="img/bg/bg_rifle_r.png"
     bgRight="img/bg/bg_rifle_l.png"
     :images="[
@@ -11,61 +11,62 @@
         'img/guerrilla-resistance/image_3_2.png',
     ]"
 >
-    <h6>在封鎖之中打開生命通道</h6>
-    <p>香港淪陷後，日軍迅速封鎖交通要道，實施宵禁和搜捕，試圖切斷香港與外界的聯繫。在這樣的高壓環境下，港九大隊及其前身武工隊的工作，並不只是武裝作戰。情報收集、秘密護送、營救被困人士、協助盟軍人員脫險，都成為日佔時期香港抗戰的重要部分。</p>
-    <p>這些行動往往不如戰鬥場面那樣直接可見，卻同樣危險。一次接頭、一條山路、一艘小船、一間雜貨舖，都可能關係到被營救者的生命，也可能關係到情報能否傳到盟軍手中。港九大隊的情報與營救工作，使香港在被佔領後仍然不是孤島，而是一個仍能與中國抗戰和國際反法西斯戰爭相連的敵後據點。</p>
+    <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_section_1_title') }}</h6>
+    <p>{{ __('guerrilla.guerrilla_warfare.intelligence_section_1_p1') }}</p>
+    <p>{{ __('guerrilla.guerrilla_warfare.intelligence_section_1_p2') }}</p>
 
-    <h6>秘密大營救：淪陷初期的緊急任務</h6>
-    <p>1941年12月香港淪陷後，大批原本滯留香港的抗日文化人、民主人士和進步人士陷入危險。日軍不但封鎖道路和港口，還大肆搜捕抗日人士，企圖迫使他們報到或投降。許多人不懂本地語言，又缺乏隱蔽條件，一旦被日軍或特務發現，後果極為嚴重。</p>
-    <p>在這樣的背景下，中共地下黨組織、廣東人民抗日游擊隊及港九大隊前身的武工隊，展開了後來被稱為「秘密大營救」的行動。這場營救從1941年12月25日香港淪陷開始，到1942年11月22日鄒韜奮到達蘇北抗日根據地為止，歷時11個月；其間先後救出知名抗日民主人士和文化人300多人，連同其他人士共約800人。</p>
+    <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_section_2_title') }}</h6>
+    <p>{{ __('guerrilla.guerrilla_warfare.intelligence_section_2_p1') }}</p>
+    <p>{{ __('guerrilla.guerrilla_warfare.intelligence_section_2_p2') }}</p>
 
     <x-slot:modal>
-        <h6>從九龍到東江：穿越封鎖線</h6>
-        <p>秘密大營救之所以艱難，是因為它不是單純把人帶出市區，而是要穿越日軍崗哨、封鎖線、土匪出沒地帶和複雜山路，再把被營救者送往較安全的游擊區。營救路線包括經牛池灣、九龍坳、西貢、企嶺下或深涌灣，再渡大鵬灣前往惠陽游擊區的東線；也包括經荃灣、大帽山、元朗、落馬洲，渡深圳河前往白石龍游擊根據地的西線。</p>
-        <p>這些路線並不安全。護送人員要化裝、分批行動、避開日軍巡邏，還要處理被營救者體力不支、語言不通、糧水不足等問題。許多文化人原本生活在城市，未必習慣長途山路跋涉；而護送隊伍則要在不暴露身份的情況下，確保一批又一批人安全離港。秘密大營救的成功，顯示香港淪陷初期仍存在一套隱蔽而有效的抗日交通系統。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_1_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_1_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_1_p2') }}</p>
 
-        <h6>營救文化人的歷史意義</h6>
-        <p>秘密大營救不只是一次人員撤離行動。被營救者中，包括何香凝、柳亞子、鄒韜奮、茅盾、夏衍、沈志遠、張友漁、胡繩、范長江、梁漱溟等重要文化界和民主人士。這些人在中國抗戰和戰後政治、文化、新聞、教育等領域都有重要影響。若他們在香港淪陷後被日軍捕殺或控制，對中國抗戰文化力量將是重大損失。</p>
-        <p>港九大隊前身武工隊在營救中發揮重要作用。他們排除土匪干擾，闖過日軍崗哨和搜查，把大批人士平安護送到大後方。茅盾後來稱這場營救是「抗戰以來……最偉大的搶救工作」。 對香港而言，這場行動也說明，淪陷初期的香港並非完全被日軍封死；在城市、鄉村、山路與海灣之間，仍有人冒險打開一條生命通道。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_2_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_2_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_2_p2') }}</p>
 
-        <h6>營救盟軍：從賴濂士到英軍服務團</h6>
-        <p>除了營救中國文化人和民主人士，港九大隊及其前身武工隊亦協助盟軍人員脫險。1942年1月，英軍賴濂士中校等人從深水埗集中營逃出後，得到港九大隊前身武工隊協助，經西貢等地轉移，最終脫離險境。相關紀念特刊指出，賴濂士等四人獲救，促成英軍和廣東人民抗日游擊總隊的合作。</p>
-        <p>賴濂士脫險後，英國軍事當局接受他的建議，成立專門營救戰俘和從事情報工作的英軍服務團。這一事件，使香港敵後抗日力量與英方軍事情報機構建立起更密切聯繫。港九大隊與英軍服務團的合作，後來成為香港日佔時期情報與營救工作的重要一環。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_3_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_3_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_3_p2') }}</p>
 
-        <h6>情報交通站：X站、Y站與Z站</h6>
-        <p>1942年11月，英軍服務團派遣翻譯李耀標前往西貢，與港九大隊領導蔡國樑、陳達明商討合作收集情報。蔡國樑建議在沙魚涌、赤徑和九龍設立三個交通站，以方便雙方人員共同工作。英軍服務團同意後，分別把沙魚涌交通站稱為X站，西貢赤徑交通站稱為Y站，深水埗砵蘭街一間雜貨店稱為Z站。</p>
-        <p>這些交通站的存在，說明情報工作並不只是前線偵察，而需要安全接頭、文件傳遞、人員轉移和身份掩護。九龍砵蘭街的Z站由港九大隊國際工作小組組長黃作梅化名開設，表面上是一間雜貨店，實際上承擔地下聯絡任務。後來因英方聯絡員被捕招供，Z站被日軍搗毀，黃作梅的親人也被抓走。戰後，英國國王授予黃作梅MBE勳章，以表彰其配合盟軍作戰的貢獻。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_4_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_4_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_4_p2') }}</p>
 
-        <h6>赤徑Y站：日佔區內的合作據點</h6>
-        <p>赤徑在港九大隊與英軍服務團合作中具有特殊地位。位於赤徑上圍的「天水流芳」大屋，日佔時期曾用作英軍服務團的情報站。資料記載，英軍服務團把西貢赤徑交通站稱為Y站，而這個Y站就設在「天水流芳」大屋內；它是英軍服務團唯一一個設在日佔區域內的據點。</p>
-        <p>Y站的安全，依賴港九大隊在赤徑一帶的保護。為掩人耳目，英軍服務團派駐該地的人員多為華人或歐亞混血兒，包括李耀標和譚靄勵。譚靄勵本是香港大學醫科生，駐守期間除參與工作外，亦曾教授港九大隊衛生員急救知識，並協助治療傷員。 這種合作，既有軍事情報層面，也有醫療、聯絡和人員支援層面。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_5_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_5_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_5_p2') }}</p>
 
-        <h6>軍事情報：從港口到機場</h6>
-        <p>香港在日軍佔領下具有重要軍事價值。港口、船塢、軍火庫、機場、炮台和兵營，都可能成為日軍支援華南和太平洋戰場的設施。港九大隊能在日佔區內收集這些情報，對盟軍作戰具有實際意義。曾生在《港九獨立大隊史》序言中指出，港九大隊在情報工作上作出突出貢獻，能及時了解日軍艦艇往來、兵員調動等情報，供盟軍作戰參考，使美國空軍襲擊日本軍事設施時提高命中率。</p>
-        <p>情報工作需要長時間觀察和高度隱蔽。1944年，港九大隊曾在香港中環半山儒林台設立觀察點，24小時監視維港日軍艦艇和軍事設施動向。 這類工作沒有正面戰鬥的聲勢，卻同樣承擔巨大風險。一旦身份暴露，情報人員和其家人都可能面臨搜捕、酷刑甚至死亡。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_6_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_6_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_6_p2') }}</p>
 
-        <h6>拍攝軍事設施與盟軍轟炸</h6>
-        <p>港九大隊與英軍服務團的合作，也包括協助偵察和拍攝日軍重要軍事設施。據《港九大隊志》記載，英軍服務團曾請求港九大隊協助拍攝日軍在港重要軍事設施。港九大隊人員掩護英方人員登山，拍下啟德機場、軍火倉庫、炮台、兵營等目標；不久後，盟軍飛機轟炸銅鑼灣軍火庫、啟德機場、鯉魚門炮台、太古船廠等設施。</p>
-        <p>這段歷史顯示，香港敵後情報不是孤立資料，而能轉化為盟軍空襲和軍事行動的參考。港九大隊熟悉地形，能接近或觀察日軍設施；英軍服務團和盟軍則具備更廣泛的軍事資源。雙方合作，使日佔香港內部的觀察，能與外部戰場行動連接起來。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_7_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_7_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_7_p2') }}</p>
 
-        <h6>營救美軍飛行員克爾</h6>
-        <p>1944年2月，美軍飛行員克爾中尉在與轟炸香港啟德機場相關的行動中跳傘逃生。日軍隨即在西貢、沙田一帶展開嚴密搜捕，派出千餘人追捕克爾。港九大隊則設法協助他轉移和隱蔽。資料記載，1944年2月18日，劉黑仔等護送克爾轉移，並安排六名游擊隊員陪同他在石壟仔村山洞藏匿兩個星期。</p>
-        <p>為分散日軍注意，港九大隊採取「圍魏救趙」策略，透過槍殺漢奸、偷襲啟德機場、在市中心散發抗日傳單等行動，牽制日軍搜捕。待搜捕稍緩後，劉黑仔等人再保護克爾穿越山路，經海路和陸路轉移到大浪村大隊部。3月初，海上中隊派出兩艘船，護送克爾渡海到坪山東江縱隊司令部。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_8_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_8_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_8_p2') }}</p>
 
-        <h6>克爾營救的後續影響</h6>
-        <p>克爾獲救後，與東江縱隊司令員曾生會面，並順利回到桂林繼續工作。他對港九大隊的救援表示深切感謝，稱游擊隊員給了他勇氣與安慰，並點名表揚蔡國樑、黃冠芳、劉黑仔、譚天等人。 這次營救也促成美軍與東江縱隊之間的合作。成立八十周年紀念特刊亦指出，1944年2月港九大隊營救克爾中尉，此事促成美軍與東江縱隊的合作。</p>
-        <p>克爾事件的意義，在於它清楚展示港九大隊的多重能力：能掌握敵情，能隱蔽藏匿，能組織轉移，能發動牽制行動，也能完成跨區護送。這不是單一救援行動，而是情報、交通、游擊、海上運輸和翻譯聯絡共同配合的結果。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_9_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_9_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_9_p2') }}</p>
 
-        <h6>國際反法西斯戰爭中的香港角色</h6>
-        <p>港九大隊的情報與營救工作，使日佔香港與國際反法西斯戰爭產生直接聯繫。相關紀念特刊指出，東江縱隊共營救國際友人89人，其中大部分由港九大隊及其前身武工隊營救；港九大隊與盟軍進行卓有成效的國際軍事情報合作，為保衛香港、打擊日本侵略者和世界反法西斯戰爭勝利作出重大歷史貢獻。</p>
-        <p>這一點對理解香港戰時歷史非常重要。香港雖然在1941年12月失守，但它並沒有完全從盟軍戰爭體系中消失。相反，在港九大隊和相關地下力量協助下，香港仍能提供情報、營救人員、支援空襲、聯絡盟軍，成為敵後戰場的一部分。這使香港的抗戰歷史，不只是地方記憶，也屬於世界反法西斯戰爭的一部分。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_10_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_10_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_10_p2') }}</p>
 
-        <h6>情報與營救背後的風險</h6>
-        <p>情報與營救工作常常比正面戰鬥更隱蔽，也更難被完整記錄。參與者可能是游擊隊員，也可能是交通員、翻譯、學生、醫護人員、商舖經營者或村民。他們未必每次都拿起武器，卻同樣承擔生命危險。日軍一旦發現交通站、藏身點或聯絡人，往往會搜捕、審訊，甚至牽連家人。</p>
-        <p>黃作梅的Z站被破壞，便反映出這種風險。雜貨店表面是普通商舖，實際是地下交通站；一旦被日軍查獲，整個家庭都可能受到牽連。這些故事提醒我們，抗戰不只是戰場上的衝鋒，也包括在日常生活掩護下進行的秘密工作。正是這些無聲的冒險，支撐了香港敵後抵抗的情報與營救系統。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_11_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_11_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_11_p2') }}</p>
 
-        <h6>小結：黑暗中的聯絡線</h6>
-        <p>港九大隊的情報與營救工作，讓日佔香港不再只是被封鎖、被控制、被孤立的城市。即使在日軍嚴密管治下，仍有人穿越山路和海灣，仍有人傳遞情報，仍有人把被困者送往安全地帶，也仍有人把香港的軍事情況傳向盟軍。</p>
-        <p>這些行動拯救了生命，也保存了香港與外界的聯繫。它們讓香港在黑暗歲月中仍有通往外界的道路，仍有支援抗戰的能力，仍有不願屈服的人。情報與營救，是港九大隊歷史中最能體現勇氣、智慧與人道精神的一面。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_12_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_12_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.intelligence_model_section_12_p2') }}</p>
+    
     </x-slot:modal>
 </x-content-section>

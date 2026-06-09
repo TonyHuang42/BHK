@@ -191,7 +191,7 @@ return [
     'economy_model_section_12_p2' => 'They altered relationships, disrupted communities, weakened social institutions, and reshaped everyday life. For many residents, the greatest hardship was not simply poverty, but the disappearance of the foundations upon which ordinary life depended: stable work, reliable money, access to supplies, community networks, and trust in the future. The economic collapse of occupied Hong Kong therefore became a profound social trauma—one that forced a city renowned for trade and mobility to relearn how to survive under conditions of restriction, scarcity, and uncertainty.',
 
      // tab 4
-    'everyday_title' => 'Wartime daily life',
+    'everyday_title' => 'Everyday Life Under Occupation',
     'everyday_subtitle' => 'Everyday Life Under Occupation',
     'everyday_intro' => 'During the Japanese occupation, war was not confined to military headquarters, police stations, or official proclamations. It entered the daily lives of ordinary people.',
 

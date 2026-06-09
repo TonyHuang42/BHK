@@ -2,7 +2,7 @@
 
 return [
      'people-and-stories' => [
-        'title' => 'Anti-Japanese War Figures',
+        'title' => 'Those Who Stood Up',
         'subtitle' => 'Those Who Stood Up',
         'intro' => 'The history of Hong Kong\'s resistance during the Second World War is not only a story of battles, organisations, and operations. It is also a story of individuals. Some were guerrilla commanders. Others served in pistol squads, intelligence networks, rescue operations, transportation routes, or support services. Many began as ordinary villagers, students, workers, merchants, fishermen, or religious figures before making decisions that would change the course of their lives.',
 
@@ -82,7 +82,7 @@ return [
         'stoodUp_model_section_15_p2' => 'Looking back today, we do not see a single type of hero. We see people of different ages, backgrounds, occupations, and experiences. Some carried rifles. Some steered boats. Some delivered messages. Some prepared meals. Some rescued others. Some suffered in silence. It was through their courage, perseverance, and willingness to help one another that the history of occupied Hong Kong became more than a story of hardship and oppression. It also became a story of resilience, solidarity, and the determination to protect one\'s community in a time of war.',
 
         // tab 2
-        'village_title' => 'Village memory',
+        'village_title' => 'Villages That Remember',
         'village_subtitle' => 'Villages That Remember',
         'village_intro' => 'The villages of the New Territories played an important role during the War of Resistance against Japanese Aggression. They served as guerrilla bases, sources of food and intelligence, places of refuge, and vital links in transportation and communication networks.',
 
@@ -148,7 +148,7 @@ return [
         'village_model_section_13_p2' => 'Together, these villages remind us that the War of Resistance was not fought only on distant battlefields. It was also fought along village paths, mountain trails, church grounds, ancestral halls, piers, and shorelines across Hong Kong. These places remember the choices people made, the risks they accepted, and the hope they preserved during one of the darkest periods in the city\'s history.',
 
         // tab 3
-        'acts_title' => 'Civilian mutual aid',
+        'acts_title' => 'Acts of Courage and Care',
         'acts_subtitle' => 'Acts of Courage and Care',
         'acts_intro' => 'The history of Hong Kong\'s resistance during the Second World War is not only a story of guerrilla fighters and military operations. It is also a story of ordinary people helping one another through some of the darkest years in the city\'s history.',
 
@@ -214,7 +214,7 @@ return [
         'acts_model_section_13_p2' => 'Under occupation, mutual assistance became a form of resistance in its own right. It resisted fear. It resisted isolation. It resisted the mistrust that occupation authorities sought to create. Because of these ordinary yet extraordinary acts, Hong Kong\'s wartime history is not remembered solely through battles and sacrifice. It is also remembered through compassion, trust, generosity, and the determination of people to protect one another in a time of war.',
 
          // tab 4
-        'rescue_title' => 'Rescue story',
+        'rescue_title' => 'Stories of Rescue',
         'rescue_subtitle' => 'Stories of Rescue',
         'rescue_intro' => 'Many of the most remarkable stories from occupied Hong Kong do not begin with battles. They begin with rescue. After Hong Kong fell in December 1941, countless individuals found themselves trapped in a city under military occupation. Some were writers, journalists, and intellectuals. Others were prisoners of war, Allied servicemen, or civilians whose identities, professions, or political views placed them at risk.',
 

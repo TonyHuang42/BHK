@@ -66,7 +66,7 @@
     <div class="modal-dialog modal-dialog-scrollable modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="readMoreModalLabel-{{ $id }}">閱讀更多</h3>
+                <h3 class="modal-title" id="readMoreModalLabel-{{ $id }}">{{ __('battle.before_storm.section_readmore') }}</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
             </div>
             <div class="modal-body">

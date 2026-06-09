@@ -3,7 +3,7 @@
     id="intelligence-and-rescue"
     title="{{ __('guerrilla.guerrilla_warfare.intelligence_title') }}"
     subtitle="{{ __('guerrilla.guerrilla_warfare.intelligence_subtitle') }}" 
-    intro="{{ __('guerrilla.guerrilla_warfare.intelligence_intro') }}"
+    :intro="html_entity_decode(__('guerrilla.guerrilla_warfare.intelligence_intro'))"
     bgLeft="img/bg/bg_rifle_r.png"
     bgRight="img/bg/bg_rifle_l.png"
     :images="[

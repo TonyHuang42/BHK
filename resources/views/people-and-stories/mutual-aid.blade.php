@@ -3,7 +3,7 @@
     id="mutual-aid"
     title="{{ __('peopleStories.people-and-stories.acts_title') }}"
     subtitle="{{ __('peopleStories.people-and-stories.acts_subtitle') }}" 
-    intro="{{ __('peopleStories.people-and-stories.acts_intro') }}"
+    :intro="html_entity_decode(__('peopleStories.people-and-stories.acts_intro'))"
     bgLeft="img/bg/bg_binocular_r.png"
     bgRight="img/bg/bg_binocular_l.png"
     :images="[

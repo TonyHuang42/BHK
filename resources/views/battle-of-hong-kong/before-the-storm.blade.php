@@ -3,7 +3,7 @@
     id="before-the-storm"
     title="{{ __('battle.before_storm.title') }}"
     subtitle="{{ __('battle.before_storm.subtitle') }}" 
-    intro="{{ __('battle.before_storm.intro') }}"
+    :intro="html_entity_decode(__('battle.before_storm.intro'))"
     :images="[
         'img/battle-of-hong-kong/image_1_1.jpg',
         'img/battle-of-hong-kong/image_1_2.jpg',

@@ -3,7 +3,7 @@
     id="underground-resistance"
     title="{{ __('guerrilla.guerrilla_warfare.the_underground_title') }}"
     subtitle="{{ __('guerrilla.guerrilla_warfare.the_underground_subtitle') }}" 
-    intro="{{ __('guerrilla.guerrilla_warfare.the_underground_intro') }}"
+    :intro="html_entity_decode(__('guerrilla.guerrilla_warfare.the_underground_intro'))"
     bgLeft="img/bg/bg_rifle_r.png"
     bgRight="img/bg/bg_rifle_l.png"
     :images="[

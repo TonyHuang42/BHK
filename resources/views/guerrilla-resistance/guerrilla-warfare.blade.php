@@ -3,7 +3,7 @@
     id="guerrilla-warfare"
      title="{{ __('guerrilla.guerrilla_warfare.title') }}"
     subtitle="{{ __('guerrilla.guerrilla_warfare.subtitle') }}" 
-    intro="{{ __('guerrilla.guerrilla_warfare.intro') }}"
+    :intro="html_entity_decode(__('guerrilla.guerrilla_warfare.intro'))"
     bgLeft="img/bg/bg_rifle_r.png"
     bgRight="img/bg/bg_rifle_l.png"
     :images="[

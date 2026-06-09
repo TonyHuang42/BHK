@@ -214,7 +214,7 @@ return [
         'acts_model_section_13_p2' => 'Under occupation, mutual assistance became a form of resistance in its own right. It resisted fear. It resisted isolation. It resisted the mistrust that occupation authorities sought to create. Because of these ordinary yet extraordinary acts, Hong Kong\'s wartime history is not remembered solely through battles and sacrifice. It is also remembered through compassion, trust, generosity, and the determination of people to protect one another in a time of war.',
 
          // tab 4
-        'rescue_title' => 'rescue story',
+        'rescue_title' => 'Rescue story',
         'rescue_subtitle' => 'Stories of Rescue',
         'rescue_intro' => 'Many of the most remarkable stories from occupied Hong Kong do not begin with battles. They begin with rescue. After Hong Kong fell in December 1941, countless individuals found themselves trapped in a city under military occupation. Some were writers, journalists, and intellectuals. Others were prisoners of war, Allied servicemen, or civilians whose identities, professions, or political views placed them at risk.',
 

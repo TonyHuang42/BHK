@@ -3,7 +3,7 @@
     id="black-christmas"
     title="{{ __('battle.before_storm.black_christmas_title') }}"
     subtitle="{{ __('battle.before_storm.black_christmas_subtitle') }}"
-    intro="{{ __('battle.before_storm.black_christmas_intro') }}"
+    :intro="html_entity_decode(__('battle.before_storm.black_christmas_intro'))"
     :images="[
         'img/battle-of-hong-kong/image_3_1.jpg',
         'img/battle-of-hong-kong/image_3_2.jpg',

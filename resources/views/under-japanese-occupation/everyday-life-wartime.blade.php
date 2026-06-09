@@ -3,7 +3,7 @@
     id="everyday-life-wartime"
     title="{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_title') }}"
     subtitle="{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_subtitle') }}" 
-    intro="{{ __('underJapaneseOccupation.japanese_occupation_rule.everyday_intro') }}"
+    :intro="html_entity_decode(__('underJapaneseOccupation.japanese_occupation_rule.everyday_intro'))"
     bgLeft="img/bg/bg_rifle_r.png"
     bgRight="img/bg/bg_rifle_l.png"
     :images="[

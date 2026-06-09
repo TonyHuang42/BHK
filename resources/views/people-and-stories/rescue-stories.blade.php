@@ -3,7 +3,7 @@
     id="rescue-stories"
     title="{{ __('peopleStories.people-and-stories.rescue_title') }}"
     subtitle="{{ __('peopleStories.people-and-stories.rescue_subtitle') }}" 
-    intro="{{ __('peopleStories.people-and-stories.rescue_intro') }}"
+    :intro="html_entity_decode(__('peopleStories.people-and-stories.rescue_intro'))"
     bgLeft="img/bg/bg_binocular_r.png"
     bgRight="img/bg/bg_binocular_l.png"
     :images="[

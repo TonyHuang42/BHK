@@ -2,8 +2,8 @@
 <x-content-section
     id="village-memories"
     title="{{ __('peopleStories.people-and-stories.village_title') }}"
-    subtitle="{{ __('peopleStories.people-and-stories.village_subtitle') }}" 
-    intro="{{ __('peopleStories.people-and-stories.village_intro') }}"
+    subtitle="{{ __('peopleStories.people-and-stories.village_subtitle') }}"
+    :intro="html_entity_decode(__('peopleStories.people-and-stories.village_intro'))"
     bgLeft="img/bg/bg_binocular_r.png"
     bgRight="img/bg/bg_binocular_l.png"
     :images="[

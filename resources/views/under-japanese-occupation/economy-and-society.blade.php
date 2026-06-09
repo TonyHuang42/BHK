@@ -3,7 +3,7 @@
     id="economy-and-society"
     title="{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_title') }}"
     subtitle="{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_subtitle') }}" 
-    intro="{{ __('underJapaneseOccupation.japanese_occupation_rule.economy_intro') }}"
+    :intro="html_entity_decode(__('underJapaneseOccupation.japanese_occupation_rule.economy_intro'))"
     bgLeft="img/bg/bg_rifle_r.png"
     bgRight="img/bg/bg_rifle_l.png"
     :images="[

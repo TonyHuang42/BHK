@@ -3,7 +3,7 @@
     id="survival-and-rationing"
     title="{{ __('underJapaneseOccupation.japanese_occupation_rule.survival_title') }}"
     subtitle="{{ __('underJapaneseOccupation.japanese_occupation_rule.survival_subtitle') }}" 
-    intro="{{ __('underJapaneseOccupation.japanese_occupation_rule.survival_intro') }}"
+    :intro="html_entity_decode(__('underJapaneseOccupation.japanese_occupation_rule.survival_intro'))"
     bgLeft="img/bg/bg_rifle_r.png"
     bgRight="img/bg/bg_rifle_l.png"
     :images="[

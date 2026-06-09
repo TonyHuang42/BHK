@@ -3,7 +3,7 @@
     id="resistance-figures"
     title="{{ __('peopleStories.people-and-stories.title') }}"
     subtitle="{{ __('peopleStories.people-and-stories.subtitle') }}" 
-    intro="{{ __('peopleStories.people-and-stories.intro') }}"
+    :intro="html_entity_decode(__('peopleStories.people-and-stories.intro'))"
     bgLeft="img/bg/bg_binocular_r.png"
     bgRight="img/bg/bg_binocular_l.png"
     :images="[

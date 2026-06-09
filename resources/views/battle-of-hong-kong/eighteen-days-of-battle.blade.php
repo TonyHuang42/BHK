@@ -3,7 +3,7 @@
     id="eighteen-days-of-battle"
     title="{{ __('battle.before_storm.battle_process_title') }}"
     subtitle="{{ __('battle.before_storm.battle_process_subtitle') }}"
-    intro="{{ __('battle.before_storm.battle_process_intro') }}"
+    :intro="html_entity_decode(__('battle.before_storm.battle_process_intro'))"
     :images="[
         'img/battle-of-hong-kong/image_2_1.jpg',
         'img/battle-of-hong-kong/image_2_2.jpg',

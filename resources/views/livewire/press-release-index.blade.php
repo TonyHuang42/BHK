@@ -37,7 +37,7 @@
                             <div class="press-release-card-image-wrapper">
                                 <img
                                     src="{{ asset('storage/' . $pressRelease->featured_image) }}"
-                                    alt="{{ $pressRelease->title }}"
+                                    alt="{{ $pressRelease->localized('title') }}"
                                     class="press-release-card-image"
                                 >
                             </div>

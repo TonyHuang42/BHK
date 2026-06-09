@@ -24,11 +24,14 @@ class PressReleaseFactory extends Factory
         return [
             'press_release_category_id' => PressReleaseCategory::factory(),
             'title' => $title,
+            'title_en' => $this->faker->unique()->sentence(),
             'slug' => Str::slug($title),
             'summary' => $this->faker->paragraph(),
+            'summary_en' => $this->faker->paragraph(),
             'date' => $this->faker->date(),
             'featured_image' => 'press-releases/featured-images/'.$this->faker->uuid().'.jpg',
             'body' => $this->faker->paragraphs(3, true),
+            'body_en' => $this->faker->paragraphs(3, true),
             'is_publish' => $this->faker->boolean(),
         ];
     }

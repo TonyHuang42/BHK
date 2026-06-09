@@ -20,6 +20,7 @@ class GalleryImageCategoryFactory extends Factory
 
         return [
             'name' => ucwords($name),
+            'name_en' => ucwords($this->faker->unique()->words(2, true)),
             'slug' => Str::slug($name),
             'sort_order' => 0,
         ];

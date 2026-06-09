@@ -33,6 +33,7 @@ test('can create press release category', function () {
     livewire(CreatePressReleaseCategory::class)
         ->fillForm([
             'name' => $newData->name,
+            'name_en' => $newData->name_en,
         ])
         ->call('create')
         ->assertHasNoFormErrors()
@@ -52,6 +53,32 @@ test('generates slug from name', function () {
         ->assertFormSet([
             'slug' => 'breaking-news',
         ]);
+});
+
+test('can create press release category with an english name', function () {
+    livewire(CreatePressReleaseCategory::class)
+        ->fillForm([
+            'name' => '中文分類',
+            'name_en' => 'English Category',
+        ])
+        ->call('create')
+        ->assertHasNoFormErrors();
+
+    $this->assertDatabaseHas('press_release_categories', [
+        'name' => '中文分類',
+        'name_en' => 'English Category',
+    ]);
+});
+
+test('can update press release category english name', function () {
+    $category = PressReleaseCategory::factory()->create(['name_en' => null]);
+
+    livewire(EditPressReleaseCategory::class, ['record' => $category->getRouteKey()])
+        ->fillForm(['name_en' => 'Updated English'])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    expect($category->refresh()->name_en)->toBe('Updated English');
 });
 
 test('cannot create press release category with missing name', function () {

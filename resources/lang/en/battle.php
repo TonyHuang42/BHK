@@ -12,7 +12,7 @@ return [
 
         'battle_tab_1' => 'Before the Storm',
         'battle_tab_2' => 'Eighteen Days of Battle',
-        'battle_tab_3' => 'Black christmas', 
+        'battle_tab_3' => 'Black Christmas',
         'battle_tab_4' => 'Wartime Timeline',
 
 
@@ -80,7 +80,7 @@ return [
         'battle_process_model_section_4_title' => 'The Landing on Hong Kong Island',
         'battle_process_model_section_4_p1' => 'On the evening of 18 December 1941, Japanese forces crossed Victoria Harbour and landed on the northern shore of Hong Kong Island. Heavy fighting soon erupted across North Point, Quarry Bay, Taikoo, Wong Nai Chung Gap, Repulse Bay, and Stanley. The island\'s complex geography of ridges, valleys, roads, and coastlines fragmented the battlefield, creating numerous isolated engagements. Communication between defensive positions was frequently disrupted, leaving units to fight independently.',
         'battle_process_model_section_4_p2' => 'Among the fiercest battles were those fought around Wong Nai Chung Gap, a strategic corridor linking the northern and southern parts of the island. Determined resistance was met by repeated Japanese infiltration and flanking attacks, gradually splitting the defenders\' positions. British, Canadian, Indian, and Hong Kong Volunteer Defence Corps units fought across the island, suffering heavy casualties. Many were killed, wounded, or taken prisoner. According to the Commonwealth War Graves Commission (CWGC), the Sai Wan War Cemetery serves as the final resting place and memorial for many Commonwealth servicemen who lost their lives during the Battle of Hong Kong or while held as prisoners of war, reflecting the heavy human cost of the campaign.',
-        
+
         'battle_process_model_section_5_title' => 'Isolation and Collapse',
         'battle_process_model_section_5_p1' => 'Following the landings, the island\'s defensive network became increasingly fragmented. Although resistance continued in many areas, effective coordination and reinforcement became progressively more difficult. Japanese forces captured key high ground and transportation routes, isolating defensive sectors from one another.',
         'battle_process_model_section_5_p2' => 'Hospitals, temporary aid stations, and residential neighbourhoods were drawn into the fighting, resulting in significant civilian suffering. By the final days of the battle, the defenders faced a combination of severe challenges: lost positions, dwindling ammunition, shortages of food and water, growing numbers of wounded personnel, damaged communications, and the absence of external reinforcements. Even so, resistance continued until the very end. Forces in Stanley, in particular, held out almost until the moment of surrender, demonstrating that the defence of Hong Kong did not collapse suddenly but continued under increasingly desperate circumstances.',
@@ -179,9 +179,9 @@ return [
         'accordion_link_16' => 'Antiquities and Monuments Office (Hong Kong)',
         'accordion_link_17' => 'War of Resistance Against Japanese Aggression Memorial Network',
         'accordion_link_18' => 'Wikipedia – Battle of Hong Kong',
-        
+
 
 
     ],
 
-];  
+];

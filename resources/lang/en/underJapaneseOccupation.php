@@ -2,14 +2,14 @@
 
 return [
      'japanese_occupation_rule' => [
-        'title' => 'The Japanese Occupation Rule',
-        'subtitle' => 'The Japanese Occupation Rule',
+        'title' => 'Japanese Rule in Hong Kong',
+        'subtitle' => 'Japanese Rule in Hong Kong',
         'intro' => 'On 25 December 1941, Hong Kong fell to Japanese forces on what would later become known as Black Christmas. With the fighting over, the challenge facing the occupiers was no longer how to defeat the defenders, but how to govern a densely populated city, a major port, and a complex society under military rule.',
-          
+
         // Tabs
         'tab_1' => 'Japanese Rule in Hong Kong',
-        'tab_2' => 'Survival and Rationing in Crisis',
-        'tab_3' => 'Economy and Society Under Occupation',
+        'tab_2' => 'Survival and Rationing in Crisis in Crisis',
+        'tab_3' => 'Economy and Society Under Occupation Under Occupation',
         'tab_4' => 'Everyday Life Under Occupation',
 
     // tab 1
@@ -60,15 +60,15 @@ return [
     'rule_hk_model_section_8_title' => 'Violence as the Foundation of Occupation',
     'rule_hk_model_section_8_p1' => 'Occupation rule was sustained not only through administration but also through the threat of violence. Historical research and post-war testimony document arrests, torture, sexual violence, executions, looting, and other forms of abuse during the occupation period. Even when violence was not immediately visible, its possibility remained ever-present.',
     'rule_hk_model_section_8_p2' => 'For many residents, the greatest burden was uncertainty. The threat could come from Japanese soldiers, military police, informants, collaborationist police, or other agents of the occupation system. In response, many people sought protection through family networks, trusted relationships, and local communities while avoiding unnecessary attention.',
-    'rule_hk_model_section_8_p3' => 'This atmosphere of insecurity forms the essential background for understanding later chapters on rationing, economic hardship, survival, and everyday life under occupation. Life under Japanese rule was not merely difficult—it was shaped by the combined pressures of military power, administrative control, and the constant possibility of coercion.',
+    'rule_hk_model_section_8_p3' => 'This atmosphere of insecurity forms the essential background for understanding later chapters on rationing, economic hardship, survival, and Everyday Life Under Occupation. Life under Japanese rule was not merely difficult—it was shaped by the combined pressures of military power, administrative control, and the constant possibility of coercion.',
 
     'rule_hk_model_section_9_title' => 'Conclusion: A City Under Control',
     'rule_hk_model_section_9_p1' => 'Japanese-occupied Hong Kong was a city fundamentally reshaped by military rule. The Occupation Government, the Kempeitai, police forces, registration systems, population controls, property records, renamed streets, propaganda campaigns, and collaborationist institutions formed an extensive system of control. This system sought to regulate movement, food supplies, employment, housing, language, education, and even public memory. It aimed to transform Hong Kong into a functioning component of Japan\'s wartime machinery.',
     'rule_hk_model_section_9_p2' => 'Yet control did not necessarily produce genuine acceptance. The occupation authorities could seize government offices, rename streets, establish checkpoints, and impose rationing, but they could not eliminate people\'s desire for security, dignity, and freedom. It was precisely because occupation rule was so restrictive that the acts of survival, mutual assistance, and resistance undertaken by Hong Kong\'s people became all the more significant.',
 
     // tab 2
-    'survival_title' => 'Survival and rationing',
-    'survival_subtitle' => 'Survival and Rationing in Crisis',
+    'survival_title' => 'Survival and Rationing in Crisis',
+    'survival_subtitle' => 'Survival and Rationing in Crisis in Crisis',
     'survival_intro' => 'One of the most immediate and pressing challenges faced by Hong Kong\'s residents during the Japanese occupation was survival itself. Before the war, Hong Kong depended heavily on imported food and regional trade networks to sustain its population. After the Japanese occupation, transportation routes were disrupted, trade connections severed, and resources requisitioned for military purposes. The city\'s established supply system quickly collapsed.',
 
     'survival_section_1_title' => 'Living Through Shortage and Uncertainty',
@@ -129,8 +129,8 @@ return [
     'survival_model_section_12_p2' => 'This history reminds us that the damage caused by occupation extended beyond violence and imprisonment. It was also measured in hunger, deprivation, and the gradual erosion of everyday life. The survival of Hong Kong\'s people during these years was not inevitable. It was the result of persistence, sacrifice, mutual support, and a continuous struggle to endure under extraordinarily difficult circumstances.',
 
     // tab 3
-    'economy_title' => 'Economy and Society',
-    'economy_subtitle' => 'Economy and Society Under Occupation',
+    'economy_title' => 'Economy and Society Under Occupation',
+    'economy_subtitle' => 'Economy and Society Under Occupation Under Occupation',
     'economy_intro' => 'Japanese occupation transformed Hong Kong not only politically, but also economically and socially.',
 
     'economy_section_1_title' => 'A City Reshaped by War',
@@ -140,7 +140,7 @@ return [
     'economy_section_2_title' => 'The End of the Free Port',
     'economy_section_2_p1' => 'Much of Hong Kong\'s pre-war prosperity depended upon its role as a free port and international trading centre. The city thrived on maritime commerce, financial services, shipping, and its connections with mainland China. Once Japanese forces occupied Hong Kong, however, these foundations rapidly deteriorated. International shipping routes were disrupted. Foreign trade became subject to wartime restrictions and blockades. British, American, and Allied businesses could no longer operate normally, while many companies, warehouses, and commercial facilities were seized, controlled, or closed by the occupation authorities. Hong Kong ceased to function as an open trading port and instead became an economy subordinate to Japan\'s wartime priorities.',
     'economy_section_2_p2' => 'The consequences for ordinary residents were severe. The decline of maritime trade affected dockworkers, sailors, warehouse staff, transport workers, merchants, clerks, and countless others whose livelihoods depended upon commerce. As trade contracted, employment opportunities disappeared, supplies became scarcer, and prices continued to rise. Many residents could no longer survive through their pre-war occupations and were forced to seek temporary work, rely on informal exchanges, depend upon relatives, or leave Hong Kong altogether.',
-    
+
     // Model
     'economy_model_section_1_title' => 'Military Notes and Monetary Collapse',
     'economy_model_section_1_p1' => 'One of the most significant economic changes introduced during the occupation was the replacement of Hong Kong’s monetary system. According to Hong Kong Memory, from 1 June 1943 onward, Hong Kong dollars could no longer be exchanged for Japanese military notes, which became the territory’s sole legal currency. The Government Records Service further notes that residents were compelled to exchange Hong Kong currency for military notes, effectively transferring private wealth into a currency controlled by the occupation authorities. The consequences were profound.',
@@ -253,7 +253,7 @@ return [
     'everyday_model_section_12_p2' => 'According to The History of the Hong Kong and Kowloon Brigade, the propaganda materials produced by Leung Pui-Wan included reports of Dongjiang Column and Hong Kong and Kowloon Brigade operations, information about conditions in the city, and messages encouraging support for the anti-Japanese struggle. These activities remind us that resistance could occur even in places where military action was impossible. Everyday life itself could become a form of resistance.',
 
     'everyday_model_section_13_title' => 'Conclusion: To Survive, and to Remember',
-    'everyday_model_section_13_p1' => 'The history of everyday life under occupation is not as easily recorded as battles or government policies. It consists of small moments: a lamp carefully hidden behind curtains, a censored newspaper, a requisitioned school, a bowl of thin rice porridge, a whispered conversation, a renamed street, or a person concealed from the authorities. Together, these fragments reveal a side of history closest to the experiences of ordinary people.',
+    'everyday_model_section_13_p1' => 'The history of Everyday Life Under Occupation is not as easily recorded as battles or government policies. It consists of small moments: a lamp carefully hidden behind curtains, a censored newspaper, a requisitioned school, a bowl of thin rice porridge, a whispered conversation, a renamed street, or a person concealed from the authorities. Together, these fragments reveal a side of history closest to the experiences of ordinary people.',
     'everyday_model_section_13_p2' => 'Understanding everyday life during the occupation allows us to see how residents survived from one day to the next amid fear, scarcity, and uncertainty. The people of occupied Hong Kong were not merely victims of war. They were individuals who struggled to preserve their families, their communities, their memories, and their dignity under extraordinarily difficult circumstances. It is through these everyday experiences that we can most fully appreciate the weight of Hong Kong\'s three years and eight months under occupation.',
     ]
 ];

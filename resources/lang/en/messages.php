@@ -10,15 +10,15 @@ return [
     'battle_dropdown_4' => 'Wartime Timeline',
 
     'guerrilla' => 'Guerrilla &<br>Resistance',
-    'guerrilla_dropdown_1' => 'Hong Kong and Kowloon Brigade',
-    'guerrilla_dropdown_2' => 'guerrilla warfare',
-    'guerrilla_dropdown_3' => 'Intelligence and Rescue',
-    'guerrilla_dropdown_4' => 'Anti-Japanese resistance network',
+    'guerrilla_dropdown_1' => 'The Hong Kong–Kowloon Brigade',
+    'guerrilla_dropdown_2' => 'Guerrilla Warfare',
+    'guerrilla_dropdown_3' => 'Spies, Signals, and Rescues',
+    'guerrilla_dropdown_4' => 'Anti-Japanese Resistance Network',
 
     'occupation' => 'Occupation of<br>Hong Kong',
     'occupation_dropdown_1' => 'Japanese Rule in Hong Kong',
-    'occupation_dropdown_2' => 'Survival and Rationing in Crisis',
-    'occupation_dropdown_3' => 'Economy and Society Under Occupation',
+    'occupation_dropdown_2' => 'Survival and Rationing in Crisis in Crisis',
+    'occupation_dropdown_3' => 'Economy and Society Under Occupation Under Occupation',
     'occupation_dropdown_4' => 'Everyday Life Under Occupation',
 
     'people' => 'People &<br>Stories',

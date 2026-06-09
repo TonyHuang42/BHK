@@ -85,10 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     const inner = document.createElement('div');
                     el.appendChild(inner);
 
+                    const isChinese = document.documentElement.lang.toLowerCase().startsWith('zh');
+
                     const updateCaption = () => {
                         const slide = pswp.currSlide;
-                        const w = slide.data.w || slide.data.width;
-                        inner.style.maxWidth = (w * slide.currZoomLevel) + 'px';
+                        if (isChinese) {
+                            const w = slide.data.w || slide.data.width;
+                            inner.style.maxWidth = (w * slide.currZoomLevel) + 'px';
+                        }
                         inner.innerHTML = (slide.data.caption || '').replace(/\n/g, '<br>');
                     };
 

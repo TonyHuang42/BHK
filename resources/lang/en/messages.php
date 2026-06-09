@@ -4,8 +4,8 @@ return [
     'home' => 'Home',
 
     'battle' => 'Battle of Hong Kong',
-    'battle_dropdown_1' => 'Pre-war background',
-    'battle_dropdown_2' => 'Battle process',
+    'battle_dropdown_1' => 'Before the Storm',
+    'battle_dropdown_2' => 'Eighteen Days of Battle',
     'battle_dropdown_3' => 'Black Christmas',
     'battle_dropdown_4' => 'Wartime Timeline',
 

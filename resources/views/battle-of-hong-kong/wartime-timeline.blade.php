@@ -61,72 +61,72 @@
 
     const historyData = {
         "1937.7.7": {
-            title: "{{ __('battle.before_storm.wartime_timeline_1937_title') }}",
+            title: "{!! __('battle.before_storm.wartime_timeline_1937_title') !!}",
             paragraphs: [
-                "{{ __('battle.before_storm.wartime_timeline_1937_desc') }}"
+                "{!! __('battle.before_storm.wartime_timeline_1937_desc') !!}"
             ],
             image: imgBase + "image_4_1.jpg",
             imageAlt: "1937"
         },
 
         "1938.10": {
-            title: "{{ __('battle.before_storm.wartime_timeline_1938_title') }}",
+            title: "{!! __('battle.before_storm.wartime_timeline_1938_title') !!}",
             paragraphs: [
-                "{{ __('battle.before_storm.wartime_timeline_1938_desc') }}"
+                "{!! __('battle.before_storm.wartime_timeline_1938_desc') !!}"
             ],
             image: imgBase + "image_4_2.jpg",
             imageAlt: "1938"
         },
 
         "1941.12.08": {
-            title: "{{ __('battle.before_storm.wartime_timeline_1941_1208_title') }}",
+            title: "{!! __('battle.before_storm.wartime_timeline_1941_1208_title') !!}",
             paragraphs: [
-                "{{ __('battle.before_storm.wartime_timeline_1941_1208_desc') }}"
+                "{!! __('battle.before_storm.wartime_timeline_1941_1208_desc') !!}"
             ],
             image: imgBase + "image_4_3.jpg",
             imageAlt: "1941"
         },
 
         "1941.12.10": {
-            title: "{{ __('battle.before_storm.wartime_timeline_1941_1210_title') }}",
+            title: "{!! __('battle.before_storm.wartime_timeline_1941_1210_title') !!}",
             paragraphs: [
-                "{{ __('battle.before_storm.wartime_timeline_1941_1210_desc') }}"
+                "{!! __('battle.before_storm.wartime_timeline_1941_1210_desc') !!}"
             ],
             image: imgBase + "image_4_4.jpg",
             imageAlt: "1941"
         },
 
         "1941.12.13": {
-            title: "{{ __('battle.before_storm.wartime_timeline_1941_1213_title') }}",
+            title: "{!! __('battle.before_storm.wartime_timeline_1941_1213_title') !!}",
             paragraphs: [
-                "{{ __('battle.before_storm.wartime_timeline_1941_1213_desc') }}"
+                "{!! __('battle.before_storm.wartime_timeline_1941_1213_desc') !!}"
             ],
             image: imgBase + "image_4_5.jpg",
             imageAlt: "1941"
         },
 
         "1941.12.18": {
-            title: "{{ __('battle.before_storm.wartime_timeline_1941_1218_title') }}",
+            title: "{!! __('battle.before_storm.wartime_timeline_1941_1218_title') !!}",
             paragraphs: [
-                "{{ __('battle.before_storm.wartime_timeline_1941_1218_desc') }}"
+                "{!! __('battle.before_storm.wartime_timeline_1941_1218_desc') !!}"
             ],
             image: imgBase + "image_4_6.jpg",
             imageAlt: "1941"
         },
 
         "1941.12.25": {
-            title: "{{ __('battle.before_storm.wartime_timeline_1941_1225_title') }}",
+            title: "{!! __('battle.before_storm.wartime_timeline_1941_1225_title') !!}",
             paragraphs: [
-                "{{ __('battle.before_storm.wartime_timeline_1941_1225_desc') }}"
+                "{!! __('battle.before_storm.wartime_timeline_1941_1225_desc') !!}"
             ],
             image: imgBase + "image_4_7.jpg",
             imageAlt: "1941"
         },
 
         "1942": {
-            title: "{{ __('battle.before_storm.wartime_timeline_1942_title') }}",
+            title: "{!! __('battle.before_storm.wartime_timeline_1942_title') !!}",
             paragraphs: [
-                "{{ __('battle.before_storm.wartime_timeline_1942_desc') }}"
+                "{!! __('battle.before_storm.wartime_timeline_1942_desc') !!}"
             ],
             image: imgBase + "image_4_8.jpg",
             imageAlt: "1942"

@@ -13,11 +13,11 @@
 
     <h6>{{ __('battle.before_storm.battle_process_section_1_title') }}</h6>
     <p>{{ __('battle.before_storm.battle_process_section_1_p1') }}</p>
-    <p>{{ __('battle.before_storm.battle_process_section_1_p1') }}</p>
+    <p>{{ __('battle.before_storm.battle_process_section_1_p2') }}</p>
 
     <h6>{{ __('battle.before_storm.battle_process_section_2_title') }}</h6>
     <p>{{ __('battle.before_storm.battle_process_section_2_p1') }}</p>
-    <p>{{ __('battle.before_storm.battle_process_section_2_p1') }}</p>
+    <p>{{ __('battle.before_storm.battle_process_section_2_p2') }}</p>
 
     <x-slot:modal>
         <h6>{{ __('battle.before_storm.battle_process_model_section_1_title') }}</h6>
@@ -33,27 +33,21 @@
         <h6>{{ __('battle.before_storm.battle_process_model_section_3_title') }}</h6>
         <p>{{ __('battle.before_storm.battle_process_model_section_3_p1') }}</p>
         <p>{{ __('battle.before_storm.battle_process_model_section_3_p2') }}</p>
-        <p>{{ __('battle.before_storm.battle_process_model_section_3_p3') }}</p>
-
+        
         <h6>{{ __('battle.before_storm.battle_process_model_section_4_title') }}</h6>
         <p>{{ __('battle.before_storm.battle_process_model_section_4_p1') }}</p>
         <p>{{ __('battle.before_storm.battle_process_model_section_4_p2') }}</p>
-        <p>{{ __('battle.before_storm.battle_process_model_section_4_p3') }}</p>
-
+        
         <h6>{{ __('battle.before_storm.battle_process_model_section_5_title') }}</h6>
         <p>{{ __('battle.before_storm.battle_process_model_section_5_p1') }}</p>
         <p>{{ __('battle.before_storm.battle_process_model_section_5_p2') }}</p>
-        <p>{{ __('battle.before_storm.battle_process_model_section_5_p3') }}</p>
-
+        
         <h6>{{ __('battle.before_storm.battle_process_model_section_6_title') }}</h6>
         <p>{{ __('battle.before_storm.battle_process_model_section_6_p1') }}</p>
         <p>{{ __('battle.before_storm.battle_process_model_section_6_p2') }}</p>
-        <p>{{ __('battle.before_storm.battle_process_model_section_6_p3') }}</p>
 
         <h6>{{ __('battle.before_storm.battle_process_model_section_7_title') }}</h6>
         <p>{{ __('battle.before_storm.battle_process_model_section_7_p1') }}</p>
         <p>{{ __('battle.before_storm.battle_process_model_section_7_p2') }}</p>
-        
-        
     </x-slot:modal>
 </x-content-section>

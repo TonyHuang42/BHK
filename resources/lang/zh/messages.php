@@ -29,5 +29,8 @@ return [
 
     'gallery' => '相冊',
     'press' => '新聞稿',
+
     'contact' => '聯絡我們',
+    'contact_label' => '如有任何疑問，歡迎透過以下方式聯絡我們：',
+    'contact_mail' => '電郵：'
 ];

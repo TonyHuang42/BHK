@@ -144,21 +144,21 @@
                     <a class="nav-link" href="#" data-bs-toggle="dropdown">
                         {{ __('messages.contact') }}
                     </a>
-                    <div class="dropdown-menu dropdown-menu-end contact-popup-bg">
-                        <button type="button" class="btn-close" onclick="this.closest('.dropdown').querySelector('.nav-link').click()"></button>
-
-                        <div class="contact-popup">
-                            <h3 class="fw-bold mb-1" style="color:#692626;">
-                                {{ __('messages.contact') }}
-                            </h3>
-
-                            <p>如有任何疑問，歡迎聯絡我們：</p>
-
-                            <ul class="list-unstyled mb-0">
-                                <li><strong>電郵：</strong> inquiry@battle-of-hk.com</li>
-                            </ul>
-                        </div>
-                    </div>
+                     <div class="dropdown-menu dropdown-menu-end contact-popup-bg">
+                                <button type="button" class="btn-close" style="font-size: 0.8rem; position: absolute; top: 16px; right: 16px;" aria-label="Close" onclick="this.closest('.dropdown').querySelector('.nav-link').click()"></button>
+                                <div class="contact-popup">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <h3 class="fw-bold mb-1" style="color:#692626;">{{ __('messages.contact') }}</h3>
+                                    </div>
+                                    <div style="margin-left: 225px;">
+                                        <p class="mb-3 fw-normal">{{ __('messages.contact_label') }}</p>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2"><strong>{{ __('messages.contact_mail') }}</strong> <a href="mailto:inquiry@battle-of-hk.com" class="text-decoration-none fw-normal" style="color: #672727;">inquiry@battle-of-hk.com</a></li>
+                                            {{-- <li><strong>電話：</strong> <a href="tel:+12345678" class="text-decoration-none">+1234 5678</a></li> --}}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                 </li>
 
                 <!-- Language Switch (STATIC) -->

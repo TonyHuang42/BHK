@@ -29,6 +29,8 @@ return [
 
     'gallery' => 'Gallery',
     'press' => 'Press Releases',
-    'contact' => 'Contact Us',
 
+    'contact' => 'Contact Us',
+    'contact_label' => 'If you have any questions, comments, historical information, or enquiries regarding the project, please feel free to contact us:',
+    'contact_mail' => 'Email: '
 ];

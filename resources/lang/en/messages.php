@@ -28,7 +28,10 @@ return [
     'people_dropdown_4' => 'Stories of Rescue',
 
     'gallery' => 'Gallery',
+    'gallery_all' => 'All',
+    'gallery_empty' => 'No images available.',
     'press' => 'Press<br>Releases',
+    'press_empty' => 'No press releases available.',
 
     'contact' => 'Contact Us',
     'contact_label' => 'If you have any questions, comments, historical information, or enquiries regarding the project, please feel free to contact us:',

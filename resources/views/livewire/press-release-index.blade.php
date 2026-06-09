@@ -7,7 +7,7 @@
                         type="button"
                         wire:click="setCategory('')"
                         class="gallery-filter-link {{ $category === '' ? 'is-active' : '' }}"
-                    >全部</button>
+                    >{{ __('messages.gallery_all') }}</button>
                 </li>
                 @foreach ($categories as $cat)
                     <li>
@@ -25,7 +25,7 @@
     @if ($pressReleases->isEmpty())
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <p class="mb-0">暫無新聞稿。</p>
+                <p class="mb-0">{{ __('messages.press_empty') }}</p>
             </div>
         </div>
     @else

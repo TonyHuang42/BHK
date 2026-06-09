@@ -10,31 +10,31 @@ use Illuminate\Support\Facades\Storage;
 
 class GalleryImageSeeder extends Seeder
 {
-    /** @var array<string, string> Map of slug => display name */
+    /** @var array<string, array{name: string, name_en: string}> Map of slug => names */
     private array $categories = [
-        'battle-of-hong-kong' => '香港保衛戰',
-        'japanese-occupation' => '日治時期',
-        'guerrilla-fighters' => '游擊戰士',
-        'postwar-reconstruction' => '戰後重建',
-        'civilian-rescue' => '民間救援',
+        'battle-of-hong-kong' => ['name' => '香港保衛戰', 'name_en' => 'Battle of Hong Kong'],
+        'japanese-occupation' => ['name' => '日治時期', 'name_en' => 'Japanese Occupation'],
+        'guerrilla-fighters' => ['name' => '游擊戰士', 'name_en' => 'Guerrilla Fighters'],
+        'postwar-reconstruction' => ['name' => '戰後重建', 'name_en' => 'Postwar Reconstruction'],
+        'civilian-rescue' => ['name' => '民間救援', 'name_en' => 'Civilian Rescue'],
     ];
 
-    /** @var array<int, string> */
+    /** @var array<int, array{caption: string, caption_en: string}> */
     private array $captions = [
-        '香港保衛戰珍貴影像',
-        '日治時期街道紀實',
-        '港九大隊游擊戰士',
-        '戰後重建香港',
-        '民間互助與救援',
-        '抗戰人物肖像集',
+        ['caption' => '香港保衛戰珍貴影像', 'caption_en' => 'Precious Images of the Battle of Hong Kong'],
+        ['caption' => '日治時期街道紀實', 'caption_en' => 'Street Scenes During the Japanese Occupation'],
+        ['caption' => '港九大隊游擊戰士', 'caption_en' => 'Guerrilla Fighters of the Hong Kong-Kowloon Brigade'],
+        ['caption' => '戰後重建香港', 'caption_en' => 'Rebuilding Postwar Hong Kong'],
+        ['caption' => '民間互助與救援', 'caption_en' => 'Civilian Mutual Aid and Rescue'],
+        ['caption' => '抗戰人物肖像集', 'caption_en' => 'Portraits of Wartime Figures'],
     ];
 
     public function run(): void
     {
         $categories = collect($this->categories)->map(
-            fn (string $name, string $slug): GalleryImageCategory => GalleryImageCategory::firstOrCreate(
+            fn (array $names, string $slug): GalleryImageCategory => GalleryImageCategory::firstOrCreate(
                 ['slug' => $slug],
-                ['name' => $name],
+                ['name' => $names['name'], 'name_en' => $names['name_en']],
             )
         )->values();
 
@@ -46,10 +46,13 @@ class GalleryImageSeeder extends Seeder
                 "galleries/images/seed-{$i}.jpg",
             );
 
+            $caption = $this->captions[$i % count($this->captions)];
+
             $image = GalleryImage::create([
                 'is_publish' => $i % 5 !== 0,
                 'image_url' => $imagePath,
-                'caption' => $this->captions[$i % count($this->captions)],
+                'caption' => $caption['caption'],
+                'caption_en' => $caption['caption_en'],
             ]);
 
             $image->categories()->attach(

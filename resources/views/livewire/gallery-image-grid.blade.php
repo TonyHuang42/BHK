@@ -7,7 +7,7 @@
                         href="{{ route('galleries.index') }}"
                         wire:click.prevent="$set('category', '')"
                         class="gallery-filter-link {{ $category === '' ? 'is-active' : '' }}"
-                    >全部</a>
+                    >{{ __('messages.gallery_all') }}</a>
                 </li>
                 @foreach ($categories as $cat)
                     <li>
@@ -25,7 +25,7 @@
     @if (empty($lightboxItems))
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <p class="mb-0">暫無圖片。</p>
+                <p class="mb-0">{{ __('messages.gallery_empty') }}</p>
             </div>
         </div>
     @else

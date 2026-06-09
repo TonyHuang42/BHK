@@ -28,7 +28,10 @@ return [
     'people_dropdown_4' => '救援故事',
 
     'gallery' => '相冊',
+    'gallery_all' => '全部',
+    'gallery_empty' => '暫無圖片。',
     'press' => '新聞稿',
+    'press_empty' => '暫無新聞稿。',
 
     'contact' => '聯絡我們',
     'contact_label' => '如有任何疑問，歡迎透過以下方式聯絡我們：',

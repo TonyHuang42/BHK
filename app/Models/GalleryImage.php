@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\HasLocalizedAttributes;
 use App\Services\GalleryThumbnailService;
 use Database\Factories\GalleryImageFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -12,13 +13,14 @@ use Illuminate\Support\Facades\Storage;
 class GalleryImage extends Model
 {
     /** @use HasFactory<GalleryImageFactory> */
-    use HasFactory;
+    use HasFactory, HasLocalizedAttributes;
 
     protected $fillable = [
         'is_publish',
         'image_url',
         'thumbnail_url',
         'caption',
+        'caption_en',
         'sort_order',
     ];
 

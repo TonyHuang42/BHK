@@ -16,11 +16,17 @@ class PressReleaseCategoryForm
         return $schema
             ->components([
                 TextInput::make('name')
+                    ->label('Name (Chinese)')
                     ->required()
                     ->maxLength(255)
                     ->unique(ignoreRecord: true)
                     ->live()
                     ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug(Pinyin::permalink($state ?? '')))),
+                TextInput::make('name_en')
+                    ->label('Name (English)')
+                    ->required()
+                    ->maxLength(255)
+                    ->unique(ignoreRecord: true),
                 Hidden::make('slug')
                     ->required()
                     ->unique(ignoreRecord: true),

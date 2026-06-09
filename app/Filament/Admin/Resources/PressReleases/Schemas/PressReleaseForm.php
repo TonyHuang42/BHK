@@ -2,6 +2,7 @@
 
 namespace App\Filament\Admin\Resources\PressReleases\Schemas;
 
+use App\Models\PressReleaseCategory;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Hidden;
@@ -23,10 +24,15 @@ class PressReleaseForm
             ->components([
                 TextInput::make('title')
                     ->required()
+                    ->label('Title (Chinese)')
                     ->maxLength(255)
                     ->unique(ignoreRecord: true)
                     ->live()
                     ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug(Pinyin::permalink($state ?? '')))),
+                TextInput::make('title_en')
+                    ->label('Title (English)')
+                    ->required()
+                    ->maxLength(255),
                 Hidden::make('slug')
                     ->required()
                     ->unique(ignoreRecord: true),
@@ -39,9 +45,10 @@ class PressReleaseForm
                 Select::make('press_release_category_id')
                     ->label('Category')
                     ->relationship(name: 'category', titleAttribute: 'name')
+                    ->getOptionLabelFromRecordUsing(fn (PressReleaseCategory $record): string => filled($record->name_en) ? "{$record->name} / {$record->name_en}" : $record->name)
                     ->required()
                     ->preload()
-                    ->searchable(),
+                    ->searchable(['name', 'name_en']),
                 Toggle::make('is_publish')
                     ->inline(false)
                     ->required()
@@ -54,9 +61,21 @@ class PressReleaseForm
                     ->directory('press-releases/featured-images')
                     ->columnSpanFull(),
                 Textarea::make('summary')
+                    ->label('Summary (Chinese)')
+                    ->required()
+                    ->columnSpanFull(),
+                Textarea::make('summary_en')
+                    ->label('Summary (English)')
                     ->required()
                     ->columnSpanFull(),
                 RichEditor::make('body')
+                    ->label('Body (Chinese)')
+                    ->extraAttributes(['style' => 'min-height: 200px'])
+                    ->required()
+                    ->fileAttachmentsDirectory('press-releases/attachments')
+                    ->columnSpanFull(),
+                RichEditor::make('body_en')
+                    ->label('Body (English)')
                     ->extraAttributes(['style' => 'min-height: 200px'])
                     ->required()
                     ->fileAttachmentsDirectory('press-releases/attachments')

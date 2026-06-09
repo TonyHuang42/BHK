@@ -141,3 +141,53 @@ test('can delete press release', function () {
 
     $this->assertModelMissing($pressRelease);
 });
+
+test('can create press release with english fields', function () {
+    $category = PressReleaseCategory::factory()->create();
+    $newData = PressRelease::factory()->make();
+
+    livewire(CreatePressRelease::class)
+        ->fillForm([
+            'press_release_category_id' => $category->id,
+            'title' => $newData->title,
+            'title_en' => 'English Title',
+            'summary' => $newData->summary,
+            'summary_en' => 'English summary text.',
+            'date' => $newData->date->format('Y-m-d'),
+            'body' => $newData->body,
+            'body_en' => '<p>English body content.</p>',
+            'is_publish' => $newData->is_publish,
+        ])
+        ->call('create')
+        ->assertHasNoFormErrors()
+        ->assertRedirect();
+
+    $this->assertDatabaseHas('press_releases', [
+        'title' => $newData->title,
+        'title_en' => 'English Title',
+        'summary_en' => 'English summary text.',
+    ]);
+});
+
+test('can create press release without english fields', function () {
+    $category = PressReleaseCategory::factory()->create();
+    $newData = PressRelease::factory()->make();
+
+    livewire(CreatePressRelease::class)
+        ->fillForm([
+            'press_release_category_id' => $category->id,
+            'title' => $newData->title,
+            'summary' => $newData->summary,
+            'date' => $newData->date->format('Y-m-d'),
+            'body' => $newData->body,
+            'is_publish' => $newData->is_publish,
+        ])
+        ->call('create')
+        ->assertHasNoFormErrors()
+        ->assertRedirect();
+
+    $this->assertDatabaseHas('press_releases', [
+        'title' => $newData->title,
+        'title_en' => null,
+    ]);
+});

@@ -15,7 +15,7 @@
                             href="{{ route('galleries.index', ['category' => $cat->slug]) }}"
                             wire:click.prevent="$set('category', '{{ $cat->slug }}')"
                             class="gallery-filter-link {{ $category === $cat->slug ? 'is-active' : '' }}"
-                        >{{ $cat->name }}</a>
+                        >{{ $cat->localized('name') }}</a>
                     </li>
                 @endforeach
             </ul>

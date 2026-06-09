@@ -16,7 +16,9 @@
                     <div class="text-center">
                         <img src="{{ asset('img/home/icon_ornament.svg') }}" alt="icon" class="icon-image">
                         <h3>{{ $title }}</h3>
-                        <h6>{{ $subtitle }}</h6>
+                        @if (app()->getLocale() === 'zh')
+                            <h6>{{ $subtitle }}</h6>
+                        @endif
                         <p class="mt-5">{{ $intro }}</p>
                     </div>
                 </div>

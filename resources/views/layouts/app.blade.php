@@ -28,123 +28,97 @@
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-xl">
+            <div class="container d-flex justify-content-between align-items-center">
 
-<header>
-    
-<nav class="navbar navbar-expand-lg">
-    <div class="container d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <a class="navbar-brand me-0 d-flex align-items-center gap-2" href="{{ route('home') }}">
+                    <img src="{{ asset('img/home/logo.svg') }}" alt="logo" class="logo">
+                </a>
 
-        <!-- Logo -->
-        <a class="navbar-brand me-0 d-flex align-items-center gap-2" href="{{ route('home') }}">
-            <img src="{{ asset('img/home/logo.svg') }}" alt="logo" class="logo">
-        </a>
+                <!-- Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- Toggle -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <!-- Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav d-flex justify-content-end w-100 gap-3">
 
-        <!-- Menu -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav d-flex justify-content-end w-100 gap-2">
+                        <!-- Battle -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle {{ request()->routeIs('battle.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {!! __('messages.battle') !!}
+                            </a>
 
-                <!-- Battle -->
-                <li class="nav-item dropdown">
-                    <a
-                        class="nav-link dropdown-toggle {{ request()->routeIs('battle.*') ? 'nav-link--current' : '' }}"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        {{ __('messages.battle') }}
-                    </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'before-the-storm']) }}">{{ __('messages.battle_dropdown_1') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'eighteen-days-of-battle']) }}">{{ __('messages.battle_dropdown_2') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'black-christmas']) }}">{{ __('messages.battle_dropdown_3') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'wartime-timeline']) }}">{{ __('messages.battle_dropdown_4') }}</a></li>
+                            </ul>
+                        </li>
 
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'before-the-storm']) }}">{{ __('messages.battle_dropdown_1') }}</a></li>
-                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'eighteen-days-of-battle']) }}">{{ __('messages.battle_dropdown_2') }}</a></li>
-                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'black-christmas']) }}">{{ __('messages.battle_dropdown_3') }}</a></li>
-                        <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'wartime-timeline']) }}">{{ __('messages.battle_dropdown_4') }}</a></li>
-                    </ul>
-                </li>
+                        <!-- Guerrilla -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle {{ request()->routeIs('guerrilla.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {!! __('messages.guerrilla') !!}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'hk-kowloon-brigade']) }}">{{ __('messages.guerrilla_dropdown_1') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'guerrilla-warfare']) }}">{{ __('messages.guerrilla_dropdown_2') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'intelligence-and-rescue']) }}">{{ __('messages.guerrilla_dropdown_3') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'underground-resistance']) }}">{{ __('messages.guerrilla_dropdown_4') }}</a></li>
+                            </ul>
+                        </li>
 
-              <!-- Guerrilla -->
-                <li class="nav-item dropdown">
-                    <a
-                        class="nav-link dropdown-toggle {{ request()->routeIs('guerrilla.*') ? 'nav-link--current' : '' }}"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        {{ __('messages.guerrilla') }}
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'hk-kowloon-brigade']) }}">{{ __('messages.guerrilla_dropdown_1') }}</a></li>
-                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'guerrilla-warfare']) }}">{{ __('messages.guerrilla_dropdown_2') }}</a></li>
-                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'intelligence-and-rescue']) }}">{{ __('messages.guerrilla_dropdown_3') }}</a></li>
-                        <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'underground-resistance']) }}">{{ __('messages.guerrilla_dropdown_4') }}</a></li>
-                    </ul>
-                </li>
+                        <!-- Occupation -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle {{ request()->routeIs('occupation.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {!! __('messages.occupation') !!}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'occupation-rule']) }}">{{ __('messages.occupation_dropdown_1') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'survival-and-rationing']) }}">{{ __('messages.occupation_dropdown_2') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'economy-and-society']) }}">{{ __('messages.occupation_dropdown_3') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'everyday-life-wartime']) }}">{{ __('messages.occupation_dropdown_4') }}</a></li>
+                            </ul>
+                        </li>
 
-                <!-- Occupation -->
-                <li class="nav-item dropdown">
-                    <a
-                        class="nav-link dropdown-toggle {{ request()->routeIs('occupation.*') ? 'nav-link--current' : '' }}"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        {{ __('messages.occupation') }}
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'occupation-rule']) }}">{{ __('messages.occupation_dropdown_1') }}</a></li>
-                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'survival-and-rationing']) }}">{{ __('messages.occupation_dropdown_2') }}</a></li>
-                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'economy-and-society']) }}">{{ __('messages.occupation_dropdown_3') }}</a></li>
-                        <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'everyday-life-wartime']) }}">{{ __('messages.occupation_dropdown_4') }}</a></li>
-                    </ul>
-                </li>
+                        <!-- People -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle {{ request()->routeIs('people.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {!! __('messages.people') !!}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'resistance-figures']) }}">{{ __('messages.people_dropdown_1') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'village-memories']) }}">{{ __('messages.people_dropdown_2') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'mutual-aid']) }}">{{ __('messages.people_dropdown_3') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'rescue-stories']) }}">{{ __('messages.people_dropdown_4') }}</a></li>
+                            </ul>
+                        </li>
 
-                <!-- People -->
-                <li class="nav-item dropdown">
-                    <a
-                        class="nav-link dropdown-toggle {{ request()->routeIs('people.*') ? 'nav-link--current' : '' }}"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        {{ __('messages.people') }}
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'resistance-figures']) }}">{{ __('messages.people_dropdown_1') }}</a></li>
-                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'village-memories']) }}">{{ __('messages.people_dropdown_2') }}</a></li>
-                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'mutual-aid']) }}">{{ __('messages.people_dropdown_3') }}</a></li>
-                        <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'rescue-stories']) }}">{{ __('messages.people_dropdown_4') }}</a></li>
-                    </ul>
-                </li>
+                        <!-- Gallery -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('galleries.*') ? 'nav-link--current' : '' }}" href="{{ route('galleries.index') }}">
+                                {!! __('messages.gallery') !!}
+                            </a>
+                        </li>
 
-                <!-- Gallery -->
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('galleries.*') ? 'nav-link--current' : '' }}" href="{{ route('galleries.index') }}">
-                        {{ __('messages.gallery') }}
-                    </a>
-                </li>
+                        <!-- Press -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('press-releases.*') ? 'nav-link--current' : '' }}" href="{{ route('press-releases.index') }}">
+                                {!! __('messages.press') !!}
+                            </a>
+                        </li>
 
-                <!-- Press -->
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('press-releases.*') ? 'nav-link--current' : '' }}" href="{{ route('press-releases.index') }}">
-                        {{ __('messages.press') }}
-                    </a>
-                </li>
-
-                <!-- Contact -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" data-bs-toggle="dropdown">
-                        {{ __('messages.contact') }}
-                    </a>
-                     <div class="dropdown-menu dropdown-menu-end contact-popup-bg">
+                        <!-- Contact -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" data-bs-toggle="dropdown">
+                                {!! __('messages.contact') !!}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end contact-popup-bg">
                                 <button type="button" class="btn-close" style="font-size: 0.8rem; position: absolute; top: 16px; right: 16px;" aria-label="Close" onclick="this.closest('.dropdown').querySelector('.nav-link').click()"></button>
                                 <div class="contact-popup">
                                     <div class="d-flex justify-content-between align-items-start">
@@ -159,51 +133,52 @@
                                     </div>
                                 </div>
                             </div>
-                </li>
+                        </li>
 
-                <!-- Language Switch (STATIC) -->
-            <li class="nav-item dropdown">
-                <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                >
-                    🌐 {{ app()->getLocale() }}
-                </a>
+                        <!-- Language Switch (STATIC) -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{-- 🌐 {{ app()->getLocale() }} --}}
+                                <?xml version="1.0" encoding="UTF-8"?><svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M28.2857 37H39.7143M42 42L39.7143 37L42 42ZM26 42L28.2857 37L26 42ZM28.2857 37L34 24L39.7143 37H28.2857Z" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16 6L17 9" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M6 11H28" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M10 16C10 16 11.7895 22.2609 16.2632 25.7391C20.7368 29.2174 28 32 28 32" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M24 11C24 11 22.2105 19.2174 17.7368 23.7826C13.2632 28.3478 6 32 6 32" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
 
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                        <a class="dropdown-item" href="{{ route('lang.switch', 'zh') }}">
-                            中文
-                        </a>
-                    </li>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('lang.switch', 'zh') }}">
+                                        中文
+                                    </a>
+                                </li>
 
-                    <li>
-                        <a class="dropdown-item" href="{{ route('lang.switch', 'en') }}">
-                            English
-                        </a>
-                    </li>
-                </ul>
-            </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('lang.switch', 'en') }}">
+                                        English
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-            </ul>
+    @yield('content')
+
+    <footer class="d-flex align-items-center">
+        <div class="container">
+            <div class="copyright">
+                <div>© {{ date('Y') }} {{ __('messages.footer_copy_right') }}</div>
+            </div>
         </div>
-    </div>
-</nav>
-</header>
+    </footer>
 
-@yield('content')
-
-<footer class="d-flex align-items-center">
-    <div class="container">
-        <div class="copyright">
-            <div>© {{ date('Y') }} {{ __('messages.footer_copy_right') }}</div>
-        </div>
-    </div>
-</footer>
-
-@livewireScripts
+    @livewireScripts
 </body>
+
 </html>

@@ -64,7 +64,7 @@ test('does not reorder gallery images while a category filter is active', functi
 });
 
 test('does not reorder gallery images while a search term is active', function () {
-    $images = GalleryImage::factory()->count(3)->create();
+    $images = GalleryImage::factory()->count(3)->create(['caption' => 'fixed caption']);
 
     $originalOrder = $images->mapWithKeys(fn (GalleryImage $image) => [$image->getKey() => $image->sort_order]);
 
@@ -184,6 +184,22 @@ test('can update a gallery image caption', function () {
         ->assertHasNoFormErrors();
 
     expect($image->refresh()->caption)->toBe('Updated caption');
+});
+
+test('can update a gallery image english caption', function () {
+    $image = GalleryImage::factory()->create(['caption' => '中文說明', 'caption_en' => null]);
+    $image->categories()->attach(GalleryImageCategory::factory()->create());
+    Storage::disk('public')->put(
+        $image->image_url,
+        UploadedFile::fake()->image('photo.jpg')->getContent(),
+    );
+
+    livewire(EditGalleryImage::class, ['record' => $image->getRouteKey()])
+        ->fillForm(['caption_en' => 'English caption'])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    expect($image->refresh()->caption_en)->toBe('English caption');
 });
 
 test('can delete a gallery image and its files', function () {

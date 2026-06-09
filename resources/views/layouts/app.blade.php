@@ -199,7 +199,7 @@
 <footer class="d-flex align-items-center">
     <div class="container">
         <div class="copyright">
-            <div>© {{ date('Y') }} 香港抗戰歷史 版權所有</div>
+            <div>© {{ date('Y') }} {{ __('messages.footer_copy_right') }}</div>
         </div>
     </div>
 </footer>

@@ -32,5 +32,8 @@ return [
 
     'contact' => 'Contact Us',
     'contact_label' => 'If you have any questions, comments, historical information, or enquiries regarding the project, please feel free to contact us:',
-    'contact_mail' => 'Email: '
+    'contact_mail' => 'Email: ',
+
+    'footer_copy_right' => 'Hong Kong\'s Wartime History. All Rights Reserved.'
+
 ];

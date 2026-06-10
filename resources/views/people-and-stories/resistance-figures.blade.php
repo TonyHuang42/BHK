@@ -1,9 +1,9 @@
 {{-- 抗戰人物 --}}
 <x-content-section
     id="resistance-figures"
-    title="抗戰人物"
-    subtitle="Those Who Stood Up"
-    intro="香港的抗戰歷史，不只是由戰役、組織和路線組成，也由一個個具體的人組成。有些人是游擊隊領導者，有些是短槍隊員；有些負責情報與營救，有些照顧傷員、傳送消息、保護隊伍；也有人原本只是普通村民、學生、工人、商戶或宗教人士，卻在戰爭中作出改變一生的選擇。"
+    title="{{ __('peopleStories.people-and-stories.title') }}"
+    subtitle="{{ __('peopleStories.people-and-stories.subtitle') }}" 
+    :intro="html_entity_decode(__('peopleStories.people-and-stories.intro'))"
     bgLeft="img/bg/bg_binocular_r.png"
     bgRight="img/bg/bg_binocular_l.png"
     :images="[
@@ -12,72 +12,73 @@
         'img/people-and-stories/image_1_3.jpg',
     ]"
 >
-    <h6>在歷史中留下名字的人</h6>
-    <p>「抗戰人物」這一節，不是要把所有人物完整列傳，而是讓讀者先看見香港抗戰中人的多樣面貌。港九大隊相關史料記載，港九大隊成員絕大部分是香港居民，包括原居民和青年學生；他們冒著生命危險投入抗日行動，體現出港人的傳統愛國精神。 這些人物的故事，讓香港抗戰不再只是抽象口號，而是有名字、有身份、有選擇、有犧牲的真實歷史。</p>
+    
+    <h6>{{ __('peopleStories.people-and-stories.stoodUp_section_1_title') }}</h6>
+    <p>{{ __('peopleStories.people-and-stories.stoodUp_section_1_p1') }}</p>
 
-    <h6>蔡國樑：港九大隊的早期領導者</h6>
-    <p>蔡國樑是港九大隊早期的重要領導人之一。港九大隊成立時，他擔任大隊長，與政委陳達明等人共同承擔在日佔香港建立敵後抗日武裝的重任。1942 年 2 月 3 日，港九大隊在西貢黃毛應村宣告成立，這標誌著原先分散進入新界的多支武工隊開始走向統一指揮。</p>
-    <p>蔡國樑的經歷，代表了港九大隊領導層面對的特殊處境。他們不是在穩定後方建立部隊，而是在日軍佔領、糧食短缺、特務橫行和交通受阻的環境下組織抗戰。隊伍要能打仗，也要能轉移；要能營救，也要能聯絡；要保護群眾，也要避免因暴露而牽連村民。這種領導工作，需要軍事判斷，也需要對香港地形、民情和敵情有深刻理解。</p>
+    <h6>{{ __('peopleStories.people-and-stories.stoodUp_section_2_title') }}</h6>
+    <p>{{ __('peopleStories.people-and-stories.stoodUp_section_2_p1') }}</p>
+    <p>{{ __('peopleStories.people-and-stories.stoodUp_section_2_p2') }}</p>
 
     <x-slot:modal>
-        <h6>陳達明：從學生運動到敵後抗戰</h6>
-        <p>陳達明是港九大隊另一位重要領導人，港九大隊成立時任政委。他原本在香港讀書，是香港學運中的活躍人物之一，後來投入抗日工作。這種由青年學生走向敵後抗戰的轉變，反映了戰爭如何改變一代香港青年的人生方向。</p>
-        <p>作為政委，陳達明的工作不只是軍事指揮，也包括組織、宣傳、統戰、民運和隊伍建設。港九大隊要在日佔香港長期存在，不能單靠武器，還需要建立政治信念、組織紀律和與群眾之間的信任。陳達明等人的工作，使港九大隊不只是游擊小隊，而是一支有組織、有方向、有群眾基礎的抗日力量。</p>
+          <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_1_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_1_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_1_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_2_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_2_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_2_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_3_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_3_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_3_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_4_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_4_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_4_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_5_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_5_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_5_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_6_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_6_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_6_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_7_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_7_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_7_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_8_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_8_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_8_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_9_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_9_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_9_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_10_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_10_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_10_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_11_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_11_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_11_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_12_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_12_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_12_p2') }}</p>
 
-        <h6>黃冠芳：山海之間的戰鬥者</h6>
-        <p>黃冠芳是港九大隊中極具代表性的戰鬥人物。他活躍於西貢、沙田、九龍交通線和多次游擊行動之中，既參與秘密大營救，也指揮短槍隊打擊日軍和敵偽勢力。港九大隊人物志中列有黃冠芳，並記錄其為港九大隊重要人物之一。</p>
-        <p>黃冠芳的故事，呈現出港九大隊戰鬥人員的機動與膽識。香港地方狹小，敵人駐軍密集，游擊隊不能依靠大規模陣地戰，只能在山路、村落、海邊和市區邊緣尋找機會。他們需要熟悉路線，能夠化裝、偵察、突襲和撤退，也要在緊急情況下作出判斷。黃冠芳一類人物，正是香港敵後游擊戰能持續發展的重要骨幹。</p>
-
-        <h6>劉黑仔：傳奇與真實之間</h6>
-        <p>劉黑仔是港九大隊中最為人熟悉的抗戰人物之一。他參與多次游擊行動，活躍於沙田、九龍、茶果嶺、啟德機場等地，因機智勇敢而成為香港抗戰記憶中的傳奇人物。港九大隊人物志亦列有劉黑仔，顯示其在隊史中的重要地位。</p>
-        <p>然而，理解劉黑仔，不應只停留在傳奇色彩。他的故事背後，是日佔香港高壓環境下短槍隊的真實工作：接近敵人、識別特務、保護交通線、執行突襲、掩護營救和迅速撤離。這些行動看似精彩，實際上風險極高，一旦失手便可能犧牲或牽連整個網絡。劉黑仔的形象之所以留在民間記憶中，正因他集中呈現了敵後抗戰中勇敢、機警和冒險的一面。</p>
-
-        <h6>方蘭：市區中隊與「不帶槍的游擊隊」</h6>
-        <p>方蘭是港九大隊市區中隊的重要人物。市區中隊的工作不同於山區短槍隊或海上中隊，它更多依靠秘密身份、情報收集、宣傳、聯絡和城市破壞行動。市區中隊被稱為「不帶槍的游擊隊」，這個稱呼本身便說明，抗戰並不只有槍聲，也有看不見的城市工作。</p>
-        <p>方蘭等人深入香港、九龍市區，在日軍統治核心地帶活動。他們要面對的不只是日軍，還有憲兵、偽警、特務、告密者和嚴密的城市監控。市區中隊的存在，讓香港抗戰不只發生在新界山林和海灣，也延伸到街道、商舖、銀行、印刷點和交通線之中。這類人物使我們看見，城市日常表面平靜之下，仍有抵抗力量在暗中運作。</p>
-
-        <h6>馮芝：交通員的沉默勇氣</h6>
-        <p>馮芝是港九大隊歷史中令人敬重的女性人物。她是市區中隊中隊長方蘭的母親，支持女兒參與抗戰工作，並主動擔任義務交通員，冒著生命危險傳遞情報。1944 年 3 月，她在運送情報途中被捕，在獄中遭受酷刑，仍然守口如瓶，最終從容就義。《港九大隊志》記載，2020 年 9 月，馮芝烈士被列入第三批著名抗日英烈英雄群體名錄。</p>
-        <p>馮芝的故事提醒我們，交通員的工作看似沒有戰鬥場面，卻同樣危險。送一封信、傳一句消息、走一段路，都可能被搜查、跟蹤或出賣。她的勇氣不在於衝鋒陷陣，而在於被捕後仍不出賣同志與組織。這種沉默的堅守，是敵後抗戰能夠維持的重要原因。</p>
-
-        <h6>黃作梅：情報合作中的關鍵人物</h6>
-        <p>黃作梅是港九大隊國際工作和情報合作中的重要人物。英軍服務團與港九大隊合作時，曾在沙魚涌、赤徑和九龍設立交通站，其中九龍砵蘭街一間雜貨店被稱為 Z 站。該雜貨店名為「廣恆」，由黃作梅化名登記經營，他的父親、妹妹和五弟也參與工作；後來 Z 站因英方聯絡員被捕招供而被日軍搗毀，黃作梅的親人亦被抓走。戰後，英國國王授予黃作梅 MBE 勳章，以表彰他配合盟軍作戰的貢獻。</p>
-        <p>黃作梅的故事展現了情報人物的另一面。他不是只在前線偵察，也要在普通商舖的掩護下維持秘密交通；他不只個人冒險，也讓家人共同承擔風險。這類人物連接了香港本地抗日力量與盟軍情報系統，使日佔香港仍能向外界傳遞重要軍事消息。</p>
-
-        <h6>陳志賢、王錦與海上隊員</h6>
-        <p>香港四面環海，海上隊員在港九大隊中具有特殊地位。陳志賢、王錦等人參與海上交通、護送、營救和海上作戰，把香港周邊水域變成敵後抗戰的重要空間。港九大隊人物志列有陳志賢、王錦等人物；成立八十周年紀念特刊亦記錄海上隊及其幹部編制，反映海上力量在隊伍中的重要性。</p>
-        <p>海上隊員的工作極其危險。他們常以木船、帆船或小艇在日軍巡邏艇和炮艇威脅下行動，既要熟悉水道，也要掌握天氣、潮汐和隱蔽路線。海上人物的故事，使香港抗戰不只局限於陸地山村，也延伸到大鵬灣、龍鼓洲、沙洲、大嶼山和南海之濱。</p>
-
-        <h6>劉春祥：海上抗戰中的英烈</h6>
-        <p>劉春祥是大嶼山中隊的重要人物，也是香港海上抗戰犧牲中最具代表性的烈士之一。1943 年 5 月某夜，他帶領六名班排骨幹，自大嶼山東涌乘帆船前往屯門龍鼓灘，希望打通寶安與中山游擊區聯繫。船行至龍鼓洲、沙洲海域時，突然遭兩艘日軍炮艇伏擊，激戰後船被擊沉，劉春祥等七名指戰員及船家梁克一家五口壯烈犧牲。</p>
-        <p>劉春祥的故事，把海上抗戰的勇氣與代價同時呈現出來。他們不是在安全後方規劃路線，而是在敵軍炮艇威脅下，以火力和航速都較弱的小船開闢聯絡通道。2023 年，劉春祥抗日英雄群體紀念碑在屯門龍鼓灘揭幕，這是香港首次為列入國家級紀念名錄的抗日英烈立碑，也是繼斬竹灣、烏蛟騰之後香港第三座大型抗戰紀念設施。</p>
-
-        <h6>凌娘：照顧也是抗戰</h6>
-        <p>凌娘是西貢昂窩村村民，被稱為「游擊隊的母親」。她照顧游擊隊員，借出自家房屋給軍需處辦公，又動員兩個兒子參加港九大隊工作。她的故事讓人看到，抗戰人物不一定都是作戰人員；照顧、收留、煮食、救治和保護，同樣可以成為抗戰的一部分。</p>
-        <p>在敵後環境中，隊員不只需要武器，也需要食物、住所、藥物和情感支撐。凌娘以母親般的方式照顧年輕隊員，使他們在奔走、受傷、飢餓和危險中仍能得到支持。這類人物提醒我們，香港抗戰的力量不只來自戰鬥，也來自普通人願意照顧他人的心。</p>
-
-        <h6>筏可大師：寺院中的庇護者</h6>
-        <p>筏可大師是大嶼山寶蓮寺住持，也是港九大隊歷史中重要的宗教人物。1944 年日軍掃蕩大嶼山時，港九大隊副大隊長魯風正在寶蓮寺養病。面對日軍威脅，筏可大師臨危不懼，即使遭受毒打，也沒有暴露魯風行蹤，使其得以脫險。</p>
-        <p>筏可大師的故事顯示，宗教場所和宗教人士在戰時也可能成為抵抗網絡的一部分。寺院原本是修行和庇護之地，在日佔歲月中，也成為保護傷病隊員、隱藏身份和抵抗暴力的空間。這種庇護不是抽象慈悲，而是在刀槍面前仍選擇守護生命。</p>
-
-        <h6>羅氏一家：一家人的抗戰選擇</h6>
-        <p>沙頭角南涌羅氏家族，是香港抗戰人物群像中很重要的一例。相關紀念特刊提到，香港沙頭角抗戰紀念館的展覽包括「香港抗日一家人」，介紹羅家羅許月、羅雨中、羅汝澄、羅歐鋒等人的抗戰事跡和建國後貢獻。</p>
-        <p>羅氏一家的故事，說明抗戰並不只是個人選擇，有時也是整個家庭、整個村落共同面對的歷史。有人參軍，有人聯絡，有人支援，有人保護。當家族多人投入抗日工作，風險也隨之擴大：一人暴露，可能牽連全家；但正因有家庭和村落共同支撐，抗日力量才得以在日軍掃蕩與搜捕中延續。</p>
-
-        <h6>青年學生、工人與原居民</h6>
-        <p>港九大隊成員來源廣泛，包括青年學生、工人、原居民和各地愛國人士。這些人未必一開始就是軍人。有人因香港淪陷而失學，有人因工廠停頓而失業，有人因家鄉遭日軍威脅而參與抗戰，也有人在救亡運動中逐步走向敵後工作。港九大隊成員多為香港居民這一點，正是其歷史意義所在。</p>
-        <p>這些普通出身的人物，使港九大隊不是脫離社會的軍事組織，而是紮根於香港本地社會的抗日力量。青年帶來活力，工人帶來組織經驗，原居民熟悉地形和村落關係，漁民掌握水道，商戶熟悉物資流通。不同身份的人共同參與，使香港抗戰呈現出廣泛的社會基礎。</p>
-
-        <h6>女性人物的身影</h6>
-        <p>香港抗戰人物中，女性的角色十分重要。她們有的是交通員，有的是民運員，有的是照顧者，有的是情報工作者，也有人直接參與組織和宣傳。馮芝、方蘭、凌娘、梁佩雲等人物，分別展示了女性在不同位置上的勇氣：有人被捕不屈，有人領導市區工作，有人照顧隊員，有人在燈火管制下刻印宣傳品。</p>
-        <p>女性人物的故事，也提醒我們不要把抗戰理解得過於狹窄。戰爭中的勇敢，不一定以武裝形式出現。能夠在恐懼中傳送情報，在飢餓中照顧他人，在審訊中保持沉默，在日常生活中掩護秘密工作，都是抗戰的重要一部分。</p>
-
-        <h6>犧牲者與倖存者</h6>
-        <p>抗戰人物中，有人壯烈犧牲，有人幸存至戰後，繼續在不同崗位工作。港九大隊人物志列出大量人物，從馮芝、凌娘、筏可大師、黃冠芳、蔡國樑、劉黑仔，到許多交通員、民運員、戰士、村民和後勤人員，構成一幅龐大的人物圖譜。</p>
-        <p>犧牲者的故事讓人看到戰爭代價，倖存者的故事則讓人看到記憶如何延續。許多老戰士戰後參與隊史編寫、回憶錄整理和紀念活動，讓後人得以追尋這段歷史。成立八十周年紀念特刊亦記錄，原東江縱隊港九獨立大隊老游擊戰士聯誼會由居港老戰士組成，並曾組織編寫隊史和回憶錄。</p>
-
-        <h6>小結：看見人的歷史</h6>
-        <p>抗戰人物的意義，不只是讓我們記住幾個名字，而是讓我們看見歷史如何由人作出。有人選擇領導隊伍，有人選擇上山入隊；有人選擇傳遞情報，有人選擇守住秘密；有人選擇把家門打開，有人選擇在危險中照顧傷員。這些選擇共同組成了香港抗戰的精神底色。</p>
-        <p>今天回望這些人物，我們看見的不是單一類型的英雄，而是一群身份不同、年齡不同、崗位不同的人。他們有的拿槍，有的掌舵，有的送信，有的煮飯，有的救人，有的沉默承受酷刑。正是這些人的勇氣與堅持，讓日佔香港的歷史不只有黑暗，也留下了不屈、互助和守護家園的光。</p>
+          <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_13_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_13_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_13_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_14_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_14_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_14_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.stoodUp_model_section_15_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_15_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_15_p2') }}</p>
     </x-slot:modal>
 </x-content-section>

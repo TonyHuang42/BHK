@@ -13,10 +13,10 @@
     <section class="border-bottom hero-subnav">
         <div class="container py-4">
             <div class="d-flex justify-content-evenly gap-2 gap-sm-0 flex-wrap">
-                <a href="{{ route('guerrilla.index', ['tab' => 'hk-kowloon-brigade']) }}" data-tab-link="hk-kowloon-brigade">港九大隊</a>
-                <a href="{{ route('guerrilla.index', ['tab' => 'guerrilla-warfare']) }}" data-tab-link="guerrilla-warfare">游擊戰</a>
-                <a href="{{ route('guerrilla.index', ['tab' => 'intelligence-and-rescue']) }}" data-tab-link="intelligence-and-rescue">情報與營救</a>
-                <a href="{{ route('guerrilla.index', ['tab' => 'underground-resistance']) }}" data-tab-link="underground-resistance">敵後抵抗網絡</a>
+                <a href="{{ route('guerrilla.index', ['tab' => 'hk-kowloon-brigade']) }}" data-tab-link="hk-kowloon-brigade">{{ __('guerrilla.guerrilla_warfare.guerrilla_tab_1') }}</a>
+                <a href="{{ route('guerrilla.index', ['tab' => 'guerrilla-warfare']) }}" data-tab-link="guerrilla-warfare">{{ __('guerrilla.guerrilla_warfare.guerrilla_tab_2') }}</a>
+                <a href="{{ route('guerrilla.index', ['tab' => 'intelligence-and-rescue']) }}" data-tab-link="intelligence-and-rescue">{{ __('guerrilla.guerrilla_warfare.guerrilla_tab_3') }}</a>
+                <a href="{{ route('guerrilla.index', ['tab' => 'underground-resistance']) }}" data-tab-link="underground-resistance">{{ __('guerrilla.guerrilla_warfare.guerrilla_tab_4') }}</a>
             </div>
         </div>
     </section>

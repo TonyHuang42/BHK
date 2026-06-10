@@ -51,9 +51,12 @@ test('can create press release', function () {
         ->fillForm([
             'press_release_category_id' => $category->id,
             'title' => $newData->title,
+            'title_en' => $newData->title_en,
             'summary' => $newData->summary,
+            'summary_en' => $newData->summary_en,
             'date' => $newData->date->format('Y-m-d'),
             'body' => $newData->body,
+            'body_en' => $newData->body_en,
             'is_publish' => $newData->is_publish,
         ])
         ->call('create')
@@ -140,4 +143,55 @@ test('can delete press release', function () {
         ->callAction(DeleteAction::class);
 
     $this->assertModelMissing($pressRelease);
+});
+
+test('can create press release with english fields', function () {
+    $category = PressReleaseCategory::factory()->create();
+    $newData = PressRelease::factory()->make();
+
+    livewire(CreatePressRelease::class)
+        ->fillForm([
+            'press_release_category_id' => $category->id,
+            'title' => $newData->title,
+            'title_en' => 'English Title',
+            'summary' => $newData->summary,
+            'summary_en' => 'English summary text.',
+            'date' => $newData->date->format('Y-m-d'),
+            'body' => $newData->body,
+            'body_en' => '<p>English body content.</p>',
+            'is_publish' => $newData->is_publish,
+        ])
+        ->call('create')
+        ->assertHasNoFormErrors()
+        ->assertRedirect();
+
+    $this->assertDatabaseHas('press_releases', [
+        'title' => $newData->title,
+        'title_en' => 'English Title',
+        'summary_en' => 'English summary text.',
+    ]);
+});
+
+test('cannot create press release without english fields', function () {
+    $category = PressReleaseCategory::factory()->create();
+    $newData = PressRelease::factory()->make();
+
+    livewire(CreatePressRelease::class)
+        ->fillForm([
+            'press_release_category_id' => $category->id,
+            'title' => $newData->title,
+            'title_en' => null,
+            'summary' => $newData->summary,
+            'summary_en' => null,
+            'date' => $newData->date->format('Y-m-d'),
+            'body' => $newData->body,
+            'body_en' => null,
+            'is_publish' => $newData->is_publish,
+        ])
+        ->call('create')
+        ->assertHasFormErrors([
+            'title_en' => 'required',
+            'summary_en' => 'required',
+            'body_en',
+        ]);
 });

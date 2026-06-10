@@ -29,103 +29,138 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-xl">
             <div class="container d-flex justify-content-between align-items-center">
+
+                <!-- Logo -->
                 <a class="navbar-brand me-0 d-flex align-items-center gap-2" href="{{ route('home') }}">
                     <img src="{{ asset('img/home/logo.svg') }}" alt="logo" class="logo">
                 </a>
 
+                <!-- Toggle -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <!-- Menu -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav d-flex justify-content-end w-100 gap-0 column-gap-xl-3 column-gap-lg-1 column-gap-2">
-                        {{-- <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('home') ? 'nav-link--current' : '' }}" href="{{ route('home') }}">
-                                主頁
-                            </a>
-                        </li> --}}
+                    <ul class="navbar-nav d-flex justify-content-end w-100 gap-3">
 
+                        <!-- Battle -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle {{ request()->routeIs('battle.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                香港保衛戰
+                                {!! __('messages.battle') !!}
                             </a>
+
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'before-the-storm']) }}">戰前背景</a></li>
-                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'eighteen-days-of-battle']) }}">戰役經過</a></li>
-                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'black-christmas']) }}">黑色聖誕</a></li>
-                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'wartime-timeline']) }}">戰時時間線</a></li>
+                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'before-the-storm']) }}">{{ __('messages.battle_dropdown_1') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'eighteen-days-of-battle']) }}">{{ __('messages.battle_dropdown_2') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'black-christmas']) }}">{{ __('messages.battle_dropdown_3') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('battle.index', ['tab' => 'wartime-timeline']) }}">{{ __('messages.battle_dropdown_4') }}</a></li>
                             </ul>
                         </li>
 
+                        <!-- Guerrilla -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle {{ request()->routeIs('guerrilla.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                游擊與抵抗
+                                {!! __('messages.guerrilla') !!}
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'hk-kowloon-brigade']) }}">港九大隊</a></li>
-                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'guerrilla-warfare']) }}">游擊戰</a></li>
-                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'intelligence-and-rescue']) }}">情報與營救</a></li>
-                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'underground-resistance']) }}">敵後抵抗網絡</a></li>
+                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'hk-kowloon-brigade']) }}">{{ __('messages.guerrilla_dropdown_1') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'guerrilla-warfare']) }}">{{ __('messages.guerrilla_dropdown_2') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'intelligence-and-rescue']) }}">{{ __('messages.guerrilla_dropdown_3') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('guerrilla.index', ['tab' => 'underground-resistance']) }}">{{ __('messages.guerrilla_dropdown_4') }}</a></li>
                             </ul>
                         </li>
 
+                        <!-- Occupation -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle {{ request()->routeIs('occupation.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                日治下的香港
+                                {!! __('messages.occupation') !!}
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'occupation-rule']) }}">佔領統治</a></li>
-                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'survival-and-rationing']) }}">生存與配給</a></li>
-                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'economy-and-society']) }}">經濟與社會</a></li>
-                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'everyday-life-wartime']) }}">戰時日常</a></li>
+                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'occupation-rule']) }}">{{ __('messages.occupation_dropdown_1') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'survival-and-rationing']) }}">{{ __('messages.occupation_dropdown_2') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'economy-and-society']) }}">{{ __('messages.occupation_dropdown_3') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('occupation.index', ['tab' => 'everyday-life-wartime']) }}">{{ __('messages.occupation_dropdown_4') }}</a></li>
                             </ul>
                         </li>
 
+                        <!-- People -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle {{ request()->routeIs('people.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                人物與故事
+                                {!! __('messages.people') !!}
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'resistance-figures']) }}">抗戰人物</a></li>
-                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'village-memories']) }}">村落記憶</a></li>
-                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'mutual-aid']) }}">民間互助</a></li>
-                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'rescue-stories']) }}">救援故事</a></li>
+                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'resistance-figures']) }}">{{ __('messages.people_dropdown_1') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'village-memories']) }}">{{ __('messages.people_dropdown_2') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'mutual-aid']) }}">{{ __('messages.people_dropdown_3') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('people.index', ['tab' => 'rescue-stories']) }}">{{ __('messages.people_dropdown_4') }}</a></li>
                             </ul>
                         </li>
 
+                        <!-- Gallery -->
                         <li class="nav-item">
                             <a class="nav-link {{ request()->routeIs('galleries.*') ? 'nav-link--current' : '' }}" href="{{ route('galleries.index') }}">
-                                相冊
+                                {!! __('messages.gallery') !!}
                             </a>
                         </li>
 
+                        <!-- Press -->
                         <li class="nav-item">
                             <a class="nav-link {{ request()->routeIs('press-releases.*') ? 'nav-link--current' : '' }}" href="{{ route('press-releases.index') }}">
-                                新聞稿
+                                {!! __('messages.press') !!}
                             </a>
                         </li>
 
+                        <!-- Contact -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                                聯絡我們
+                            <a class="nav-link" href="#" data-bs-toggle="dropdown">
+                                {!! __('messages.contact') !!}
                             </a>
                             <div class="dropdown-menu dropdown-menu-end contact-popup-bg">
                                 <button type="button" class="btn-close" style="font-size: 0.8rem; position: absolute; top: 16px; right: 16px;" aria-label="Close" onclick="this.closest('.dropdown').querySelector('.nav-link').click()"></button>
                                 <div class="contact-popup">
                                     <div class="d-flex justify-content-between align-items-start">
-                                        <h3 class="fw-bold mb-1" style="color:#692626;">聯絡我們</h3>
+                                        <h3 class="fw-bold mb-1" style="color:#692626;">{{ __('messages.contact') }}</h3>
                                     </div>
-                                    <div style="margin-left: 235px;">
-                                        <p class="mb-3 fw-normal">如有任何疑問，歡迎透過以下方式聯絡我們：</p>
+                                    <div style="margin-left: 225px;">
+                                        <p class="mb-3 fw-normal">{{ __('messages.contact_label') }}</p>
                                         <ul class="list-unstyled mb-0">
-                                            <li class="mb-2"><strong>電郵：</strong> <a href="mailto:inquiry@battle-of-hk.com" class="text-decoration-none fw-normal" style="color: #672727;">inquiry@battle-of-hk.com</a></li>
+                                            <li class="mb-2"><strong>{{ __('messages.contact_mail') }}</strong> <a href="mailto:inquiry@battle-of-hk.com" class="text-decoration-none fw-normal" style="color: #672727;">inquiry@battle-of-hk.com</a></li>
                                             {{-- <li><strong>電話：</strong> <a href="tel:+12345678" class="text-decoration-none">+1234 5678</a></li> --}}
                                         </ul>
                                     </div>
                                 </div>
                             </div>
+                        </li>
+
+                        <!-- Language Switch (STATIC) -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{-- 🌐 {{ app()->getLocale() }} --}}
+                                <?xml version="1.0" encoding="UTF-8"?><svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M28.2857 37H39.7143M42 42L39.7143 37L42 42ZM26 42L28.2857 37L26 42ZM28.2857 37L34 24L39.7143 37H28.2857Z" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16 6L17 9" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M6 11H28" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M10 16C10 16 11.7895 22.2609 16.2632 25.7391C20.7368 29.2174 28 32 28 32" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M24 11C24 11 22.2105 19.2174 17.7368 23.7826C13.2632 28.3478 6 32 6 32" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('lang.switch', 'zh') }}">
+                                        中文
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('lang.switch', 'en') }}">
+                                        English
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -138,7 +173,7 @@
     <footer class="d-flex align-items-center">
         <div class="container">
             <div class="copyright">
-                <div>© {{ date('Y') }} 香港抗戰歷史 版權所有</div>
+                <div>© {{ date('Y') }} {{ __('messages.footer_copy_right') }}</div>
             </div>
         </div>
     </footer>

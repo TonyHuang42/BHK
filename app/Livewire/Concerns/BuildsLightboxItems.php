@@ -66,7 +66,7 @@ trait BuildsLightboxItems
                     return null;
                 }
 
-                $caption = $image->caption ?? '';
+                $caption = $image->localized('caption') ?? '';
 
                 $entry = [
                     'src' => asset('storage/'.$path),

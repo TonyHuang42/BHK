@@ -67,7 +67,7 @@ test('shows an empty state when there are no images', function () {
 });
 
 test('lists categories as filter options', function () {
-    GalleryImageCategory::factory()->create(['name' => 'Wartime']);
+    GalleryImageCategory::factory()->create(['name' => 'Wartime', 'name_en' => 'Wartime']);
 
     livewire(GalleryImageGrid::class)
         ->assertSee('全部')
@@ -75,9 +75,38 @@ test('lists categories as filter options', function () {
 });
 
 test('lists categories ordered by sort_order', function () {
-    GalleryImageCategory::factory()->create(['name' => 'Alpha', 'sort_order' => 2]);
-    GalleryImageCategory::factory()->create(['name' => 'Bravo', 'sort_order' => 1]);
+    GalleryImageCategory::factory()->create(['name' => 'Alpha', 'name_en' => 'Alpha', 'sort_order' => 2]);
+    GalleryImageCategory::factory()->create(['name' => 'Bravo', 'name_en' => 'Bravo', 'sort_order' => 1]);
 
     livewire(GalleryImageGrid::class)
         ->assertSeeInOrder(['Bravo', 'Alpha']);
+});
+
+test('renders english caption when locale is en', function () {
+    app()->setLocale('en');
+
+    publishedImageWithFile(['caption' => '中文說明', 'caption_en' => 'English Caption']);
+
+    livewire(GalleryImageGrid::class)
+        ->assertSee('English Caption')
+        ->assertDontSee('中文說明');
+});
+
+test('falls back to chinese caption when english caption is empty and locale is en', function () {
+    app()->setLocale('en');
+
+    publishedImageWithFile(['caption' => '中文說明', 'caption_en' => null]);
+
+    livewire(GalleryImageGrid::class)
+        ->assertSee('中文說明');
+});
+
+test('renders english category name when locale is en', function () {
+    app()->setLocale('en');
+
+    GalleryImageCategory::factory()->create(['name' => '中文分類', 'name_en' => 'English Category']);
+
+    livewire(GalleryImageGrid::class)
+        ->assertSee('English Category')
+        ->assertDontSee('中文分類');
 });

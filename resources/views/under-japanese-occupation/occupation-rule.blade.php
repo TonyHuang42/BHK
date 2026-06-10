@@ -1,66 +1,66 @@
 {{-- 佔領統治 --}}
 <x-content-section
     id="occupation-rule"
-    title="佔領統治"
-    subtitle="The Japanese Occupation Rule"
-    intro="1941 年 12 月 25 日，香港在「黑色聖誕」中淪陷。戰鬥結束後，日軍面對的已不只是如何擊敗守軍，而是如何控制一座人口密集、港口繁忙、社會網絡複雜的城市。"
+    title="{{ __('underJapaneseOccupation.japanese_occupation_rule.title') }}"
+    subtitle="{{ __('underJapaneseOccupation.japanese_occupation_rule.subtitle') }}" 
+    :intro="html_entity_decode(__('underJapaneseOccupation.japanese_occupation_rule.intro'))"
     bgLeft="img/bg/bg_rifle_r.png"
     bgRight="img/bg/bg_rifle_l.png"
     :images="[
         'img/under-japanese-occupation/image_1_1.jpg',
     ]"
 >
-    <h6>從軍事勝利到軍政控制</h6>
-    <p>1941 年 12 月 25 日，香港在「黑色聖誕」中淪陷。戰鬥結束後，日軍面對的已不只是如何擊敗守軍，而是如何控制一座人口密集、港口繁忙、社會網絡複雜的城市。香港從英國殖民地變成日本軍事佔領地，原有政府秩序被中斷，市民生活也被納入一套以軍事、治安、物資和思想控制為核心的管治體系之中。</p>
-    <p>日本佔領香港後，於 1942 年 2 月設立「香港佔領地總督部」，由磯谷廉介出任總督。香港記憶資料庫指出，日本在 1941 年 12 月 25 日完全控制香港，翌年 2 月設立「香港佔領地總督部」，並把香港視為軍事補給線，以高壓方式管治城市。 這意味著香港不再以普通民政城市方式運作，而是被納入日本戰時軍事體系，成為支援其華南及太平洋戰爭部署的佔領據點。</p>
+    <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_section_1_title') }}</h6>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_section_1_p1') }}</p>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_section_1_p2') }}</p>
 
-    <h6>總督部的建立</h6>
-    <p>日軍佔領香港後，建立以「香港佔領地總督部」為核心的軍政架構。這套制度表面上承擔行政、治安、司法、經濟與民生管理職能，但其根本目的，是服務日本軍事佔領需要。香港原有的英式行政系統被迫停止，政府大樓、公共機構、警務和司法權力，都轉由日方掌控。</p>
-    <p>磯谷廉介出任首任香港佔領地總督，象徵日本對香港的統治正式制度化。香港不再只是剛被攻下的戰場，而成為日本軍方試圖長期控制、徵用和改造的城市。政府檔案處的戰時記錄介紹亦指出，日軍佔領香港後進行物業登記，記錄地址、面積、業權和估值等資料，並將部分街道及地區改以日式名稱，同時亦徵用建築物和土地。</p>
-    <p>這些行政措施看似是「管理」，實際上反映的是佔領權力深入城市空間。街名、物業、土地、公共建築、機關和學校，都被重新登記、命名和分配。佔領統治不只控制人，也控制地方；不只改變政府，也改變市民熟悉的城市秩序。</p>
-
+    <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_section_2_title') }}</h6>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_section_2_p1') }}</p>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_section_2_p2') }}</p>
+    <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_section_2_p3') }}</p>
+    
     <x-slot:modal>
-        <h6>軍事優先的城市管理</h6>
-        <p>日治時期的香港，首先被視為軍事據點，而不是普通民生城市。日軍重視香港的港口、船塢、倉庫、機場、通信設施和交通線，因為這些資源能夠支援日本在華南與太平洋的軍事行動。香港的行政、經濟和社會管理，往往服從軍事需要。</p>
-        <p>這種軍事優先的邏輯，改變了香港原有的城市功能。戰前的香港是自由港、貿易中心和人口流動樞紐；日治下的香港，則被壓縮成一個由軍方支配的補給和管制空間。港口不再只是商業港口，可能被用作軍事運輸；工廠、倉庫、車輛和船隻，也可能被徵用；市民的行動自由，則受到宵禁、證件、檢查站和軍警管制限制。</p>
-        <p>在這樣的制度下，市民日常生活與軍事佔領無法分開。出門、購糧、營業、搬遷、通行、工作，甚至說話與讀報，都可能受到管制。佔領統治不是只存在於政府大樓，而是滲入街道、市場、碼頭、學校、警署和家庭生活之中。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_1_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_1_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_1_p2') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_1_p3') }}</p>
 
-        <h6>憲兵、警察與恐懼秩序</h6>
-        <p>日治香港最令人恐懼的力量之一，是憲兵與治安機關。日軍需要壓制抗日活動、監視市民、搜捕情報人員和維持佔領秩序，因此依靠憲兵、警察、特務和本地協力者組成嚴密的治安網。街頭檢查、搜屋、拘捕、審訊和酷刑，成為許多市民記憶中最陰影深重的一部分。</p>
-        <p>對普通市民而言，佔領統治的可怕之處，在於它不需要明確罪名也能製造恐懼。被懷疑藏匿抗日人士、傳遞情報、收聽外國廣播、私藏物資，甚至只是與可疑人物接觸，都可能引來調查。日軍也常利用告密、特務和地方協力者監控社會，使人與人之間的信任受到破壞。</p>
-        <p>這種恐懼秩序，是佔領統治的重要工具。它不只是為了懲罰已發生的抵抗，更是為了讓市民在行動前自我審查，不敢公開談論政治，不敢協助抗日力量，不敢保護被追捕者。日治下的香港，街道仍有人來往，商舖仍可能營業，但背後是一種隨時可能被監視和拘捕的不安。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_2_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_2_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_2_p2') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_2_p3') }}</p>
 
-        <h6>人口管制與強制離港</h6>
-        <p>日治初期，香港面對嚴重糧食短缺。日本軍政府無力或無意維持戰前規模的人口供應，於是推行人口遣返和嚴格配給政策。政府檔案處的介紹指出，日軍佔領後，因糧食短缺，日本軍政府實施「人口遣返」和嚴格的米糧配給。</p>
-        <p>人口遣返是佔領統治中極具衝擊性的政策。許多失業者、貧民、難民和無法取得穩定供應的人，被迫離開香港返回內地。這不只是人口流動，也是一場由佔領政府主導的社會清理。對日軍而言，減少人口可以降低糧食壓力，亦有助於控制城市；但對市民而言，這意味著家庭分散、生活中斷，以及在戰亂環境下踏上未知而危險的歸途。</p>
-        <p>人口管制也改變了香港社會本身。戰前香港人口急速增加，聚集了大量難民、工人、商人、文化人和家庭；日治期間，人口因遣返、飢餓、逃亡、死亡和流散大幅下降。城市變得空蕩，許多街道、商舖和住宅失去原有生氣。這種人口劇變，為後續「生存與配給」「經濟與社會」埋下背景。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_3_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_3_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_3_p2') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_3_p3') }}</p>
 
-        <h6>登記、證件與通行控制</h6>
-        <p>為了維持佔領秩序，日軍透過登記制度和通行管制掌握市民行蹤。身份證明、通行證、物業登記、住戶資料和工作安排，都可能成為控制工具。市民若要通過檢查站、跨區移動或取得配給，往往需要證件或許可。沒有合法文件，便可能被截查、拘留，甚至被懷疑與抗日活動有關。</p>
-        <p>這些制度使香港市民的行動空間大幅收窄。過去可以自由往來的道路、碼頭和市區，在日治下變成需要通行理由的管制區。新界與市區、港島與九龍、海島與陸地之間的往來，都受到更嚴密監控。對抗日力量而言，這使情報傳遞和人員護送更加危險；對普通市民而言，日常出行也變成帶有風險的行動。</p>
-        <p>通行控制亦加深了日治社會的階層差異。能取得工作證、配給證或與佔領機構有關係的人，較容易在城市中生存；沒有證件、沒有工作、沒有物資來源的人，則更容易被邊緣化、遣返或陷入飢餓。佔領統治透過文件和制度，把生存資源與政治服從、行政登記和治安審查連接起來。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_4_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_4_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_4_p2') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_4_p3') }}</p>
 
-        <h6>改名、宣傳與皇民化</h6>
-        <p>日軍不只控制香港的政治和治安，也試圖改造城市的象徵秩序。街道和地區被改以日式名稱，公共空間出現日本軍國主義宣傳，學校和媒體亦受到審查與控制。政府檔案處提到，日治時期曾有街道和地區被改以日本式名稱，物業登記檔案亦記錄了這些更名情況。</p>
-        <p>名稱的改變，不只是行政細節，而是佔領者試圖重塑城市身份的方式。當熟悉的街名被替換，公共儀式被改造，報章和教育被納入宣傳系統，市民便被迫生活在一套由佔領者定義的秩序中。日軍希望透過語言、儀式、教育和宣傳，削弱香港原有的英國殖民制度記憶，也壓制中國抗日意識。</p>
-        <p>然而，這種宣傳並不代表市民真正認同。很多人表面服從，只是為了生存；真正的態度則藏在家庭、村落、地下網絡和私下記憶之中。日軍能夠更改街名，卻未必能改變人們對佔領的恐懼、怨恨和抵抗意識。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_5_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_5_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_5_p2') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_5_p3') }}</p>
 
-        <h6>利用地方菁英與協力機制</h6>
-        <p>佔領者要管理一座複雜城市，不能只依靠日本軍人。因此，日軍也嘗試利用本地華人菁英、商界人士、地方人士和基層協力者參與行政、維持治安或推動政策。這類安排既可減少日方直接管理成本，也可為佔領統治製造一種「本地參與」的表象。</p>
-        <p>但這種協力機制充滿壓力與矛盾。有人可能因生存、保護家族或維持社區基本運作而被迫與日方周旋；也有人主動投靠日軍，成為偽組織、特務或漢奸，協助搜捕抗日人士、壓迫市民和掠奪資源。對抗日力量而言，這些協力者往往比遠在軍營中的日軍更危險，因為他們熟悉本地語言、社會關係和村落情況。</p>
-        <p>因此，日治下的香港不是簡單地分成「日本軍」與「香港市民」。佔領統治透過恐懼、利益、脅迫和行政安排，製造了複雜的灰色地帶。有人被迫沉默，有人冒險抵抗，有人選擇合作，也有人在不同壓力之間艱難求存。這種社會撕裂，是佔領統治留下的深層傷痕之一。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_6_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_6_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_6_p2') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_6_p3') }}</p>
 
-        <h6>英籍與外籍人士的拘禁</h6>
-        <p>日軍佔領香港後，英籍及其他外籍平民的處境也急劇改變。許多外籍平民被送往拘留營，最著名的是赤柱拘留營。這些被拘禁者失去自由，在糧食不足、疾病、壓力和不確定中度過日佔歲月。這一安排反映出日軍對前殖民統治群體和敵國僑民的集中控制。</p>
-        <p>外籍人士的拘禁，是日治秩序的一部分。它象徵英國在香港權力的崩潰，也反映日本軍政府以國籍、身份和戰爭敵我劃分市民命運。對華人市民而言，處境同樣艱難，但形式更多是配給、遣返、搜捕、勞役和治安監控；對外籍平民而言，則常以集中拘禁方式呈現。不同群體遭遇不同，但都生活在日軍權力之下。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_7_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_7_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_7_p2') }}</p>
 
-        <h6>佔領統治的暴力底色</h6>
-        <p>日治管治不只是行政制度，也是一套建立在暴力威脅之上的秩序。從戰後記憶和歷史研究可見，日軍在香港期間曾發生搜捕、酷刑、強姦、殺害、掠奪和迫害。即使在沒有直接暴力發生的日子，暴力的可能性也始終存在，成為市民日常心理的一部分。</p>
-        <p>這種暴力底色，使佔領統治帶有深刻的不安全感。市民不只要面對飢餓和貧困，也要面對無法預測的權力。日軍、憲兵、偽警、特務和協力者，都可能成為威脅來源。許多人選擇低調、沉默、躲避，並在家庭和熟人圈子中尋求保護。</p>
-        <p>也正是在這種環境下，後續章節所寫的配給、生存、經濟變化與戰時日常，才有其真實背景。日治下的生活不是普通困苦，而是在軍事暴力與行政控制共同作用下的艱難生存。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_8_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_8_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_8_p2') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_8_p3') }}</p>
 
-        <h6>小結：被控制的城市</h6>
-        <p>日治下的香港，是一座被軍事佔領重新塑造的城市。總督部、憲兵、警察、通行證、人口遣返、物業登記、街名更改、宣傳教育和協力機制，共同構成一套高壓管治系統。它控制市民的行動、糧食、工作、住所、語言和記憶，也試圖把香港變成日本戰爭機器的一部分。</p>
-        <p>然而，控制並不等於真正的服從。日軍可以佔領政府機關、改名街道、設立檢查站和推行配給，卻無法完全消除市民對自由、安全和尊嚴的渴望。正因這套統治如此嚴苛，香港人在日治歲月中的生存、互助與抵抗，才更顯得沉重而珍貴。</p>
+        <h6>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_9_title') }}</h6>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_9_p1') }}</p>
+        <p>{{ __('underJapaneseOccupation.japanese_occupation_rule.rule_hk_model_section_9_p2') }}</p>
     </x-slot:modal>
 </x-content-section>

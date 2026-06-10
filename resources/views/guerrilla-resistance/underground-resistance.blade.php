@@ -1,70 +1,69 @@
 {{-- 敵後抵抗網絡 --}}
 <x-content-section
     id="underground-resistance"
-    title="敵後抵抗網絡"
-    subtitle="The Underground Resistance Network"
-    intro="港九大隊能夠在日佔香港堅持三年零八個月，靠的並不只是武裝隊員本身。游擊戰、情報工作、營救行動和海上交通，都需要一個龐大而隱蔽的支援網絡。"
+    title="{{ __('guerrilla.guerrilla_warfare.the_underground_title') }}"
+    subtitle="{{ __('guerrilla.guerrilla_warfare.the_underground_subtitle') }}" 
+    :intro="html_entity_decode(__('guerrilla.guerrilla_warfare.the_underground_intro'))"
     bgLeft="img/bg/bg_rifle_r.png"
     bgRight="img/bg/bg_rifle_l.png"
     :images="[
         'img/guerrilla-resistance/image_4_1.jpg',
     ]"
 >
-    <h6>讓抵抗得以延續的人與地方</h6>
-    <p>港九大隊能夠在日佔香港堅持三年零八個月，靠的並不只是武裝隊員本身。游擊戰、情報工作、營救行動和海上交通，都需要一個龐大而隱蔽的支援網絡。這個網絡由村民、漁民、交通員、商戶、婦女、青年、宗教人士、醫護人員和地下工作者共同組成，分布在新界山村、離島、海灣、市區街巷和邊境通道之間。</p>
-    <p>這些人未必全部拿起武器，也未必每個名字都被完整記錄下來；但他們的支援，使港九大隊能夠找到藏身之處、取得糧食物資、傳遞情報、護送人員、躲避搜捕，並在日軍控制之下繼續活動。曾生在《港九獨立大隊史》序言中指出，港九獨立大隊是港九人民的子弟兵，其每一項成就都與港九同胞的熱情支援分不開。</p>
-
-    <h6>山村、海灣與城市之間的網絡</h6>
-    <p>香港的敵後抵抗網絡，並不是一條單一路線，而是一張由多個地點和人物連成的網。西貢、沙頭角、烏蛟騰、赤徑、深涌、元朗、大嶼山、長洲、大埔、九龍市區等地，都曾以不同方式參與其中。有些地方是游擊隊駐地，有些是情報交通站，有些是物資轉運點，有些則是臨時藏身處或接頭地點。</p>
-    <p>這張網絡的價值，在於它能把不同任務連接起來。戰鬥需要情報，情報需要交通站，營救需要嚮導，海上行動需要船隻，後勤需要糧食和藥物，隊員受傷需要治療，機關轉移需要掩護。每一個環節看似微小，但只要其中一處被破壞，整個行動便可能失敗。因此，敵後抵抗網絡既是港九大隊的支援系統，也是日佔香港抗戰得以延續的生命線。</p>
-
+    <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_section_1_title') }}</h6>
+    <p>{{ __('guerrilla.guerrilla_warfare.the_underground_section_1_p1') }}</p>
+    <p>{{ __('guerrilla.guerrilla_warfare.the_underground_section_1_p2') }}</p>
+ 
+    <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_section_2_title') }}</h6>
+    <p>{{ __('guerrilla.guerrilla_warfare.the_underground_section_2_p1') }}</p>
+    <p>{{ __('guerrilla.guerrilla_warfare.the_underground_section_2_p2') }}</p>
     <x-slot:modal>
-        <h6>交通站：敵後抗戰的神經節點</h6>
-        <p>交通站是港九大隊網絡中最重要的組成部分之一。它們負責傳遞情報、轉送文件、接應人員、安排行程、轉運物資，有時也兼作臨時駐地或藏身處。交通站通常設在村屋、商舖、魚欄、祠堂或偏僻民居內，表面上與普通生活無異，實際上卻承擔著極其危險的地下任務。</p>
-        <p>深涌李家大屋就是一個典型例子。資料記載，深涌交通站共有多條路線，可從深涌連接榕樹澳、企嶺下、十四鄉、沙田梅子林、沙頭角涌尾、西貢嶂上、西貢墟、北潭、赤徑等地；大量物資經此轉送到內地抗戰前線，搜集所得情報亦經此傳遞到大隊部，使指揮機關能及時作出部署。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_1_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_1_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_1_p2') }}</p>
 
-        <h6>李家大屋與普通家庭的冒險</h6>
-        <p>交通站的運作，往往依靠普通家庭承擔巨大風險。深涌李家大屋及相連舊屋在日佔時期曾作游擊隊駐地，屋內通道可供人員在日軍掃蕩時迅速轉移上山。李家人亦曾協助搜購米票，解決部隊糧食困難；李源毓、李華新因幫助游擊隊被日本人拘捕，並遭灌水等酷刑。</p>
-        <p>這類故事讓我們看見，敵後抵抗不是只發生在槍聲響起的地方。它也發生在廚房、米舖、魚欄和村屋之中。有人為隊員煮飯，有人提供茶水，有人為交通員打掩護，有人被捕後仍不供出秘密。這些看似平凡的行動，構成了港九大隊能夠生存下去的基礎。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_2_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_2_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_2_p2') }}</p>
 
-        <h6>鄉村社會的保護與支援</h6>
-        <p>新界鄉村是港九大隊活動的重要依靠。許多村民熟悉山路、水源、田地和通道，能為隊伍提供嚮導、糧食、住宿和情報。日軍掃蕩時，村民有時會提前通報，使游擊隊得以轉移；遇到受傷或患病隊員，也有人協助照料。鄉村並不是單純的背景，而是敵後抗戰網絡的核心空間。</p>
-        <p>這種支援也伴隨沉重代價。日軍為搜捕游擊隊，常以酷刑和集體懲罰威嚇村民，逼迫他們供出隊伍行蹤。許多村民明知風險，仍選擇保護游擊隊。這種選擇，讓香港抗戰具有鮮明的民眾基礎：港九大隊不是孤立地在山中活動，而是與本地鄉村社會形成互相依靠的關係。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_3_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_3_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_3_p2') }}</p>
 
-        <h6>烏蛟騰：村落、會議與電台</h6>
-        <p>烏蛟騰是香港敵後抗戰記憶中極具代表性的地點。1943 年 2 月下旬，中共廣東省委臨委和東江軍政委員會在新界沙頭角烏蛟騰附近上下苗田一帶召開會議，史稱「烏蛟騰會議」，港九大隊負責會議的後勤和保衛工作。 這說明新界山村不只是游擊隊活動地，也是重要抗戰決策與聯絡工作的支撐空間。</p>
-        <p>此外，1942 年 4 月至 1943 年 3 月，中共廣東黨組織和抗日游擊隊與延安聯繫的唯一一部電台，設在烏蛟騰附近的石水澗村，港九大隊承擔了電台的選址和保衛工作。 在日軍佔領與封鎖之下，一部電台意味著敵後力量仍能與外界保持聯繫；保護電台，也就是保護整個華南抗戰通信鏈條的重要一環。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_4_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_4_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_4_p2') }}</p>
 
-        <h6>漁民與海上交通</h6>
-        <p>香港四面環海，漁民和船家在敵後抵抗網絡中扮演重要角色。熟悉水道、潮汐、島嶼和避風處的人，能協助運送人員、物資和情報，也能為海上中隊提供船隻與嚮導。海上交通往往比陸路更隱蔽，但風險也更高：日軍炮艇、巡邏船、天氣和海況，都可能令行動失敗。</p>
-        <p>港九大隊的海上行動能夠持續，離不開漁民和船家的支援。劉春祥等人在龍鼓洲、沙洲海域犧牲時，同船的船家梁克一家五口亦壯烈犧牲，正反映海上抵抗並非只有武裝隊員承擔風險。這些普通船家和漁民，用自己的船、經驗和生命支援抗戰，使海灣與島嶼成為香港抵抗網絡的一部分。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_5_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_5_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_5_p2') }}</p>
 
-        <h6>商戶、魚欄與物資供應</h6>
-        <p>日佔時期香港物資短缺，糧食、藥品、燃料、布匹、五金和交通工具都非常珍貴。港九大隊需要在敵後維持人員生活、醫療、通訊和作戰，必須依靠商戶和地方人士協助採購、轉運和掩護。西貢木利魚欄東主徐觀生便是一個例子。資料記載，日軍進侵香港時，他原準備棄家加入游擊隊，後來接受黃冠芳建議，繼續經營魚欄，協助團結商戶老闆為游擊隊服務。</p>
-        <p>這類支援顯示，參與抗戰不一定只有參軍一種方式。有些人留在商舖和行業網絡之中，反而更能提供長期支援。他們熟悉市場和人脈，能以日常交易作掩護，為游擊隊籌措物資、傳遞消息，或協助掩護人員往來。敵後抵抗網絡，正是由這些看似普通的社會關係構成。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_6_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_6_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_6_p2') }}</p>
 
-        <h6>婦女與青年：隱蔽而關鍵的力量</h6>
-        <p>在港九大隊的抵抗網絡中，婦女和青年承擔了大量工作。她們有人擔任交通員，有人照顧傷員，有人參與宣傳，有人負責送信、煮飯、掩護和聯絡。由於日軍有時較不容易懷疑婦女和年輕人，她們反而能在某些場合更靈活地穿梭於村落、市區和交通點之間。</p>
-        <p>這些工作危險而重要。送一封信、帶一次路、藏一名傷員，都可能引來日軍搜查與酷刑。婦女和青年所承擔的任務，往往被戰鬥敘事掩蓋，但沒有她們的參與，許多情報、營救和後勤行動都難以完成。香港敵後抗戰的力量，不只來自武裝隊伍，也來自這些分布在日常生活中的隱蔽角色。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_7_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_7_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_7_p2') }}</p>
 
-        <h6>凌娘：「游擊隊的母親」</h6>
-        <p>西貢昂窩村村民凌娘，是港九大隊民眾支援中最具代表性的人物之一。資料記載，凌娘無微不至地照顧游擊隊員，因而被稱為「游擊隊的母親」。她借出自家房屋給軍需處辦公，又動員兩個兒子參加港九大隊工作；1943 年初，她還用土方法救活了身患重病的民運員梁雪英。</p>
-        <p>凌娘的故事，展現出抵抗網絡中「照顧」的力量。戰爭不只是前線衝突，也包括病痛、飢餓、疲憊和恐懼。有人願意提供屋簷、飯菜、藥方和安慰，隊伍才能繼續行動。凌娘之所以被記住，不是因為她指揮戰鬥，而是因為她以母親般的照料，支撐了許多在敵後奔走的年輕隊員。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_8_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_8_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_8_p2') }}</p>
 
-        <h6>宗教場所與庇護空間</h6>
-        <p>宗教場所也曾在敵後抵抗網絡中發揮作用。寺廟、教堂和祠堂既是地方社會的公共空間，有時也能成為藏身、療養或接頭的地點。大嶼山寶蓮寺住持筏可大師掩護港九大隊副大隊長魯風的故事，便是其中一例。</p>
-        <p>1944 年日軍掃蕩大嶼山時，魯風正在寶蓮寺養病。日軍搜查寺院期間，筏可大師安排魯風偽裝成僧人，混在聽經人群中避過檢查。其後日軍對筏可大師盤問，並以刀相逼、毒打他，但他始終沒有透露魯風行蹤。 這一事件說明，在日軍高壓下，宗教人士和寺院空間也曾成為保護抗日力量的重要屏障。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_9_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_9_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_9_p2') }}</p>
 
-        <h6>民運、宣傳與地方組織</h6>
-        <p>敵後抵抗網絡不只是藏匿和運送，也包括動員群眾。港九大隊內部設有民運、宣傳、統戰等工作崗位，負責聯絡村民、發動青年、組織地方支援，並維持抗日訊息的傳播。成立八十周年紀念特刊列出的組織概況中，港九大隊政訓室設有民運幹事、宣傳幹事、統戰幹事等職位；各地區亦有民運負責人或民運區委。</p>
-        <p>這些職位說明，港九大隊十分重視群眾工作。敵後抗戰若只是軍事行動，便難以長期維持；只有讓地方居民理解、支持和參與，隊伍才能獲得情報、糧食、兵源和掩護。民運和宣傳工作，把抗戰從少數人的行動變成社會共同承擔的事。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_10_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_10_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_10_p2') }}</p>
 
-        <h6>隱蔽、信任與代價</h6>
-        <p>敵後抵抗網絡最重要的基礎，是信任。交通員要相信接頭人，村民要相信游擊隊，隊伍要相信嚮導，商戶要相信秘密不會外泄。在日軍搜捕、特務滲透和漢奸告密的威脅下，任何一個環節出錯，都可能造成嚴重後果。因此，這張網絡既強韌，也脆弱；它靠的是長期建立的人際關係、地方聲望和共同信念。</p>
-        <p>這種信任往往要付出代價。有人被捕，有人遭酷刑，有人家人受牽連，有人犧牲性命。許多支援者不是職業軍人，卻承擔了與軍人同樣沉重的風險。敵後抵抗網絡的歷史，正是由這些無名或少名的人共同支撐起來的。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_11_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_11_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_11_p2') }}</p>
 
-        <h6>小結：抵抗不是一個人的事</h6>
-        <p>港九大隊的歷史告訴我們，日佔時期香港的抵抗不是少數武裝人員孤立完成的。它是一張由人、地方、路線和信任交織而成的網絡。山村提供藏身之處，海灣連接外界，交通站傳遞情報，商戶籌措物資，婦女和青年穿梭聯絡，宗教場所提供庇護，普通家庭承擔風險。</p>
-        <p>正因有這張網絡，港九大隊才能在日軍嚴密控制下長期活動；正因有這些普通人的選擇，香港的抗戰記憶才不只屬於戰場，也屬於村屋、魚欄、碼頭、寺院、山徑和城市街角。敵後抵抗網絡讓我們看見，在最艱難的年代，保衛家園並不只是拿起武器，也可以是帶路、煮飯、藏人、送信、守口如瓶，以及在危險面前仍選擇互相扶持。</p>
+        <h6>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_12_title') }}</h6>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_12_p1') }}</p>
+        <p>{{ __('guerrilla.guerrilla_warfare.the_underground_model_section_12_p2') }}</p>
     </x-slot:modal>
 </x-content-section>

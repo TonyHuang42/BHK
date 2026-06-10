@@ -31,7 +31,7 @@ test('can create a gallery image category', function () {
     $newData = GalleryImageCategory::factory()->make();
 
     livewire(CreateGalleryImageCategory::class)
-        ->fillForm(['name' => $newData->name])
+        ->fillForm(['name' => $newData->name, 'name_en' => $newData->name_en])
         ->call('create')
         ->assertHasNoFormErrors()
         ->assertRedirect();
@@ -42,11 +42,37 @@ test('can create a gallery image category', function () {
     ]);
 });
 
+test('can create a gallery image category with an english name', function () {
+    livewire(CreateGalleryImageCategory::class)
+        ->fillForm([
+            'name' => '中文分類',
+            'name_en' => 'English Category',
+        ])
+        ->call('create')
+        ->assertHasNoFormErrors();
+
+    $this->assertDatabaseHas('gallery_image_categories', [
+        'name' => '中文分類',
+        'name_en' => 'English Category',
+    ]);
+});
+
+test('can update a gallery image category english name', function () {
+    $category = GalleryImageCategory::factory()->create(['name_en' => null]);
+
+    livewire(EditGalleryImageCategory::class, ['record' => $category->getRouteKey()])
+        ->fillForm(['name_en' => 'Updated English'])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    expect($category->refresh()->name_en)->toBe('Updated English');
+});
+
 test('appends new category to the end of the sort order', function () {
     GalleryImageCategory::factory()->create(['sort_order' => 5]);
 
     livewire(CreateGalleryImageCategory::class)
-        ->fillForm(['name' => 'Newest Category'])
+        ->fillForm(['name' => 'Newest Category', 'name_en' => 'Newest Category EN'])
         ->call('create')
         ->assertHasNoFormErrors();
 

@@ -30,7 +30,6 @@ class GallerySeeder extends Seeder
 
         foreach ($this->albums as $index => $album) {
             $gallery = Gallery::create([
-                'gallery_category_id' => $defaultCategory->id,
                 'title' => $album['title'],
                 'slug' => $album['slug'],
                 'date' => $album['date'],
@@ -38,6 +37,8 @@ class GallerySeeder extends Seeder
                 'featured_image' => '',
                 'images' => [],
             ]);
+
+            $gallery->categories()->attach($defaultCategory->id);
 
             $dir = "galleries/{$gallery->id}";
             Storage::disk('public')->makeDirectory($dir);

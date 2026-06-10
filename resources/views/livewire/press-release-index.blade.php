@@ -7,7 +7,7 @@
                         type="button"
                         wire:click="setCategory('')"
                         class="gallery-filter-link {{ $category === '' ? 'is-active' : '' }}"
-                    >全部</button>
+                    >{{ __('messages.gallery_all') }}</button>
                 </li>
                 @foreach ($categories as $cat)
                     <li>
@@ -15,7 +15,7 @@
                             type="button"
                             wire:click="setCategory('{{ $cat->slug }}')"
                             class="gallery-filter-link {{ $category === $cat->slug ? 'is-active' : '' }}"
-                        >{{ $cat->name }}</button>
+                        >{{ $cat->localized('name') }}</button>
                     </li>
                 @endforeach
             </ul>
@@ -25,7 +25,7 @@
     @if ($pressReleases->isEmpty())
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <p class="mb-0">暫無新聞稿。</p>
+                <p class="mb-0">{{ __('messages.press_empty') }}</p>
             </div>
         </div>
     @else
@@ -37,18 +37,18 @@
                             <div class="press-release-card-image-wrapper">
                                 <img
                                     src="{{ asset('storage/' . $pressRelease->featured_image) }}"
-                                    alt="{{ $pressRelease->title }}"
+                                    alt="{{ $pressRelease->localized('title') }}"
                                     class="press-release-card-image"
                                 >
                             </div>
                         </div>
                         <div class="col-lg-6">
                             @if ($pressRelease->category)
-                                <p class="press-release-card-category mb-2">{{ $pressRelease->category->name }}</p>
+                                <p class="press-release-card-category mb-2">{{ $pressRelease->category->localized('name') }}</p>
                             @endif
-                            <h3 class="mb-3">{{ $pressRelease->title }}</h3>
+                            <h3 class="mb-3">{{ $pressRelease->localized('title') }}</h3>
                             @if ($pressRelease->summary)
-                                <p class="mb-3">{{ $pressRelease->summary }}</p>
+                                <p class="mb-3">{{ $pressRelease->localized('summary') }}</p>
                             @endif
                             <p class="mb-0">{{ $pressRelease->date->format('Y-m-d') }}</p>
                         </div>

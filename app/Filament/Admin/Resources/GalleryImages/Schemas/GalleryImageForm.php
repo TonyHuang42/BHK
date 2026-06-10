@@ -2,6 +2,7 @@
 
 namespace App\Filament\Admin\Resources\GalleryImages\Schemas;
 
+use App\Models\GalleryImageCategory;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -28,14 +29,20 @@ class GalleryImageForm
 
                         return $name.'-'.Str::random(6).'.'.$file->getClientOriginalExtension();
                     }),
-                Textarea::make('caption')
-                    ->autosize(),
                 Select::make('categories')
                     ->required()
                     ->label('Categories')
                     ->relationship(name: 'categories', titleAttribute: 'name')
+                    ->getOptionLabelFromRecordUsing(fn (GalleryImageCategory $record): string => filled($record->name_en) ? "{$record->name} / {$record->name_en}" : $record->name)
                     ->multiple()
+                    ->searchable(['name', 'name_en'])
                     ->preload(),
+                Textarea::make('caption')
+                    ->label('Caption (Chinese)')
+                    ->autosize(),
+                Textarea::make('caption_en')
+                    ->label('Caption (English)')
+                    ->autosize(),
                 Toggle::make('is_publish')
                     ->required()
                     ->inline(false)

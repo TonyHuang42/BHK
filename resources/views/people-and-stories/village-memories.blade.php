@@ -1,74 +1,74 @@
 {{-- 村落記憶 --}}
 <x-content-section
     id="village-memories"
-    title="村落記憶"
-    subtitle="Villages That Remember"
-    intro="新界村落在抗戰中扮演了重要角色，既是游擊隊的據點，也是糧食、情報和庇護的來源。許多村民面對威嚇與酷刑，仍選擇保護抗日力量。"
+    title="{{ __('peopleStories.people-and-stories.village_title') }}"
+    subtitle="{{ __('peopleStories.people-and-stories.village_subtitle') }}"
+    :intro="html_entity_decode(__('peopleStories.people-and-stories.village_intro'))"
     bgLeft="img/bg/bg_binocular_r.png"
     bgRight="img/bg/bg_binocular_l.png"
     :images="[
         'img/people-and-stories/image_2.jpg',
     ]"
 >
-    <h6>山村、祠堂與海灣留下的抗戰印記</h6>
-    <p>香港的抗戰記憶，不只保存在戰史、紀念碑和人物傳記之中，也深深留在一個個村落裡。西貢、沙頭角、大埔、大嶼山、元朗、龍鼓灘等地，曾經是游擊隊活動、情報傳遞、物資轉運、藏身療傷和民眾支援的重要空間。這些地方有山路、海灣、祠堂、教堂、村屋和田地，看似平凡，卻在日佔歲月中承載了許多驚險、犧牲與守望。</p>
-    <p>「村落記憶」不同於單一人物故事，也不同於宏觀戰事敘述。它關心的是地方如何記住戰爭：哪一間屋曾是交通站，哪一座教堂曾見證審訊與逼供，哪條山路曾護送人員離開，哪片海面曾發生戰鬥，哪個村口曾有人冒死守住秘密。《港九大隊志》在「鄉民篇」中列出多個與村落和鄉民有關的篇目，包括烏蛟騰、黃毛應、赤徑、山下村、西徑村、南華莆、昂窩、大嶼山僧尼等，顯示村落社會在香港抗戰記憶中的重要位置。</p>
+    <h6>{{ __('peopleStories.people-and-stories.village_section_1_title') }}</h6>
+    <p>{{ __('peopleStories.people-and-stories.village_section_1_p1') }}</p>
+    <p>{{ __('peopleStories.people-and-stories.village_section_1_p2') }}</p>
 
-    <h6>西貢：山海之間的抗戰空間</h6>
-    <p>西貢是港九大隊歷史中極重要的地區。這裡既有山地和村落，也有海灣和出海通道，能連接九龍、新界東北、大鵬灣和東江游擊區。對日軍而言，這些山海交錯的地形不易完全控制；對游擊隊和支援者而言，西貢則提供了隱蔽、轉移、補給和聯絡的條件。</p>
-    <p>黃毛應、赤徑、深涌、山寮、昂窩、大浪等地，都在不同程度上留下抗戰記憶。有些村落曾為游擊隊提供駐地，有些負責接應和藏匿，有些參與交通與醫療，有些則在日軍掃蕩中承受酷刑和壓迫。西貢的抗戰記憶不是集中在單一戰場，而是分散在村與村、山與海、屋與路之間。</p>
+    <h6>{{ __('peopleStories.people-and-stories.village_section_2_title') }}</h6>
+    <p>{{ __('peopleStories.people-and-stories.village_section_2_p1') }}</p>
+    <p>{{ __('peopleStories.people-and-stories.village_section_2_p2') }}</p>
+      <x-slot:modal>
+        <h6>{{ __('peopleStories.people-and-stories.village_model_section_1_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_1_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_1_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.village_model_section_2_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_2_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_2_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.village_model_section_3_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_3_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_3_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.village_model_section_4_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_4_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_4_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.village_model_section_5_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_5_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_5_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.village_model_section_6_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_6_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_6_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.village_model_section_7_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_7_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_7_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.village_model_section_8_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_8_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_8_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.village_model_section_9_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_9_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_9_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.village_model_section_10_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_10_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_10_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.village_model_section_11_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_11_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_11_p2') }}</p>
+        
+        <h6>{{ __('peopleStories.people-and-stories.village_model_section_12_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_12_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_12_p2') }}</p>
 
-    <x-slot:modal>
-        <h6>黃毛應：成立地與受難地</h6>
-        <p>黃毛應村在港九大隊歷史中具有象徵意義。1942 年 2 月 3 日，港九大隊在西貢黃毛應村宣告成立。這個村落不只是地理上的據點，也象徵香港敵後抗日力量由分散武工隊走向統一組織。港九大隊的成立，使日佔香港的抵抗有了更清晰的領導、編制和方向。</p>
-        <p>但黃毛應村留下的，不只有成立的記憶，也有受難的記憶。《港九大隊志》記載，1944 年 9 月 21 日，日軍到黃毛應村掃蕩，因未發現游擊隊員蹤跡，便將村民帶到村內教堂嚴刑逼供。這段歷史說明，支持或被懷疑支持游擊隊的村落，往往要承受日軍報復。村民的沉默與忍受，成為保護抗日力量的重要代價。</p>
-
-        <h6>赤徑：天主教村莊與情報交通</h6>
-        <p>赤徑村是另一個具有代表性的村落。它位於西貢山海之間，地勢相對隱蔽，又能連接多條山路和海路。抗戰時期，赤徑不只是村民生活的地方，也曾成為交通、情報和救護工作的重要節點。赤徑「天水流芳」大屋曾與英軍服務團 Y 站有關，見證港九大隊與盟軍情報合作的歷史。</p>
-        <p>赤徑的村落記憶，也包含婦女和村民的支援。《港九大隊志》記載，李有娣出任赤徑婦女會會長期間，多番動員村內婦女支援港九大隊，包括唱歌演戲宣傳抗日、收割柴草、協助運輸糧食及物資到山洞存放、安排住宿、打掃衛生、補衣服、照顧傷病員及傳遞情報等。這讓赤徑的記憶不只停留在「據點」二字，而是具體呈現出整個村落如何以日常勞動支撐抗戰。</p>
-
-        <h6>深涌：交通路線上的大屋</h6>
-        <p>深涌李家大屋是港九大隊交通網絡中的重要地方。它連接多條山路和村路，可通往榕樹澳、企嶺下、十四鄉、沙田梅子林、沙頭角涌尾、西貢嶂上、西貢墟、北潭和赤徑等地。相關資料記載，大量物資曾經深涌轉送到內地抗戰前線，情報亦經由此處傳到大隊部，使指揮機關能及時作出部署。</p>
-        <p>這類村屋在戰時有雙重身份。表面上，它們是普通民居；實際上，它們可能是交通站、藏身處、情報中轉點和物資集散地。深涌的記憶提醒我們，敵後抗戰不是只靠武裝衝突，也靠一間間願意承擔風險的村屋。門一關，裡面可能藏著文件、藥物、傷員，或正準備轉移的人。</p>
-
-        <h6>烏蛟騰：抗戰模範村的記憶</h6>
-        <p>烏蛟騰是香港抗戰記憶中最具代表性的村落之一。《港九大隊志》稱其為「香港抗戰模範村」。這個稱呼並非因為村落本身規模龐大，而是因為它在日佔時期承擔了重要的抗戰支援、保護和犧牲。</p>
-        <p>1942 年 9 月 25 日，日軍掃蕩烏蛟騰村，將村民趕到曬穀場上，逼迫他們交出自衛武器並供出駐村游擊隊員下落。村長李世藩拒絕透露任何消息，遭日軍灌水、毆打，並被軍馬拖行，最終被活活折磨而死。另一位村長李源培同樣拒絕供出游擊隊，被殘酷拷打，左手被打斷，身體受到嚴重傷害；醒來後，他仍動員女兒和村民參加游擊隊抗日。</p>
-
-        <h6>烏蛟騰會議與石水澗電台</h6>
-        <p>烏蛟騰的歷史意義，也不只在於村民受難。1943 年 2 月下旬，中共廣東省委臨委和東江軍政委員會在烏蛟騰附近上下苗田一帶召開會議，史稱「烏蛟騰會議」，港九大隊負責會議的後勤和保衛工作。成立八十周年紀念特刊亦指出，這是中共廣東黨史上意義重大的會議。</p>
-        <p>此外，1942 年 4 月至 1943 年 3 月，中共廣東黨組織和抗日游擊隊與延安聯繫的唯一一部電台，設在烏蛟騰附近的石水澗村，由港九大隊承擔選址和保衛工作。這讓烏蛟騰一帶不只是地方村落，更成為華南敵後抗戰通信、會議和戰略部署的重要空間。村落的山坡與石屋，承載的是超越地方的抗戰意義。</p>
-
-        <h6>昂窩：照顧與庇護的村落記憶</h6>
-        <p>昂窩村的抗戰記憶，常與凌娘連在一起。她無微不至地照顧游擊隊員，因而被稱為「游擊隊的母親」。成立八十周年紀念特刊記載，凌娘借出自家房屋給軍需處辦公，又動員兩個兒子參加港九大隊工作；1943 年初，她還用土辦法救活了身患重病的民運員梁雪英。</p>
-        <p>昂窩的故事，呈現的是村落作為庇護空間的一面。在戰爭中，隊員需要的不只是作戰地點，也需要可以休息、養病、藏身和重新出發的地方。村民的照料、屋宇的遮蔽、山路的熟悉，都是抵抗得以延續的條件。昂窩留下的記憶，正是這種不一定喧嘩、卻極其重要的照顧與守護。</p>
-
-        <h6>山寮與西貢村落的接應角色</h6>
-        <p>山寮村曾在秘密大營救中扮演接應角色。當護送隊伍經九龍、牛池灣、九龍坳一帶轉往西貢時，山寮村成為途中重要的停留和接待點。村民為被護送者提供休息、食物和掩護，使他們能繼續趕往海邊，再經水路轉往內地。</p>
-        <p>這類村落接應，不一定每次都留下戲劇化場面，卻是營救與交通行動能否成功的關鍵。從市區走到山村，再由山村走向海灣，每一步都需要有人熟悉路線、安排時間、觀察敵情、準備食物。山寮一類村落的記憶，讓我們看到香港山村如何成為生命通道的一部分。</p>
-
-        <h6>大嶼山：島嶼上的抗戰記憶</h6>
-        <p>大嶼山在港九大隊歷史中同樣重要。島上村落、寺院、山路和海灣，曾經與大嶼山中隊、海上交通和抗日活動相連。大嶼山距離市區較遠，地形複雜，又靠近多條海上路線，既有利於隱蔽，也容易受到日軍海上力量威脅。</p>
-        <p>大嶼山的村落記憶包含多重面向：有隊伍活動，有村民支援，有寺院庇護，也有海上犧牲。劉春祥等人在龍鼓洲、沙洲海域犧牲，雖發生於海上，但與大嶼山中隊和東涌出發路線密切相關。後來劉春祥抗日英雄群體紀念碑在屯門龍鼓灘建立，亦把龍鼓灘、沙洲、龍鼓洲和大嶼山一帶的海上記憶連接起來。</p>
-
-        <h6>龍鼓灘：遙望海面的紀念</h6>
-        <p>龍鼓灘的抗戰記憶，與劉春祥抗日英雄群體密切相連。1943 年 5 月，劉春祥等人乘帆船由東涌前往龍鼓灘，希望開闢新的聯絡與活動路線，途中在龍鼓洲、沙洲海域遭日軍炮艇伏擊，最終壯烈犧牲。劉春祥抗日英雄群體紀念碑特刊提到，龍鼓灘是劉春祥及其戰友原計劃登岸的地方，因此後來在此立碑，以紀念其英勇與犧牲。</p>
-        <p>龍鼓灘的記憶具有一種特殊的空間感：人們站在岸邊，遙望龍鼓洲和沙洲，便能把今日平靜海面與當年激戰連接起來。紀念碑使這段原本發生在海上的歷史，有了一個可以憑弔、講述和傳承的陸上位置。村落與海面，在這裡共同成為記憶的一部分。</p>
-
-        <h6>寺院、教堂與祠堂的地方記憶</h6>
-        <p>村落記憶不只存在於民居，也存在於宗教與公共建築中。黃毛應村的教堂、赤徑的村屋與天主教社群、寶蓮寺、祠堂和書室等，都曾在不同程度上與抗戰歷史相連。有些是日軍逼供的地方，有些是游擊隊藏身或養病的地方，有些則是村民聚集、商議和接應的地方。</p>
-        <p>這些建築之所以重要，是因為它們把歷史固定在可以辨認的地方。讀者走到一座教堂、一間祠堂或一座寺院前，不只是看到建築本身，也可以想像當年村民如何在其中承受威脅、保護隊伍、安置傷員或維持聯絡。地方記憶使歷史從文字走回地面，讓人知道戰爭曾經發生在真實的村落空間中。</p>
-
-        <h6>村民承受的風險</h6>
-        <p>在日佔時期，支援港九大隊的村落往往承受巨大風險。日軍一旦懷疑某村藏匿游擊隊、提供糧食或傳遞情報，便可能發動掃蕩、拘捕、酷刑甚至殺害。烏蛟騰、黃毛應等村落的遭遇，正說明村民所付出的不是抽象支持，而是真實的生命代價。</p>
-        <p>村落記憶因此帶有沉重性。它不是單純歌頌地方英勇，也要記住恐懼、逼供、傷痛和失去。許多村民或許沒有正式加入隊伍，也沒有被列入軍事編制，但他們用沉默保護秘密，用家屋提供掩護，用身體承受酷刑。這些記憶，是香港抗戰史不可忽略的一部分。</p>
-
-        <h6>從口述到紀念</h6>
-        <p>不少村落記憶是透過口述歷史、後人回憶、地方調查和紀念設施保存下來的。例如《港九大隊志》引用赤徑村民訪談、香港中文大學西貢口述歷史計劃，以及多份與新界村民和船民服務有關的檔案資料，說明這些村落故事並非只來自單一文獻，而是由口述、檔案和實地考察共同拼接而成。</p>
-        <p>這一點很重要。戰爭中的普通村民，很多沒有留下日記或正式報告，他們的經歷往往靠後人口述、地方記憶和紀念活動保存。今天重新整理這些故事，不只是補充戰史細節，也是在為那些曾經支撐抗戰卻不一定留下完整姓名的人，保留一個位置。</p>
-
-        <h6>小結：地方記住了戰爭</h6>
-        <p>村落記憶讓香港抗戰史變得更貼近土地。黃毛應記住港九大隊的成立與村民受難，赤徑記住婦女支援和情報交通，深涌記住大屋與山路，烏蛟騰記住村民不屈與電台會議，昂窩記住照顧與庇護，大嶼山與龍鼓灘則記住海上犧牲與遙望。</p>
-        <p>這些村落告訴我們，抗戰不是只發生在遠方戰場，也發生在香港的村口、山徑、祠堂、教堂、碼頭和海邊。地方記住了人的選擇，也記住了戰爭留下的傷痕。當我們重新走近這些村落，看到的不只是地名，而是一段段曾在日佔歲月中守護香港、支撐抵抗、保存希望的地方記憶。</p>
+          <h6>{{ __('peopleStories.people-and-stories.village_model_section_13_title') }}</h6>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_13_p1') }}</p>
+        <p>{{ __('peopleStories.people-and-stories.village_model_section_13_p2') }}</p>
+        
     </x-slot:modal>
 </x-content-section>

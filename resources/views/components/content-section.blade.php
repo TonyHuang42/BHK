@@ -16,7 +16,9 @@
                     <div class="text-center">
                         <img src="{{ asset('img/home/icon_ornament.svg') }}" alt="icon" class="icon-image">
                         <h3>{{ $title }}</h3>
-                        <h6>{{ $subtitle }}</h6>
+                        @if (app()->getLocale() === 'zh')
+                            <h6>{{ $subtitle }}</h6>
+                        @endif
                         <p class="mt-5">{{ $intro }}</p>
                     </div>
                 </div>
@@ -52,7 +54,7 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-8 mx-auto">
                     {{ $slot }}
-                    <button type="button" class="read-more" data-bs-toggle="modal" data-bs-target="#readMoreModal-{{ $id }}">閱讀更多</button>
+                    <button type="button" class="read-more" data-bs-toggle="modal" data-bs-target="#readMoreModal-{{ $id }}">{{ __('battle.before_storm.section_readmore') }}</button>
                     @if (count($images) === 2)
                         <img src="{{ asset($images[1]) }}" alt="Image 2" class="w-100 mt-4">
                     @endif
@@ -66,7 +68,7 @@
     <div class="modal-dialog modal-dialog-scrollable modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="readMoreModalLabel-{{ $id }}">閱讀更多</h3>
+                <h3 class="modal-title" id="readMoreModalLabel-{{ $id }}">{{ __('battle.before_storm.section_readmore') }}</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
             </div>
             <div class="modal-body">

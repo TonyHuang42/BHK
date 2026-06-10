@@ -9,7 +9,7 @@ return [
         // Tabs
         'tab_1' => 'Japanese Rule in Hong Kong',
         'tab_2' => 'Survival and Rationing in Crisis in Crisis',
-        'tab_3' => 'Economy and Society Under Occupation Under Occupation',
+        'tab_3' => 'Economy and Society Under Occupation',
         'tab_4' => 'Everyday Life Under Occupation',
 
     // tab 1
@@ -130,7 +130,7 @@ return [
 
     // tab 3
     'economy_title' => 'Economy and Society Under Occupation',
-    'economy_subtitle' => 'Economy and Society Under Occupation Under Occupation',
+    'economy_subtitle' => 'Economy and Society Under Occupation',
     'economy_intro' => 'Japanese occupation transformed Hong Kong not only politically, but also economically and socially.',
 
     'economy_section_1_title' => 'A City Reshaped by War',

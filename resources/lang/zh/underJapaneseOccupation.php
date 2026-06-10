@@ -131,7 +131,7 @@ return [
 
         // tab 3
         'economy_title' => '經濟與社會',
-        'economy_subtitle' => 'Economy and Society Under Occupation Under Occupation',
+        'economy_subtitle' => 'Economy and Society Under Occupation',
         'economy_intro' => '日治下的香港，不只是政治上被佔領，也在經濟和社會結構上被徹底改變。戰前的香港是華南重要的自由港、轉口貿易中心和金融城市；日軍佔領後，原有的商業網絡被切斷，銀行和貨幣制度被改造，工廠、倉庫、船隻和物業被徵用，市民的工作、收入和財產都受到巨大衝擊。',
 
         'economy_section_1_title' => '被戰爭重塑的城市秩序',

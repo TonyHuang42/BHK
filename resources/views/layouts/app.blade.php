@@ -34,7 +34,7 @@
 
                 <!-- Logo -->
                 <a class="navbar-brand me-0 d-flex align-items-center gap-2" href="{{ route('home') }}">
-                    <img src="{{ asset('img/home/logo.svg') }}" alt="logo" class="logo">
+                    <img src="{{ asset(app()->getLocale() === 'en' ? 'img/home/logo_en.svg' : 'img/home/logo.svg') }}" alt="logo" class="logo">
                 </a>
 
                 <!-- Toggle -->
@@ -44,7 +44,7 @@
 
                 <!-- Menu -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav d-flex justify-content-end w-100 gap-3">
+                    <ul class="navbar-nav d-flex justify-content-end w-100 gap-xl-3">
 
                         <!-- Battle -->
                         <li class="nav-item dropdown">
@@ -99,17 +99,17 @@
                             </ul>
                         </li>
 
-                        <!-- Gallery -->
-                        <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('galleries.*') ? 'nav-link--current' : '' }}" href="{{ route('galleries.index') }}">
-                                {!! __('messages.gallery') !!}
-                            </a>
-                        </li>
-
                         <!-- Press -->
                         <li class="nav-item">
                             <a class="nav-link {{ request()->routeIs('press-releases.*') ? 'nav-link--current' : '' }}" href="{{ route('press-releases.index') }}">
                                 {!! __('messages.press') !!}
+                            </a>
+                        </li>
+
+                        <!-- Gallery -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('galleries.*') ? 'nav-link--current' : '' }}" href="{{ route('galleries.index') }}">
+                                {!! __('messages.gallery') !!}
                             </a>
                         </li>
 
@@ -120,26 +120,25 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-end contact-popup-bg">
                                 <button type="button" class="btn-close" style="font-size: 0.8rem; position: absolute; top: 16px; right: 16px;" aria-label="Close" onclick="this.closest('.dropdown').querySelector('.nav-link').click()"></button>
-                                <div class="contact-popup">
+                                {{-- <div class="contact-popup"> --}}
                                     <div class="d-flex justify-content-between align-items-start">
                                         <h3 class="fw-bold mb-1" style="color:#692626;">{{ __('messages.contact') }}</h3>
                                     </div>
-                                    <div style="margin-left: 225px;">
+                                    <div class="contact-popup-body">
                                         <p class="mb-3 fw-normal">{{ __('messages.contact_label') }}</p>
                                         <ul class="list-unstyled mb-0">
                                             <li class="mb-2"><strong>{{ __('messages.contact_mail') }}</strong> <a href="mailto:inquiry@battle-of-hk.com" class="text-decoration-none fw-normal" style="color: #672727;">inquiry@battle-of-hk.com</a></li>
                                             {{-- <li><strong>電話：</strong> <a href="tel:+12345678" class="text-decoration-none">+1234 5678</a></li> --}}
                                         </ul>
                                     </div>
-                                </div>
+                                {{-- </div> --}}
                             </div>
                         </li>
 
                         <!-- Language Switch (STATIC) -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                {{-- 🌐 {{ app()->getLocale() }} --}}
-                                <?xml version="1.0" encoding="UTF-8"?><svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M28.2857 37H39.7143M42 42L39.7143 37L42 42ZM26 42L28.2857 37L26 42ZM28.2857 37L34 24L39.7143 37H28.2857Z" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M16 6L17 9" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M6 11H28" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />

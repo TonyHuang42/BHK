@@ -52,6 +52,10 @@ p {
     text-align: justify;
 }
 
+:lang(en) p {
+    line-height: 1.6;
+}
+
 a {
     text-decoration: none;
     color: #000;
@@ -93,6 +97,10 @@ a:hover {
     padding-bottom: calc(var(--padding) * 0.5);
 }
 
+.navbar {
+    min-height: 80px;
+}
+
 .navbar-nav {
     --bs-nav-link-font-weight: 400;
 }
@@ -129,25 +137,10 @@ a:hover {
     padding: 40px 50px 50px;
 }
 
-/* .contact-popup {
-    height: fit-content;
-    width: 270px;
-    position: absolute;
-    right: 9%;
-    top: 28%;
-    transform: translateY(-50%);
-} */
-
 .btn-close {
     --bs-btn-close-opacity: 1;
     --bs-btn-close-hover-opacity: 1;
 }
-
-/* .contact-popup.show {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
 
 .nav-link:focus-visible,
 .btn-close:focus {
@@ -155,7 +148,11 @@ a:hover {
 }
 
 .dropdown-menu[data-bs-popper] {
-    top: 126.2%;
+    top: 137%;
+}
+
+:lang(en) .dropdown-menu[data-bs-popper] {
+    top: 108%;
 }
 
 .dropdown-toggle::after {
@@ -219,7 +216,7 @@ a:hover {
 }
 
 .gallery-hero-title {
-    width: min(25vw, 170px);
+    width: min(31vw, 215px);
 }
 
 .press-release-hero-title {
@@ -715,7 +712,7 @@ footer {
 /* PhotoSwipe caption */
 .pswp__caption {
     position: absolute;
-    bottom: 100px;
+    bottom: 80px;
     left: 0;
     right: 110px;
     height: 90px;
@@ -818,6 +815,12 @@ footer {
     }
 }
 
+@media only screen and (max-width: 1199px) {
+    .navbar-nav .dropdown-menu.contact-popup-bg {
+        position: relative;
+    }
+}
+
 @media only screen and (max-width: 1100px) {
     .bg-right {
         background-position: 98% 95%;
@@ -871,9 +874,9 @@ footer {
         width: 100%;
     }
 
-    .contact-popup {
+    /* .contact-popup {
         top: 35%;
-    }
+    } */
 
     .history-description {
         max-width: 100%;
@@ -970,6 +973,13 @@ footer {
     }
 }
 
+@media (min-width: 1200px) {
+    .navbar-nav .nav-item {
+        display: flex;
+        align-items: center;
+    }
+}
+
 @media (min-width: 992px) {
 
     .modal-lg,
@@ -981,5 +991,9 @@ footer {
 @media (min-width: 576px) {
     .modal {
         --bs-modal-margin: 48px;
+    }
+
+    .contact-popup-body {
+        margin-left: 225px;
     }
 }

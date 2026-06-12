@@ -23,7 +23,7 @@
         <p>{{ __('battle.before_storm.model_section_1_p1') }}</p>
         <p>{{ __('battle.before_storm.model_section_1_p2') }}</p>
 
-        <h6 class="content-subtitle">{{ __('battle.before_storm.model_section_2_title') }}</h6>
+        <h6 class="content-subtitle">{!! __('battle.before_storm.model_section_2_title') !!}</h6>
         <p>{{ __('battle.before_storm.model_section_2_p1') }}</p>
         <p>{{ __('battle.before_storm.model_section_2_p2') }}</p>
 

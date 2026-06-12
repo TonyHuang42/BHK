@@ -46,7 +46,7 @@
         <p>{{ __('battle.before_storm.battle_process_model_section_6_p1') }}</p>
         <p>{{ __('battle.before_storm.battle_process_model_section_6_p2') }}</p>
 
-        <h6 class="content-subtitle">{{ __('battle.before_storm.battle_process_model_section_7_title') }}</h6>
+        <h6 class="content-subtitle">{!! __('battle.before_storm.battle_process_model_section_7_title') !!}</h6>
         <p>{{ __('battle.before_storm.battle_process_model_section_7_p1') }}</p>
         <p>{{ __('battle.before_storm.battle_process_model_section_7_p2') }}</p>
     </x-slot:modal>

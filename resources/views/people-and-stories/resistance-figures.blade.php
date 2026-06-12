@@ -16,7 +16,7 @@
     <h6 class="content-subtitle">{{ __('peopleStories.people-and-stories.stoodUp_section_1_title') }}</h6>
     <p>{{ __('peopleStories.people-and-stories.stoodUp_section_1_p1') }}</p>
 
-    <h6 class="content-subtitle">{{ __('peopleStories.people-and-stories.stoodUp_section_2_title') }}</h6>
+    <h6 class="content-subtitle">{!! __('peopleStories.people-and-stories.stoodUp_section_2_title') !!}</h6>
     <p>{{ __('peopleStories.people-and-stories.stoodUp_section_2_p1') }}</p>
     <p>{{ __('peopleStories.people-and-stories.stoodUp_section_2_p2') }}</p>
 
@@ -61,7 +61,7 @@
         <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_10_p1') }}</p>
         <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_10_p2') }}</p>
 
-        <h6 class="content-subtitle">{{ __('peopleStories.people-and-stories.stoodUp_model_section_11_title') }}</h6>
+        <h6 class="content-subtitle">{!! __('peopleStories.people-and-stories.stoodUp_model_section_11_title') !!}</h6>
         <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_11_p1') }}</p>
         <p>{{ __('peopleStories.people-and-stories.stoodUp_model_section_11_p2') }}</p>
 

@@ -41,7 +41,7 @@
 
         <div class="container-fluid gx-0">
             <div class="row g-0">
-                <div class="col-sm-6 col-md">
+                <div class="col-6 col-md">
                     <a href="{{ route('battle.index') }}">
                         <article class="overview-card">
                             <img src="{{ asset('img/home/image_香港保衛戰.jpg') }}" alt="香港保衛戰" class="w-100 h-100 overview-card-image">
@@ -52,7 +52,7 @@
                     </a>
                 </div>
 
-                <div class="col-sm-6 col-md">
+                <div class="col-6 col-md">
                     <a href="{{ route('guerrilla.index') }}">
                         <article class="overview-card">
                             <img src="{{ asset('img/home/image_游擊與抵抗.jpg') }}" alt="游擊與抵抗" class="w-100 h-100 overview-card-image">
@@ -63,7 +63,7 @@
                     </a>
                 </div>
 
-                <div class="col-sm-6 col-md">
+                <div class="col-6 col-md">
                     <a href="{{ route('occupation.index') }}">
                         <article class="overview-card">
                             <img src="{{ asset('img/home/image_日治下的香港.jpg') }}" alt="日治下的香港" class="w-100 h-100 overview-card-image">
@@ -74,7 +74,7 @@
                     </a>
                 </div>
 
-                <div class="col-sm-6 col-md">
+                <div class="col-6 col-md">
                     <a href="{{ route('people.index') }}">
                         <article class="overview-card">
                             <img src="{{ asset('img/home/image_人物與故事.jpg') }}" alt="人物與故事" class="w-100 h-100 overview-card-image">

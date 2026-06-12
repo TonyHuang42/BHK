@@ -41,7 +41,7 @@
         <p>{{ __('peopleStories.people-and-stories.rescue_model_section_5_p1') }}</p>
         <p>{{ __('peopleStories.people-and-stories.rescue_model_section_5_p2') }}</p>
 
-        <h6 class="content-subtitle">{{ __('peopleStories.people-and-stories.rescue_model_section_6_title') }}</h6>
+        <h6 class="content-subtitle">{!! __('peopleStories.people-and-stories.rescue_model_section_6_title') !!}</h6>
         <p>{{ __('peopleStories.people-and-stories.rescue_model_section_6_p1') }}</p>
         <p>{{ __('peopleStories.people-and-stories.rescue_model_section_6_p2') }}</p>
 

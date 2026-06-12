@@ -35,7 +35,7 @@
         <p>{{ __('peopleStories.people-and-stories.village_model_section_4_p1') }}</p>
         <p>{{ __('peopleStories.people-and-stories.village_model_section_4_p2') }}</p>
 
-        <h6 class="content-subtitle">{{ __('peopleStories.people-and-stories.village_model_section_5_title') }}</h6>
+        <h6 class="content-subtitle">{!! __('peopleStories.people-and-stories.village_model_section_5_title') !!}</h6>
         <p>{{ __('peopleStories.people-and-stories.village_model_section_5_p1') }}</p>
         <p>{{ __('peopleStories.people-and-stories.village_model_section_5_p2') }}</p>
 

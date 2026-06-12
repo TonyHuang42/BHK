@@ -44,8 +44,7 @@
 
                 <!-- Menu -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav d-flex justify-content-end w-100 gap-xl-4">
-
+                    <ul class="navbar-nav d-flex justify-content-end w-100 {{ app()->getLocale() === 'en' ? 'nav-gap-en' : 'gap-xl-4' }}">
                         <!-- Battle -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle {{ request()->routeIs('battle.*') ? 'nav-link--current' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -121,16 +120,16 @@
                             <div class="dropdown-menu dropdown-menu-end contact-popup-bg">
                                 <button type="button" class="btn-close" style="font-size: 0.8rem; position: absolute; top: 16px; right: 16px;" aria-label="Close" onclick="this.closest('.dropdown').querySelector('.nav-link').click()"></button>
                                 {{-- <div class="contact-popup"> --}}
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <h3 class="fw-bold mb-1" style="color:#692626;">{{ __('messages.contact') }}</h3>
-                                    </div>
-                                    <div class="contact-popup-body">
-                                        <p class="mb-3 fw-normal">{{ __('messages.contact_label') }}</p>
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="mb-2"><strong>{{ __('messages.contact_mail') }}</strong> <a href="mailto:inquiry@battle-of-hk.com" class="text-decoration-none fw-normal" style="color: #672727;">inquiry@battle-of-hk.com</a></li>
-                                            {{-- <li><strong>電話：</strong> <a href="tel:+12345678" class="text-decoration-none">+1234 5678</a></li> --}}
-                                        </ul>
-                                    </div>
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <h3 class="fw-bold mb-1" style="color:#692626;">{{ __('messages.contact') }}</h3>
+                                </div>
+                                <div class="contact-popup-body">
+                                    <p class="mb-3 fw-normal">{{ __('messages.contact_label') }}</p>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><strong>{{ __('messages.contact_mail') }}</strong> <a href="mailto:inquiry@battle-of-hk.com" class="text-decoration-none fw-normal" style="color: #672727;">inquiry@battle-of-hk.com</a></li>
+                                        {{-- <li><strong>電話：</strong> <a href="tel:+12345678" class="text-decoration-none">+1234 5678</a></li> --}}
+                                    </ul>
+                                </div>
                                 {{-- </div> --}}
                             </div>
                         </li>

@@ -67,7 +67,7 @@
         <p>{{ __('peopleStories.people-and-stories.acts_model_section_12_p1') }}</p>
         <p>{{ __('peopleStories.people-and-stories.acts_model_section_12_p2') }}</p>
 
-        <h6 class="content-subtitle">{{ __('peopleStories.people-and-stories.acts_model_section_13_title') }}</h6>
+        <h6 class="content-subtitle">{!! __('peopleStories.people-and-stories.acts_model_section_13_title') !!}</h6>
         <p>{{ __('peopleStories.people-and-stories.acts_model_section_13_p1') }}</p>
         <p>{{ __('peopleStories.people-and-stories.acts_model_section_13_p2') }}</p>
     </x-slot:modal>

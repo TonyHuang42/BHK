@@ -8,7 +8,7 @@
                         <img src="{{ asset('img/home/icon_ornament.svg') }}" alt="icon" class="icon-image">
                         <h3>{{ __('battle.before_storm.wartime_timeline_title') }}</h3>
                         @if (app()->getLocale() === 'zh')
-                            <h6>{{ __('battle.before_storm.wartime_timeline_subtitle') }}</h6>
+                            <h6 class="content-subtitle">{{ __('battle.before_storm.wartime_timeline_subtitle') }}</h6>
                         @endif
                         <p class="mt-5">{{ __('battle.before_storm.wartime_timeline_intro') }}</p>
                     </div>

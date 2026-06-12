@@ -14,8 +14,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <h5 class="mb-0 text-center text-white">                
-                        {!! __('home.home_description') !!}                     
+                    <h5 class="mb-0 text-center text-white">
+                        {!! __('home.home_description') !!}
                     </h5>
                 </div>
             </div>
@@ -26,10 +26,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <div class="text-center mb-5">
+                    <div class="text-center bottom-padding">
                         <img src="{{ asset('img/home/icon_ornament.svg') }}" alt="icon" class="icon-image">
-                        <h3 class="mb-2"> 
-                            {{ __('home.home_section_1_title') }}
+                        <h3 class="mb-5">
+                            {!! __('home.home_section_1_title') !!}
                         </h3>
                         <p class="mb-0 text-center">
                             {{ __('home.home_section_1_p1') }}
@@ -90,7 +90,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <div class="text-center mt-5">
+                    <div class="text-center top-padding">
                         <p>
                             {{ __('home.home_section_1_p2') }}
                         </p>

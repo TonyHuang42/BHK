@@ -44,7 +44,7 @@
 
                 <!-- Menu -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav d-flex justify-content-end w-100 gap-xl-3">
+                    <ul class="navbar-nav d-flex justify-content-end w-100 gap-xl-4">
 
                         <!-- Battle -->
                         <li class="nav-item dropdown">

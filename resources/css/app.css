@@ -107,8 +107,12 @@ a:hover {
 
 .navbar-nav .nav-link.nav-link--current {
     color: #672727;
-    text-decoration: underline;
-    text-underline-offset: 5px;
+    /* text-decoration: underline;
+    text-underline-offset: 5px; */
+}
+
+.dropdown-item:active {
+    background-color: #672727;
 }
 
 .navbar-nav .nav-link.nav-link--current:hover {
@@ -142,22 +146,38 @@ a:hover {
     --bs-btn-close-hover-opacity: 1;
 }
 
+.nav-link {
+    line-height: 1.2;
+    text-align: center;
+}
+
+.nav-link.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+}
+
 .nav-link:focus-visible,
 .btn-close:focus {
     box-shadow: none;
 }
 
 .dropdown-menu[data-bs-popper] {
-    top: 137%;
+    top: 143%;
 }
 
 :lang(en) .dropdown-menu[data-bs-popper] {
-    top: 108%;
+    top: 118%;
 }
 
-.dropdown-toggle::after {
+/* .dropdown-toggle::after {
     margin-left: 1px;
-}
+} */
 
 .hero-subnav a[aria-current="page"] {
     color: #672727;
@@ -213,6 +233,11 @@ a:hover {
     right: 3%;
     width: min(80vw, 600px);
     opacity: 0.75;
+}
+
+.content-subtitle {
+    text-align: center;
+    margin-top: 24px;
 }
 
 .gallery-hero-title {
